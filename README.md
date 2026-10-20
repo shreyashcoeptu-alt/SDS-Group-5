@@ -1,4 +1,4 @@
-# Campus Bites — College Cafeteria Ordering System
+# The Lunchroom — College Cafeteria Ordering System
 ### Software Development Section (SDS) — Group 5 Collaborated Project
 
 A full-stack modern web application built to digitize and elevate college cafeteria dining. Customers can discover dishes with real-time dietary tags and live meal-slot recommendations, place orders, and track order progress; cafeteria administrators and kitchen staff manage menus, pricing, availability toggles, and incoming order fulfillment.
