@@ -42,3 +42,7 @@ Thumbs.db
 .parcel-cache/
 .turbo/
 tmp/
+
+# Local agent skills
+.agents/rules/skills.md
+.agents/skills/*/SKILL.md
