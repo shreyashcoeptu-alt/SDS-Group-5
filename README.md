@@ -1,22 +1,9 @@
 # The Lunchroom — College Cafeteria Ordering System
-### Software Development Section (SDS) — Group 5 Collaborated Project
+### Software Development Section (SDS) — Group 5 Project
 
 A full-stack modern web application built to digitize and elevate college cafeteria dining. Customers can discover dishes with real-time dietary tags and live meal-slot recommendations, place orders, and track order progress; cafeteria administrators and kitchen staff manage menus, pricing, availability toggles, and incoming order fulfillment.
 
 ---
-
-## 👥 Team Collaboration & Feature Ownership
-
-| Student / Developer | Feature Module & Responsibility | Domain |
-|---|---|---|
-| **Student 1** | **Authentication & User Management**<br>Registration, login, password hashing, JWT sessions, role management (`customer` vs `admin`) | `client/src/features/auth/`<br>`server/routes/authRoutes.js` |
-| **Student 2 (Shreyash & AI Antigravity)** | **Menu & Food Management**<br>Digital customer menu, category tabs, debounced search, veg/non-veg filters, admin menu manager, inline availability switch, bulk actions, drawer form | `client/src/features/menu/`<br>`server/routes/menuRoutes.js` |
-| **Student 3** | **Cart & Order Placement**<br>Cart drawer, item quantities, total calculation in ₹, checkout form, Razorpay online payments & cash on counter | `client/src/features/cart/`<br>`server/routes/orderRoutes.js` |
-| **Student 4** | **Order Tracking & Admin Dashboard**<br>Order history, live step-by-step order tracker, kitchen staff live queue, admin sales summaries | `client/src/features/orders/`<br>`server/routes/orderRoutes.js` |
-| **Shantanu** | **Database Architecture & Seeding**<br>MongoDB connection, Mongoose schemas (`User`, `MenuItem`, `Order`), seed data script | `server/config/db.js`<br>`server/models/*`<br>`server/utils/seed.js` |
-| **Sarthak & Sherwin** | **API Routing & Controllers**<br>Express server setup, route endpoints, error handling middleware | `server/server.js`<br>`server/routes/*` |
-
-> 📖 **Detailed Architecture:** For the complete system design, Mermaid sequence diagrams, data schemas, and API contracts, see [ARCHITECTURE.md](file:///Users/shreyash/Desktop/SDS-Group-5/ARCHITECTURE.md).
 
 ---
 
@@ -59,10 +46,10 @@ cafeteria-ordering-system/
 │       ├── styles/index.css        # Global CSS & Tailwind imports
 │       ├── utils/                  # formatCurrency (₹), constants
 │       └── features/
-│           ├── auth/               # Student 1: Authentication & User Profile
-│           ├── menu/               # Student 2: Menu & Food Management (Shreyash)
-│           ├── cart/               # Student 3: Cart & Checkout
-│           └── orders/             # Student 4: Tracking & Admin Dashboard
+│           ├── auth/               # Authentication & User Profile
+│           ├── menu/               # Menu & Food Management
+│           ├── cart/               # Cart & Checkout
+│           └── orders/             # Tracking & Admin Dashboard
 └── server/                         # Node.js + Express Backend
     ├── .env.example
     ├── package.json
@@ -116,7 +103,7 @@ Restart `npm run dev` in `client/`.
 
 ---
 
-## 🍱 Student 2: Menu & Food Management Showcase
+## 🍱 Menu & Food Management Showcase
 
 - **Customer Menu (`/menu`)**:
   - Time-of-day greeting (Breakfast, Lunch, Snacks, Dinner) with Indian date format.
