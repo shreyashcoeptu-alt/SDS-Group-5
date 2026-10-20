@@ -105,3 +105,29 @@ def remove_from_cart(user_id: str, food_item_id: str):
     return f"❌ Item {food_item_id} not found in cart."
 
 
+def get_cart_summary(user_id: str):
+    """
+    Fetches the user's cart, calculates the live total price, 
+    and returns a clean summary dictionary.
+    """
+    user_cart = cart_collection.find_one({"userId": user_id})
+    
+    if not user_cart or not user_cart.get("items"):
+        return {
+            "userId": user_id,
+            "items": [],
+            "totalAmount": 0.0,
+            "message": "Cart is empty"
+        }
+
+    items = user_cart.get("items", [])
+    
+    # Calculate total price dynamically based on item prices & quantities
+    total_amount = sum(item["price"] * item["quantity"] for item in items)
+
+    return {
+        "userId": user_id,
+        "items": items,
+        "totalAmount": round(total_amount, 2),
+        "message": "Cart retrieved successfully"
+    }
