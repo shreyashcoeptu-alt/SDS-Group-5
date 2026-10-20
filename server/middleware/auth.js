@@ -1,0 +1,53 @@
+const jwt = require('jsonwebtoken');
+
+/**
+ * Authentication Middleware
+ * Owner: Student 1 (Auth)
+ */
+
+// Protect routes - verifies JWT bearer token
+const protect = async (req, res, next) => {
+  let token;
+  if (
+    req.headers.authorization &&
+    req.headers.authorization.startsWith('Bearer')
+  ) {
+    token = req.headers.authorization.split(' ')[1];
+  }
+
+  if (!token) {
+    return res.status(401).json({
+      success: false,
+      message: 'Not authorized to access this route. No token provided.',
+    });
+  }
+
+  try {
+    const decoded = jwt.verify(token, process.env.JWT_SECRET || 'supersecretjwtkey_replace_in_production');
+    req.user = decoded; // { id, role, ... }
+    next();
+  } catch (err) {
+    return res.status(401).json({
+      success: false,
+      message: 'Not authorized. Token verification failed or expired.',
+    });
+  }
+};
+
+// Grant access to specific roles (e.g. 'admin')
+const authorize = (...roles) => {
+  return (req, res, next) => {
+    if (!req.user || !roles.includes(req.user.role)) {
+      return res.status(403).json({
+        success: false,
+        message: `Role '${req.user?.role || 'anonymous'}' is not authorized to access this resource.`,
+      });
+    }
+    next();
+  };
+};
+
+module.exports = {
+  protect,
+  authorize,
+};
