@@ -11,13 +11,14 @@ try {
 const connectDB = async () => {
   try {
     const conn = await mongoose.connect(process.env.MONGODB_URI, {
-      serverSelectionTimeoutMS: 10000,
+      serverSelectionTimeoutMS: 8000,
     });
     console.log(`[Database] MongoDB Connected: ${conn.connection.host} / ${conn.connection.name}`);
     return conn;
   } catch (error) {
     console.error(`[Database Error] Connection failed: ${error.message}`);
-    process.exit(1);
+    console.log('[Database] Retrying connection in 5 seconds...');
+    setTimeout(connectDB, 5000);
   }
 };
 
