@@ -42,3 +42,6 @@ Thumbs.db
 .parcel-cache/
 .turbo/
 tmp/
+
+__pycache__/
+*.pyc
