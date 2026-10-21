@@ -1,7 +1,7 @@
 {
   "name": "cafeteria-backend",
   "version": "1.0.0",
-  "description": "Student 1 - Authentication & User Management Backend API for Cafeteria System",
+  "description": "The Lunchroom - Authentication & User Management Backend API",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
@@ -10,13 +10,13 @@
     "test": "node verify-all.js"
   },
   "keywords": [
+    "the-lunchroom",
     "cafeteria",
     "authentication",
     "jwt",
-    "user-management",
-    "student-1"
+    "user-management"
   ],
-  "author": "Student 1",
+  "author": "The Lunchroom",
   "license": "ISC",
   "dependencies": {
     "bcryptjs": "^2.4.3",

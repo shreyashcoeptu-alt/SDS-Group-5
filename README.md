@@ -1,6 +1,6 @@
-# CampusBite — Smart Cafeteria Management Platform
+# The Lunchroom — Smart Cafeteria Management Platform
 
-A modular full-stack web application designed for campus cafeteria dining operations. Built with **React** (Frontend), **Node.js / Express** (Backend), and **MongoDB Atlas** (Database).
+A modern full-stack web application designed for campus cafeteria dining operations. Built with **React** (Frontend), **Node.js / Express** (Backend), and **MongoDB Atlas** (Database).
 
 ---
 

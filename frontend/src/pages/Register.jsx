@@ -119,7 +119,7 @@ const Register = () => {
           </div>
           <h1 style={{ fontSize: '1.75rem', marginBottom: '0.4rem' }}>Create Account</h1>
           <p style={{ color: 'var(--text-muted)', fontSize: '0.9rem' }}>
-            Join CampusBite to order food and manage services
+            Join The Lunchroom to order food and manage services
           </p>
         </div>
 
@@ -166,7 +166,7 @@ const Register = () => {
                   Customer
                 </div>
                 <div style={{ fontSize: '0.75rem', color: 'var(--text-dim)', marginTop: '2px' }}>
-                  Student / Patron
+                  Campus Patron / Customer
                 </div>
               </div>
 

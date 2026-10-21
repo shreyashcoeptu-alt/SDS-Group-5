@@ -12,7 +12,9 @@ import {
   ClipboardList, 
   CheckCircle2,
   Lock,
-  Zap
+  Zap,
+  Clock,
+  HeartHandshake
 } from 'lucide-react';
 
 const Home = () => {
@@ -41,7 +43,7 @@ const Home = () => {
           marginBottom: '1.5rem'
         }}>
           <Sparkles size={16} />
-          Student 1 Module: Authentication & User Management Live
+          Welcome to The Lunchroom • Smart Campus Dining
         </div>
 
         <h1 style={{
@@ -51,11 +53,12 @@ const Home = () => {
           marginBottom: '1.25rem',
           letterSpacing: '-0.03em'
         }}>
-          The Intelligent Dining Platform for <span style={{
+          Delicious Food, Faster Service at{' '}
+          <span style={{
             background: 'linear-gradient(135deg, #ea580c 0%, #fb923c 50%, #f97316 100%)',
             WebkitBackgroundClip: 'text',
             WebkitTextFillColor: 'transparent'
-          }}>Campus Life</span>
+          }}>The Lunchroom</span>
         </h1>
 
         <p style={{
@@ -65,7 +68,7 @@ const Home = () => {
           margin: '0 auto 2.5rem',
           lineHeight: 1.6
         }}>
-          A collaborative full-stack web application designed for campus cafeterias. Featuring secure JWT authentication, multi-role privileges (Customer & Cafeteria Admin), and ready-to-merge modular interfaces.
+          The official campus cafeteria management system. Experience secure user accounts, instant role privileges, pre-ordering capabilities, and real-time counter updates.
         </p>
 
         {/* Call to Actions */}
@@ -78,7 +81,7 @@ const Home = () => {
           ) : (
             <>
               <Link to="/login" className="btn btn-primary" style={{ padding: '0.9rem 2rem', fontSize: '1rem' }}>
-                <span>Sign In to Cafeteria</span>
+                <span>Sign In to The Lunchroom</span>
                 <ArrowRight size={18} />
               </Link>
               <Link to="/register" className="btn btn-secondary" style={{ padding: '0.9rem 2rem', fontSize: '1rem' }}>
@@ -89,144 +92,68 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Feature Architecture Matrix: 4 Students Breakdown */}
-      <section style={{ marginTop: '3rem' }}>
+      {/* Modern Cafeteria Highlights (No Student 1,2,3,4 section) */}
+      <section style={{ marginTop: '2rem', marginBottom: '3rem' }}>
         <div style={{ textAlign: 'center', marginBottom: '2.5rem' }}>
           <h2 style={{ fontSize: '1.85rem', marginBottom: '0.5rem' }}>
-            Multi-Student Collaborative Architecture
+            Everything You Need for Campus Dining
           </h2>
           <p style={{ color: 'var(--text-muted)', fontSize: '0.95rem' }}>
-            Built modularly so every teammate can merge their backend and frontend features without git conflicts.
+            Built for students, faculty, and cafeteria kitchen staff
           </p>
         </div>
 
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1.5rem' }}>
-          {/* Student 1 Card */}
-          <div className="glass-card" style={{
-            padding: '2rem',
-            border: '2px solid rgba(234, 88, 12, 0.4)',
-            boxShadow: 'var(--shadow-glow)',
-            position: 'relative',
-            overflow: 'hidden'
-          }}>
-            <div style={{
-              position: 'absolute',
-              top: '1rem',
-              right: '1rem',
-              background: 'var(--success-light)',
-              color: '#34d399',
-              border: '1px solid rgba(52, 211, 153, 0.3)',
-              borderRadius: 'var(--radius-full)',
-              padding: '0.2rem 0.6rem',
-              fontSize: '0.72rem',
-              fontWeight: '700'
-            }}>
-              YOUR MODULE • ACTIVE
-            </div>
-
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '1.5rem' }}>
+          {/* Card 1: Secure Accounts */}
+          <div className="glass-card" style={{ padding: '2rem' }}>
             <div className="stat-icon" style={{ marginBottom: '1.25rem' }}>
               <ShieldCheck size={26} />
             </div>
-            <div style={{ fontSize: '0.8rem', color: '#fb923c', fontWeight: '700', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
-              Student 1 (Feature Owner)
-            </div>
-            <h3 style={{ fontSize: '1.35rem', margin: '0.35rem 0 0.75rem' }}>
-              Authentication & User Management
+            <h3 style={{ fontSize: '1.25rem', margin: '0.35rem 0 0.65rem' }}>
+              Secure Authentication & Roles
             </h3>
-            <ul style={{ listStyle: 'none', color: 'var(--text-muted)', fontSize: '0.88rem', display: 'flex', flexDirection: 'column', gap: '0.5rem', marginBottom: '1.5rem' }}>
-              <li style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                <CheckCircle2 size={15} color="#10b981" />
-                <span>User registration & login</span>
-              </li>
-              <li style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                <CheckCircle2 size={15} color="#10b981" />
-                <span>Bcrypt password hashing & verification</span>
-              </li>
-              <li style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                <CheckCircle2 size={15} color="#10b981" />
-                <span>Authentication using JWT</span>
-              </li>
-              <li style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                <CheckCircle2 size={15} color="#10b981" />
-                <span>Roles: customer & cafeteria admin</span>
-              </li>
-              <li style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                <CheckCircle2 size={15} color="#10b981" />
-                <span>Protected routes & user management</span>
-              </li>
-            </ul>
-            <div style={{ fontSize: '0.8rem', color: 'var(--text-dim)', background: 'var(--surface-input)', padding: '0.6rem 0.8rem', borderRadius: 'var(--radius-sm)' }}>
-              Backend routes: <code>auth/</code>, <code>users/</code>
-            </div>
+            <p style={{ color: 'var(--text-muted)', fontSize: '0.88rem', lineHeight: '1.6' }}>
+              Encrypted credentials with bcrypt password hashing, JWT sessions, and differentiated roles for campus patrons and cafeteria administration staff.
+            </p>
           </div>
 
-          {/* Student 2 Card */}
+          {/* Card 2: Fresh Daily Menu */}
           <div className="glass-card" style={{ padding: '2rem' }}>
             <div className="stat-icon secondary" style={{ marginBottom: '1.25rem' }}>
               <UtensilsCrossed size={26} />
             </div>
-            <div style={{ fontSize: '0.8rem', color: '#38bdf8', fontWeight: '700', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
-              Student 2 (Feature Owner)
-            </div>
-            <h3 style={{ fontSize: '1.35rem', margin: '0.35rem 0 0.75rem' }}>
-              Menu & Food Management
+            <h3 style={{ fontSize: '1.25rem', margin: '0.35rem 0 0.65rem' }}>
+              Daily Menu Catalog
             </h3>
-            <ul style={{ listStyle: 'none', color: 'var(--text-muted)', fontSize: '0.88rem', display: 'flex', flexDirection: 'column', gap: '0.5rem', marginBottom: '1.5rem' }}>
-              <li>• Display available food items</li>
-              <li>• Add, edit, and delete menu items</li>
-              <li>• Food categories, prices, & descriptions</li>
-              <li>• Mark items available/unavailable</li>
-              <li>• Admin menu management portal</li>
-            </ul>
-            <div style={{ fontSize: '0.8rem', color: 'var(--text-dim)', background: 'var(--surface-input)', padding: '0.6rem 0.8rem', borderRadius: 'var(--radius-sm)' }}>
-              Backend routes: <code>menu/</code>, <code>food-items/</code>
-            </div>
+            <p style={{ color: 'var(--text-muted)', fontSize: '0.88rem', lineHeight: '1.6' }}>
+              Explore hot meal options, daily specials, healthy snacks, and beverages with categorized pricing and real-time kitchen availability tags.
+            </p>
           </div>
 
-          {/* Student 3 Card */}
+          {/* Card 3: Quick Orders */}
           <div className="glass-card" style={{ padding: '2rem' }}>
             <div className="stat-icon" style={{ background: 'rgba(245, 158, 11, 0.15)', color: '#f59e0b', marginBottom: '1.25rem' }}>
               <ShoppingBag size={26} />
             </div>
-            <div style={{ fontSize: '0.8rem', color: '#fbbf24', fontWeight: '700', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
-              Student 3 (Feature Owner)
-            </div>
-            <h3 style={{ fontSize: '1.35rem', margin: '0.35rem 0 0.75rem' }}>
-              Cart & Order Placement
+            <h3 style={{ fontSize: '1.25rem', margin: '0.35rem 0 0.65rem' }}>
+              Quick Cart & Checkout
             </h3>
-            <ul style={{ listStyle: 'none', color: 'var(--text-muted)', fontSize: '0.88rem', display: 'flex', flexDirection: 'column', gap: '0.5rem', marginBottom: '1.5rem' }}>
-              <li>• Add food items to cart</li>
-              <li>• Update quantities & remove items</li>
-              <li>• Real-time price & tax calculation</li>
-              <li>• Place new food orders</li>
-              <li>• Save order details & line items</li>
-            </ul>
-            <div style={{ fontSize: '0.8rem', color: 'var(--text-dim)', background: 'var(--surface-input)', padding: '0.6rem 0.8rem', borderRadius: 'var(--radius-sm)' }}>
-              Backend routes: <code>cart/</code>, <code>orders/</code>
-            </div>
+            <p style={{ color: 'var(--text-muted)', fontSize: '0.88rem', lineHeight: '1.6' }}>
+              Customize your tray, adjust meal item quantities, calculate instantaneous totals, and avoid waiting in long noon lunch lines.
+            </p>
           </div>
 
-          {/* Student 4 Card */}
+          {/* Card 4: Kitchen Order Tracking */}
           <div className="glass-card" style={{ padding: '2rem' }}>
             <div className="stat-icon admin" style={{ marginBottom: '1.25rem' }}>
               <ClipboardList size={26} />
             </div>
-            <div style={{ fontSize: '0.8rem', color: '#c084fc', fontWeight: '700', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
-              Student 4 (Feature Owner)
-            </div>
-            <h3 style={{ fontSize: '1.35rem', margin: '0.35rem 0 0.75rem' }}>
-              Order Tracking & Kitchen Admin
+            <h3 style={{ fontSize: '1.25rem', margin: '0.35rem 0 0.65rem' }}>
+              Live Order Status
             </h3>
-            <ul style={{ listStyle: 'none', color: 'var(--text-muted)', fontSize: '0.88rem', display: 'flex', flexDirection: 'column', gap: '0.5rem', marginBottom: '1.5rem' }}>
-              <li>• Customer order receipt history</li>
-              <li>• Live order status tracking</li>
-              <li>• Staff update status (Prep, Ready)</li>
-              <li>• Kitchen incoming queue monitor</li>
-              <li>• Basic order summaries & totals</li>
-            </ul>
-            <div style={{ fontSize: '0.8rem', color: 'var(--text-dim)', background: 'var(--surface-input)', padding: '0.6rem 0.8rem', borderRadius: 'var(--radius-sm)' }}>
-              Backend routes: <code>order-status/</code>, <code>admin-dashboard/</code>
-            </div>
+            <p style={{ color: 'var(--text-muted)', fontSize: '0.88rem', lineHeight: '1.6' }}>
+              Track preparation status from kitchen grill to pickup counter with instant status updates and past order history.
+            </p>
           </div>
         </div>
       </section>

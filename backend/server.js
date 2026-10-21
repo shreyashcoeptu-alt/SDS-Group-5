@@ -26,30 +26,30 @@ app.use((req, res, next) => {
   next();
 });
 
-// Root Health Check & Team Architecture API Overview
+// Root Health Check & System API Overview
 app.get('/api/health', (req, res) => {
   res.status(200).json({
     status: 'online',
-    project: 'Smart Cafeteria Management Platform',
-    teamModules: {
-      student1: {
+    project: 'The Lunchroom - Cafeteria Management Platform',
+    modules: {
+      auth: {
         feature: 'Authentication & User Management',
-        status: 'COMPLETE & ACTIVE',
+        status: 'ACTIVE',
         endpoints: ['/api/auth/register', '/api/auth/login', '/api/auth/me', '/api/users/profile', '/api/users'],
       },
-      student2: {
+      menu: {
         feature: 'Menu & Food Management',
-        status: 'Stub ready for Student 2',
+        status: 'Mounted',
         endpoints: ['/api/menu'],
       },
-      student3: {
+      cart: {
         feature: 'Cart & Order Placement',
-        status: 'Stub ready for Student 3',
+        status: 'Mounted',
         endpoints: ['/api/cart'],
       },
-      student4: {
+      orders: {
         feature: 'Order Tracking & Admin Dashboard',
-        status: 'Stub ready for Student 4',
+        status: 'Mounted',
         endpoints: ['/api/orders', '/api/admin-dashboard'],
       },
     },
@@ -60,7 +60,7 @@ app.get('/api/health', (req, res) => {
 app.use('/api/auth', require('./routes/authRoutes'));
 app.use('/api/users', require('./routes/userRoutes'));
 
-// Modular Stubs for Team Members (Student 2, 3, 4)
+// Modular Stubs for Team Members
 app.use('/api/menu', require('./routes/menuRoutes'));
 app.use('/api/cart', require('./routes/cartRoutes'));
 app.use('/api/orders', require('./routes/orderRoutes'));
@@ -87,7 +87,7 @@ const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, () => {
   console.log(`=================================================`);
-  console.log(`🚀 Cafeteria Backend Server running on port ${PORT}`);
+  console.log(`🚀 The Lunchroom Backend Server running on port ${PORT}`);
   console.log(`   Health Check: http://localhost:${PORT}/api/health`);
   console.log(`   Auth API:     http://localhost:${PORT}/api/auth`);
   console.log(`   Users API:    http://localhost:${PORT}/api/users`);

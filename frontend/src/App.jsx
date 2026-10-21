@@ -73,7 +73,7 @@ function App() {
             }}>
               <div style={{ maxWidth: '1240px', margin: '0 auto', display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', alignItems: 'center', gap: '1rem' }}>
                 <div>
-                  <strong>CampusBite Cafeteria Platform</strong> — Student 1 Authentication & User Management
+                  <strong>The Lunchroom</strong> — Campus Cafeteria & Dining Platform
                 </div>
                 <div>
                   Node.js • Express • MongoDB Atlas • JWT • React

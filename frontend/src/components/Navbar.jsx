@@ -50,7 +50,7 @@ const Navbar = () => {
             <Coffee size={22} color="#ffffff" />
           </div>
           <div>
-            <span>Campus<span className="logo-highlight">Bite</span></span>
+            <span>The <span className="logo-highlight">Lunchroom</span></span>
             <div style={{
               fontSize: '0.68rem',
               fontWeight: '500',
@@ -59,7 +59,7 @@ const Navbar = () => {
               textTransform: 'uppercase',
               lineHeight: 1
             }}>
-              Student 1 • Auth & Users
+              Campus Dining Platform
             </div>
           </div>
         </Link>

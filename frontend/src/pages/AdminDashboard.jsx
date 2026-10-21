@@ -144,14 +144,14 @@ const AdminDashboard = () => {
               <ShieldCheck size={13} /> Cafeteria Admin Portal
             </span>
             <span className="badge badge-status-active">
-              <Activity size={13} /> Auth & User Mgmt (Student 1)
+              <Activity size={13} /> System Administration
             </span>
           </div>
           <h1 style={{ fontSize: '2.25rem', marginBottom: '0.5rem' }}>
-            Cafeteria Management Console
+            The Lunchroom Management Console
           </h1>
           <p style={{ color: 'var(--text-muted)', fontSize: '0.95rem', maxWidth: '650px' }}>
-            Welcome, <strong>{currentAdmin?.name}</strong>. Full control over user accounts, role-based privileges, security credentials, and teammate service hooks.
+            Welcome, <strong>{currentAdmin?.name}</strong>. Full control over user accounts, role-based privileges, security credentials, and cafeteria services.
           </p>
         </div>
 
@@ -184,7 +184,7 @@ const AdminDashboard = () => {
           </div>
           <div className="stat-info">
             <div className="stat-value">{stats.totalCustomers}</div>
-            <div className="stat-label">Active Customers / Students</div>
+            <div className="stat-label">Active Customers</div>
           </div>
         </div>
 
@@ -216,21 +216,21 @@ const AdminDashboard = () => {
           onClick={() => setActiveTab('users')}
         >
           <UserCog size={17} />
-          <span>User Management (Student 1)</span>
+          <span>User Management</span>
         </button>
         <button
           className={`tab-btn ${activeTab === 'menu' ? 'active' : ''}`}
           onClick={() => setActiveTab('menu')}
         >
           <UtensilsCrossed size={17} />
-          <span>Menu Catalog (Student 2)</span>
+          <span>Menu Catalog</span>
         </button>
         <button
           className={`tab-btn ${activeTab === 'orders' ? 'active' : ''}`}
           onClick={() => setActiveTab('orders')}
         >
           <ClipboardList size={17} />
-          <span>Live Orders & Kitchen (Student 4)</span>
+          <span>Live Orders & Kitchen</span>
         </button>
       </div>
 
@@ -424,34 +424,34 @@ const AdminDashboard = () => {
         </div>
       )}
 
-      {/* Tab 2: Teammate Student 2 Menu Management */}
+      {/* Tab 2: Menu Management */}
       {activeTab === 'menu' && (
         <div className="teammate-card glass-card animate-fade-in">
           <UtensilsCrossed size={48} color="#0284c7" style={{ margin: '0 auto 1rem' }} />
-          <h3>Student 2 — Menu & Food Management Hub</h3>
+          <h3>Cafeteria Menu Catalog</h3>
           <p>
-            Student 2 will plug in cafeteria food catalogs, item categories, price management, and item availability toggles here.
+            Browse and manage hot meals, daily specials, food categories, pricing, and item availability tags.
           </p>
           <div style={{ display: 'inline-flex', gap: '0.75rem', background: 'var(--surface-input)', padding: '0.75rem 1.25rem', borderRadius: 'var(--radius-sm)', fontSize: '0.85rem' }}>
-            <span>Backend Mount: <code>/api/menu</code></span>
+            <span>Backend Route: <code>/api/menu</code></span>
             <span>•</span>
-            <span style={{ color: '#38bdf8' }}>Ready for Student 2 Controller & Routes</span>
+            <span style={{ color: '#38bdf8' }}>Menu Management Module</span>
           </div>
         </div>
       )}
 
-      {/* Tab 3: Teammate Student 4 Order Tracking */}
+      {/* Tab 3: Order Tracking & Kitchen */}
       {activeTab === 'orders' && (
         <div className="teammate-card glass-card animate-fade-in">
           <ClipboardList size={48} color="#8b5cf6" style={{ margin: '0 auto 1rem' }} />
-          <h3>Student 4 — Kitchen Orders & Admin Dashboard</h3>
+          <h3>Live Kitchen & Order Queue</h3>
           <p>
-            Student 4 will display incoming cafeteria order queues, order state updates (Preparing, Ready, Picked up), and daily sales totals here.
+            Live cafeteria incoming order display, real-time stage updates (Preparing, Ready, Picked up), and daily sales totals.
           </p>
           <div style={{ display: 'inline-flex', gap: '0.75rem', background: 'var(--surface-input)', padding: '0.75rem 1.25rem', borderRadius: 'var(--radius-sm)', fontSize: '0.85rem' }}>
-            <span>Backend Mount: <code>/api/orders</code> & <code>/api/admin-dashboard</code></span>
+            <span>Backend Route: <code>/api/orders</code></span>
             <span>•</span>
-            <span style={{ color: '#c084fc' }}>Ready for Student 4 Controller & Routes</span>
+            <span style={{ color: '#c084fc' }}>Live Kitchen Module</span>
           </div>
         </div>
       )}
