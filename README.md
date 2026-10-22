@@ -32,7 +32,8 @@ cafeteria-ordering-system/
 ├── .gitignore
 ├── README.md                       # Project overview & quick start
 ├── ARCHITECTURE.md                 # Full system architecture, API contracts & schemas
-├── client/                         # React 18 + Tailwind Frontend
+├── package.json                    # Monorepo root scripts (npm run dev, dev:frontend, dev:backend)
+├── frontend/                       # React 18 + Tailwind Frontend
 │   ├── .env.example
 │   ├── index.html
 │   ├── package.json
@@ -50,7 +51,7 @@ cafeteria-ordering-system/
 │           ├── menu/               # Menu & Food Management
 │           ├── cart/               # Cart & Checkout
 │           └── orders/             # Tracking & Admin Dashboard
-└── server/                         # Node.js + Express Backend
+└── backend/                        # Node.js + Express Backend
     ├── .env.example
     ├── package.json
     ├── server.js                   # Express server entry point
@@ -65,22 +66,29 @@ cafeteria-ordering-system/
 
 ## 🚀 Quick Start Guide
 
-### 1. Running the Frontend (`client/`)
+### Monorepo Quickstart (From Root)
+```bash
+npm run install:all     # Install dependencies for both backend and frontend
+npm run dev             # Start the frontend dev server
+npm run dev:backend     # Start the Express API server
+```
+
+### 1. Running the Frontend (`frontend/`)
 
 ```bash
-cd client
+cd frontend
 npm install
 npm run dev
 ```
 
 The frontend will start on **`http://localhost:5173/`**.
 
-> **Note on Mock Mode**: By default, `VITE_USE_MOCKS=true` in `client/.env`. The frontend runs completely standalone with 20 pre-seeded authentic Indian dishes, persistent localStorage edits, and a floating **DEV ROLE SWITCHER** pill to toggle between Customer (`/menu`) and Admin (`/admin/menu`).
+> **Note on Mock Mode**: By default, `VITE_USE_MOCKS=true` in `frontend/.env`. The frontend runs completely standalone with 20 pre-seeded authentic Indian dishes, persistent localStorage edits, and a floating **DEV ROLE SWITCHER** pill to toggle between Customer (`/menu`) and Admin (`/admin/menu`).
 
-### 2. Running the Backend (`server/`)
+### 2. Running the Backend (`backend/`)
 
 ```bash
-cd server
+cd backend
 npm install
 # Copy environment configuration
 cp .env.example .env
@@ -94,12 +102,12 @@ The backend API will run on **`http://localhost:5000/api`**.
 
 ### 3. Connecting Frontend to Real Backend
 
-In `client/.env`:
+In `frontend/.env`:
 ```bash
 VITE_API_URL=http://localhost:5000/api
 VITE_USE_MOCKS=false
 ```
-Restart `npm run dev` in `client/`.
+Restart `npm run dev` in `frontend/`.
 
 ---
 
