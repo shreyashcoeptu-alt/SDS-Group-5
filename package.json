@@ -1,0 +1,15 @@
+{
+  "name": "cafeteria-ordering-system",
+  "version": "1.0.0",
+  "private": true,
+  "description": "College Cafeteria Ordering System - Monorepo root",
+  "scripts": {
+    "dev": "npm run dev --prefix frontend",
+    "dev:frontend": "npm run dev --prefix frontend",
+    "dev:backend": "npm run dev --prefix backend",
+    "dev:client": "npm run dev --prefix frontend",
+    "dev:server": "npm run dev --prefix backend",
+    "build": "npm run build --prefix frontend",
+    "install:all": "npm install --prefix frontend && npm install --prefix backend"
+  }
+}

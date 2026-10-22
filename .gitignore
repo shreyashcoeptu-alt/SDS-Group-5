@@ -41,4 +41,7 @@ Thumbs.db
 .cache/
 .parcel-cache/
 .turbo/
+# Local agent skills
+.agents/
+.agent/
 tmp/

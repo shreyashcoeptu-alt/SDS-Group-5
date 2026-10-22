@@ -1,26 +1,24 @@
 # The Lunchroom — College Cafeteria Ordering System
-### Software Development Section (SDS) — Group 5 Collaborated Project
+### Software Development Section (SDS) — Group 5 Project
 
 A full-stack modern web application built to digitize and elevate college cafeteria dining. Customers can discover dishes with real-time dietary tags and live meal-slot recommendations, place orders, and track order progress; cafeteria administrators and kitchen staff manage menus, pricing, availability toggles, and incoming order fulfillment.
 
 ---
 
-
-
-> 📖 **Detailed Architecture:** For the complete system design, Mermaid sequence diagrams, data schemas, and API contracts, see [ARCHITECTURE.md](file:///Users/shreyash/Desktop/SDS-Group-5/ARCHITECTURE.md).
+> 📖 **Detailed Architecture:** For the complete system design, data schemas, roles, and API contracts, see [ARCHITECTURE.md](file:///Users/shreyash/Desktop/SDS-Group-5/ARCHITECTURE.md).
 
 ---
 
 ## 🛠️ Technology Stack
 
-- **Frontend (`client/`):**
+- **Frontend (`frontend/`):**
   - **Framework:** React 18 + Vite (SPA)
   - **Styling:** Tailwind CSS with custom warm cafeteria tokens (`brand-600`, `cafe-bg`, `cafe-text`)
   - **Typography:** Bricolage Grotesque (headings), Plus Jakarta Sans (body UI), JetBrains Mono (prices)
   - **Icons:** Lucide React
   - **Routing:** React Router v6
   - **HTTP:** Axios with JWT interceptors
-- **Backend (`server/`):**
+- **Backend (`backend/`):**
   - **Runtime:** Node.js + Express
   - **Database:** MongoDB + Mongoose ODM
   - **Security:** JSON Web Tokens (JWT), Bcrypt.js, CORS
@@ -36,7 +34,8 @@ cafeteria-ordering-system/
 ├── .gitignore
 ├── README.md                       # Project overview & quick start
 ├── ARCHITECTURE.md                 # Full system architecture, API contracts & schemas
-├── client/                         # React 18 + Tailwind Frontend
+├── package.json                    # Monorepo root scripts (npm run dev, dev:frontend, dev:backend)
+├── frontend/                       # React 18 + Tailwind Frontend
 │   ├── .env.example
 │   ├── index.html
 │   ├── package.json
@@ -50,11 +49,11 @@ cafeteria-ordering-system/
 │       ├── styles/index.css        # Global CSS & Tailwind imports
 │       ├── utils/                  # formatCurrency (₹), constants
 │       └── features/
-│           ├── auth/               # Student 1: Authentication & User Profile
-│           ├── menu/               # Student 2: Menu & Food Management (Shreyash)
-│           ├── cart/               # Student 3: Cart & Checkout
-│           └── orders/             # Student 4: Tracking & Admin Dashboard
-└── server/                         # Node.js + Express Backend
+│           ├── auth/               # Authentication & User Profile
+│           ├── menu/               # Menu & Food Management
+│           ├── cart/               # Cart & Checkout
+│           └── orders/             # Tracking & Admin Dashboard
+└── backend/                        # Node.js + Express Backend
     ├── .env.example
     ├── package.json
     ├── server.js                   # Express server entry point
@@ -69,22 +68,29 @@ cafeteria-ordering-system/
 
 ## 🚀 Quick Start Guide
 
-### 1. Running the Frontend (`client/`)
+### Monorepo Quickstart (From Root)
+```bash
+npm run install:all     # Install dependencies for both backend and frontend
+npm run dev             # Start the frontend dev server
+npm run dev:backend     # Start the Express API server
+```
+
+### 1. Running the Frontend (`frontend/`)
 
 ```bash
-cd client
+cd frontend
 npm install
 npm run dev
 ```
 
 The frontend will start on **`http://localhost:5173/`**.
 
-> **Note on Mock Mode**: By default, `VITE_USE_MOCKS=true` in `client/.env`. The frontend runs completely standalone with 20 pre-seeded authentic Indian dishes, persistent localStorage edits, and a floating **DEV ROLE SWITCHER** pill to toggle between Customer (`/menu`) and Admin (`/admin/menu`).
+> **Note on Mock Mode**: By default, `VITE_USE_MOCKS=true` in `frontend/.env`. The frontend runs completely standalone with 20 pre-seeded authentic Indian dishes, persistent localStorage edits, and a floating **DEV ROLE SWITCHER** pill to toggle between Customer (`/menu`) and Admin (`/admin/menu`).
 
-### 2. Running the Backend (`server/`)
+### 2. Running the Backend (`backend/`)
 
 ```bash
-cd server
+cd backend
 npm install
 # Copy environment configuration
 cp .env.example .env
@@ -98,12 +104,12 @@ The backend API will run on **`http://localhost:5000/api`**.
 
 ### 3. Connecting Frontend to Real Backend
 
-In `client/.env`:
+In `frontend/.env`:
 ```bash
 VITE_API_URL=http://localhost:5000/api
 VITE_USE_MOCKS=false
 ```
-Restart `npm run dev` in `client/`.
+Restart `npm run dev` in `frontend/`.
 
 ---
 
