@@ -33,31 +33,36 @@ const Home = () => {
           display: 'inline-flex',
           alignItems: 'center',
           gap: '0.6rem',
-          padding: '0.4rem 1rem',
+          padding: '0.35rem 0.95rem',
           borderRadius: 'var(--radius-full)',
-          background: 'rgba(234, 88, 12, 0.1)',
-          border: '1px solid rgba(234, 88, 12, 0.25)',
-          color: '#fb923c',
-          fontSize: '0.85rem',
+          background: '#F3F4F6',
+          border: '1px solid #E5E7EB',
+          color: 'var(--text-main)',
+          fontSize: '0.8rem',
           fontWeight: '600',
-          marginBottom: '1.5rem'
+          fontFamily: 'var(--font-mono)',
+          marginBottom: '1.5rem',
+          boxShadow: 'var(--shadow-sm)'
         }}>
-          <Sparkles size={16} />
-          Welcome to The Lunchroom • Smart Campus Dining
+          <Zap size={14} color="#0F0F11" fill="#0F0F11" />
+          The Lunchroom • Smart Campus Dining
         </div>
 
         <h1 style={{
           fontSize: 'clamp(2.5rem, 5vw, 3.8rem)',
-          fontWeight: '800',
+          fontWeight: '700',
+          fontFamily: 'var(--font-display)',
           lineHeight: 1.15,
           marginBottom: '1.25rem',
-          letterSpacing: '-0.03em'
+          letterSpacing: '-0.03em',
+          color: 'var(--text-main)'
         }}>
           Delicious Food, Faster Service at{' '}
           <span style={{
-            background: 'linear-gradient(135deg, #ea580c 0%, #fb923c 50%, #f97316 100%)',
+            background: 'linear-gradient(135deg, #0F0F11 0%, #27272A 100%)',
             WebkitBackgroundClip: 'text',
-            WebkitTextFillColor: 'transparent'
+            WebkitTextFillColor: 'transparent',
+            borderBottom: '3px solid #EA580C'
           }}>The Lunchroom</span>
         </h1>
 

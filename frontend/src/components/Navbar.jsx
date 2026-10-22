@@ -3,14 +3,12 @@ import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import { useToast } from '../context/ToastContext';
 import { 
-  Coffee, 
+  Zap, 
   LogOut, 
   User, 
   ShieldCheck, 
   LayoutDashboard, 
-  Users, 
-  Sparkles,
-  ChevronRight
+  Sparkles
 } from 'lucide-react';
 
 const Navbar = () => {
@@ -38,26 +36,28 @@ const Navbar = () => {
         {/* Brand & Project Info */}
         <Link to="/" className="nav-brand">
           <div style={{
-            width: '38px',
-            height: '38px',
-            borderRadius: '10px',
-            background: 'linear-gradient(135deg, #ea580c, #f97316)',
+            width: '36px',
+            height: '36px',
+            borderRadius: '9px',
+            background: '#0F0F11',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
-            boxShadow: '0 4px 12px rgba(234, 88, 12, 0.4)'
+            color: '#FFFFFF'
           }}>
-            <Coffee size={22} color="#ffffff" />
+            <Zap size={18} fill="#FFFFFF" />
           </div>
           <div>
             <span>The <span className="logo-highlight">Lunchroom</span></span>
             <div style={{
-              fontSize: '0.68rem',
-              fontWeight: '500',
+              fontSize: '0.65rem',
+              fontWeight: '600',
+              fontFamily: 'var(--font-mono)',
               color: 'var(--text-dim)',
               letterSpacing: '0.04em',
               textTransform: 'uppercase',
-              lineHeight: 1
+              lineHeight: 1,
+              marginTop: '2px'
             }}>
               Campus Dining Platform
             </div>
@@ -79,15 +79,13 @@ const Navbar = () => {
               )}
 
               {isAdmin && (
-                <>
-                  <Link
-                    to="/admin"
-                    className={`nav-link ${location.pathname === '/admin' ? 'active' : ''}`}
-                  >
-                    <ShieldCheck size={16} style={{ verticalAlign: 'middle', marginRight: '6px' }} />
-                    Admin Control
-                  </Link>
-                </>
+                <Link
+                  to="/admin"
+                  className={`nav-link ${location.pathname === '/admin' ? 'active' : ''}`}
+                >
+                  <ShieldCheck size={16} style={{ verticalAlign: 'middle', marginRight: '6px' }} />
+                  Admin Control
+                </Link>
               )}
 
               <Link
@@ -105,11 +103,11 @@ const Navbar = () => {
                     {getInitials(user?.name)}
                   </div>
                   <div style={{ textAlign: 'left', lineHeight: 1.2 }}>
-                    <div style={{ fontSize: '0.82rem', fontWeight: '600', color: '#fff' }}>
+                    <div style={{ fontSize: '0.82rem', fontWeight: '600', color: 'var(--text-main)' }}>
                       {user?.name?.split(' ')[0]}
                     </div>
                     <span className={`badge ${isAdmin ? 'badge-admin' : 'badge-customer'}`} style={{ padding: '0 0.4rem', fontSize: '0.65rem' }}>
-                      {isAdmin ? 'Cafeteria Admin' : 'Customer'}
+                      {isAdmin ? 'Admin' : 'Customer'}
                     </span>
                   </div>
                 </Link>
@@ -120,7 +118,7 @@ const Navbar = () => {
                   title="Sign out of account"
                   style={{ gap: '0.35rem', padding: '0.45rem 0.75rem' }}
                 >
-                  <LogOut size={15} />
+                  <LogOut size={14} />
                   <span>Logout</span>
                 </button>
               </div>

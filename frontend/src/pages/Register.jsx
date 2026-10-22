@@ -107,17 +107,16 @@ const Register = () => {
             display: 'inline-flex',
             alignItems: 'center',
             justifyContent: 'center',
-            width: '56px',
-            height: '56px',
-            borderRadius: '16px',
-            background: 'linear-gradient(135deg, rgba(234, 88, 12, 0.2), rgba(234, 88, 12, 0.05))',
-            color: 'var(--primary)',
+            width: '48px',
+            height: '48px',
+            borderRadius: '12px',
+            background: '#0F0F11',
+            color: '#FFFFFF',
             marginBottom: '1rem',
-            border: '1px solid rgba(234, 88, 12, 0.25)'
           }}>
-            <UserPlus size={28} />
+            <UserPlus size={22} />
           </div>
-          <h1 style={{ fontSize: '1.75rem', marginBottom: '0.4rem' }}>Create Account</h1>
+          <h1 style={{ fontSize: '1.75rem', marginBottom: '0.4rem', fontFamily: 'var(--font-display)' }}>Create Account</h1>
           <p style={{ color: 'var(--text-muted)', fontSize: '0.9rem' }}>
             Join The Lunchroom to order food and manage services
           </p>
@@ -129,11 +128,11 @@ const Register = () => {
             display: 'flex',
             alignItems: 'center',
             gap: '0.65rem',
-            background: 'var(--danger-light)',
-            border: '1px solid rgba(239, 68, 68, 0.3)',
+            background: 'var(--badge-danger-bg)',
+            border: '1px solid var(--badge-danger-border)',
             borderRadius: 'var(--radius-sm)',
             padding: '0.75rem 1rem',
-            color: '#f87171',
+            color: 'var(--badge-danger-text)',
             fontSize: '0.86rem',
             marginBottom: '1.5rem'
           }}>
@@ -152,20 +151,21 @@ const Register = () => {
               <div
                 onClick={() => handleRoleSelect('customer')}
                 style={{
-                  padding: '1rem 0.75rem',
+                  padding: '1.1rem 0.75rem',
                   borderRadius: 'var(--radius-sm)',
-                  border: `2px solid ${formData.role === 'customer' ? 'var(--secondary)' : 'var(--border-subtle)'}`,
-                  background: formData.role === 'customer' ? 'var(--secondary-light)' : 'var(--surface-input)',
+                  border: formData.role === 'customer' ? '2px solid #2563EB' : '1px solid var(--border-subtle)',
+                  background: formData.role === 'customer' ? '#EFF6FF' : '#FFFFFF',
                   cursor: 'pointer',
                   textAlign: 'center',
+                  boxShadow: 'var(--shadow-sm)',
                   transition: 'all var(--transition-fast)'
                 }}
               >
-                <ShoppingBag size={22} color={formData.role === 'customer' ? '#38bdf8' : '#94a3b8'} style={{ margin: '0 auto 0.4rem' }} />
-                <div style={{ fontWeight: '700', fontSize: '0.9rem', color: formData.role === 'customer' ? '#38bdf8' : '#ffffff' }}>
+                <ShoppingBag size={22} color={formData.role === 'customer' ? '#1D4ED8' : '#71717A'} style={{ margin: '0 auto 0.4rem' }} />
+                <div style={{ fontWeight: '700', fontSize: '0.9rem', color: formData.role === 'customer' ? '#1D4ED8' : 'var(--text-main)' }}>
                   Customer
                 </div>
-                <div style={{ fontSize: '0.75rem', color: 'var(--text-dim)', marginTop: '2px' }}>
+                <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)', marginTop: '2px' }}>
                   Campus Patron / Customer
                 </div>
               </div>
@@ -173,20 +173,21 @@ const Register = () => {
               <div
                 onClick={() => handleRoleSelect('cafeteria_admin')}
                 style={{
-                  padding: '1rem 0.75rem',
+                  padding: '1.1rem 0.75rem',
                   borderRadius: 'var(--radius-sm)',
-                  border: `2px solid ${formData.role === 'cafeteria_admin' ? 'var(--admin-accent)' : 'var(--border-subtle)'}`,
-                  background: formData.role === 'cafeteria_admin' ? 'var(--admin-light)' : 'var(--surface-input)',
+                  border: formData.role === 'cafeteria_admin' ? '2px solid #7E22CE' : '1px solid var(--border-subtle)',
+                  background: formData.role === 'cafeteria_admin' ? '#FAF5FF' : '#FFFFFF',
                   cursor: 'pointer',
                   textAlign: 'center',
+                  boxShadow: 'var(--shadow-sm)',
                   transition: 'all var(--transition-fast)'
                 }}
               >
-                <ShieldCheck size={22} color={formData.role === 'cafeteria_admin' ? '#c084fc' : '#94a3b8'} style={{ margin: '0 auto 0.4rem' }} />
-                <div style={{ fontWeight: '700', fontSize: '0.9rem', color: formData.role === 'cafeteria_admin' ? '#c084fc' : '#ffffff' }}>
+                <ShieldCheck size={22} color={formData.role === 'cafeteria_admin' ? '#7E22CE' : '#71717A'} style={{ margin: '0 auto 0.4rem' }} />
+                <div style={{ fontWeight: '700', fontSize: '0.9rem', color: formData.role === 'cafeteria_admin' ? '#7E22CE' : 'var(--text-main)' }}>
                   Cafeteria Admin
                 </div>
-                <div style={{ fontSize: '0.75rem', color: 'var(--text-dim)', marginTop: '2px' }}>
+                <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)', marginTop: '2px' }}>
                   Staff & Management
                 </div>
               </div>
@@ -196,25 +197,25 @@ const Register = () => {
           {/* Admin Secret Key Field (Conditional) */}
           {formData.role === 'cafeteria_admin' && (
             <div className="form-group animate-fade-in" style={{
-              background: 'var(--admin-light)',
+              background: '#FAF5FF',
               padding: '1rem',
               borderRadius: 'var(--radius-sm)',
-              border: '1px solid rgba(139, 92, 246, 0.3)'
+              border: '1px solid #E9D5FF'
             }}>
-              <label className="form-label" htmlFor="reg-admin-key" style={{ color: '#d8b4fe' }}>
+              <label className="form-label" htmlFor="reg-admin-key" style={{ color: '#6B21A8' }}>
                 <span>Staff Security Passkey</span>
-                <span style={{ fontSize: '0.75rem', opacity: 0.8 }}>Default: CAFE_ADMIN_2026</span>
+                <span style={{ fontSize: '0.75rem', fontFamily: 'var(--font-mono)' }}>Default: CAFE_ADMIN_2026</span>
               </label>
               <div className="input-wrapper">
                 <span className="input-icon">
-                  <KeyRound size={17} color="#c084fc" />
+                  <KeyRound size={17} color="#7E22CE" />
                 </span>
                 <input
                   id="reg-admin-key"
                   name="adminSecretKey"
                   type="text"
                   className="custom-input"
-                  style={{ borderColor: 'rgba(139, 92, 246, 0.4)' }}
+                  style={{ borderColor: '#D8B4FE', background: '#FFFFFF' }}
                   placeholder="Enter staff security key"
                   value={formData.adminSecretKey}
                   onChange={handleChange}

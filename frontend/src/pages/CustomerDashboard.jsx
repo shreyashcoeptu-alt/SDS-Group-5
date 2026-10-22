@@ -27,8 +27,8 @@ const CustomerDashboard = () => {
       <div className="glass-card" style={{
         padding: '2.5rem',
         marginBottom: '2rem',
-        background: 'linear-gradient(135deg, rgba(234, 88, 12, 0.12) 0%, rgba(2, 132, 199, 0.08) 100%), #131a29',
-        border: '1px solid rgba(234, 88, 12, 0.25)',
+        background: '#FFFFFF',
+        border: '1px solid var(--border-subtle)',
         display: 'flex',
         flexWrap: 'wrap',
         justifyContent: 'space-between',
@@ -44,7 +44,7 @@ const CustomerDashboard = () => {
               <CheckCircle2 size={13} /> Account {user?.status || 'Active'}
             </span>
           </div>
-          <h1 style={{ fontSize: '2.25rem', marginBottom: '0.5rem' }}>
+          <h1 style={{ fontSize: '2.25rem', marginBottom: '0.5rem', fontFamily: 'var(--font-display)', color: 'var(--text-main)' }}>
             Welcome to The Lunchroom, {user?.name}! 👋
           </h1>
           <p style={{ color: 'var(--text-muted)', fontSize: '0.95rem', maxWidth: '600px' }}>
@@ -68,10 +68,10 @@ const CustomerDashboard = () => {
           </div>
           <div className="stat-info">
             <div className="stat-label">Full Name</div>
-            <div style={{ fontSize: '1.25rem', fontWeight: '700', color: '#fff' }}>
+            <div style={{ fontSize: '1.25rem', fontWeight: '700', color: 'var(--text-main)', fontFamily: 'var(--font-display)' }}>
               {user?.name}
             </div>
-            <div style={{ fontSize: '0.78rem', color: 'var(--text-dim)', marginTop: '2px' }}>
+            <div style={{ fontSize: '0.78rem', color: 'var(--text-dim)', marginTop: '2px', fontFamily: 'var(--font-mono)' }}>
               Account Verified
             </div>
           </div>
@@ -83,10 +83,10 @@ const CustomerDashboard = () => {
           </div>
           <div className="stat-info">
             <div className="stat-label">Registered Email</div>
-            <div style={{ fontSize: '1.05rem', fontWeight: '600', color: '#fff', wordBreak: 'break-all' }}>
+            <div style={{ fontSize: '1.05rem', fontWeight: '600', color: 'var(--text-main)', wordBreak: 'break-all' }}>
               {user?.email}
             </div>
-            <div style={{ fontSize: '0.78rem', color: '#38bdf8', marginTop: '2px' }}>
+            <div style={{ fontSize: '0.78rem', color: '#1D4ED8', marginTop: '2px', fontFamily: 'var(--font-mono)' }}>
               Secure JWT Session
             </div>
           </div>
@@ -98,10 +98,10 @@ const CustomerDashboard = () => {
           </div>
           <div className="stat-info">
             <div className="stat-label">Phone Contact</div>
-            <div style={{ fontSize: '1.15rem', fontWeight: '600', color: '#fff' }}>
+            <div style={{ fontSize: '1.15rem', fontWeight: '600', color: 'var(--text-main)' }}>
               {user?.phone || 'Not provided'}
             </div>
-            <div style={{ fontSize: '0.78rem', color: 'var(--text-dim)', marginTop: '2px' }}>
+            <div style={{ fontSize: '0.78rem', color: 'var(--text-dim)', marginTop: '2px', fontFamily: 'var(--font-mono)' }}>
               SMS Notifications
             </div>
           </div>
@@ -113,10 +113,10 @@ const CustomerDashboard = () => {
           </div>
           <div className="stat-info">
             <div className="stat-label">Member Since</div>
-            <div style={{ fontSize: '1.15rem', fontWeight: '600', color: '#fff' }}>
+            <div style={{ fontSize: '1.15rem', fontWeight: '600', color: 'var(--text-main)' }}>
               {formattedDate}
             </div>
-            <div style={{ fontSize: '0.78rem', color: 'var(--text-dim)', marginTop: '2px' }}>
+            <div style={{ fontSize: '0.78rem', color: 'var(--text-dim)', marginTop: '2px', fontFamily: 'var(--font-mono)' }}>
               The Lunchroom
             </div>
           </div>

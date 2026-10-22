@@ -130,8 +130,8 @@ const AdminDashboard = () => {
       <div className="glass-card" style={{
         padding: '2.5rem',
         marginBottom: '2rem',
-        background: 'linear-gradient(135deg, rgba(139, 92, 246, 0.12) 0%, rgba(234, 88, 12, 0.08) 100%), #131a29',
-        border: '1px solid rgba(139, 92, 246, 0.25)',
+        background: '#FFFFFF',
+        border: '1px solid var(--border-subtle)',
         display: 'flex',
         flexWrap: 'wrap',
         justifyContent: 'space-between',
@@ -147,7 +147,7 @@ const AdminDashboard = () => {
               <Activity size={13} /> System Administration
             </span>
           </div>
-          <h1 style={{ fontSize: '2.25rem', marginBottom: '0.5rem' }}>
+          <h1 style={{ fontSize: '2.25rem', marginBottom: '0.5rem', fontFamily: 'var(--font-display)', color: 'var(--text-main)' }}>
             The Lunchroom Management Console
           </h1>
           <p style={{ color: 'var(--text-muted)', fontSize: '0.95rem', maxWidth: '650px' }}>
@@ -329,15 +329,15 @@ const AdminDashboard = () => {
                               {u.name?.substring(0, 2).toUpperCase()}
                             </div>
                             <div>
-                              <div style={{ fontWeight: '600', color: '#fff', display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
+                              <div style={{ fontWeight: '600', color: 'var(--text-main)', display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
                                 {u.name}
                                 {isSelf && (
-                                  <span style={{ fontSize: '0.68rem', color: '#fb923c', background: 'var(--primary-light)', padding: '1px 6px', borderRadius: '4px' }}>
+                                  <span style={{ fontSize: '0.68rem', color: '#1D4ED8', background: '#EFF6FF', border: '1px solid #BFDBFE', padding: '1px 6px', borderRadius: '4px', fontFamily: 'var(--font-mono)' }}>
                                     (You)
                                   </span>
                                 )}
                               </div>
-                              <div style={{ fontSize: '0.78rem', color: 'var(--text-dim)' }}>
+                              <div style={{ fontSize: '0.78rem', color: 'var(--text-dim)', fontFamily: 'var(--font-mono)' }}>
                                 ID: {u._id}
                               </div>
                             </div>
@@ -346,7 +346,7 @@ const AdminDashboard = () => {
 
                         {/* Email & Phone */}
                         <td>
-                          <div style={{ color: '#fff', fontSize: '0.88rem' }}>{u.email}</div>
+                          <div style={{ color: 'var(--text-main)', fontSize: '0.88rem' }}>{u.email}</div>
                           <div style={{ fontSize: '0.78rem', color: 'var(--text-muted)' }}>
                             {u.phone || 'No phone'}
                           </div>

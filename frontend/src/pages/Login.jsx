@@ -83,17 +83,16 @@ const Login = () => {
             display: 'inline-flex',
             alignItems: 'center',
             justifyContent: 'center',
-            width: '56px',
-            height: '56px',
-            borderRadius: '16px',
-            background: 'linear-gradient(135deg, rgba(234, 88, 12, 0.2), rgba(234, 88, 12, 0.05))',
-            color: 'var(--primary)',
+            width: '48px',
+            height: '48px',
+            borderRadius: '12px',
+            background: '#0F0F11',
+            color: '#FFFFFF',
             marginBottom: '1rem',
-            border: '1px solid rgba(234, 88, 12, 0.25)'
           }}>
-            <LogIn size={28} />
+            <LogIn size={22} />
           </div>
-          <h1 style={{ fontSize: '1.75rem', marginBottom: '0.4rem' }}>Welcome Back</h1>
+          <h1 style={{ fontSize: '1.75rem', marginBottom: '0.4rem', fontFamily: 'var(--font-display)' }}>Welcome Back</h1>
           <p style={{ color: 'var(--text-muted)', fontSize: '0.9rem' }}>
             Sign in to access your cafeteria account
           </p>
@@ -102,7 +101,7 @@ const Login = () => {
         {/* Quick Demo Credentials Box */}
         <div className="demo-box">
           <div className="demo-title">
-            <Sparkles size={14} /> Quick Demo Logins:
+            <Sparkles size={13} /> Quick Demo Logins:
           </div>
           <div className="demo-buttons-row">
             <button
@@ -110,16 +109,16 @@ const Login = () => {
               className="demo-chip"
               onClick={() => fillDemo('customer')}
             >
-              <UserCheck size={14} color="#38bdf8" />
-              Customer Account
+              <UserCheck size={14} color="#1D4ED8" />
+              <span>Customer Account</span>
             </button>
             <button
               type="button"
               className="demo-chip"
               onClick={() => fillDemo('admin')}
             >
-              <ShieldCheck size={14} color="#c084fc" />
-              Cafeteria Admin
+              <ShieldCheck size={14} color="#7E22CE" />
+              <span>Cafeteria Admin</span>
             </button>
           </div>
         </div>
@@ -130,11 +129,11 @@ const Login = () => {
             display: 'flex',
             alignItems: 'center',
             gap: '0.65rem',
-            background: 'var(--danger-light)',
-            border: '1px solid rgba(239, 68, 68, 0.3)',
+            background: 'var(--badge-danger-bg)',
+            border: '1px solid var(--badge-danger-border)',
             borderRadius: 'var(--radius-sm)',
             padding: '0.75rem 1rem',
-            color: '#f87171',
+            color: 'var(--badge-danger-text)',
             fontSize: '0.86rem',
             marginBottom: '1.5rem'
           }}>
