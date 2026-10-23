@@ -45,3 +45,7 @@ tmp/
 
 __pycache__/
 *.pyc
+# Local agent skills
+.agents/
+.agent/
+tmp/
