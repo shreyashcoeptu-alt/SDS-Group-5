@@ -1,3 +1,4 @@
+
 const fs = require('fs');
 const path = require('path');
 const dotenv = require('dotenv');
@@ -16,11 +17,6 @@ const BATCH_FILES = [
   { file: 'batch-2030.json', batchYear: '2030' },
 ];
 
-/**
- * Parses college email into studentId, department, and domain.
- * Example: 'chittorarp23.civil@coeptech.ac.in'
- * -> studentId: 'chittorarp23', department: 'civil', domain: 'coeptech.ac.in'
- */
 function parseStudentEmail(email) {
   const cleanEmail = (email || '').toLowerCase().trim();
   const parts = cleanEmail.split('@');
@@ -47,15 +43,13 @@ async function seedBatchStudents() {
   console.log('====================================================\n');
 
   try {
-    // Connect to MongoDB Atlas
+    // Connect using the URI configured in backend/.env
     const conn = await connectDB();
     console.log(`[Database] Connected to: ${conn.connection.name}\n`);
 
-    // Pre-compute standard password hash to avoid slow repeated hashing of 4,000+ entries
     console.log('[Setup] Pre-computing default student password hash...');
     const salt = await bcrypt.genSalt(10);
     const defaultHashedPassword = await bcrypt.hash('coep@123', salt);
-
 
     const candidates = [
       path.join(__dirname, '../data'),
@@ -64,10 +58,11 @@ async function seedBatchStudents() {
     ];
 
     const studentMap = new Map();
-    let totalLoaded = 0; //no of records loaded from all files
+    let totalLoaded = 0;
 
     for (const { file, batchYear } of BATCH_FILES) {
       let resolvedPath = null;
+
       for (const dir of candidates) {
         const p = path.join(dir, file);
         if (fs.existsSync(p)) {
@@ -83,10 +78,12 @@ async function seedBatchStudents() {
 
       const raw = fs.readFileSync(resolvedPath, 'utf8');
       const students = JSON.parse(raw);
+
       console.log(`[Parse] Found ${students.length} records in ${file} (Batch ${batchYear})`);
 
       students.forEach(s => {
         const parsed = parseStudentEmail(s.email);
+
         if (parsed.email && !studentMap.has(parsed.email)) {
           studentMap.set(parsed.email, {
             name: (s.name || '').trim(),
@@ -107,8 +104,8 @@ async function seedBatchStudents() {
     console.log(`\n[Summary] Total records across all batches: ${totalLoaded}`);
     console.log(`[Summary] Unique students to upsert into 'users': ${studentMap.size}`);
 
-    // Convert map to bulk upsert operations
     const bulkOps = [];
+
     for (const student of studentMap.values()) {
       bulkOps.push({
         updateOne: {
@@ -133,7 +130,7 @@ async function seedBatchStudents() {
       });
     }
 
-    // Also ensure demo admin and customer accounts exist for cafeteria testing
+    // Demo admin and customer accounts
     const adminHashed = await bcrypt.hash('Admin@123', salt);
     const customerHashed = await bcrypt.hash('Customer@123', salt);
 
@@ -149,7 +146,10 @@ async function seedBatchStudents() {
               status: 'active',
               phone: '+1 (555) 019-2834',
             },
-            $setOnInsert: { password: adminHashed, createdAt: new Date() },
+            $setOnInsert: {
+              password: adminHashed,
+              createdAt: new Date(),
+            },
           },
           upsert: true,
         },
@@ -166,41 +166,46 @@ async function seedBatchStudents() {
               status: 'active',
               phone: '+1 (555) 349-8812',
             },
-            $setOnInsert: { password: customerHashed, createdAt: new Date() },
+            $setOnInsert: {
+              password: customerHashed,
+              createdAt: new Date(),
+            },
           },
           upsert: true,
         },
       }
     );
 
-    // Execute bulk write in chunks of 1000
     const CHUNK_SIZE = 1000;
     let processed = 0;
-    console.log(`\n[Database] Seeding into 'Lunchroom.users' in chunks of ${CHUNK_SIZE}...`);
+
+    console.log(`\n[Database] Seeding into 'TheLunchroom.users' in chunks of ${CHUNK_SIZE}...`);
 
     for (let i = 0; i < bulkOps.length; i += CHUNK_SIZE) {
       const chunk = bulkOps.slice(i, i + CHUNK_SIZE);
       const res = await User.bulkWrite(chunk, { ordered: false });
+
       processed += chunk.length;
+
       console.log(
         `[Progress] Processed ${processed}/${bulkOps.length} ops (Inserted: ${res.upsertedCount}, Modified: ${res.modifiedCount})`
       );
     }
 
     const totalInDB = await User.countDocuments();
-    console.log(`\n====================================================`);
-    console.log(`✅ Seeding Complete!`);
+
+    console.log('\n====================================================');
+    console.log('✅ Seeding Complete!');
     console.log(`   Total documents in 'users' collection: ${totalInDB}`);
-    console.log(`====================================================\n`);
+    console.log('====================================================\n');
 
     console.log('📌 Verification Details:');
     console.log('- Students can authenticate via POST /api/login or POST /api/auth/login');
-    console.log('- Example Request Payload:');
-    console.log('  {');
-    console.log('    "email": "chittorarp23.civil@coeptech.ac.in",');
-    console.log('    "studentId": "chittorarp23"');
-    console.log('  }');
-    console.log('  OR with password "coep@123"\n');
+    console.log('- Default student password: coep@123');
+    console.log('- Demo admin email: admin@cafeteria.com');
+    console.log('- Demo admin password: Admin@123');
+    console.log('- Demo customer email: customer@student.com');
+    console.log('- Demo customer password: Customer@123');
 
     process.exit(0);
   } catch (error) {
