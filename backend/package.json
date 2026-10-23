@@ -6,7 +6,9 @@
   "scripts": {
     "start": "node server.js",
     "dev": "node server.js",
-    "seed": "node scripts/seedUsers.js",
+    "seed": "node scripts/seedBatchStudents.js",
+    "seed:batches": "node scripts/seedBatchStudents.js",
+    "seed:users": "node scripts/seedUsers.js",
     "test": "node verify-all.js"
   },
   "keywords": [

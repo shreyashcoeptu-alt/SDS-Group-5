@@ -10,15 +10,18 @@ try {
 
 const connectDB = async () => {
   try {
-    const conn = await mongoose.connect(process.env.MONGODB_URI, {
-      serverSelectionTimeoutMS: 8000,
+    const mongoURI = process.env.MONGODB_URI || process.env.MONGO_URI;
+    if (!mongoURI) {
+      throw new Error('MongoDB connection URI is missing from .env file');
+    }
+    const conn = await mongoose.connect(mongoURI, {
+      serverSelectionTimeoutMS: 10000,
     });
     console.log(`[Database] MongoDB Connected: ${conn.connection.host} / ${conn.connection.name}`);
     return conn;
   } catch (error) {
     console.error(`[Database Error] Connection failed: ${error.message}`);
-    console.log('[Database] Retrying connection in 5 seconds...');
-    setTimeout(connectDB, 5000);
+    throw error;
   }
 };
 

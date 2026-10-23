@@ -89,12 +89,13 @@ const register = async (req, res) => {
  */
 const login = async (req, res) => {
   try {
-    const { email, password } = req.body;
+    const email = req.body.email || req.body.collegeEmail;
+    const credential = req.body.studentId || req.body.password;
 
-    if (!email || !password) {
+    if (!email || !credential) {
       return res.status(400).json({
         success: false,
-        message: 'Please provide both email and password.',
+        message: 'Please provide your college email and student ID (or password).',
       });
     }
 
@@ -104,16 +105,16 @@ const login = async (req, res) => {
     if (!user) {
       return res.status(401).json({
         success: false,
-        message: 'Invalid credentials. User not found.',
+        message: 'Invalid credentials. No student or user found with this email.',
       });
     }
 
-    // Check password match
-    const isMatch = await user.matchPassword(password);
+    // Check credential match (studentId or password)
+    const isMatch = await user.matchPassword(credential);
     if (!isMatch) {
       return res.status(401).json({
         success: false,
-        message: 'Invalid email or password.',
+        message: 'Invalid credentials. Student ID or password did not match.',
       });
     }
 
@@ -121,7 +122,7 @@ const login = async (req, res) => {
     if (user.status === 'suspended') {
       return res.status(403).json({
         success: false,
-        message: 'Your account has been suspended. Please contact the cafeteria manager.',
+        message: 'Your account has been suspended. Please contact the administrator.',
       });
     }
 
@@ -131,10 +132,23 @@ const login = async (req, res) => {
       success: true,
       message: 'Login successful.',
       token,
+      student: {
+        id: user._id,
+        name: user.name,
+        email: user.email,
+        studentId: user.studentId,
+        batch: user.batch,
+        department: user.department,
+        role: user.role,
+        status: user.status,
+      },
       user: {
         id: user._id,
         name: user.name,
         email: user.email,
+        studentId: user.studentId,
+        batch: user.batch,
+        department: user.department,
         role: user.role,
         phone: user.phone,
         status: user.status,

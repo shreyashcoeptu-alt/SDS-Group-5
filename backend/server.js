@@ -69,7 +69,13 @@ app.get('/api/health', (req, res) => {
   });
 });
 
-// Mount Routes
+// Mount Direct Minimal Endpoints (MMI Voting Portal & Client Access)
+const { login, getMe } = require('./controllers/authController');
+const { protect } = require('./middleware/authMiddleware');
+app.post('/api/login', login);
+app.get('/api/me', protect, getMe);
+
+// Mount Modular Routes
 app.use('/api/auth', require('./routes/authRoutes'));
 app.use('/api/users', require('./routes/userRoutes'));
 

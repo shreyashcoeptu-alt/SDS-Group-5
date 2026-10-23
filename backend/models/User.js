@@ -7,7 +7,7 @@ const userSchema = new mongoose.Schema(
       type: String,
       required: [true, 'Please provide a full name'],
       trim: true,
-      maxlength: [60, 'Name cannot exceed 60 characters'],
+      maxlength: [120, 'Name cannot exceed 120 characters'],
     },
     email: {
       type: String,
@@ -15,24 +15,35 @@ const userSchema = new mongoose.Schema(
       unique: true,
       lowercase: true,
       trim: true,
-      match: [
-        /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,})+$/,
-        'Please provide a valid email address',
-      ],
+    },
+    studentId: {
+      type: String,
+      trim: true,
+      index: true,
+      default: '',
+    },
+    batch: {
+      type: String,
+      trim: true,
+      default: '',
+    },
+    department: {
+      type: String,
+      trim: true,
+      default: '',
     },
     password: {
       type: String,
-      required: [true, 'Please provide a password'],
-      minlength: [6, 'Password must be at least 6 characters long'],
+      minlength: [4, 'Password must be at least 4 characters long'],
       select: false, // Prevents password from being returned in normal queries
     },
     role: {
       type: String,
       enum: {
-        values: ['customer', 'cafeteria_admin'],
-        message: '{VALUE} is not a valid role (allowed: customer, cafeteria_admin)',
+        values: ['customer', 'cafeteria_admin', 'student'],
+        message: '{VALUE} is not a valid role',
       },
-      default: 'customer',
+      default: 'student',
     },
     phone: {
       type: String,
@@ -56,17 +67,40 @@ const userSchema = new mongoose.Schema(
 
 // Hash password before saving if modified
 userSchema.pre('save', async function () {
-  if (!this.isModified('password')) {
+  if (!this.password || !this.isModified('password')) {
     return;
   }
 
-  const salt = await bcrypt.genSalt(10);
-  this.password = await bcrypt.hash(this.password, salt);
+  // Only hash if not already bcrypt-hashed
+  if (!this.password.startsWith('$2a$') && !this.password.startsWith('$2b$')) {
+    const salt = await bcrypt.genSalt(10);
+    this.password = await bcrypt.hash(this.password, salt);
+  }
 });
 
-// Compare entered password with stored hashed password
-userSchema.methods.matchPassword = async function (enteredPassword) {
-  return await bcrypt.compare(enteredPassword, this.password);
+// Compare entered credential with stored hashed password or student ID
+userSchema.methods.matchPassword = async function (enteredCredential) {
+  if (!enteredCredential) return false;
+  
+  // Direct studentId or email-prefix match
+  if (this.studentId && this.studentId.toLowerCase() === enteredCredential.toLowerCase().trim()) {
+    return true;
+  }
+  const emailPrefix = this.email ? this.email.split('@')[0].toLowerCase() : '';
+  if (emailPrefix && emailPrefix === enteredCredential.toLowerCase().trim()) {
+    return true;
+  }
+
+  // Bcrypt password comparison if password exists
+  if (this.password) {
+    try {
+      return await bcrypt.compare(enteredCredential, this.password);
+    } catch {
+      return false;
+    }
+  }
+
+  return false;
 };
 
 // Omit password when transforming to JSON

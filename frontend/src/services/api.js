@@ -46,10 +46,14 @@ const request = async (endpoint, options = {}) => {
 };
 
 export const authAPI = {
-  login: (email, password) =>
-    request('/auth/login', {
+  login: (email, credential) =>
+    request('/login', {
       method: 'POST',
-      body: JSON.stringify({ email, password }),
+      body: JSON.stringify({
+        email,
+        studentId: credential,
+        password: credential,
+      }),
     }),
 
   register: (userData) =>

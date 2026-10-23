@@ -59,7 +59,11 @@ const Login = () => {
 
   const fillDemo = (role) => {
     setErrorMessage('');
-    if (role === 'customer') {
+    if (role === 'student') {
+      setEmail('chittorarp23.civil@coeptech.ac.in');
+      setPassword('chittorarp23');
+      showToast('Loaded Demo Student (Batch 2027) credentials', 'info');
+    } else if (role === 'customer') {
       setEmail('customer@student.com');
       setPassword('Customer@123');
       showToast('Loaded Demo Customer credentials', 'info');
@@ -94,7 +98,7 @@ const Login = () => {
           </div>
           <h1 style={{ fontSize: '1.75rem', marginBottom: '0.4rem', fontFamily: 'var(--font-display)' }}>Welcome Back</h1>
           <p style={{ color: 'var(--text-muted)', fontSize: '0.9rem' }}>
-            Sign in to access your cafeteria account
+            Sign in with your College Email & Student ID or Password
           </p>
         </div>
 
@@ -107,10 +111,18 @@ const Login = () => {
             <button
               type="button"
               className="demo-chip"
+              onClick={() => fillDemo('student')}
+            >
+              <UserCheck size={14} color="#059669" />
+              <span>COEP Student (Batch)</span>
+            </button>
+            <button
+              type="button"
+              className="demo-chip"
               onClick={() => fillDemo('customer')}
             >
               <UserCheck size={14} color="#1D4ED8" />
-              <span>Customer Account</span>
+              <span>Customer</span>
             </button>
             <button
               type="button"
@@ -118,7 +130,7 @@ const Login = () => {
               onClick={() => fillDemo('admin')}
             >
               <ShieldCheck size={14} color="#7E22CE" />
-              <span>Cafeteria Admin</span>
+              <span>Admin</span>
             </button>
           </div>
         </div>
@@ -167,7 +179,7 @@ const Login = () => {
 
           <div className="form-group">
             <label className="form-label" htmlFor="login-password">
-              Password
+              Password or Student ID
             </label>
             <div className="input-wrapper">
               <span className="input-icon">
@@ -177,7 +189,7 @@ const Login = () => {
                 id="login-password"
                 type={showPassword ? 'text' : 'password'}
                 className="custom-input"
-                placeholder="••••••••"
+                placeholder="•••••••• or Student ID (e.g. chittorarp23)"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 required

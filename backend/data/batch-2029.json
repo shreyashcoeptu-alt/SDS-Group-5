@@ -1,0 +1,5446 @@
+[
+  {
+    "name": "AARTI SHIVAJI KAUTKAR",
+    "email": "shivajika25.elec@coeptech.ac.in"
+  },
+  {
+    "name": "AARYAN MAKRAND JOSHI",
+    "email": "makrandja25.elec@coeptech.ac.in"
+  },
+  {
+    "name": "AASHISH KHARADE",
+    "email": "kharadeak25.elec@coeptech.ac.in"
+  },
+  {
+    "name": "ABHIJIT ANIL KHARE",
+    "email": "khareaa25.elec@coeptech.ac.in"
+  },
+  {
+    "name": "ABHINAV GAGAN WADHWA",
+    "email": "wadhwaag25.elec@coeptech.ac.in"
+  },
+  {
+    "name": "ABHINAV KOKATE",
+    "email": "kokatea25.elec@coeptech.ac.in"
+  },
+  {
+    "name": "ADITYA BHARDWAJ",
+    "email": "bhardwajak25.elec@coeptech.ac.in"
+  },
+  {
+    "name": "ADITYA DHURVESH BADOLE",
+    "email": "badolead25.elec@coeptech.ac.in"
+  },
+  {
+    "name": "ADITYA MAHADEO GARAD",
+    "email": "garadam25.elec@coeptech.ac.in"
+  },
+  {
+    "name": "ADITYA SUDHIR BHOKARE",
+    "email": "bhokareas25.elec@coeptech.ac.in"
+  },
+  {
+    "name": "ADVEY AMAR BHANDARWAR",
+    "email": "bhandarwaraa25.elec@coeptech.ac.in"
+  },
+  {
+    "name": "AJINKYA BIBHISHAN BURLE",
+    "email": "burleab25.elec@coeptech.ac.in"
+  },
+  {
+    "name": "AKSHADA SANDEEP PARALKAR",
+    "email": "paralkaras25.elec@coeptech.ac.in"
+  },
+  {
+    "name": "AMAN VINAYAK NIRMAL",
+    "email": "nirmalav25.elec@coeptech.ac.in"
+  },
+  {
+    "name": "ANEESH PARESH AVACHAT",
+    "email": "avachataa25.elec@coeptech.ac.in"
+  },
+  {
+    "name": "ANJALI KIRAN APARADH",
+    "email": "aparadhak25.elec@coeptech.ac.in"
+  },
+  {
+    "name": "ANSH DIPAK NERKAR",
+    "email": "nerkarad25.elec@coeptech.ac.in"
+  },
+  {
+    "name": "ANTARA SANTOSH KOKATE",
+    "email": "kokateas25.elec@coeptech.ac.in"
+  },
+  {
+    "name": "ANVAY SHRIRANG TULPULE",
+    "email": "tulpuleas25.elec@coeptech.ac.in"
+  },
+  {
+    "name": "ARIHANT LALIT LODHA",
+    "email": "lalitla25.elec@coeptech.ac.in"
+  },
+  {
+    "name": "ARJUN HEMANT KORLEKAR",
+    "email": "hemantka25.elec@coeptech.ac.in"
+  },
+  {
+    "name": "ARYAN ATUL GADO",
+    "email": "gadoaa25.elec@coeptech.ac.in"
+  },
+  {
+    "name": "ARYAN RAVINDRA GHORPADE",
+    "email": "ghorpadear25.elec@coeptech.ac.in"
+  },
+  {
+    "name": "ARYAN VIVEK JATHAR",
+    "email": "jatharav25.elec@coeptech.ac.in"
+  },
+  {
+    "name": "ASHIKA ANIL",
+    "email": "anila25.elec@coeptech.ac.in"
+  },
+  {
+    "name": "ATHARVA SHARMA",
+    "email": "sharmaa25.elec@coeptech.ac.in"
+  },
+  {
+    "name": "ATHARVA YOURAJ GORLE",
+    "email": "gorleay25.elec@coeptech.ac.in"
+  },
+  {
+    "name": "AVISHKAR SANJAY KADAM",
+    "email": "sanjayka25.elec@coeptech.ac.in"
+  },
+  {
+    "name": "AYUSH CHANDAN DUDHPACHARE",
+    "email": "dudhpachareac25.elec@coeptech.ac.in"
+  },
+  {
+    "name": "BHUVAN NILESH GANDHI",
+    "email": "gandhibn25.elec@coeptech.ac.in"
+  },
+  {
+    "name": "CHAITANYA RAJESH SHAH",
+    "email": "shahcr25.elec@coeptech.ac.in"
+  },
+  {
+    "name": "CHARVI VIJAYKUMAR MULAY",
+    "email": "mulaycv25.elec@coeptech.ac.in"
+  },
+  {
+    "name": "CHETAN KIRAN KHAMKAR",
+    "email": "kirankc25.elec@coeptech.ac.in"
+  },
+  {
+    "name": "CHINMAY YOGESH TULJAPURKAR",
+    "email": "tuljapurkarcy25.elec@coeptech.ac.in"
+  },
+  {
+    "name": "DANISH KOUL",
+    "email": "kould25.elec@coeptech.ac.in"
+  },
+  {
+    "name": "DEV KUMAR BANSAL",
+    "email": "bansaldk25.elec@coeptech.ac.in"
+  },
+  {
+    "name": "DEVANSH DWIVEDI",
+    "email": "dwivedid25.elec@coeptech.ac.in"
+  },
+  {
+    "name": "DIYA METHA",
+    "email": "methad25.elec@coeptech.ac.in"
+  },
+  {
+    "name": "DNYANESHWARI SURESH NARDE",
+    "email": "nardeds25.elec@coeptech.ac.in"
+  },
+  {
+    "name": "FAROOQUIMOHAMMAD UBAID JUBAIR",
+    "email": "ubaidfm25.elec@coeptech.ac.in"
+  },
+  {
+    "name": "GANESH ATRAM",
+    "email": "atramg25.elec@coeptech.ac.in"
+  },
+  {
+    "name": "HARSH PRAVIN GOSAVI",
+    "email": "gosavihp25.elec@coeptech.ac.in"
+  },
+  {
+    "name": "HARSHVARDHAN VIKRAM PAWAR",
+    "email": "pawarhv25.elec@coeptech.ac.in"
+  },
+  {
+    "name": "HARSHWARDHAN JAYRAM MUTHAL",
+    "email": "muthalhj25.elec@coeptech.ac.in"
+  },
+  {
+    "name": "HEMAMBIKA RAY CHAUDHURI",
+    "email": "chaudhurihr25.elec@coeptech.ac.in"
+  },
+  {
+    "name": "HIMANSHU RUSHIRAJ CHOUHAN",
+    "email": "chouhanhr25.elec@coeptech.ac.in"
+  },
+  {
+    "name": "ISHA UDAY TRIKUTKAR",
+    "email": "trikutkariu25.elec@coeptech.ac.in"
+  },
+  {
+    "name": "ISHWARI SATISH CHAVAN",
+    "email": "chavanis25.elec@coeptech.ac.in"
+  },
+  {
+    "name": "ISHWARI SHYAM KATKADE",
+    "email": "shyamki25.elec@coeptech.ac.in"
+  },
+  {
+    "name": "JANVI CHITTESHWAR DHOLE",
+    "email": "dholejc25.elec@coeptech.ac.in"
+  },
+  {
+    "name": "JASRAJ JEEVAN KALAGE",
+    "email": "jeevankj25.elec@coeptech.ac.in"
+  },
+  {
+    "name": "JAY SACHIN GIRDHAR",
+    "email": "girdharjs25.elec@coeptech.ac.in"
+  },
+  {
+    "name": "JYOTIRADITYA AMOL DESHPANDE",
+    "email": "deshpandeja25.elec@coeptech.ac.in"
+  },
+  {
+    "name": "KALP RAJESH CHAJED",
+    "email": "chajedkr25.elec@coeptech.ac.in"
+  },
+  {
+    "name": "KASHINATH VIJAYKUMAR HATTURE",
+    "email": "hatturekv25.elec@coeptech.ac.in"
+  },
+  {
+    "name": "KOUMUDI JOSHI",
+    "email": "joshik25.elec@coeptech.ac.in"
+  },
+  {
+    "name": "KRISHNA PITAMBAR DANGAL",
+    "email": "dangalkp25.elec@coeptech.ac.in"
+  },
+  {
+    "name": "KRISHNA RATHOD",
+    "email": "rathodk25.elec@coeptech.ac.in"
+  },
+  {
+    "name": "KRISHNA SUNIL BHOKARE",
+    "email": "bhokareks25.elec@coeptech.ac.in"
+  },
+  {
+    "name": "KRITARTH SANTOSH AMBATWAR",
+    "email": "ambatwarks25.elec@coeptech.ac.in"
+  },
+  {
+    "name": "MAHESHWARI ARUN JADHAO",
+    "email": "jadhaoma25.elec@coeptech.ac.in"
+  },
+  {
+    "name": "MANDAL AYUSH SUBRATO",
+    "email": "mandalas25.elec@coeptech.ac.in"
+  },
+  {
+    "name": "MAYANK SINGH BHADOURIA",
+    "email": "singhmb25.elec@coeptech.ac.in"
+  },
+  {
+    "name": "MAYUR ASHOK PALVE",
+    "email": "palvema25.elec@coeptech.ac.in"
+  },
+  {
+    "name": "MAYUR MAHESH PATIL",
+    "email": "mayurp25.elec@coeptech.ac.in"
+  },
+  {
+    "name": "MEET KISHOR GANGREDDIWAR",
+    "email": "gangreddiwarmk25.elec@coeptech.ac.in"
+  },
+  {
+    "name": "MOHAMMADREHAN IQBAL HUSAIN",
+    "email": "iqbalmr25.elec@coeptech.ac.in"
+  },
+  {
+    "name": "MUKESH HARISHCHANDRA MAHAJAN",
+    "email": "harishchandramm25.elec@coeptech.ac.in"
+  },
+  {
+    "name": "NAVNEET SINGH",
+    "email": "singhn25.elec@coeptech.ac.in"
+  },
+  {
+    "name": "NEHAL DEEPAK",
+    "email": "chaudharind25.elec@coeptech.ac.in"
+  },
+  {
+    "name": "NITTIKA RAJESH KHANDWANI",
+    "email": "rajeshkn25.elec@coeptech.ac.in"
+  },
+  {
+    "name": "OM ANIL BANGALE",
+    "email": "bangaleoa25.elec@coeptech.ac.in"
+  },
+  {
+    "name": "OM RAJENDRA SHELKE",
+    "email": "shelkeor25.elec@coeptech.ac.in"
+  },
+  {
+    "name": "OM SANJAY AHER",
+    "email": "aheros25.elec@coeptech.ac.in"
+  },
+  {
+    "name": "PARITOSH RAVI FULE",
+    "email": "fulepr25.elec@coeptech.ac.in"
+  },
+  {
+    "name": "PRAJWAL GAJANAN KARDE",
+    "email": "kardepg25.elec@coeptech.ac.in"
+  },
+  {
+    "name": "PRANAV AJABRAO BAVISKAR",
+    "email": "baviskarpa25.elec@coeptech.ac.in"
+  },
+  {
+    "name": "PURVESH BANDU KOLI",
+    "email": "bandukp25.elec@coeptech.ac.in"
+  },
+  {
+    "name": "RIDDHI NANDKISHOR LOHIYA",
+    "email": "nandkishorlr25.elec@coeptech.ac.in"
+  },
+  {
+    "name": "SAHIL ASIFKHA PATHAN",
+    "email": "pathansa25.elec@coeptech.ac.in"
+  },
+  {
+    "name": "SAIRAMAN SANJAY NARMITWAR",
+    "email": "narmitwarss25.elec@coeptech.ac.in"
+  },
+  {
+    "name": "SALONI SARJERAO PATIL",
+    "email": "salonip25.elec@coeptech.ac.in"
+  },
+  {
+    "name": "SAMYAK TUSHAR JAIN",
+    "email": "jainst25.elec@coeptech.ac.in"
+  },
+  {
+    "name": "SANDESH SHARAD HIRAY",
+    "email": "sharadhs25.elec@coeptech.ac.in"
+  },
+  {
+    "name": "SANIKA VISHNU AWATADE",
+    "email": "awatadesv25.elec@coeptech.ac.in"
+  },
+  {
+    "name": "SANSKAR SANJAY KADAM",
+    "email": "sanjayks25.elec@coeptech.ac.in"
+  },
+  {
+    "name": "SARANG SHRIHARI GAIKWAD",
+    "email": "gaikwadss25.elec@coeptech.ac.in"
+  },
+  {
+    "name": "SHAM LAXMANRAO AWACHAR",
+    "email": "awacharas25.elec@coeptech.ac.in"
+  },
+  {
+    "name": "SHRAVANI AJIT PISAL",
+    "email": "pisals25.elec@coeptech.ac.in"
+  },
+  {
+    "name": "SHRAWASTI PREMCHAND AMBHORE",
+    "email": "premchandas25.elec@coeptech.ac.in"
+  },
+  {
+    "name": "SHREYAS BANDU PATIL",
+    "email": "shreyasp25.elec@coeptech.ac.in"
+  },
+  {
+    "name": "SHREYAS YASHODHAN DHOPAVKAR",
+    "email": "dhopavkarsy25.elec@coeptech.ac.in"
+  },
+  {
+    "name": "SHRINIVAS SANJAY MULIK",
+    "email": "mulikss25.elec@coeptech.ac.in"
+  },
+  {
+    "name": "SRUSHTI MAHESH AFRE",
+    "email": "maheshas25.elec@coeptech.ac.in"
+  },
+  {
+    "name": "SWARA MANOHAR NAGARUT",
+    "email": "nagarutsm25.elec@coeptech.ac.in"
+  },
+  {
+    "name": "TANISHQ RAJESH BANSELE",
+    "email": "banseletr25.elec@coeptech.ac.in"
+  },
+  {
+    "name": "TANMAY MUKTESHWAR JOSHI",
+    "email": "mukteshwarjt25.elec@coeptech.ac.in"
+  },
+  {
+    "name": "UDDESH RITESH JOSHI",
+    "email": "riteshju25.elec@coeptech.ac.in"
+  },
+  {
+    "name": "VINIT HARIDAS NIMBALKAR",
+    "email": "nimbalkarvh25.elec@coeptech.ac.in"
+  },
+  {
+    "name": "YASH HANUMAN PHAD",
+    "email": "phadyh25.elec@coeptech.ac.in"
+  },
+  {
+    "name": "ABHINANDAN SUNIL SONTAKKE",
+    "email": "sontakkeas25.elec@coeptech.ac.in"
+  },
+  {
+    "name": "ADITYA JAGAN WABLE",
+    "email": "wableaj25.elec@coeptech.ac.in"
+  },
+  {
+    "name": "ADITYA UDDHAV TEKALE",
+    "email": "uddhavta25.elec@coeptech.ac.in"
+  },
+  {
+    "name": "AMRUTA VISHNUKUMAR SHRIRAMJWAR",
+    "email": "vishnukumarsa25.elec@coeptech.ac.in"
+  },
+  {
+    "name": "ARYAN RAGHUNANDAN ZANWAR",
+    "email": "zanwarar25.elec@coeptech.ac.in"
+  },
+  {
+    "name": "ATHARVA MAROTI RANDAI",
+    "email": "marotira25.elec@coeptech.ac.in"
+  },
+  {
+    "name": "GHANASHYAM NARENDRA TAMHANKAR",
+    "email": "narendratg25.elec@coeptech.ac.in"
+  },
+  {
+    "name": "HARSH ANSHUMAN THAKAR",
+    "email": "thakarha25.elec@coeptech.ac.in"
+  },
+  {
+    "name": "HARSHAD SACHIDANAND SWAMI",
+    "email": "sachidanandsh25.elec@coeptech.ac.in"
+  },
+  {
+    "name": "ISHWARI RAHUL SUDKE",
+    "email": "sudkeir25.elec@coeptech.ac.in"
+  },
+  {
+    "name": "KHYATI VIVEKANAND WAGHMARE",
+    "email": "waghmarekv25.elec@coeptech.ac.in"
+  },
+  {
+    "name": "KRUSHNA NAVNATH SANGALE",
+    "email": "sangalekn25.elec@coeptech.ac.in"
+  },
+  {
+    "name": "MANAV MADAN KHANDVE",
+    "email": "khandvemm25.elec@coeptech.ac.in"
+  },
+  {
+    "name": "OJAS DEEPAK SHIRBHATE",
+    "email": "shirbhateod25.elec@coeptech.ac.in"
+  },
+  {
+    "name": "OM SHIRISH SHINDE",
+    "email": "shindeos25.elec@coeptech.ac.in"
+  },
+  {
+    "name": "PANKAJ RAJENDRA PUNIYANI",
+    "email": "puniyanipp25.elec@coeptech.ac.in"
+  },
+  {
+    "name": "PRAJAKTA JAGANNATH SANGALE",
+    "email": "sangalepj25.elec@coeptech.ac.in"
+  },
+  {
+    "name": "PRAJWAL GAUTAM NARWADE",
+    "email": "narwadepg25.elec@coeptech.ac.in"
+  },
+  {
+    "name": "PRAJWAL RAVINDRA BENDRE",
+    "email": "bendrepr25.elec@coeptech.ac.in"
+  },
+  {
+    "name": "PRANAV ANANDA SHINDE",
+    "email": "shindepa25.elec@coeptech.ac.in"
+  },
+  {
+    "name": "PRANJALI SANTOSH TEMBHURNE",
+    "email": "santoshtp25.elec@coeptech.ac.in"
+  },
+  {
+    "name": "PRATHAM NILESH NIGADE",
+    "email": "nigadepn25.elec@coeptech.ac.in"
+  },
+  {
+    "name": "PRATHAM RAJESH SIDAM",
+    "email": "sidampr25.elec@coeptech.ac.in"
+  },
+  {
+    "name": "PRATHMESH DILIP SHIRSE",
+    "email": "shirsepd25.elec@coeptech.ac.in"
+  },
+  {
+    "name": "PRATIK VIKAS WAIDANDE",
+    "email": "waidandepv25.elec@coeptech.ac.in"
+  },
+  {
+    "name": "PREM PRADIP SONNE",
+    "email": "sonnepp25.elec@coeptech.ac.in"
+  },
+  {
+    "name": "PRINCE PATIDAR",
+    "email": "patidarp25.elec@coeptech.ac.in"
+  },
+  {
+    "name": "RAM SURESH TIKAR",
+    "email": "tikarrs25.elec@coeptech.ac.in"
+  },
+  {
+    "name": "RANVEER SIDDHARTH AJINKYA",
+    "email": "ajinkyars25.elec@coeptech.ac.in"
+  },
+  {
+    "name": "RAVINDRA GOPAL RAUT",
+    "email": "rautrg25.elec@coeptech.ac.in"
+  },
+  {
+    "name": "REYANSH SANJAYKUMAR RAMTEKE",
+    "email": "ramtekers25.elec@coeptech.ac.in"
+  },
+  {
+    "name": "RUSHIKESH SANJAY GAIKWAD",
+    "email": "gaikwadrs25.elec@coeptech.ac.in"
+  },
+  {
+    "name": "RUTURAJ DHOTRE",
+    "email": "dhotrer25.elec@coeptech.ac.in"
+  },
+  {
+    "name": "SACHIN MAHADU RAJPUT",
+    "email": "rajputsm25.elec@coeptech.ac.in"
+  },
+  {
+    "name": "SAGAR SUSTE",
+    "email": "sustes25.elec@coeptech.ac.in"
+  },
+  {
+    "name": "SAHIL PRAKASH RAMNANI",
+    "email": "ramnanisp25.elec@coeptech.ac.in"
+  },
+  {
+    "name": "SAHIL VASANT LONKAR",
+    "email": "lonkarsv25.elec@coeptech.ac.in"
+  },
+  {
+    "name": "SAISH VIJAY SARGAR",
+    "email": "sargarsv25.elec@coeptech.ac.in"
+  },
+  {
+    "name": "SAKET SIDDHARTH TAMGADGE",
+    "email": "tamgadgess25.elec@coeptech.ac.in"
+  },
+  {
+    "name": "SAMRUDH RAHUL GUPTA",
+    "email": "guptasr25.elec@coeptech.ac.in"
+  },
+  {
+    "name": "SANJANA ANAND IJERI",
+    "email": "ijerisa25.elec@coeptech.ac.in"
+  },
+  {
+    "name": "SANKALP NAVIN PATIL",
+    "email": "patilsn25.elec@coeptech.ac.in"
+  },
+  {
+    "name": "SANKET SANJAY PAGAR",
+    "email": "pagarss25.elec@coeptech.ac.in"
+  },
+  {
+    "name": "SHARAYU GANESH SONAWANE",
+    "email": "sonawanesg25.elec@coeptech.ac.in"
+  },
+  {
+    "name": "SHIVRAJ KAKASAHEB BANDWAN",
+    "email": "bandwansk25.elec@coeptech.ac.in"
+  },
+  {
+    "name": "SHON CHANDRASHEKHAR LOKHANDE",
+    "email": "lokhandes25.elec@coeptech.ac.in"
+  },
+  {
+    "name": "SHRADDHEY CHARANDAS DORLE",
+    "email": "dorlesc25.elec@coeptech.ac.in"
+  },
+  {
+    "name": "SHRAVANI BHUSHAN DHOREY",
+    "email": "dhoreysb25.elec@coeptech.ac.in"
+  },
+  {
+    "name": "SHRINATH RAHUL TARE",
+    "email": "taresr25.elec@coeptech.ac.in"
+  },
+  {
+    "name": "SHRINIVAS KESHAO KINAKE",
+    "email": "kinakesk25.elec@coeptech.ac.in"
+  },
+  {
+    "name": "SOHA DNYANESHWAR BORCHATE",
+    "email": "borchatesd25.elec@coeptech.ac.in"
+  },
+  {
+    "name": "SOHAM MANOJ MISHRA",
+    "email": "mishrasm25.elec@coeptech.ac.in"
+  },
+  {
+    "name": "SOHAN SATISH KURKURE",
+    "email": "kurkuress25.elec@coeptech.ac.in"
+  },
+  {
+    "name": "SRUSHTI GAJANAN HINGMIRE",
+    "email": "hingmiresg25.elec@coeptech.ac.in"
+  },
+  {
+    "name": "SURYANSHU PATIL",
+    "email": "patils25.elec@coeptech.ac.in"
+  },
+  {
+    "name": "SUSHRUT NITIN WADEKAR",
+    "email": "wadekarsn25.elec@coeptech.ac.in"
+  },
+  {
+    "name": "SWANAND DHANANJAY SIRSIKAR",
+    "email": "sirsikarsd25.elec@coeptech.ac.in"
+  },
+  {
+    "name": "TANVI DIGAMBAR INGALE",
+    "email": "ingaletd25.elec@coeptech.ac.in"
+  },
+  {
+    "name": "UTKARSH GIRIDHAR JHA",
+    "email": "jhaug25.elec@coeptech.ac.in"
+  },
+  {
+    "name": "VAISHNVI SANJAY SONKATALE",
+    "email": "sonkatalevs25.elec@coeptech.ac.in"
+  },
+  {
+    "name": "VARAD RAJESH INGALE",
+    "email": "ingalevr25.elec@coeptech.ac.in"
+  },
+  {
+    "name": "VARUN HEMANT GODBOLE",
+    "email": "godbolevh25.elec@coeptech.ac.in"
+  },
+  {
+    "name": "VEDANSHU ANILKUMAR PANDEY",
+    "email": "pandeyva25.elec@coeptech.ac.in"
+  },
+  {
+    "name": "VEDANT MAHAJAN",
+    "email": "mahajanv25.elec@coeptech.ac.in"
+  },
+  {
+    "name": "VEERPRATAPSINGH JAGDISHSINGH TH",
+    "email": "singhtv25.elec@coeptech.ac.in"
+  },
+  {
+    "name": "VIDHIKA SHITAL MATEY",
+    "email": "mateyvs25.elec@coeptech.ac.in"
+  },
+  {
+    "name": "VIKRAM SINGH",
+    "email": "singhv25.elec@coeptech.ac.in"
+  },
+  {
+    "name": "VISHNU VINAYAK WAGHMARE",
+    "email": "waghmarevv25.elec@coeptech.ac.in"
+  },
+  {
+    "name": "YUGA RUPAK SHEVATE",
+    "email": "shevateyr25.elec@coeptech.ac.in"
+  },
+  {
+    "name": "AARYA PRASHANT KADAM",
+    "email": "kadamap25.civil@coeptech.ac.in"
+  },
+  {
+    "name": "AARYAN ASHWIN PATIL",
+    "email": "patilaa25.civil@coeptech.ac.in"
+  },
+  {
+    "name": "ABHAY ATMARAM DONGARE",
+    "email": "dongareaa25.civil@coeptech.ac.in"
+  },
+  {
+    "name": "ABHIJEET GOVARDHAN TIKAR",
+    "email": "tikarag25.civil@coeptech.ac.in"
+  },
+  {
+    "name": "ABHIMANYU ARJUN PATIL",
+    "email": "abhimanyup25.civil@coeptech.ac.in"
+  },
+  {
+    "name": "ABHISHEK JITENDRA BORATE",
+    "email": "borateaj25.civil@coeptech.ac.in"
+  },
+  {
+    "name": "ABHISHEK NITIN BALLAL",
+    "email": "ballalan25.civil@coeptech.ac.in"
+  },
+  {
+    "name": "ADEENA MIR",
+    "email": "miram25.civil@coeptech.ac.in"
+  },
+  {
+    "name": "ADITI SUNIL MANWADKAR",
+    "email": "manwadkaras25.civil@coeptech.ac.in"
+  },
+  {
+    "name": "ADITYA ARUN JADHAO",
+    "email": "jadhaoaa25.civil@coeptech.ac.in"
+  },
+  {
+    "name": "ADITYA ATMARAM GAIKWAD",
+    "email": "gaikwadaa25.civil@coeptech.ac.in"
+  },
+  {
+    "name": "ADITYA GANESH DHAGE",
+    "email": "dhageag25.civil@coeptech.ac.in"
+  },
+  {
+    "name": "ADITYA JEEWAN NIVLE",
+    "email": "nivleaj25.civil@coeptech.ac.in"
+  },
+  {
+    "name": "ADITYA KALIDAS BHOSALE",
+    "email": "bhosaleak25.civil@coeptech.ac.in"
+  },
+  {
+    "name": "ADITYA NAGNATH KENDRE",
+    "email": "kendrean25.civil@coeptech.ac.in"
+  },
+  {
+    "name": "ADITYA NANDKUMAR SHIRGAVE",
+    "email": "shirgavean25.civil@coeptech.ac.in"
+  },
+  {
+    "name": "ADITYA SURESH SHINDE",
+    "email": "shindeas25.civil@coeptech.ac.in"
+  },
+  {
+    "name": "AJINKYA RAJESH KAMDI",
+    "email": "kamdiar25.civil@coeptech.ac.in"
+  },
+  {
+    "name": "AKASH PRAKASH GONDHALI",
+    "email": "gondhaliap25.civil@coeptech.ac.in"
+  },
+  {
+    "name": "AMBARISH SHIVAJI KHAMKAR",
+    "email": "khamkaras25.civil@coeptech.ac.in"
+  },
+  {
+    "name": "ANIRUDDHA VIJAY BHAKARE",
+    "email": "bhakareav25.civil@coeptech.ac.in"
+  },
+  {
+    "name": "ANKIT CHOUDHARY",
+    "email": "choudharya25.civil@coeptech.ac.in"
+  },
+  {
+    "name": "ANKIT SURESH BHALERAO",
+    "email": "bhaleraoas25.civil@coeptech.ac.in"
+  },
+  {
+    "name": "ANKITA UMESH PATIL",
+    "email": "patilau25.civil@coeptech.ac.in"
+  },
+  {
+    "name": "ANKITA VIKAS PATIL",
+    "email": "patilav25.civil@coeptech.ac.in"
+  },
+  {
+    "name": "ANUJ BBBB",
+    "email": "anuj25.civil@coeptech.ac.in"
+  },
+  {
+    "name": "ANUJA VITHOBA PAWAR",
+    "email": "pawarav25.civil@coeptech.ac.in"
+  },
+  {
+    "name": "ARHAAN NITIN BHALERAO",
+    "email": "bhaleraoan25.civil@coeptech.ac.in"
+  },
+  {
+    "name": "ARJUN ATUL HIVARKAR",
+    "email": "hivarkaraa25.civil@coeptech.ac.in"
+  },
+  {
+    "name": "ARJUN GAURAV DADA",
+    "email": "dadaag25.civil@coeptech.ac.in"
+  },
+  {
+    "name": "ARNAV MAHESH BOTTUWAR",
+    "email": "bottuwaram25.civil@coeptech.ac.in"
+  },
+  {
+    "name": "ARNAV PURUSHOTTAM DURAGKAR",
+    "email": "duragkarap25.civil@coeptech.ac.in"
+  },
+  {
+    "name": "ARYAN MOHAN SANGALE",
+    "email": "sangaleam25.civil@coeptech.ac.in"
+  },
+  {
+    "name": "ARYAN SUNIL JADHAV",
+    "email": "jadhavas25.civil@coeptech.ac.in"
+  },
+  {
+    "name": "ARYAN SURENDRA RATHI",
+    "email": "rathias25.civil@coeptech.ac.in"
+  },
+  {
+    "name": "ARYAN VIVEK JATHAR",
+    "email": "gawaiav25.civil@coeptech.ac.in"
+  },
+  {
+    "name": "ASHLESHA ANIL RAUT",
+    "email": "anilra25.civil@coeptech.ac.in"
+  },
+  {
+    "name": "ATHARV SAGAR PATIL",
+    "email": "patilas25.civil@coeptech.ac.in"
+  },
+  {
+    "name": "ATHARV SANJAY CHAPKE",
+    "email": "chapkeas25.civil@coeptech.ac.in"
+  },
+  {
+    "name": "ATHARV VINAY KOLAWALE",
+    "email": "kolawaleav25.civil@coeptech.ac.in"
+  },
+  {
+    "name": "ATHARVA BHUSHAN JADHAV",
+    "email": "jadhavab25.civil@coeptech.ac.in"
+  },
+  {
+    "name": "ATHARVA DATTATRAY PADGHAN",
+    "email": "padghanad25.civil@coeptech.ac.in"
+  },
+  {
+    "name": "AVANEESH SUDHIR MUTHAL",
+    "email": "muthalas25.civil@coeptech.ac.in"
+  },
+  {
+    "name": "AVANTIKA ANANDRAO SHINDE",
+    "email": "shindeaa25.civil@coeptech.ac.in"
+  },
+  {
+    "name": "AYUSH APPA BALLAL",
+    "email": "ballalaa25.civil@coeptech.ac.in"
+  },
+  {
+    "name": "AYUSH MOHANRAO DESHMUKH",
+    "email": "deshmukham25.civil@coeptech.ac.in"
+  },
+  {
+    "name": "BHAGYASHRI SACHIN TAYDE",
+    "email": "taydebs25.civil@coeptech.ac.in"
+  },
+  {
+    "name": "CHAITANYA KISHOR GARAD",
+    "email": "garadck25.civil@coeptech.ac.in"
+  },
+  {
+    "name": "CHESA KENT",
+    "email": "chesak25.civil@coeptech.ac.in"
+  },
+  {
+    "name": "DANISH SALIM TADAVI",
+    "email": "tadavids25.civil@coeptech.ac.in"
+  },
+  {
+    "name": "DATTA DEVIDAS KULKARNI",
+    "email": "kulkarnidd25.civil@coeptech.ac.in"
+  },
+  {
+    "name": "DHIRAJ NANDKUMAR BHARADE",
+    "email": "nandkumarbd25.civil@coeptech.ac.in"
+  },
+  {
+    "name": "DHRUV DILIP SHEKHADA",
+    "email": "shekhadadd25.civil@coeptech.ac.in"
+  },
+  {
+    "name": "DIGVIJAY BALASAHEB JADHAV",
+    "email": "jadhavdb25.civil@coeptech.ac.in"
+  },
+  {
+    "name": "DIPALI SHAHAJI MOHITE",
+    "email": "mohiteds25.civil@coeptech.ac.in"
+  },
+  {
+    "name": "DISHA SHASHIKANT BABAR",
+    "email": "babards25.civil@coeptech.ac.in"
+  },
+  {
+    "name": "GRISHMA PRAVIN BIRHADE",
+    "email": "birhadegp25.civil@coeptech.ac.in"
+  },
+  {
+    "name": "HARDIK VIKAS BAGUL",
+    "email": "bagulhv25.civil@coeptech.ac.in"
+  },
+  {
+    "name": "HARIOM SACHIN PENSALWAR",
+    "email": "pensalwarhs25.civil@coeptech.ac.in"
+  },
+  {
+    "name": "HARSHIT JARDIAL",
+    "email": "harshithj25.civil@coeptech.ac.in"
+  },
+  {
+    "name": "HARSHWARDHAN VIJAY LAGARE",
+    "email": "lagarehv25.civil@coeptech.ac.in"
+  },
+  {
+    "name": "HIMANSHU BHUSHAN CHAUDHARI",
+    "email": "chaudharihb25.civil@coeptech.ac.in"
+  },
+  {
+    "name": "HITO NYEKHA",
+    "email": "nyekhahn25.civil@coeptech.ac.in"
+  },
+  {
+    "name": "JANHAVI AJAY SHENDE",
+    "email": "janhavias25.civil@coeptech.ac.in"
+  },
+  {
+    "name": "JAYWARDHAN SARDAR PATIL",
+    "email": "patiljs25.civil@coeptech.ac.in"
+  },
+  {
+    "name": "JINAY SAMEER LODHA",
+    "email": "lodhajs25.civil@coeptech.ac.in"
+  },
+  {
+    "name": "JYOTIRADITYA VIJAYKUMAR PALWE",
+    "email": "palwejv25.civil@coeptech.ac.in"
+  },
+  {
+    "name": "KADAMBARI KHAWALE",
+    "email": "khawalekk25.civil@coeptech.ac.in"
+  },
+  {
+    "name": "KARTIK RAJESH SAVARKAR",
+    "email": "savarkarkr25.civil@coeptech.ac.in"
+  },
+  {
+    "name": "KARTIK RAJESH SOMANI",
+    "email": "rajeshsk25.civil@coeptech.ac.in"
+  },
+  {
+    "name": "KARTIK VILAS GAIKWAD",
+    "email": "gaikwadkv25.civil@coeptech.ac.in"
+  },
+  {
+    "name": "KARTIKEY SAWANT",
+    "email": "kartikeys25.civil@coeptech.ac.in"
+  },
+  {
+    "name": "KHAMKAR PRATIK SANTOSH",
+    "email": "khamkarps25.civil@coeptech.ac.in"
+  },
+  {
+    "name": "KISHAN RAJARAM YEWALE",
+    "email": "rajaramyk25.civil@coeptech.ac.in"
+  },
+  {
+    "name": "KRISH RAJESH PACHBHAI",
+    "email": "pachbhaikr25.civil@coeptech.ac.in"
+  },
+  {
+    "name": "KRISHNA SUNIL KHOMANE",
+    "email": "khomaneks25.civil@coeptech.ac.in"
+  },
+  {
+    "name": "KUBDE VEDANT MAHESH",
+    "email": "kubdevm25.civil@coeptech.ac.in"
+  },
+  {
+    "name": "MADAVI KHUSHI GIRIDAS",
+    "email": "giridasmk25.civil@coeptech.ac.in"
+  },
+  {
+    "name": "MADHUR ATUL TAORI",
+    "email": "taorima25.civil@coeptech.ac.in"
+  },
+  {
+    "name": "MAHESH GURUNATH MULE",
+    "email": "mulemg25.civil@coeptech.ac.in"
+  },
+  {
+    "name": "MANASI PRAVEEN JADHAV",
+    "email": "jadhavmp25.civil@coeptech.ac.in"
+  },
+  {
+    "name": "MAYUR SANJEEV PATTANSHETTI",
+    "email": "pattanshettims25.civil@coeptech.ac.in"
+  },
+  {
+    "name": "MAYURESH AMAR JADHAV",
+    "email": "jadhavma25.civil@coeptech.ac.in"
+  },
+  {
+    "name": "MOHIT BAIJU HATKAR",
+    "email": "baijuhm25.civil@coeptech.ac.in"
+  },
+  {
+    "name": "MONU KUMAR",
+    "email": "kumarm25.civil@coeptech.ac.in"
+  },
+  {
+    "name": "MRUNAL MAHADEV TODMAL",
+    "email": "todmalmm25.civil@coeptech.ac.in"
+  },
+  {
+    "name": "MUJAWAR MOHAMMAD ZAFEERKARIM",
+    "email": "zafeermm25.civil@coeptech.ac.in"
+  },
+  {
+    "name": "MUMTAK PERME",
+    "email": "permemp25.civil@coeptech.ac.in"
+  },
+  {
+    "name": "NIRAJ KAILAS JADHAO",
+    "email": "jadhaonk25.civil@coeptech.ac.in"
+  },
+  {
+    "name": "PARAS JITENDRA PATIL",
+    "email": "patilpj25.civil@coeptech.ac.in"
+  },
+  {
+    "name": "PARTH SUNIL MURABATTE",
+    "email": "murabatteps25.civil@coeptech.ac.in"
+  },
+  {
+    "name": "PAWAN GOVINDA DEVTALE",
+    "email": "devtalepg25.civil@coeptech.ac.in"
+  },
+  {
+    "name": "PIYUSH NITIN SAKHARE",
+    "email": "sakharepn25.civil@coeptech.ac.in"
+  },
+  {
+    "name": "PIYUSHA VITTHAL PATIL",
+    "email": "patilpv25.civil@coeptech.ac.in"
+  },
+  {
+    "name": "PRADNYESH ANIL WADEKAR",
+    "email": "wadekarpa25.civil@coeptech.ac.in"
+  },
+  {
+    "name": "PRANAV AJITKUMAR KATKAR",
+    "email": "katkarpa25.civil@coeptech.ac.in"
+  },
+  {
+    "name": "PRANAV DATTATRAY TATHOD",
+    "email": "tathodpd25.civil@coeptech.ac.in"
+  },
+  {
+    "name": "PRANAV SATISH KHANDERAO",
+    "email": "khanderaops25.civil@coeptech.ac.in"
+  },
+  {
+    "name": "PRANAY RUPESH GAIKWAD",
+    "email": "gaikwadpr25.civil@coeptech.ac.in"
+  },
+  {
+    "name": "PRANJAL NAVNATH BHAGAT",
+    "email": "bhagatpn25.civil@coeptech.ac.in"
+  },
+  {
+    "name": "PRANJALI BALASAHEB GHUGE",
+    "email": "ghugepb25.civil@coeptech.ac.in"
+  },
+  {
+    "name": "PRANTIKA PRAKASH BANDAWAR",
+    "email": "bandawarpp25.civil@coeptech.ac.in"
+  },
+  {
+    "name": "PRASANNA SHRIKANT PATIL",
+    "email": "patilps25.civil@coeptech.ac.in"
+  },
+  {
+    "name": "PRATHAMESH PRATAPSING RAJPUT",
+    "email": "pratapsingrp25.civil@coeptech.ac.in"
+  },
+  {
+    "name": "PRATHMESH BALAJI CHATRE",
+    "email": "chatrepb25.civil@coeptech.ac.in"
+  },
+  {
+    "name": "PREM UMESH LONKAR",
+    "email": "lonkarpu25.civil@coeptech.ac.in"
+  },
+  {
+    "name": "PRITHVI NANDKISHOR PARDESHI",
+    "email": "pardeshipn25.civil@coeptech.ac.in"
+  },
+  {
+    "name": "PRIYAM BALESH VIRULKAR",
+    "email": "virulkarpb25.civil@coeptech.ac.in"
+  },
+  {
+    "name": "RAJAS AMITKUMAR PENDHARI",
+    "email": "pendharira25.civil@coeptech.ac.in"
+  },
+  {
+    "name": "RAJKUMAR AGRAWAL LAKSH",
+    "email": "agrawallr25.civil@coeptech.ac.in"
+  },
+  {
+    "name": "RANVEERSINH MAHESH BHOSALE",
+    "email": "bhosalerm25.civil@coeptech.ac.in"
+  },
+  {
+    "name": "RATNADEEP RAJENDRA MALUSARE",
+    "email": "malusarerr25.civil@coeptech.ac.in"
+  },
+  {
+    "name": "RISHIKESH SUNIL WAGH",
+    "email": "waghrs25.civil@coeptech.ac.in"
+  },
+  {
+    "name": "RITESH RAJEEV PAPPU",
+    "email": "pappurr25.civil@coeptech.ac.in"
+  },
+  {
+    "name": "RIYA BHIMRAO KANINDE",
+    "email": "kaninderb25.civil@coeptech.ac.in"
+  },
+  {
+    "name": "ROHAN RAJESH MUNDADA",
+    "email": "mundadarr25.civil@coeptech.ac.in"
+  },
+  {
+    "name": "RUTHIK RAHUL BORA",
+    "email": "borarr25.civil@coeptech.ac.in"
+  },
+  {
+    "name": "RUTUJA VISHWAS GOTPAGAR",
+    "email": "gotpagarrv25.civil@coeptech.ac.in"
+  },
+  {
+    "name": "SACHIN RAJUPRASAD SAW",
+    "email": "sawsr25.civil@coeptech.ac.in"
+  },
+  {
+    "name": "SAEE SACHIN CHAVAN",
+    "email": "chavanss25.civil@coeptech.ac.in"
+  },
+  {
+    "name": "SAJAL MAHAVIR PATIL",
+    "email": "patilsm25.civil@coeptech.ac.in"
+  },
+  {
+    "name": "SAMARTH MANGESH PATIL",
+    "email": "samarthp25.civil@coeptech.ac.in"
+  },
+  {
+    "name": "SAMIKSHA SUBHASH JADHAV",
+    "email": "samikshasj25.civil@coeptech.ac.in"
+  },
+  {
+    "name": "SAMYAK LALIT KATARIYA",
+    "email": "katariyasl25.civil@coeptech.ac.in"
+  },
+  {
+    "name": "SANKET ISHWAR THAKARE",
+    "email": "thakaresi25.civil@coeptech.ac.in"
+  },
+  {
+    "name": "SARDA RIYA PAVAN",
+    "email": "sardarp25.civil@coeptech.ac.in"
+  },
+  {
+    "name": "SARTHAK ASHISH CHAUDHARY",
+    "email": "chaudharysa25.civil@coeptech.ac.in"
+  },
+  {
+    "name": "SAVARI VISHWAS SATAV",
+    "email": "satavsv25.civil@coeptech.ac.in"
+  },
+  {
+    "name": "SAYALI VISHWANATH PUKALE",
+    "email": "pukalesv25.civil@coeptech.ac.in"
+  },
+  {
+    "name": "SHASHANK KISHORRAO SHIRURKAR",
+    "email": "shirurkarsk25.civil@coeptech.ac.in"
+  },
+  {
+    "name": "SHIVAM GANGADHAR RAKH",
+    "email": "rakhsg25.civil@coeptech.ac.in"
+  },
+  {
+    "name": "SHIVAM SANTOSH GOLE",
+    "email": "goless25.civil@coeptech.ac.in"
+  },
+  {
+    "name": "SHIVAM SUNIL TARGUDE",
+    "email": "targudess25.civil@coeptech.ac.in"
+  },
+  {
+    "name": "SHIVRAJ GANESH KHALATE",
+    "email": "khalatesg25.civil@coeptech.ac.in"
+  },
+  {
+    "name": "SHIVRAJ MAHADEO SURVASE",
+    "email": "mahadeoss25.civil@coeptech.ac.in"
+  },
+  {
+    "name": "SHIVTEJ SADASHIV JADHAV",
+    "email": "jadhavss25.civil@coeptech.ac.in"
+  },
+  {
+    "name": "SHRADDHA GANGADHAR MANGALWAD",
+    "email": "gangadharms25.civil@coeptech.ac.in"
+  },
+  {
+    "name": "SHRADDHA SHARAD VARADE",
+    "email": "varadess25.civil@coeptech.ac.in"
+  },
+  {
+    "name": "SHREYASH SUNIL WATHORE",
+    "email": "wathoress25.civil@coeptech.ac.in"
+  },
+  {
+    "name": "SHREYASI SACHIN MESTRY",
+    "email": "mestryss25.civil@coeptech.ac.in"
+  },
+  {
+    "name": "SHRISHKUMAR SANTOSH SHINDE",
+    "email": "shindess25.civil@coeptech.ac.in"
+  },
+  {
+    "name": "SHRUTI SHANTIRAM GHORPADE",
+    "email": "ghorpadess25.civil@coeptech.ac.in"
+  },
+  {
+    "name": "SHRUTI TEJAS RATHOD",
+    "email": "rathodst25.civil@coeptech.ac.in"
+  },
+  {
+    "name": "SIDDHANT SACHIN CHANDGUDE",
+    "email": "chandgudess25.civil@coeptech.ac.in"
+  },
+  {
+    "name": "SIDDHARTH GANPATI POWAR",
+    "email": "powarsg25.civil@coeptech.ac.in"
+  },
+  {
+    "name": "SONAL DAULATKAR SHIRLEY",
+    "email": "shirleysd25.civil@coeptech.ac.in"
+  },
+  {
+    "name": "SPRUHA SANDIP SHENDGE",
+    "email": "shendgess25.civil@coeptech.ac.in"
+  },
+  {
+    "name": "SUDARSHAN SHANKAR BOTHIKAR",
+    "email": "bothikarss25.civil@coeptech.ac.in"
+  },
+  {
+    "name": "SUJAL SACHIN LOTAKE",
+    "email": "lotakess25.civil@coeptech.ac.in"
+  },
+  {
+    "name": "SUPRIYA KUMARI",
+    "email": "kumarisk25.civil@coeptech.ac.in"
+  },
+  {
+    "name": "SWAMI RAJKUMAR JAINARAYAN",
+    "email": "jainarayansr25.civil@coeptech.ac.in"
+  },
+  {
+    "name": "SWAROOP BIBHISHAN THOMBARE",
+    "email": "thombaresb25.civil@coeptech.ac.in"
+  },
+  {
+    "name": "TANISQ VASUDEV KORRULKAR",
+    "email": "korrulkartv25.civil@coeptech.ac.in"
+  },
+  {
+    "name": "TEJAS JAYARAM LAHAMATE",
+    "email": "lahamatetj25.civil@coeptech.ac.in"
+  },
+  {
+    "name": "TEJVEER AVINASH DHAKNE",
+    "email": "tejveerad25.civil@coeptech.ac.in"
+  },
+  {
+    "name": "TRUPTI HAUSLAL RAHANGDALE",
+    "email": "hauslalrt25.civil@coeptech.ac.in"
+  },
+  {
+    "name": "UNMESH SHARAD AMBI",
+    "email": "sharadau25.civil@coeptech.ac.in"
+  },
+  {
+    "name": "URGEN DORJEE",
+    "email": "urgend25.civil@coeptech.ac.in"
+  },
+  {
+    "name": "VAISHNAVI SATISH KOLI",
+    "email": "kolivs25.civil@coeptech.ac.in"
+  },
+  {
+    "name": "VANSH MANOJ BOMANWAR",
+    "email": "bomanwarvm25.civil@coeptech.ac.in"
+  },
+  {
+    "name": "VARAD PANDURANG BANKAR",
+    "email": "bankarvp25.civil@coeptech.ac.in"
+  },
+  {
+    "name": "VEDANT AGARWAL",
+    "email": "agarwalva25.civil@coeptech.ac.in"
+  },
+  {
+    "name": "VEDIKA DNYANESHWAR AHER",
+    "email": "ahervd25.civil@coeptech.ac.in"
+  },
+  {
+    "name": "VIDHIKA SANJAY SHARMA",
+    "email": "sharmavs25.civil@coeptech.ac.in"
+  },
+  {
+    "name": "VIJAY RAJENDRA SHINDE",
+    "email": "shindevr25.civil@coeptech.ac.in"
+  },
+  {
+    "name": "VIKRANT JAIN",
+    "email": "jainvj25.civil@coeptech.ac.in"
+  },
+  {
+    "name": "VINIT MANOJ JOJARE",
+    "email": "jojarevm25.civil@coeptech.ac.in"
+  },
+  {
+    "name": "VISHAKHA PAVANLAL BISEN",
+    "email": "bisenvp25.civil@coeptech.ac.in"
+  },
+  {
+    "name": "VISHAL ANANTA KHATING",
+    "email": "khatingva25.civil@coeptech.ac.in"
+  },
+  {
+    "name": "VISHWAJEET AJAY KARALE",
+    "email": "vishwajeetak25.civil@coeptech.ac.in"
+  },
+  {
+    "name": "VISHWAJEET RAMCHANDRA MOTE",
+    "email": "motevr25.civil@coeptech.ac.in"
+  },
+  {
+    "name": "VIVOTO PUCHO",
+    "email": "vivotop25.civil@coeptech.ac.in"
+  },
+  {
+    "name": "YADNESH MAHENDRA SURYAWANSHI",
+    "email": "mahendrasy25.civil@coeptech.ac.in"
+  },
+  {
+    "name": "YASH ASHOK BHOSALE",
+    "email": "bhosaleya25.civil@coeptech.ac.in"
+  },
+  {
+    "name": "YASH PARESH KOYALE",
+    "email": "koyaleyp25.civil@coeptech.ac.in"
+  },
+  {
+    "name": "YUVRAJ DEVRAO SHINGATE",
+    "email": "shingateyd25.civil@coeptech.ac.in"
+  },
+  {
+    "name": "AADITYA ANILKUMAR BAGE",
+    "email": "anilkumarba25.extc@coeptech.ac.in"
+  },
+  {
+    "name": "AADITYA MAHESH NARKHEDKAR",
+    "email": "narkhedkaram25.extc@coeptech.ac.in"
+  },
+  {
+    "name": "AARYAN CHETAN THAKRE",
+    "email": "thakreac25.extc@coeptech.ac.in"
+  },
+  {
+    "name": "AASHISH DHANAJI KUDALE",
+    "email": "kudalead25.extc@coeptech.ac.in"
+  },
+  {
+    "name": "ABHIJIT SHANTESHWAR SWAMI",
+    "email": "shanteshwarsa25.extc@coeptech.ac.in"
+  },
+  {
+    "name": "ABHISHEK DEEPAK DANDEKAR",
+    "email": "dandekarad25.extc@coeptech.ac.in"
+  },
+  {
+    "name": "ABHISHEK RAJESHWAR KOKATE",
+    "email": "kokatear25.extc@coeptech.ac.in"
+  },
+  {
+    "name": "ADITI BAPU GARUDKAR",
+    "email": "garudkarab25.extc@coeptech.ac.in"
+  },
+  {
+    "name": "ADITYA ANIL KHAWALE",
+    "email": "khawaleaa25.extc@coeptech.ac.in"
+  },
+  {
+    "name": "ADITYA BARANWAL",
+    "email": "baranwala25.extc@coeptech.ac.in"
+  },
+  {
+    "name": "ADITYA DNYANOBA BORKAR",
+    "email": "borkarad25.extc@coeptech.ac.in"
+  },
+  {
+    "name": "ADITYA GUPTA",
+    "email": "guptaa25.extc@coeptech.ac.in"
+  },
+  {
+    "name": "ADITYA SATYANARAYAN SONI",
+    "email": "sonias25.extc@coeptech.ac.in"
+  },
+  {
+    "name": "AISHI ROY CHOUDHURY",
+    "email": "choudhuryar25.extc@coeptech.ac.in"
+  },
+  {
+    "name": "AJINKYA ARVIND MAGADUM",
+    "email": "arvindma25.extc@coeptech.ac.in"
+  },
+  {
+    "name": "AKSHAT ATUL KOTHARI",
+    "email": "kothariaa25.extc@coeptech.ac.in"
+  },
+  {
+    "name": "AMANKUMAR SUNILKUMAR SINHA",
+    "email": "kumarsa25.extc@coeptech.ac.in"
+  },
+  {
+    "name": "ANISHA AVADHUT KAMBLE",
+    "email": "kambleaa25.extc@coeptech.ac.in"
+  },
+  {
+    "name": "ANU NAGDEVE",
+    "email": "nagdevea25.extc@coeptech.ac.in"
+  },
+  {
+    "name": "ANURADHA BHAGWAN AWALE",
+    "email": "bhagwanaa25.extc@coeptech.ac.in"
+  },
+  {
+    "name": "ARCHI VIDNYAN MESHRAM",
+    "email": "meshramav25.extc@coeptech.ac.in"
+  },
+  {
+    "name": "ARCHIT MANOJ DESHPANDE",
+    "email": "deshpandeam25.extc@coeptech.ac.in"
+  },
+  {
+    "name": "ARNAV TEJAS PADHYE",
+    "email": "tejaspa25.extc@coeptech.ac.in"
+  },
+  {
+    "name": "ARYAN ASHOK TIWARI",
+    "email": "ashokta25.extc@coeptech.ac.in"
+  },
+  {
+    "name": "ARYAN PRASHANT GORE",
+    "email": "goreap25.extc@coeptech.ac.in"
+  },
+  {
+    "name": "ARYAN SANJAY POL",
+    "email": "polas25.extc@coeptech.ac.in"
+  },
+  {
+    "name": "ASHUTOSH KUMAR",
+    "email": "kumara25.extc@coeptech.ac.in"
+  },
+  {
+    "name": "ATHARV AMOL PATIL",
+    "email": "patilaa25.extc@coeptech.ac.in"
+  },
+  {
+    "name": "ATHARV MACHINDRANATH KOLEKAR",
+    "email": "kolekaram25.extc@coeptech.ac.in"
+  },
+  {
+    "name": "ATHARVA RAVI DEGALMODE",
+    "email": "ravida25.extc@coeptech.ac.in"
+  },
+  {
+    "name": "ATHARVA SACHIN GOVINDWAR",
+    "email": "govindwaras25.extc@coeptech.ac.in"
+  },
+  {
+    "name": "ATHARVA SANDIP GADGE",
+    "email": "gadgeas25.extc@coeptech.ac.in"
+  },
+  {
+    "name": "AVADHUT SANJAY YADAV",
+    "email": "sanjayya25.extc@coeptech.ac.in"
+  },
+  {
+    "name": "BHAVANESH MILIND JAGTAP",
+    "email": "jagtapbm25.extc@coeptech.ac.in"
+  },
+  {
+    "name": "BHUSHAN MAHENDRA BESARKAR",
+    "email": "besarkarbm25.extc@coeptech.ac.in"
+  },
+  {
+    "name": "CHAITANYA SIDHARTH NARVANE",
+    "email": "narvanecs25.extc@coeptech.ac.in"
+  },
+  {
+    "name": "CHAITANYA SUNIL PATIL",
+    "email": "sunilpc25.extc@coeptech.ac.in"
+  },
+  {
+    "name": "CHINMAY PRADEEP MUDGALKAR",
+    "email": "mudgalkarcp25.extc@coeptech.ac.in"
+  },
+  {
+    "name": "DEVAASHISH PRANAV VAIDYA",
+    "email": "vaidyadp25.extc@coeptech.ac.in"
+  },
+  {
+    "name": "DHANANJAY SUNIL KASULE",
+    "email": "kasuleds25.extc@coeptech.ac.in"
+  },
+  {
+    "name": "DHIRAJ GAJANAN SAKHARKAR",
+    "email": "gajanansd25.extc@coeptech.ac.in"
+  },
+  {
+    "name": "DIVYA BABAN SAMBHERAO",
+    "email": "sambheraodb25.extc@coeptech.ac.in"
+  },
+  {
+    "name": "ESHITA HITENDRA PATIL",
+    "email": "eshitap25.extc@coeptech.ac.in"
+  },
+  {
+    "name": "GANDHAR PRASHANT TAWADE",
+    "email": "prashanttg25.extc@coeptech.ac.in"
+  },
+  {
+    "name": "HARSHAD RAMRAO BHOYAR",
+    "email": "bhoyarhr25.extc@coeptech.ac.in"
+  },
+  {
+    "name": "HARSHVARDHAN YUVRAJ PATIL",
+    "email": "harsgvardhanp25.extc@coeptech.ac.in"
+  },
+  {
+    "name": "HARSHWARDHAN ADHIK JAGTAP",
+    "email": "jagtapha25.extc@coeptech.ac.in"
+  },
+  {
+    "name": "HIMANSHU DIPAK PATIL",
+    "email": "himanshup25.extc@coeptech.ac.in"
+  },
+  {
+    "name": "HRUCHA SANDESHKUMAR SHINDE",
+    "email": "shindehs25.extc@coeptech.ac.in"
+  },
+  {
+    "name": "ISHAAN SHRIKANT MUDKHEDKAR",
+    "email": "mudkhedkaris25.extc@coeptech.ac.in"
+  },
+  {
+    "name": "ISHANT DEVENDRA NAHAR",
+    "email": "naharid25.extc@coeptech.ac.in"
+  },
+  {
+    "name": "JAY BHAIYA TRIBHUVAN",
+    "email": "tribhuvanjb25.extc@coeptech.ac.in"
+  },
+  {
+    "name": "JAY SANJAY KELANI",
+    "email": "kelanijs25.extc@coeptech.ac.in"
+  },
+  {
+    "name": "JITYA NITIN HASANI",
+    "email": "hasanijn25.extc@coeptech.ac.in"
+  },
+  {
+    "name": "JOEL TIKOO",
+    "email": "tikooj25.extc@coeptech.ac.in"
+  },
+  {
+    "name": "KAIVALYA GANESH MHATRE",
+    "email": "mhatrekg25.extc@coeptech.ac.in"
+  },
+  {
+    "name": "KARTIK DILIP PATIL",
+    "email": "kartikp25.extc@coeptech.ac.in"
+  },
+  {
+    "name": "KARTIK GANESH RAUT",
+    "email": "rautkg25.extc@coeptech.ac.in"
+  },
+  {
+    "name": "KRISHNA BHIKAN PATIL",
+    "email": "krishnap25.extc@coeptech.ac.in"
+  },
+  {
+    "name": "KRISHNA DEEPAK BHISE",
+    "email": "bhisekd25.extc@coeptech.ac.in"
+  },
+  {
+    "name": "KRISHNATEJASYA MANASA ENDELA",
+    "email": "manasakt25.extc@coeptech.ac.in"
+  },
+  {
+    "name": "KUNAL VINOD NIMJE",
+    "email": "vinodnk25.extc@coeptech.ac.in"
+  },
+  {
+    "name": "LAKSHYA VARSHNEY",
+    "email": "varshneyl25.extc@coeptech.ac.in"
+  },
+  {
+    "name": "LEENA RAJENDRA SALUNKE",
+    "email": "rajendrasl25.extc@coeptech.ac.in"
+  },
+  {
+    "name": "LOKESH ANIL SURYAWANSHI",
+    "email": "anilsl25.extc@coeptech.ac.in"
+  },
+  {
+    "name": "LOKESH DHARGAVE",
+    "email": "dhargavel25.extc@coeptech.ac.in"
+  },
+  {
+    "name": "MADHURA DATTATRAY JAGTAP",
+    "email": "jagtapmd25.extc@coeptech.ac.in"
+  },
+  {
+    "name": "MANDAR PRASHANT DESAI",
+    "email": "desaimp25.extc@coeptech.ac.in"
+  },
+  {
+    "name": "MANSI VIJAYKUMAR JADHAV",
+    "email": "jadhavmv25.extc@coeptech.ac.in"
+  },
+  {
+    "name": "MAYURESH RAJARAM ZORE",
+    "email": "rajaramzm25.extc@coeptech.ac.in"
+  },
+  {
+    "name": "MEET VINAY GUPTA",
+    "email": "guptamv25.extc@coeptech.ac.in"
+  },
+  {
+    "name": "MEGHAJ PRASHANT SHARMA",
+    "email": "prashantsm25.extc@coeptech.ac.in"
+  },
+  {
+    "name": "NARAYANI JAWALE",
+    "email": "jawalen25.extc@coeptech.ac.in"
+  },
+  {
+    "name": "NEEL RAHUL BHARAMBE",
+    "email": "bharambenr25.extc@coeptech.ac.in"
+  },
+  {
+    "name": "NEERAJ TRILOKCHAND KUMARE",
+    "email": "kumarent25.extc@coeptech.ac.in"
+  },
+  {
+    "name": "NEHA NYAHALSING JARWAL",
+    "email": "nyahalsingjn25.extc@coeptech.ac.in"
+  },
+  {
+    "name": "NEHA SHANKAR GAIKWAD",
+    "email": "gaikwadns25.extc@coeptech.ac.in"
+  },
+  {
+    "name": "NIBODH RITESH JAIN",
+    "email": "jainnr25.extc@coeptech.ac.in"
+  },
+  {
+    "name": "OJAS DEVENDRA JOSHI",
+    "email": "joshio25.extc@coeptech.ac.in"
+  },
+  {
+    "name": "OM LALIT RANE",
+    "email": "lalitro25.extc@coeptech.ac.in"
+  },
+  {
+    "name": "OM VITTHAL SATPUTE",
+    "email": "vitthalso25.extc@coeptech.ac.in"
+  },
+  {
+    "name": "OMKAR MAHESH SHITOLE",
+    "email": "maheshso25.extc@coeptech.ac.in"
+  },
+  {
+    "name": "ONKAR ASHOK WAGH",
+    "email": "ashokwo25.extc@coeptech.ac.in"
+  },
+  {
+    "name": "ONKAR RAJSHEKHAR JAMBAGI",
+    "email": "rajshekharjo25.extc@coeptech.ac.in"
+  },
+  {
+    "name": "PANKAJ ATMARAM GAIKWAD",
+    "email": "gaikwadpa25.extc@coeptech.ac.in"
+  },
+  {
+    "name": "PARSHAD SACHIN NALE",
+    "email": "naleps25.extc@coeptech.ac.in"
+  },
+  {
+    "name": "PARTH GAJANAN PANDE",
+    "email": "gajananpp25.extc@coeptech.ac.in"
+  },
+  {
+    "name": "PARTH NITIN JAYSWAL",
+    "email": "jayswalpn25.extc@coeptech.ac.in"
+  },
+  {
+    "name": "PARTH SACHIN NALE",
+    "email": "parthn25.extc@coeptech.ac.in"
+  },
+  {
+    "name": "PARTH VISHNU KAMALAKAR",
+    "email": "vishnukp25.extc@coeptech.ac.in"
+  },
+  {
+    "name": "PARTH WADKAR",
+    "email": "wadkarp25.extc@coeptech.ac.in"
+  },
+  {
+    "name": "PAYAL KISAN JADHAV",
+    "email": "jadhavpk25.extc@coeptech.ac.in"
+  },
+  {
+    "name": "PRABHA SHARMA",
+    "email": "sharmap25.extc@coeptech.ac.in"
+  },
+  {
+    "name": "PRAGATI YOGESH BHORE",
+    "email": "bhorepy25.extc@coeptech.ac.in"
+  },
+  {
+    "name": "PRANAV GANESH KHAIRNAR",
+    "email": "khairnarpg25.extc@coeptech.ac.in"
+  },
+  {
+    "name": "PRANJAL MAHESHKUMAR PATIL",
+    "email": "pranjalp25.extc@coeptech.ac.in"
+  },
+  {
+    "name": "PRATHAMESH PRAVIN BUTTE",
+    "email": "buttepp25.extc@coeptech.ac.in"
+  },
+  {
+    "name": "PRATHMESH PUNDLIK SONAWANE",
+    "email": "pundliksp25.extc@coeptech.ac.in"
+  },
+  {
+    "name": "PRITHVIRAJ SIDDHARTH KAMBLE",
+    "email": "kambleps25.extc@coeptech.ac.in"
+  },
+  {
+    "name": "PRIYAANSH PRATAP TENDULKAR",
+    "email": "tendulkarpp25.extc@coeptech.ac.in"
+  },
+  {
+    "name": "PRIYESH SUNIL PATIL",
+    "email": "priyeshp25.extc@coeptech.ac.in"
+  },
+  {
+    "name": "PURVA MAHESH JOSHI",
+    "email": "joship25.extc@coeptech.ac.in"
+  },
+  {
+    "name": "RAJVEER SINGH DIXIT",
+    "email": "dixitrs25.extc@coeptech.ac.in"
+  },
+  {
+    "name": "RAMMYA JANARDAN SHETE",
+    "email": "sheterj25.extc@coeptech.ac.in"
+  },
+  {
+    "name": "RAWANE DHRUV HARSHVARDHAN",
+    "email": "harshvardhanrd25.extc@coeptech.ac.in"
+  },
+  {
+    "name": "RIDDHI SACHIN BENDALE",
+    "email": "bendalers25.extc@coeptech.ac.in"
+  },
+  {
+    "name": "RISHI PANKAJ GUJARATHI",
+    "email": "gujarathirp25.extc@coeptech.ac.in"
+  },
+  {
+    "name": "RISHIK RAJESH RAJURKAR",
+    "email": "rajeshrr25.extc@coeptech.ac.in"
+  },
+  {
+    "name": "RISHIKA SHRIHARSH SHARMA",
+    "email": "sharmars25.extc@coeptech.ac.in"
+  },
+  {
+    "name": "RISHIT SHAILESHSHETTY",
+    "email": "shaileshsr25.extc@coeptech.ac.in"
+  },
+  {
+    "name": "RITESH NAGNATH KAYATE",
+    "email": "kayatern25.extc@coeptech.ac.in"
+  },
+  {
+    "name": "RIYA ABHINANDAN SOUNDATTE",
+    "email": "abhinandansr25.extc@coeptech.ac.in"
+  },
+  {
+    "name": "ROHAN VINAYAK VAIDYA",
+    "email": "vaidyarv25.extc@coeptech.ac.in"
+  },
+  {
+    "name": "RONNIT YOGESH KASAT",
+    "email": "kasatry25.extc@coeptech.ac.in"
+  },
+  {
+    "name": "RUCHA GANESH DASNAM",
+    "email": "dasnamrg25.extc@coeptech.ac.in"
+  },
+  {
+    "name": "RUGVED DINESH NANDEDKAR",
+    "email": "dineshnr25.extc@coeptech.ac.in"
+  },
+  {
+    "name": "SAHIL SANTOSH KHARAT",
+    "email": "kharatss25.extc@coeptech.ac.in"
+  },
+  {
+    "name": "SAI RAJEEV HOTHA",
+    "email": "hothasr25.extc@coeptech.ac.in"
+  },
+  {
+    "name": "SAKSHAM MANOJKUMAR INANI",
+    "email": "manojkumaris25.extc@coeptech.ac.in"
+  },
+  {
+    "name": "SAMARTH KRUSHANA GADEKAR",
+    "email": "gadekarsk25.extc@coeptech.ac.in"
+  },
+  {
+    "name": "SAMARTH SUNIL KADAM",
+    "email": "kadamss25.extc@coeptech.ac.in"
+  },
+  {
+    "name": "SAMBIT DAS",
+    "email": "dass25.extc@coeptech.ac.in"
+  },
+  {
+    "name": "SAMYAK GAUTAM GAJBHIYE",
+    "email": "gajbhiyesg25.extc@coeptech.ac.in"
+  },
+  {
+    "name": "SAMYAK TULJANAND KHANAPURKAR",
+    "email": "khanapurkarst25.extc@coeptech.ac.in"
+  },
+  {
+    "name": "SANCHIT PRASHANT JOSHI",
+    "email": "joshisp25.extc@coeptech.ac.in"
+  },
+  {
+    "name": "SANIKA CHANDRASHEKHAR JOSHI",
+    "email": "joshisc25.extc@coeptech.ac.in"
+  },
+  {
+    "name": "SANKET VIRBHADRA BAWAGE",
+    "email": "bawagesv25.extc@coeptech.ac.in"
+  },
+  {
+    "name": "SARTHAK VISHWAS PATIL",
+    "email": "patilsv25.extc@coeptech.ac.in"
+  },
+  {
+    "name": "SARTHAKI DEVANAND BUDHWANT",
+    "email": "devanandbs25.extc@coeptech.ac.in"
+  },
+  {
+    "name": "SARVESH MAHESH KULKARNI",
+    "email": "kulkarnism25.extc@coeptech.ac.in"
+  },
+  {
+    "name": "SAVANI VIJAY REDEKAR",
+    "email": "vijayrs25.extc@coeptech.ac.in"
+  },
+  {
+    "name": "SHAIKHHAYYAN HAYYUR REHMAN",
+    "email": "hayyursh25.extc@coeptech.ac.in"
+  },
+  {
+    "name": "SHAMAN SUDHEER RAI",
+    "email": "raiss25.extc@coeptech.ac.in"
+  },
+  {
+    "name": "SHARVARI SHRIPADRAO MULEY",
+    "email": "shripadraoms25.extc@coeptech.ac.in"
+  },
+  {
+    "name": "SHARVARY NARAYAN JUWAR",
+    "email": "juwarsn25.extc@coeptech.ac.in"
+  },
+  {
+    "name": "SHOURYASAMARTH SACHIN ICHALKARA",
+    "email": "ichalkaranjess25.extc@coeptech.ac.in"
+  },
+  {
+    "name": "SHRAVANI SUJIT MANE",
+    "email": "sujitms25.extc@coeptech.ac.in"
+  },
+  {
+    "name": "SHRESTHA BHAUMIK",
+    "email": "bhaumiks25.extc@coeptech.ac.in"
+  },
+  {
+    "name": "SHREYA DHANRAJ DADMAL",
+    "email": "dadmalsd25.extc@coeptech.ac.in"
+  },
+  {
+    "name": "SHREYASH SANJAY PAWAR",
+    "email": "sanjayps25.extc@coeptech.ac.in"
+  },
+  {
+    "name": "SHRUTI JAYHIND DISALE",
+    "email": "jayhindds25.extc@coeptech.ac.in"
+  },
+  {
+    "name": "SHUBHAM YASHAWANT NEMADE",
+    "email": "nemadesy25.extc@coeptech.ac.in"
+  },
+  {
+    "name": "SIDDHANT DILIP NIKHADE",
+    "email": "dilipns25.extc@coeptech.ac.in"
+  },
+  {
+    "name": "SIDDHI BHAGWAT KOLEKAR",
+    "email": "kolekarsb25.extc@coeptech.ac.in"
+  },
+  {
+    "name": "SIDDHI MANOHAR REDEKAR",
+    "email": "manoharrs25.extc@coeptech.ac.in"
+  },
+  {
+    "name": "SNEHAL BABURAO AMBRE",
+    "email": "baburaoas25.extc@coeptech.ac.in"
+  },
+  {
+    "name": "SOHAM TANAJI ADEKAR",
+    "email": "tanajias25.extc@coeptech.ac.in"
+  },
+  {
+    "name": "SOUMYA SANJAY FUSEY",
+    "email": "sanjayfs25.extc@coeptech.ac.in"
+  },
+  {
+    "name": "SOURABH SUNIL SONTAKKE",
+    "email": "sontakkess25.extc@coeptech.ac.in"
+  },
+  {
+    "name": "SUJAL SHASHIKANT CHANDANE",
+    "email": "shashikantcs25.extc@coeptech.ac.in"
+  },
+  {
+    "name": "SUPRIYA MAHENDRA BORDEPATIL",
+    "email": "bordepatilsm25.extc@coeptech.ac.in"
+  },
+  {
+    "name": "SURAJ PAWAR",
+    "email": "pawars25.extc@coeptech.ac.in"
+  },
+  {
+    "name": "SUYASH ANIL JORE",
+    "email": "joresa25.extc@coeptech.ac.in"
+  },
+  {
+    "name": "SWANANDI GHANSHYAM ZADE",
+    "email": "ghanshyamzs25.extc@coeptech.ac.in"
+  },
+  {
+    "name": "SWANANDI MOHARIL",
+    "email": "moharils25.extc@coeptech.ac.in"
+  },
+  {
+    "name": "SWARA SACHIN KADAM",
+    "email": "swarask25.extc@coeptech.ac.in"
+  },
+  {
+    "name": "SWARALI HIMMATRAO PATIL",
+    "email": "swaralip25.extc@coeptech.ac.in"
+  },
+  {
+    "name": "SWAYAM RAHUL BANKAR",
+    "email": "bankarsr25.extc@coeptech.ac.in"
+  },
+  {
+    "name": "TANISHA PRAVIN BABAR",
+    "email": "babartp25.extc@coeptech.ac.in"
+  },
+  {
+    "name": "TANISHQ KAMLESH BHANDARI",
+    "email": "bhandaritk25.extc@coeptech.ac.in"
+  },
+  {
+    "name": "TANVI AJAY MEHENDALE",
+    "email": "ajaymt25.extc@coeptech.ac.in"
+  },
+  {
+    "name": "VAIDEHI VIVEK NARKHEDE",
+    "email": "viveknv25.extc@coeptech.ac.in"
+  },
+  {
+    "name": "VARAD SADASHIV SAROLKAR",
+    "email": "sadashivsv25.extc@coeptech.ac.in"
+  },
+  {
+    "name": "VEDA SOURABH SINGH",
+    "email": "singhvs25.extc@coeptech.ac.in"
+  },
+  {
+    "name": "VEDANG PANKAJ VORA",
+    "email": "voravp25.extc@coeptech.ac.in"
+  },
+  {
+    "name": "VEDANT GOVINDRAO KULKARNI",
+    "email": "govindraokv25.extc@coeptech.ac.in"
+  },
+  {
+    "name": "VEDANT SHRIHARI YENCHEWAD",
+    "email": "shrihariyv25.extc@coeptech.ac.in"
+  },
+  {
+    "name": "VEDANT VENKAT HURCHNALE",
+    "email": "venkathv25.extc@coeptech.ac.in"
+  },
+  {
+    "name": "VIRAJ SWAPNIL PATIL",
+    "email": "swapnilpv25.extc@coeptech.ac.in"
+  },
+  {
+    "name": "VISHWAJEET SOMANATH MOHITE",
+    "email": "somanathmv25.extc@coeptech.ac.in"
+  },
+  {
+    "name": "VISHWANAND MARUTHE",
+    "email": "maruthev25.extc@coeptech.ac.in"
+  },
+  {
+    "name": "YUWANSH DAHIKAR",
+    "email": "dahikary25.extc@coeptech.ac.in"
+  },
+  {
+    "name": "ADITI SATISH SAWANT",
+    "email": "satishsa25.instru@coeptech.ac.in"
+  },
+  {
+    "name": "AGRAJ SANJAY RAUT",
+    "email": "sanjayra25.instru@coeptech.ac.in"
+  },
+  {
+    "name": "AMAN KHANDELWAL",
+    "email": "khandelwala25.instru@coeptech.ac.in"
+  },
+  {
+    "name": "AMEY AJAY KSHIRSAGAR",
+    "email": "kshirsagaraa25.instru@coeptech.ac.in"
+  },
+  {
+    "name": "AMEYA SACHIN PATIL",
+    "email": "patilas25.instru@coeptech.ac.in"
+  },
+  {
+    "name": "ANANNYA TUSHAR MIRKUTE",
+    "email": "mirkuteat25.instru@coeptech.ac.in"
+  },
+  {
+    "name": "ARNAV ANAND SAVREKAR",
+    "email": "anandsa25.instru@coeptech.ac.in"
+  },
+  {
+    "name": "ARYAN ADMANE",
+    "email": "admanea25.instru@coeptech.ac.in"
+  },
+  {
+    "name": "ASHVIN VISHNU WANJARE",
+    "email": "vishnuwa25.instru@coeptech.ac.in"
+  },
+  {
+    "name": "ASHWIN PREM PATHAK",
+    "email": "pathakap25.instru@coeptech.ac.in"
+  },
+  {
+    "name": "ASMITA ARVIND GANVIR",
+    "email": "ganvira25.instru@coeptech.ac.in"
+  },
+  {
+    "name": "ATHARVA PRADEEP SAKHARE",
+    "email": "pradeepsa25.instru@coeptech.ac.in"
+  },
+  {
+    "name": "CHINMAY ANIL DHEKANE",
+    "email": "dhekaneca25.instru@coeptech.ac.in"
+  },
+  {
+    "name": "CHIRAYU BABALU SALUNKE",
+    "email": "babalusc25.instru@coeptech.ac.in"
+  },
+  {
+    "name": "DAKSH DHANANJAY GATTEWAR",
+    "email": "dhananjaygd25.instru@coeptech.ac.in"
+  },
+  {
+    "name": "DHANANJAY SARVE MALHAR",
+    "email": "sarvemd25.instru@coeptech.ac.in"
+  },
+  {
+    "name": "DHRUV ISHWAR PATIL",
+    "email": "ishwarpd25.instru@coeptech.ac.in"
+  },
+  {
+    "name": "DNYANESHWARI JALINDAR JADHAV",
+    "email": "jalindarjd25.instru@coeptech.ac.in"
+  },
+  {
+    "name": "DUSHYANT KAILAS MARATHE",
+    "email": "kailasmd25.instru@coeptech.ac.in"
+  },
+  {
+    "name": "HARSH SACHIN VATHARE",
+    "email": "sachinvh25.instru@coeptech.ac.in"
+  },
+  {
+    "name": "JANAK SHARAD RAHUDKAR",
+    "email": "sharadrj25.instru@coeptech.ac.in"
+  },
+  {
+    "name": "JANHAVI GHOSE",
+    "email": "ghosej25.instru@coeptech.ac.in"
+  },
+  {
+    "name": "JANVI GAJANAN KHUDE",
+    "email": "khudejg25.instru@coeptech.ac.in"
+  },
+  {
+    "name": "KUMAR MANDAR KULKARNI",
+    "email": "kulkarnikm25.instru@coeptech.ac.in"
+  },
+  {
+    "name": "MANAV DHANRAJ RACHETTI",
+    "email": "dhanrajrm25.instru@coeptech.ac.in"
+  },
+  {
+    "name": "MEET AMOL PATIL",
+    "email": "amolpm25.instru@coeptech.ac.in"
+  },
+  {
+    "name": "MRUNMAYI ANANDKUMAR LONDHE",
+    "email": "londhema25.instru@coeptech.ac.in"
+  },
+  {
+    "name": "NIHARIKA NITIN KONDALWADEPATIL",
+    "email": "kondalwadenn25.instru@coeptech.ac.in"
+  },
+  {
+    "name": "NIKHIL SHRIPAD PATANKAR",
+    "email": "shripadpn25.instru@coeptech.ac.in"
+  },
+  {
+    "name": "OMKAR BHAGINATH KORADE",
+    "email": "korade25.instru@coeptech.ac.in"
+  },
+  {
+    "name": "PARTH SACHIN AGRAWAL",
+    "email": "agrawalps25.instru@coeptech.ac.in"
+  },
+  {
+    "name": "PRAJAKTA ADLINGE",
+    "email": "adlingep25.instru@coeptech.ac.in"
+  },
+  {
+    "name": "PRANAY MANIK RATHOD",
+    "email": "rathodpm25.instru@coeptech.ac.in"
+  },
+  {
+    "name": "PRATHAMESH PANDURANG PALAMKAR",
+    "email": "pandurangpp25.instru@coeptech.ac.in"
+  },
+  {
+    "name": "RACHIT MAHENDRA DONGRE",
+    "email": "mahendradr25.instru@coeptech.ac.in"
+  },
+  {
+    "name": "RATNAPARKHI MRUNAL MANDAR",
+    "email": "mandarrm25.instru@coeptech.ac.in"
+  },
+  {
+    "name": "ROHAN SANJAY KUMBHARE",
+    "email": "kumbharrs25.instru@coeptech.ac.in"
+  },
+  {
+    "name": "RUDRAPRIYA GIRISH KANGANE",
+    "email": "kanganerg25.instru@coeptech.ac.in"
+  },
+  {
+    "name": "RUSHABH BHAIRAVNATH VARULE",
+    "email": "bhairavnathvr25.instru@coeptech.ac.in"
+  },
+  {
+    "name": "RUTVA KAUSHAL PAREKH",
+    "email": "parekhrk25.instru@coeptech.ac.in"
+  },
+  {
+    "name": "SAMARTH SAMADHAN GALANDE",
+    "email": "galandess25.instru@coeptech.ac.in"
+  },
+  {
+    "name": "SANCHIT DANGONDA PATIL",
+    "email": "dangondaps25.instru@coeptech.ac.in"
+  },
+  {
+    "name": "SARANG PRANAV JAIRAM",
+    "email": "jairamsp25.instru@coeptech.ac.in"
+  },
+  {
+    "name": "SARTHAK MAHADEV BHAWAR",
+    "email": "mahadevbs25.instru@coeptech.ac.in"
+  },
+  {
+    "name": "SHARWARI RAJESH JAWADE",
+    "email": "jawadesr25.instru@coeptech.ac.in"
+  },
+  {
+    "name": "SHRADDHA JAYWANT SHINDE",
+    "email": "jaywantss25.instru@coeptech.ac.in"
+  },
+  {
+    "name": "SHRISTI SINGH SINGH",
+    "email": "singhs25.instru@coeptech.ac.in"
+  },
+  {
+    "name": "SOUMYASHREE SIDDHARUDHA HOLIKA",
+    "email": "siddharudhahs25.instru@coeptech.ac.in"
+  },
+  {
+    "name": "SPANDAN CHANDRABHAN GAIKWAD",
+    "email": "gaikwadsc25.instru@coeptech.ac.in"
+  },
+  {
+    "name": "SRUSHTI SACHIN DHAVALE",
+    "email": "sachinds25.instru@coeptech.ac.in"
+  },
+  {
+    "name": "SUJAL EKNATH JADHAO",
+    "email": "jadhaose25.instru@coeptech.ac.in"
+  },
+  {
+    "name": "SWAPNALI SANTOSH MALI",
+    "email": "santoshms25.instru@coeptech.ac.in"
+  },
+  {
+    "name": "SWAPNIL MAHADEO GADKAR",
+    "email": "mahadeogs25.instru@coeptech.ac.in"
+  },
+  {
+    "name": "TANMAY MAHADEO KARPE",
+    "email": "karpetm25.instru@coeptech.ac.in"
+  },
+  {
+    "name": "TANMAY SHRIKANT JOSHI",
+    "email": "joshits25.instru@coeptech.ac.in"
+  },
+  {
+    "name": "TANUJA DATTATRAY KHARSUNDE",
+    "email": "kharsundetd25.instru@coeptech.ac.in"
+  },
+  {
+    "name": "TEJAS SHRIKANT TAVADARKAR",
+    "email": "tavadarkarts25.instru@coeptech.ac.in"
+  },
+  {
+    "name": "USMAANMOHAMMAD FAROOQUE SHEW",
+    "email": "farooqueum25.instru@coeptech.ac.in"
+  },
+  {
+    "name": "VAIBHAV VIKRAM INAMDAR",
+    "email": "inamdarvv25.instru@coeptech.ac.in"
+  },
+  {
+    "name": "VARAD BABAN BHANDURE",
+    "email": "bhandurevb25.instru@coeptech.ac.in"
+  },
+  {
+    "name": "VARDHAN HERAMB KULKARNI",
+    "email": "herambkv25.instru@coeptech.ac.in"
+  },
+  {
+    "name": "VEDANT ASHOK BHAKRE",
+    "email": "ashokbv25.instru@coeptech.ac.in"
+  },
+  {
+    "name": "VIDUSHI MANTOO",
+    "email": "mantoov25.instru@coeptech.ac.in"
+  },
+  {
+    "name": "VIRUPAKSHA DNYANOBA DHAGE",
+    "email": "dnyanobadv25.instru@coeptech.ac.in"
+  },
+  {
+    "name": "WAKDE RANJEET JEEVAN",
+    "email": "jeevanwr25.instru@coeptech.ac.in"
+  },
+  {
+    "name": "YASHODEEP MAHENDRA GAIKWAD",
+    "email": "gaikwadym25.instru@coeptech.ac.in"
+  },
+  {
+    "name": "YASHODHAN DAYANAND KAMATH",
+    "email": "kamathyd25.instru@coeptech.ac.in"
+  },
+  {
+    "name": "ZIL SHARAD BHUTE",
+    "email": "bhutezs25.instru@coeptech.ac.in"
+  },
+  {
+    "name": "AADARSH ARUN MANE",
+    "email": "arunma25.mech@coeptech.ac.in"
+  },
+  {
+    "name": "AADYA ARVIND NAIR",
+    "email": "nairaa25.mech@coeptech.ac.in"
+  },
+  {
+    "name": "ABHINAV GANPATI KUMBHAR",
+    "email": "ganpatika25.mech@coeptech.ac.in"
+  },
+  {
+    "name": "ACHYUT NISHIKANT KAMBLE",
+    "email": "nishikantka25.mech@coeptech.ac.in"
+  },
+  {
+    "name": "ADITYA ABHAY PASTE",
+    "email": "pasteaa25.mech@coeptech.ac.in"
+  },
+  {
+    "name": "ADITYA DILIP KHARAT",
+    "email": "kharatad25.mech@coeptech.ac.in"
+  },
+  {
+    "name": "ADITYA VITTHAL SHINDE",
+    "email": "shindeav25.mech@coeptech.ac.in"
+  },
+  {
+    "name": "ADWAIT ASHISH BHADANG",
+    "email": "bhadangaa25.mech@coeptech.ac.in"
+  },
+  {
+    "name": "AGASTYA PRABHANJAN WANDREKAR",
+    "email": "wandrekarap25.mech@coeptech.ac.in"
+  },
+  {
+    "name": "AGASTYA VIJAY DULANI",
+    "email": "dulaniav25.mech@coeptech.ac.in"
+  },
+  {
+    "name": "AINESH UDAY MALANDKAR",
+    "email": "udayma25.mech@coeptech.ac.in"
+  },
+  {
+    "name": "AMAN DILIP KALE",
+    "email": "kalead25.mech@coeptech.ac.in"
+  },
+  {
+    "name": "AMOGH DEVENDRA BHADIKAR",
+    "email": "bhadikarad25.mech@coeptech.ac.in"
+  },
+  {
+    "name": "ANIKET VIJAY PATIL",
+    "email": "patilav25.mech@coeptech.ac.in"
+  },
+  {
+    "name": "ANSHUL PRASAD AUTADE",
+    "email": "prasadaa25.mech@coeptech.ac.in"
+  },
+  {
+    "name": "ANUSHA CHAITANYA BHIDE",
+    "email": "bhideac25.mech@coeptech.ac.in"
+  },
+  {
+    "name": "ANUSHKA MANISH PARIHAR",
+    "email": "pariharam25.mech@coeptech.ac.in"
+  },
+  {
+    "name": "ARANYASIDDH SADASHIV KAGWADE",
+    "email": "sadashivka25.mech@coeptech.ac.in"
+  },
+  {
+    "name": "ARNAV ANIL KULKARNI",
+    "email": "kulkarniaa25.mech@coeptech.ac.in"
+  },
+  {
+    "name": "ARNAV PRAVIN BAWANKAR",
+    "email": "pravinba25.mech@coeptech.ac.in"
+  },
+  {
+    "name": "ARPITA AMIT MARATHE",
+    "email": "amitma25.mech@coeptech.ac.in"
+  },
+  {
+    "name": "ARYA SANTOSH HIROLLI",
+    "email": "santoshha25.mech@coeptech.ac.in"
+  },
+  {
+    "name": "ARYAN GANESH BANDAL",
+    "email": "bandalag25.mech@coeptech.ac.in"
+  },
+  {
+    "name": "ARYAN MAHENDRA SOLUNKE",
+    "email": "solunkeam25.mech@coeptech.ac.in"
+  },
+  {
+    "name": "ARYAN SANJAY SHELAR",
+    "email": "shelaras25.mech@coeptech.ac.in"
+  },
+  {
+    "name": "ATHARV TUKARAM JADHAV",
+    "email": "tukaramja25.mech@coeptech.ac.in"
+  },
+  {
+    "name": "ATHARVA KISHOR MANKAR",
+    "email": "kishorma25.mech@coeptech.ac.in"
+  },
+  {
+    "name": "ATMAJA DEY",
+    "email": "deya25.mech@coeptech.ac.in"
+  },
+  {
+    "name": "AYUSH ADESH KAMBLE",
+    "email": "adeshka25.mech@coeptech.ac.in"
+  },
+  {
+    "name": "AYUSH RAINA",
+    "email": "rainaa25.mech@coeptech.ac.in"
+  },
+  {
+    "name": "AYUSH SHAILESH KATE",
+    "email": "kateas25.mech@coeptech.ac.in"
+  },
+  {
+    "name": "BHAVIK RAJESH KALRA",
+    "email": "kalrabr25.mech@coeptech.ac.in"
+  },
+  {
+    "name": "BHUVANESH ABHIJIT CHAUDHARI",
+    "email": "chaudhariba25.mech@coeptech.ac.in"
+  },
+  {
+    "name": "CHINMAY AJAY JOSHI",
+    "email": "ajayjc25.mech@coeptech.ac.in"
+  },
+  {
+    "name": "DEVESH SHANTANU DESHPANDE",
+    "email": "shantanudd25.mech@coeptech.ac.in"
+  },
+  {
+    "name": "DHANRAJ PRAVIN THORAT",
+    "email": "thoratdp25.mech@coeptech.ac.in"
+  },
+  {
+    "name": "DHRUV PANKAJ WANKHEDE",
+    "email": "wankhededp25.mech@coeptech.ac.in"
+  },
+  {
+    "name": "DNYANESHWARI DHANANJAY DEBARE",
+    "email": "dhananjaydd25.mech@coeptech.ac.in"
+  },
+  {
+    "name": "EHSAN S BAKSHI",
+    "email": "bakshies25.mech@coeptech.ac.in"
+  },
+  {
+    "name": "ESHAAN ROHIT NERLEKAR",
+    "email": "nerlekarer25.mech@coeptech.ac.in"
+  },
+  {
+    "name": "GAUTAM SHIVANANDA KAMATH",
+    "email": "shivanandakg25.mech@coeptech.ac.in"
+  },
+  {
+    "name": "HARSHIT SANDIP GAHUKAR",
+    "email": "gahukarhs25.mech@coeptech.ac.in"
+  },
+  {
+    "name": "HARSHIT VIVEK SURYAWANSHI",
+    "email": "suryawanshihv25.mech@coeptech.ac.in"
+  },
+  {
+    "name": "HASNAIN BOHARI",
+    "email": "boharih25.mech@coeptech.ac.in"
+  },
+  {
+    "name": "ISHIKA SADA KAMADI",
+    "email": "kamadiis25.mech@coeptech.ac.in"
+  },
+  {
+    "name": "JAI TILAK THAPA",
+    "email": "thapajt25.mech@coeptech.ac.in"
+  },
+  {
+    "name": "JAY DHANYAKUMAR SAWALWADE",
+    "email": "sawalwadejd25.mech@coeptech.ac.in"
+  },
+  {
+    "name": "KARAN MAHADEV KADAM",
+    "email": "mahadevkk25.mech@coeptech.ac.in"
+  },
+  {
+    "name": "KARAN RAMCHANDRA JAGDALE",
+    "email": "jagdalekr25.mech@coeptech.ac.in"
+  },
+  {
+    "name": "KAUSTUBH TUSHAR JOSHI",
+    "email": "tusharjk25.mech@coeptech.ac.in"
+  },
+  {
+    "name": "KIRTI TATYABA KHARAT",
+    "email": "tatyabakk25.mech@coeptech.ac.in"
+  },
+  {
+    "name": "KODAG GAURAV GUNDA",
+    "email": "gundakg25.mech@coeptech.ac.in"
+  },
+  {
+    "name": "KSHIRAJA PRASHANT KHADE",
+    "email": "khadekp25.mech@coeptech.ac.in"
+  },
+  {
+    "name": "MADHURA MAHESH GAIKWAD",
+    "email": "gaikwadmm25.mech@coeptech.ac.in"
+  },
+  {
+    "name": "MANAS MANOHAR AVHAD",
+    "email": "manoharam25.mech@coeptech.ac.in"
+  },
+  {
+    "name": "MANASVI GUPTA",
+    "email": "guptam25.mech@coeptech.ac.in"
+  },
+  {
+    "name": "MANAV PREMKUMAR PUNJABI",
+    "email": "punjabimp25.mech@coeptech.ac.in"
+  },
+  {
+    "name": "MANOJKUMAR DONIKAR DEWANSHU",
+    "email": "donikardm25.mech@coeptech.ac.in"
+  },
+  {
+    "name": "NISHANT UMESH KULKARNI",
+    "email": "umeshkn25.mech@coeptech.ac.in"
+  },
+  {
+    "name": "PIYUSH MILIND AMBIKE",
+    "email": "milindap25.mech@coeptech.ac.in"
+  },
+  {
+    "name": "PIYUSH NARESH GAWHALE",
+    "email": "nareshgp25.mech@coeptech.ac.in"
+  },
+  {
+    "name": "PRANALI SUDHIR BUVA",
+    "email": "sudhirbp25.mech@coeptech.ac.in"
+  },
+  {
+    "name": "PRATHAMESH SIDHARAM FULARI",
+    "email": "sidharamfp25.mech@coeptech.ac.in"
+  },
+  {
+    "name": "PRATISH PUNDLIK CHAVAN",
+    "email": "pundlikcp25.mech@coeptech.ac.in"
+  },
+  {
+    "name": "PUSHKAR MANOJ CHAUDHARI",
+    "email": "manojcp25.mech@coeptech.ac.in"
+  },
+  {
+    "name": "RAJ RAHUL DESAI",
+    "email": "rahuldr25.mech@coeptech.ac.in"
+  },
+  {
+    "name": "RIYA RAHUL GAIKWAD",
+    "email": "rahulgr25.mech@coeptech.ac.in"
+  },
+  {
+    "name": "ROHAN NAMDEO DHINDALE",
+    "email": "namdeodr25.mech@coeptech.ac.in"
+  },
+  {
+    "name": "ROHAN VIJAY KHARBADKAR",
+    "email": "vijaykr25.mech@coeptech.ac.in"
+  },
+  {
+    "name": "ROHIT SUBHASH BHANUSE",
+    "email": "subhashbr25.mech@coeptech.ac.in"
+  },
+  {
+    "name": "SAHADEV NAVNATH KHAMKAR",
+    "email": "navnathks25.mech@coeptech.ac.in"
+  },
+  {
+    "name": "SAHIL KEDAR JOSHI",
+    "email": "kedarjs25.mech@coeptech.ac.in"
+  },
+  {
+    "name": "SAI RUPESH JANGAMSWAMI",
+    "email": "rupeshjs25.mech@coeptech.ac.in"
+  },
+  {
+    "name": "SAISH MARUTI DIVASE",
+    "email": "marutids25.mech@coeptech.ac.in"
+  },
+  {
+    "name": "SAMAKSH MANISH MANDLIK",
+    "email": "manishms25.mech@coeptech.ac.in"
+  },
+  {
+    "name": "SARTHAK BHARAT DEVHARE",
+    "email": "bharatds25.mech@coeptech.ac.in"
+  },
+  {
+    "name": "SARTHAK SANDIP GUGALE",
+    "email": "sandipgs25.mech@coeptech.ac.in"
+  },
+  {
+    "name": "SARVADNYA SUDHIR BAKARE",
+    "email": "sudhirbs25.mech@coeptech.ac.in"
+  },
+  {
+    "name": "SARVESH PANKAJ LADDHA",
+    "email": "pankajls25.mech@coeptech.ac.in"
+  },
+  {
+    "name": "SAWANI SANJAY DAWALE",
+    "email": "sanjayds25.mech@coeptech.ac.in"
+  },
+  {
+    "name": "SHANTANU VIKAS LAHANE",
+    "email": "vikasls25.mech@coeptech.ac.in"
+  },
+  {
+    "name": "SHREYAS ANURAG CHITALE",
+    "email": "anuragcs25.mech@coeptech.ac.in"
+  },
+  {
+    "name": "SHREYASH RAGHUNATH DESAI",
+    "email": "raghunathds25.mech@coeptech.ac.in"
+  },
+  {
+    "name": "SHRUTI DNYANESHWAR BHUJBAL",
+    "email": "dnyaneshwarbs25.mech@coeptech.ac.in"
+  },
+  {
+    "name": "SOHAM NITIN KADAM",
+    "email": "nitinks25.mech@coeptech.ac.in"
+  },
+  {
+    "name": "SPARSH SANJAY GAICHARE",
+    "email": "sanjaygs25.mech@coeptech.ac.in"
+  },
+  {
+    "name": "SWAROOP SANTOSH BAGAL",
+    "email": "santoshbs25.mech@coeptech.ac.in"
+  },
+  {
+    "name": "TANISHK AMIT BADAL",
+    "email": "amitbt25.mech@coeptech.ac.in"
+  },
+  {
+    "name": "TANMAY RAHUL BARHANPURE",
+    "email": "rahulbt25.mech@coeptech.ac.in"
+  },
+  {
+    "name": "TANMAY SHRIRAM GODSE",
+    "email": "shriramgt25.mech@coeptech.ac.in"
+  },
+  {
+    "name": "TOSHITH MAHESH CHAKOLE",
+    "email": "maheshct25.mech@coeptech.ac.in"
+  },
+  {
+    "name": "VARDHAN RANJIT MANE",
+    "email": "ranjitmv25.mech@coeptech.ac.in"
+  },
+  {
+    "name": "VEDANT SACHIN MAHAJAN",
+    "email": "sachinmv25.mech@coeptech.ac.in"
+  },
+  {
+    "name": "VEDASHRI SHAILESH KARHALE",
+    "email": "shaileshkv25.mech@coeptech.ac.in"
+  },
+  {
+    "name": "VIHAAN PRASHANT CHANDANE",
+    "email": "prashantcv25.mech@coeptech.ac.in"
+  },
+  {
+    "name": "VIRAJ VILAS KHADE",
+    "email": "vilaskv25.mech@coeptech.ac.in"
+  },
+  {
+    "name": "YASH DINKAR BHAVALE",
+    "email": "dinkarby25.mech@coeptech.ac.in"
+  },
+  {
+    "name": "YASH RAJESH KUBAL",
+    "email": "rajeshky25.mech@coeptech.ac.in"
+  },
+  {
+    "name": "YASH SADANAND DIWAN",
+    "email": "sadananddy25.mech@coeptech.ac.in"
+  },
+  {
+    "name": "YASH SATISH KHINVASARA",
+    "email": "satishky25.mech@coeptech.ac.in"
+  },
+  {
+    "name": "AASTHA RAJESH PATANGE",
+    "email": "rajeshpa25.mech@coeptech.ac.in"
+  },
+  {
+    "name": "ABHAS DEEPENDRA SAYARE",
+    "email": "deependrasa25.mech@coeptech.ac.in"
+  },
+  {
+    "name": "ADARSH BALASAHEB SANAP",
+    "email": "balasahebsa25.mech@coeptech.ac.in"
+  },
+  {
+    "name": "ADITYA JAYSING SHINDE",
+    "email": "jaysingsa25.mech@coeptech.ac.in"
+  },
+  {
+    "name": "ARYAN RAUT",
+    "email": "rauta25.mech@coeptech.ac.in"
+  },
+  {
+    "name": "ARYEN SACHIN SANTOSHWAR",
+    "email": "sachinsa25.mech@coeptech.ac.in"
+  },
+  {
+    "name": "ATHARVA AMOL OTAWANEKAR",
+    "email": "amoloa25.mech@coeptech.ac.in"
+  },
+  {
+    "name": "ATHARVA NILESH MOHITE",
+    "email": "nileshma25.mech@coeptech.ac.in"
+  },
+  {
+    "name": "DHAWALSHREE MILIND NAVANALE",
+    "email": "milindnd25.mech@coeptech.ac.in"
+  },
+  {
+    "name": "GANESH GULAB SABLE",
+    "email": "gulabsg25.mech@coeptech.ac.in"
+  },
+  {
+    "name": "GAURAV AMBRISH TIWARI",
+    "email": "ambrishtg25.mech@coeptech.ac.in"
+  },
+  {
+    "name": "ISHAN ASHUTOSH WALIMBE",
+    "email": "ashutoshwi25.mech@coeptech.ac.in"
+  },
+  {
+    "name": "ISHITA SUNIL PARDESI",
+    "email": "sunilpi25.mech@coeptech.ac.in"
+  },
+  {
+    "name": "JAY SUNIL VARHADE",
+    "email": "sunilvj25.mech@coeptech.ac.in"
+  },
+  {
+    "name": "KAUSTUBH VINAYAK NAGAVKAR",
+    "email": "vinayaknk25.mech@coeptech.ac.in"
+  },
+  {
+    "name": "LUCKY RAJENDRA NIRWAN",
+    "email": "rajendranl25.mech@coeptech.ac.in"
+  },
+  {
+    "name": "MAYURESH NATHA DUTE",
+    "email": "dutemn25.mech@coeptech.ac.in"
+  },
+  {
+    "name": "MAYURI MARUTI PATIL",
+    "email": "marutipm25.mech@coeptech.ac.in"
+  },
+  {
+    "name": "MONAL PRASHANT VASAIKAR",
+    "email": "prashantvm25.mech@coeptech.ac.in"
+  },
+  {
+    "name": "NEELAKSH UMESH PANDYA",
+    "email": "pandyanu25.mech@coeptech.ac.in"
+  },
+  {
+    "name": "NIDHI RAMSAGAR VISHWAKARMA",
+    "email": "vishwakarmanr25.mech@coeptech.ac.in"
+  },
+  {
+    "name": "NIHAL NARENDRAKUMAR PADOLE",
+    "email": "narendrakumarpn25.mech@coeptech.ac.in"
+  },
+  {
+    "name": "OM HARISH NAHIDE",
+    "email": "harishno25.mech@coeptech.ac.in"
+  },
+  {
+    "name": "OM SALKUTE",
+    "email": "salkuteo25.mech@coeptech.ac.in"
+  },
+  {
+    "name": "OM SIDDHESHWAR NARAKE",
+    "email": "siddheshwarno25.mech@coeptech.ac.in"
+  },
+  {
+    "name": "OMKAR JAGAN SANGADE",
+    "email": "sangadeoj25.mech@coeptech.ac.in"
+  },
+  {
+    "name": "PARTH MANOJ BOBADE",
+    "email": "bobadepm25.mech@coeptech.ac.in"
+  },
+  {
+    "name": "PARTH PRADEEP KAMBLE",
+    "email": "kamblepp25.mech@coeptech.ac.in"
+  },
+  {
+    "name": "PARTH SRINIVASAN",
+    "email": "srinivasanp25.mech@coeptech.ac.in"
+  },
+  {
+    "name": "PRANAV HARISH PATEL",
+    "email": "harishpp25.mech@coeptech.ac.in"
+  },
+  {
+    "name": "PRATHAMESH DHONDIRAM SAWANT",
+    "email": "dhondiramsp25.mech@coeptech.ac.in"
+  },
+  {
+    "name": "PRATIMA NAGORAO RAUT",
+    "email": "rautpn25.mech@coeptech.ac.in"
+  },
+  {
+    "name": "PRERNA VINAYAK PONDKULE",
+    "email": "vinayakpp25.mech@coeptech.ac.in"
+  },
+  {
+    "name": "RAHUL DILIP SHINDE",
+    "email": "shinderd25.mech@coeptech.ac.in"
+  },
+  {
+    "name": "RAJ BHUPENDRA RAVAL",
+    "email": "bhupendrarr25.mech@coeptech.ac.in"
+  },
+  {
+    "name": "RAJ SURESH LOHAR",
+    "email": "loharrs25.mech@coeptech.ac.in"
+  },
+  {
+    "name": "RISHABH AMARISH KARNIK",
+    "email": "karnikra25.mech@coeptech.ac.in"
+  },
+  {
+    "name": "RIYA SACHIN PATIL",
+    "email": "patilrs25.mech@coeptech.ac.in"
+  },
+  {
+    "name": "ROBIN XAVIER",
+    "email": "xavierr25.mech@coeptech.ac.in"
+  },
+  {
+    "name": "ROHAN SANTOSH HARDE",
+    "email": "santoshhr25.mech@coeptech.ac.in"
+  },
+  {
+    "name": "ROHAN SANTOSH SALUNKHE",
+    "email": "santoshsr25.mech@coeptech.ac.in"
+  },
+  {
+    "name": "S LEELA VEDANT REDDY",
+    "email": "vedantsl25.mech@coeptech.ac.in"
+  },
+  {
+    "name": "SAMARTH SACHIN KHULE",
+    "email": "sachinks25.mech@coeptech.ac.in"
+  },
+  {
+    "name": "SAMIP SUMEDH SHIRSAT",
+    "email": "shirsatss25.mech@coeptech.ac.in"
+  },
+  {
+    "name": "SARTH VINAYAK SHINDE",
+    "email": "vinayakss25.mech@coeptech.ac.in"
+  },
+  {
+    "name": "SARTHAK ANIL KADAM",
+    "email": "anilks25.mech@coeptech.ac.in"
+  },
+  {
+    "name": "SAURABH PRAVIN PATIL",
+    "email": "patilsp25.mech@coeptech.ac.in"
+  },
+  {
+    "name": "SAYYAD SAHIL KHAJASAB",
+    "email": "khajasabss25.mech@coeptech.ac.in"
+  },
+  {
+    "name": "SAYYED OWAIS AHMED",
+    "email": "ahmedso25.mech@coeptech.ac.in"
+  },
+  {
+    "name": "SHANTANU VIJAY VAIDYA",
+    "email": "vijayvs25.mech@coeptech.ac.in"
+  },
+  {
+    "name": "SHAURYA VIKRAM MOTE",
+    "email": "motesv25.mech@coeptech.ac.in"
+  },
+  {
+    "name": "SHLOK RUTUPARNA PEDNEKAR",
+    "email": "pednekarsr25.mech@coeptech.ac.in"
+  },
+  {
+    "name": "SHLOK VINODSINGH THAKUR",
+    "email": "thakursv25.mech@coeptech.ac.in"
+  },
+  {
+    "name": "SHOURYA ANIL TADWALE",
+    "email": "anilts25.mech@coeptech.ac.in"
+  },
+  {
+    "name": "SHREERAM SAMEER SAWARKAR",
+    "email": "sawarkarss25.mech@coeptech.ac.in"
+  },
+  {
+    "name": "SHRIHARSH PRAMOD CHAVAN",
+    "email": "pramodcs25.mech@coeptech.ac.in"
+  },
+  {
+    "name": "SHRUTI YOGESH PITKAR",
+    "email": "pitkarsy25.mech@coeptech.ac.in"
+  },
+  {
+    "name": "SHUBHAM UTTAM POWAR",
+    "email": "uttamps25.mech@coeptech.ac.in"
+  },
+  {
+    "name": "SHUKLA VAISHNAV AKALPIT",
+    "email": "akalpitsv25.mech@coeptech.ac.in"
+  },
+  {
+    "name": "SOHAM ANIL JOSHI",
+    "email": "joshisa25.mech@coeptech.ac.in"
+  },
+  {
+    "name": "SUMEDH NITIN ZODGE",
+    "email": "nitinzs25.mech@coeptech.ac.in"
+  },
+  {
+    "name": "SURABHI HRISHIKESH NENE",
+    "email": "nenesh25.mech@coeptech.ac.in"
+  },
+  {
+    "name": "SWANAND NITIN WANI",
+    "email": "wanisn25.mech@coeptech.ac.in"
+  },
+  {
+    "name": "SWARA SHAMKANT BHOR",
+    "email": "bhorss25.mech@coeptech.ac.in"
+  },
+  {
+    "name": "SWARUP BHARAT PATIL",
+    "email": "bharatps25.mech@coeptech.ac.in"
+  },
+  {
+    "name": "TANJILA MAULALI TAMBOLI",
+    "email": "maulalitt25.mech@coeptech.ac.in"
+  },
+  {
+    "name": "UJJWAL KAMALKANT JHA",
+    "email": "jhauk25.mech@coeptech.ac.in"
+  },
+  {
+    "name": "UNAMTEEPHRANG TARIANG",
+    "email": "tariangu25.mech@coeptech.ac.in"
+  },
+  {
+    "name": "VARAD SANJAY GAIKWAD",
+    "email": "gaikwadvs25.mech@coeptech.ac.in"
+  },
+  {
+    "name": "VEDANSH HRISHIKESH BARGE",
+    "email": "bargevh25.mech@coeptech.ac.in"
+  },
+  {
+    "name": "VINISHA SAMPATH MUDALIAR",
+    "email": "sampathmv25.mech@coeptech.ac.in"
+  },
+  {
+    "name": "VRIDDHI SHETTY",
+    "email": "shettyv25.mech@coeptech.ac.in"
+  },
+  {
+    "name": "AADITYA ABHIJIT LAULKAR",
+    "email": "laulkaraa25.mfg@coeptech.ac.in"
+  },
+  {
+    "name": "AADITYA ASHOK GHULE",
+    "email": "ashokga25.mfg@coeptech.ac.in"
+  },
+  {
+    "name": "AALAP HARSHAL TALEGAONKAR",
+    "email": "harshalta25.mfg@coeptech.ac.in"
+  },
+  {
+    "name": "AANCHAL SOURABH KULKARNI",
+    "email": "kulkarnias25.mfg@coeptech.ac.in"
+  },
+  {
+    "name": "ADITI AMOL POTEKAR",
+    "email": "amolpa25.mfg@coeptech.ac.in"
+  },
+  {
+    "name": "ADITYA HANMANT SHETE",
+    "email": "sheteah25.mfg@coeptech.ac.in"
+  },
+  {
+    "name": "ADITYA PRASHANT JADHAV",
+    "email": "prashantja25.mfg@coeptech.ac.in"
+  },
+  {
+    "name": "ADITYA RAJU GAIKWAD",
+    "email": "rajuga25.mfg@coeptech.ac.in"
+  },
+  {
+    "name": "AKANKSHA GORAKHNATH HANGE",
+    "email": "hangeag25.mfg@coeptech.ac.in"
+  },
+  {
+    "name": "AKSHADA ANANDA AUTI",
+    "email": "anandaaa25.mfg@coeptech.ac.in"
+  },
+  {
+    "name": "AMIT GOVIND DADHEL",
+    "email": "govindda25.mfg@coeptech.ac.in"
+  },
+  {
+    "name": "AMOGH ABHAY KULKARNI",
+    "email": "abhayka25.mfg@coeptech.ac.in"
+  },
+  {
+    "name": "APURV NITIN INGALE",
+    "email": "nitinia25.mfg@coeptech.ac.in"
+  },
+  {
+    "name": "ASHISH GIRISH ARWADE",
+    "email": "girishaa25.mfg@coeptech.ac.in"
+  },
+  {
+    "name": "AVANEESH MILIND CHIRMULE",
+    "email": "chirmuleam25.mfg@coeptech.ac.in"
+  },
+  {
+    "name": "AYUSH AMOL POTDAR",
+    "email": "potdaraa25.mfg@coeptech.ac.in"
+  },
+  {
+    "name": "AYUSH ASHISH DESHMUKH",
+    "email": "deshmukhaa25.mfg@coeptech.ac.in"
+  },
+  {
+    "name": "BHAGWAN LAXMAN PATIL",
+    "email": "laxmanpb25.mfg@coeptech.ac.in"
+  },
+  {
+    "name": "CHAITANYA BHUPENDRA HIRULKAR",
+    "email": "bhupendrahc25.mfg@coeptech.ac.in"
+  },
+  {
+    "name": "CHETAN AMRITLAL GUPTA",
+    "email": "amritlalgc25.mfg@coeptech.ac.in"
+  },
+  {
+    "name": "DEVESH KAMLESH CHAVAN",
+    "email": "kamleshcd25.mfg@coeptech.ac.in"
+  },
+  {
+    "name": "DHAVAL AMOL DEVMORE",
+    "email": "amoldd25.mfg@coeptech.ac.in"
+  },
+  {
+    "name": "GANVITA ANKUSH DHURVE",
+    "email": "ankushdg25.mfg@coeptech.ac.in"
+  },
+  {
+    "name": "GOPAL ULHAS SADEGAONKAR",
+    "email": "ulhassg25.mfg@coeptech.ac.in"
+  },
+  {
+    "name": "GURUKANT TIWARI",
+    "email": "tiwarig25.mfg@coeptech.ac.in"
+  },
+  {
+    "name": "HANMANT NAGNATH HEMBADE",
+    "email": "nagnathhh25.mfg@coeptech.ac.in"
+  },
+  {
+    "name": "HARSH BASAVARAJ CHOUGALA",
+    "email": "chougalahb25.mfg@coeptech.ac.in"
+  },
+  {
+    "name": "HARSH RATHI",
+    "email": "rathih25.mfg@coeptech.ac.in"
+  },
+  {
+    "name": "HARSHAL WAMAN CHUDHARI",
+    "email": "chudharihw25.mfg@coeptech.ac.in"
+  },
+  {
+    "name": "HIMANSHU BHAGAWAT PATIL",
+    "email": "bhagawatph25.mfg@coeptech.ac.in"
+  },
+  {
+    "name": "HIMANSHU NITIN SARODE",
+    "email": "sarodehn25.mfg@coeptech.ac.in"
+  },
+  {
+    "name": "JAHNAVI SHRIRAM SINGH",
+    "email": "singhjs25.mfg@coeptech.ac.in"
+  },
+  {
+    "name": "JATIN HARIDAS KATKAR",
+    "email": "haridaskj25.mfg@coeptech.ac.in"
+  },
+  {
+    "name": "JAYRAJ SUDHAKAR CHAVAN",
+    "email": "sudhakarcj25.mfg@coeptech.ac.in"
+  },
+  {
+    "name": "KHANMOHAMMED AYAAN SHAMIR",
+    "email": "ayaankm25.mfg@coeptech.ac.in"
+  },
+  {
+    "name": "KHUSHI BANSAL",
+    "email": "bansalk25.mfg@coeptech.ac.in"
+  },
+  {
+    "name": "KRUSHNESH HARSHWARDHAN HARDAS",
+    "email": "harshwardhanhk25.mfg@coeptech.ac.in"
+  },
+  {
+    "name": "MAITHILI UMASHANKAR KOCHE",
+    "email": "kochemu25.mfg@coeptech.ac.in"
+  },
+  {
+    "name": "MANTHAN RAVI KHOBRAGADE",
+    "email": "ravikm25.mfg@coeptech.ac.in"
+  },
+  {
+    "name": "MAYURI DNYANESHWAR PAWAR",
+    "email": "dnyaneshwarpm25.mfg@coeptech.ac.in"
+  },
+  {
+    "name": "NACHIKET VAISHAMPAYAN",
+    "email": "nachiketv25.mfg@coeptech.ac.in"
+  },
+  {
+    "name": "OMKAAR SACHIN PATWARDHAN",
+    "email": "patwardhanos25.mfg@coeptech.ac.in"
+  },
+  {
+    "name": "OMKAR RAJUDAS RATHOD",
+    "email": "rajudasro25.mfg@coeptech.ac.in"
+  },
+  {
+    "name": "PARINITA SAMEER KHEDIKAR",
+    "email": "khedikarps25.mfg@coeptech.ac.in"
+  },
+  {
+    "name": "PARITOSH PRASANNA ARKADI",
+    "email": "arkadipp25.mfg@coeptech.ac.in"
+  },
+  {
+    "name": "PRANAV SHIVAJI CHOUGULE",
+    "email": "shivajicp25.mfg@coeptech.ac.in"
+  },
+  {
+    "name": "PRANITEE PRASAD KHEDKAR",
+    "email": "prasadkp25.mfg@coeptech.ac.in"
+  },
+  {
+    "name": "PRUTHVIRAJ VIJAY DHAWALE",
+    "email": "vijaydp25.mfg@coeptech.ac.in"
+  },
+  {
+    "name": "REEVA JHAWAR",
+    "email": "jhawarr25.mfg@coeptech.ac.in"
+  },
+  {
+    "name": "RENUSANJANA SIVA BOMMISETTY",
+    "email": "sanjanabr25.mfg@coeptech.ac.in"
+  },
+  {
+    "name": "ROHAN BABAN WAGH",
+    "email": "babanwr25.mfg@coeptech.ac.in"
+  },
+  {
+    "name": "RUPAK SHIVDARSHAN AMBEKAR",
+    "email": "ambekarrs25.mfg@coeptech.ac.in"
+  },
+  {
+    "name": "RUSHABH SUBHASH CHOUGULE",
+    "email": "chougulers25.mfg@coeptech.ac.in"
+  },
+  {
+    "name": "SAMYAK ATUL JAIN",
+    "email": "jainsa25.mfg@coeptech.ac.in"
+  },
+  {
+    "name": "SANIKA RAGHUNATH LAWHALE",
+    "email": "raghunathls25.mfg@coeptech.ac.in"
+  },
+  {
+    "name": "SANKPAL CHAITANYA ANAND",
+    "email": "anandsc25.mfg@coeptech.ac.in"
+  },
+  {
+    "name": "SAYYAM PRASHANT BADGUJAR",
+    "email": "prashantbs25.mfg@coeptech.ac.in"
+  },
+  {
+    "name": "SHANTANU SANJAY KANBALE",
+    "email": "kanbaless25.mfg@coeptech.ac.in"
+  },
+  {
+    "name": "SHARVARI SAHEBRAO MORE",
+    "email": "moress25.mfg@coeptech.ac.in"
+  },
+  {
+    "name": "SHASHWAT MAHESH MAHAJAN",
+    "email": "maheshms25.mfg@coeptech.ac.in"
+  },
+  {
+    "name": "SHLOK RAKESHKUMAR BHANGDIYA",
+    "email": "bhangdiyasr25.mfg@coeptech.ac.in"
+  },
+  {
+    "name": "SHRAVAN JITENDRA MORE",
+    "email": "moresj25.mfg@coeptech.ac.in"
+  },
+  {
+    "name": "SHRAVANI RAMCHANDRA KHOT",
+    "email": "ramchandraks25.mfg@coeptech.ac.in"
+  },
+  {
+    "name": "SHREEHARI FATING",
+    "email": "fatings25.mfg@coeptech.ac.in"
+  },
+  {
+    "name": "SHREYA DATTATRAYA DAGADE",
+    "email": "dagadesd25.mfg@coeptech.ac.in"
+  },
+  {
+    "name": "SHREYA SACHIN GAIKWAD",
+    "email": "sachings25.mfg@coeptech.ac.in"
+  },
+  {
+    "name": "SHREYASH JAMBU GAIKWAD",
+    "email": "jambugs25.mfg@coeptech.ac.in"
+  },
+  {
+    "name": "SHRIKANT DIPAK SALUNKHE",
+    "email": "dipakss25.mfg@coeptech.ac.in"
+  },
+  {
+    "name": "SHRINIVAS DIGAMBAR PANDE",
+    "email": "digambarps25.mfg@coeptech.ac.in"
+  },
+  {
+    "name": "SHRIRAM SUHAS DHAMNE",
+    "email": "suhasds25.mfg@coeptech.ac.in"
+  },
+  {
+    "name": "SIDDESH PRAMOD INGOLE",
+    "email": "ingolesp25.mfg@coeptech.ac.in"
+  },
+  {
+    "name": "SIDDHESH SATHIK",
+    "email": "sathiks25.mfg@coeptech.ac.in"
+  },
+  {
+    "name": "SPANDAN VISHAL JAIN",
+    "email": "vishaljs25.mfg@coeptech.ac.in"
+  },
+  {
+    "name": "SPARSH ANIL LONDHE",
+    "email": "londhesa25.mfg@coeptech.ac.in"
+  },
+  {
+    "name": "SUJIT KUMAR",
+    "email": "kumarsk25.mfg@coeptech.ac.in"
+  },
+  {
+    "name": "SUMIT SAINATH BORADE",
+    "email": "sainathbs25.mfg@coeptech.ac.in"
+  },
+  {
+    "name": "SURAJ SAKHARAM BINNAR",
+    "email": "sakharambs25.mfg@coeptech.ac.in"
+  },
+  {
+    "name": "SUSHANT SUBHASH SONAWANE",
+    "email": "sonawaness25.mfg@coeptech.ac.in"
+  },
+  {
+    "name": "TANISHQ SHITALKUMAR LOKHANDE",
+    "email": "shitalkumarlt25.mfg@coeptech.ac.in"
+  },
+  {
+    "name": "TEJAS RAJARAM SHELKE",
+    "email": "rajaramst25.mfg@coeptech.ac.in"
+  },
+  {
+    "name": "UTKARSH UMASHANKAR GUPTA",
+    "email": "guptauu25.mfg@coeptech.ac.in"
+  },
+  {
+    "name": "VAISHNAVI VITTHAL LABADE",
+    "email": "labadevv25.mfg@coeptech.ac.in"
+  },
+  {
+    "name": "VARAD MURLIDHAR DESHMUKH",
+    "email": "deshmukhvm25.mfg@coeptech.ac.in"
+  },
+  {
+    "name": "VEDANT KRANTIVEER PAWAR",
+    "email": "pawarvk25.mfg@coeptech.ac.in"
+  },
+  {
+    "name": "VINAYAK VISHWANATH KHOKALE",
+    "email": "vishwanathkv25.mfg@coeptech.ac.in"
+  },
+  {
+    "name": "YASHODHAN ASHISH APTE",
+    "email": "ashishay25.mfg@coeptech.ac.in"
+  },
+  {
+    "name": "YASHWANT SUBHASH CHANDANE",
+    "email": "subhashcy25.mfg@coeptech.ac.in"
+  },
+  {
+    "name": "ABHIRAM ANAND MAIRAL",
+    "email": "mairalaa25.meta@coeptech.ac.in"
+  },
+  {
+    "name": "ADITYA ANNASAHEB GAIKWAD",
+    "email": "annasahebga25.meta@coeptech.ac.in"
+  },
+  {
+    "name": "AMOGH PRASAD WALEKAR",
+    "email": "prasadwa25.meta@coeptech.ac.in"
+  },
+  {
+    "name": "ANIKET RAMKISAN NARWADE",
+    "email": "ramkisanna25.meta@coeptech.ac.in"
+  },
+  {
+    "name": "ANJALI SHANKAR KALMENGHE",
+    "email": "kalmengheas25.meta@coeptech.ac.in"
+  },
+  {
+    "name": "ARNAV MANISH GAWANDE",
+    "email": "manishga25.meta@coeptech.ac.in"
+  },
+  {
+    "name": "ARNAV NIRMAL NEHETE",
+    "email": "nehetean25.meta@coeptech.ac.in"
+  },
+  {
+    "name": "ARYA KALPESH JUVEKAR",
+    "email": "kalpeshja25.meta@coeptech.ac.in"
+  },
+  {
+    "name": "AYUSH SHINDE",
+    "email": "shindea25.meta@coeptech.ac.in"
+  },
+  {
+    "name": "AYUSH SUNIL CHOUGULE",
+    "email": "sunilca25.meta@coeptech.ac.in"
+  },
+  {
+    "name": "BHAVIK DATTATRAY SANGALE",
+    "email": "sangalebd25.meta@coeptech.ac.in"
+  },
+  {
+    "name": "CHAITANYA LAKSHMI NARAYAN",
+    "email": "narayancl25.meta@coeptech.ac.in"
+  },
+  {
+    "name": "CHANDANSHIV ADITYA CHAKRADHAR",
+    "email": "chakradharca25.meta@coeptech.ac.in"
+  },
+  {
+    "name": "CHETAN KUMBHARE",
+    "email": "kumbharec25.meta@coeptech.ac.in"
+  },
+  {
+    "name": "HARSHAD SURYAKANT PATIL",
+    "email": "suryakantph25.meta@coeptech.ac.in"
+  },
+  {
+    "name": "HARSHIT JEETENDRA BORA",
+    "email": "borahj25.meta@coeptech.ac.in"
+  },
+  {
+    "name": "HIMANSHU RAMESH PUJARI",
+    "email": "rameshph25.meta@coeptech.ac.in"
+  },
+  {
+    "name": "ISHWARI PRASANNA WALKE",
+    "email": "prasannawi25.meta@coeptech.ac.in"
+  },
+  {
+    "name": "JAYESH MANOJ KHANDELWAL",
+    "email": "manojkj25.meta@coeptech.ac.in"
+  },
+  {
+    "name": "JAYRAJ RAVINDRA SOMDE",
+    "email": "somdejr25.meta@coeptech.ac.in"
+  },
+  {
+    "name": "KARAN SUNIL LAMKHEDE",
+    "email": "sunillk25.meta@coeptech.ac.in"
+  },
+  {
+    "name": "KARUNA SANJAY SASANE",
+    "email": "sanjaysk25.meta@coeptech.ac.in"
+  },
+  {
+    "name": "KAVISH BRAJESH BANG",
+    "email": "bangkb25.meta@coeptech.ac.in"
+  },
+  {
+    "name": "KHUSHI PUSHPAM GUPTA",
+    "email": "guptakp25.meta@coeptech.ac.in"
+  },
+  {
+    "name": "KRISH SHRIKANT SANKALE",
+    "email": "shrikantsk25.meta@coeptech.ac.in"
+  },
+  {
+    "name": "MOHAMMADFAIZ MOHAMMAD GHAZANF",
+    "email": "mohammadmf25.meta@coeptech.ac.in"
+  },
+  {
+    "name": "NACHIKET PRAKASH POHANEY",
+    "email": "pohaneynp25.meta@coeptech.ac.in"
+  },
+  {
+    "name": "NIRAJ RAHATE",
+    "email": "rahaten25.meta@coeptech.ac.in"
+  },
+  {
+    "name": "NISARG NITIN WAYKAR",
+    "email": "nitinwn25.meta@coeptech.ac.in"
+  },
+  {
+    "name": "PARAS AJIT SHAH",
+    "email": "ajitsp25.meta@coeptech.ac.in"
+  },
+  {
+    "name": "PIYUSH NAVANATH KURLE",
+    "email": "kurlepn25.meta@coeptech.ac.in"
+  },
+  {
+    "name": "PIYUSHA PRADEEP MADDE",
+    "email": "pradeepmp25.meta@coeptech.ac.in"
+  },
+  {
+    "name": "PRACHI GANESH GORE",
+    "email": "gorepg25.meta@coeptech.ac.in"
+  },
+  {
+    "name": "PRAGYA GUPTA",
+    "email": "guptap25.meta@coeptech.ac.in"
+  },
+  {
+    "name": "PRANAV NITIN JAGTAP",
+    "email": "nitinjp25.meta@coeptech.ac.in"
+  },
+  {
+    "name": "PRANJAL PRAMOD PALHAL",
+    "email": "pramodpp25.meta@coeptech.ac.in"
+  },
+  {
+    "name": "PRATHAMESH PURUSHOTTAM THOMBR",
+    "email": "purushottamtp25.meta@coeptech.ac.in"
+  },
+  {
+    "name": "PRATHAMESH VILAS KADLAG",
+    "email": "vilaskp25.meta@coeptech.ac.in"
+  },
+  {
+    "name": "PUSHKAR SANJAY UDAWANT",
+    "email": "sanjayup25.meta@coeptech.ac.in"
+  },
+  {
+    "name": "RAHUL NITESH MESHRAM",
+    "email": "meshramrn25.meta@coeptech.ac.in"
+  },
+  {
+    "name": "RAHUL PRALHAD SHINDE",
+    "email": "pralhadsr25.meta@coeptech.ac.in"
+  },
+  {
+    "name": "RAJVEERSINGH JAGROOPSINGH KALSI",
+    "email": "jagrooprs25.meta@coeptech.ac.in"
+  },
+  {
+    "name": "RAJWARDHAN RANJIT MOHITE",
+    "email": "ranjitmr25.meta@coeptech.ac.in"
+  },
+  {
+    "name": "RANAJAGJITSING VIJAYKUMAR RATHOD",
+    "email": "vijaykumarrr25.meta@coeptech.ac.in"
+  },
+  {
+    "name": "RASIKA MAHESH TONDGAONKAR",
+    "email": "maheshtr25.meta@coeptech.ac.in"
+  },
+  {
+    "name": "RITESH MAHADEV MAKADE",
+    "email": "makaderm25.meta@coeptech.ac.in"
+  },
+  {
+    "name": "RIYA PRALHAD KADAM",
+    "email": "pralhadkr25.meta@coeptech.ac.in"
+  },
+  {
+    "name": "ROHAK PRASHANT ZALKE",
+    "email": "prashantzr25.meta@coeptech.ac.in"
+  },
+  {
+    "name": "ROHAN VYANKATI MULE",
+    "email": "vyankatimr25.meta@coeptech.ac.in"
+  },
+  {
+    "name": "ROHIT MANISH JAIN",
+    "email": "manishjr25.meta@coeptech.ac.in"
+  },
+  {
+    "name": "RUDRA SATISH GHEWARE",
+    "email": "satishgr25.meta@coeptech.ac.in"
+  },
+  {
+    "name": "SAARTH ASHISH DUNGARWAL",
+    "email": "dungarwalsa25.meta@coeptech.ac.in"
+  },
+  {
+    "name": "SAGAL SITARAM SONAWALE",
+    "email": "sitaramss25.meta@coeptech.ac.in"
+  },
+  {
+    "name": "SAMEER BAGWAN ANAS",
+    "email": "bagwanas25.meta@coeptech.ac.in"
+  },
+  {
+    "name": "SAMRUDDHA RAVINDRA MOKAL",
+    "email": "ravindrams25.meta@coeptech.ac.in"
+  },
+  {
+    "name": "SANIKA NIVAS SHINDE",
+    "email": "nivasss25.meta@coeptech.ac.in"
+  },
+  {
+    "name": "SARTHAK SHIVRAM RATHOD",
+    "email": "shivramrs25.meta@coeptech.ac.in"
+  },
+  {
+    "name": "SHASTRI RUJUL RAJVEER",
+    "email": "rajveersr25.meta@coeptech.ac.in"
+  },
+  {
+    "name": "SHIKALGAR WASIF FIROZ",
+    "email": "firozsw25.meta@coeptech.ac.in"
+  },
+  {
+    "name": "SHREYA ABHIJIT KESKAR",
+    "email": "abhijitks25.meta@coeptech.ac.in"
+  },
+  {
+    "name": "SHREYASH SANJAY MORE",
+    "email": "moress25.meta@coeptech.ac.in"
+  },
+  {
+    "name": "SHRISH MAHESH YEOLEKAR",
+    "email": "maheshys25.meta@coeptech.ac.in"
+  },
+  {
+    "name": "SIDDHARTHA DEO",
+    "email": "deos25.meta@coeptech.ac.in"
+  },
+  {
+    "name": "SMIT AVINASH NAWALE",
+    "email": "avinashns25.meta@coeptech.ac.in"
+  },
+  {
+    "name": "SOHAM NILESH SANE",
+    "email": "nileshss25.meta@coeptech.ac.in"
+  },
+  {
+    "name": "SUCHIR SHRIRANG DIVEKAR",
+    "email": "shrirangds25.meta@coeptech.ac.in"
+  },
+  {
+    "name": "SUNAYANA DEEPAK CHAKANE",
+    "email": "chakanesd25.meta@coeptech.ac.in"
+  },
+  {
+    "name": "SUSHIL VINOD BHOSALE",
+    "email": "vinodbs25.meta@coeptech.ac.in"
+  },
+  {
+    "name": "SWAPNIL NARESH SIDAM",
+    "email": "nareshss25.meta@coeptech.ac.in"
+  },
+  {
+    "name": "SWARALI NITESH RAJPURKAR",
+    "email": "rajpurkarsn25.meta@coeptech.ac.in"
+  },
+  {
+    "name": "TAKSHEEL BUDDHADEO",
+    "email": "buddhadeot25.meta@coeptech.ac.in"
+  },
+  {
+    "name": "TANAYA BALAJI MORE",
+    "email": "moretb25.meta@coeptech.ac.in"
+  },
+  {
+    "name": "TANISHA AMOL KHISTE",
+    "email": "khisteta25.meta@coeptech.ac.in"
+  },
+  {
+    "name": "TANVI JEETENDRA PATIL",
+    "email": "patiltj25.meta@coeptech.ac.in"
+  },
+  {
+    "name": "TIYAN SUHAS DHAWALE",
+    "email": "suhasdt25.meta@coeptech.ac.in"
+  },
+  {
+    "name": "VANSH VIJAY SHRIWASTAVA",
+    "email": "shriwastavavv25.meta@coeptech.ac.in"
+  },
+  {
+    "name": "VANSHIKA SRIVASTAVA",
+    "email": "srivastavav25.meta@coeptech.ac.in"
+  },
+  {
+    "name": "VEDANG AGRAWAL",
+    "email": "agrawalv25.meta@coeptech.ac.in"
+  },
+  {
+    "name": "VEDANT MANGESH SAKURIKAR",
+    "email": "mangeshsv25.meta@coeptech.ac.in"
+  },
+  {
+    "name": "VIPASHYA RAJESH SAPKAL",
+    "email": "rajeshsv25.meta@coeptech.ac.in"
+  },
+  {
+    "name": "YASHIKA GANESH DAIMIWAL",
+    "email": "ganeshdy25.meta@coeptech.ac.in"
+  },
+  {
+    "name": "YASHWARDHAN GANESH BHAME",
+    "email": "ganeshby25.meta@coeptech.ac.in"
+  },
+  {
+    "name": "AAFAN IMRAN PATHAN",
+    "email": "pathanai25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "AARAV OSWAL",
+    "email": "oswalao25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "AAROHI MAHENDRA RUNWAL",
+    "email": "runwalam25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "AARYA PRASHANT BANSOD",
+    "email": "bansodap25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "AARYA SUSHANT KHAPANE",
+    "email": "khapaneas25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "AASHLESHA AMARSINH CHAVAN",
+    "email": "chavanaa25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "ABHISHEK SANTOSH GARJE",
+    "email": "garjeas25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "ADITI BALASAHEB MANE",
+    "email": "maneab25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "ADITI SANJAY POL",
+    "email": "polas25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "ADITYA MUKESH TOTANI",
+    "email": "totaniam25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "ADITYA RAMCHANDRA DESHPANDE",
+    "email": "deshpandear25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "ADITYA SINHA",
+    "email": "sinhaas25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "ADITYA VIKRAM FARATE",
+    "email": "farateav25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "AISHWARYA PRAKASH",
+    "email": "prakashap25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "AKSHAJ SAXENA",
+    "email": "saxenaa25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "AKSHAY JHA",
+    "email": "jhaa25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "ANEKA RAJESH GANYARPAWAR",
+    "email": "ganyarpawarar25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "ANSARI AMAAN SAJID",
+    "email": "sajidaa25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "ANUSHREE NIRANJAN DUDHBADE",
+    "email": "dudhbadean25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "ARHANT RAUT",
+    "email": "rautar25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "ARUSH ABASAHEB DESAI",
+    "email": "desaiaa25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "ARYAN RAJENDRA GAVALI",
+    "email": "gavaliar25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "ARYAN SANJAY KHAIRKHAR",
+    "email": "khairkharas25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "ASHUTOSH AMIT SAXENA",
+    "email": "saxenaaa25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "ATHARV NAMDEV GORSHETWAR",
+    "email": "gorshetwaran25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "ATHARV SACHIN DIVATE",
+    "email": "divateas25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "ATHARVA ARVIND PATIL",
+    "email": "patilaa25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "ATHARVA PANKAJ JAGTAP",
+    "email": "jagtapap25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "ATHARVA SANDEEP GIDDE",
+    "email": "giddeas25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "AUTI PARTH BHARAT",
+    "email": "autipb25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "AVINASH SANTOSH GARJE",
+    "email": "avinashg25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "AYAN JAVID SHIKALGAR",
+    "email": "shikalgaraj25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "AYUSH NIVARUTTI GARMODE",
+    "email": "garmodean25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "AYUSH SUBHASH PHAD",
+    "email": "phadas25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "CHANCHAL SANTOSH BHAYANI",
+    "email": "bhayanics25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "CHINMAY VIKAS CHAVAN",
+    "email": "chavancv25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "DARSHIL UMESH GHOLE",
+    "email": "darshilug25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "DATTA ANKUSH RABIN",
+    "email": "dattaar25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "DEVANSH MAHESH AGARWAL",
+    "email": "agarwaldm25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "DHIRAJ DATTATRAYA SHINDE",
+    "email": "shindedd25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "DHRUVA DEVIDAS HARWALKAR",
+    "email": "harwalkardd25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "DISHAN OSWAL",
+    "email": "dishano25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "DIVYAM RAVI AGRAWAL",
+    "email": "agrawaldr25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "EKLAVYA KUMAR",
+    "email": "kumare25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "GAURANG RAJESH GOHIL",
+    "email": "gohilgr25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "GAURAV PRAKASH CHOPRA",
+    "email": "chopragp25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "HARSH ANIL SAWANT",
+    "email": "sawantha25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "HARSH DHIRENDRA MISHRA",
+    "email": "mishrahd25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "HARSH JAISING YADAV",
+    "email": "yadavhj25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "HERAMBA AMOL BARDE",
+    "email": "bardeha25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "HIMANSHI SINGH",
+    "email": "singhh25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "ISHAAN JAIN",
+    "email": "jaini25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "KUNAL NARENDRA FIRAKE",
+    "email": "firakekn25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "KUNAL SANDIP GANGURDE",
+    "email": "gangurdeks25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "MADHAV DINESH AGRAWAL",
+    "email": "agrawalmd25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "MAHESH HASANRAO CHAVAN",
+    "email": "chavanmh25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "MEET HARESH BATHEJA",
+    "email": "bathejamh25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "MEGHARANI RAJENDRA GORE",
+    "email": "goremr25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "NIHAL RAJESH BHATIA",
+    "email": "bhatianr25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "PIYUSH NAMDEO AHIRE",
+    "email": "ahirepn25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "PIYUSH PRAVIN BHOSALE",
+    "email": "bhosalepp25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "PIYUSH VINOD DAMBHARE",
+    "email": "dambharepv25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "PRANAV DHARMENDRA DONGARWAR",
+    "email": "dongarwarpd25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "PRANJAL SUDHAKAR INGLE",
+    "email": "ingleps25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "RAUNAK RUPESH AGRAWAL",
+    "email": "agrawalrr25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "RISHIT DHARMESH CHOTALIA",
+    "email": "chotaliard25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "RITESH EKNATH BODAKHE",
+    "email": "bodakhere25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "RIYA ANIL GORDE",
+    "email": "gordera25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "ROHAN SUBHASH HARPUDE",
+    "email": "harpuders25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "ROSHANI SURESH DESAI",
+    "email": "desairs25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "ROSHNI SANTOSH GUSINGE",
+    "email": "gusingers25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "RUDRA DILEEP BOROLE",
+    "email": "borolerd25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "RUTU KIRAN CHAVHAN",
+    "email": "chavhanrk25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "SAHIL PRAKASH DHEKALE",
+    "email": "dhekalesp25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "SAKSHAM NAMOBUDDHAY BETAL",
+    "email": "betalsn25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "SAKSHI DATTA GAIKWAD",
+    "email": "gaikwadsd25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "SAMARTH RAJENDRA DEVKAR",
+    "email": "devkarsr25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "SAMRUDDHI DADA DHAGE",
+    "email": "dhagesd25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "SANIKA DADASAHEB INGALE",
+    "email": "ingalesd25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "SANSKAR PANJABRAO GAWHAD",
+    "email": "gawhadsp25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "SANSKAR PRABHAKAR BHOSALE",
+    "email": "bhosalesp25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "SARTHAK SANJAY GHADAGE",
+    "email": "ghadagess25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "SARTHAK SUBHASH DAGALE",
+    "email": "dagaless25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "SARTHAK VITTHAL DESHMUKH",
+    "email": "deshmukhsv25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "SHAMBHURAJE SATISH GOSAVI",
+    "email": "gosaviss25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "SHERWIN DINESH ADVANT",
+    "email": "dineshas25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "SHOUNAK SUYOG DESHMUKH",
+    "email": "deshmukhss25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "SHRADDHA RAVINDRA CHAVHAN",
+    "email": "chavhansr25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "SHRAVANI RAMKRISHNA BORSE",
+    "email": "borsesr25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "SIDDHESH GAJANAN CHITKESHIWAR",
+    "email": "chitkeshiwarsg25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "SOHAM SHANKAR FOBAWAR",
+    "email": "fobawarss25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "SONAL RAVINDRA GANJARE",
+    "email": "ganjaresr25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "SURAJ VINOD GIMHAVANEKAR",
+    "email": "gimhavanekarsv25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "SWARA RAVINDRA AMBATKAR",
+    "email": "ambatkarsr25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "TANISHKA KRISHNAT GHOLAPE",
+    "email": "gholapetk25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "TANMAY BRIJESH BIHANI",
+    "email": "bihanitb25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "TANMAY SANJAY BHARTAL",
+    "email": "bhartalts25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "TANUJ SAMEER GITE",
+    "email": "gitets25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "TEJASWINI RAHUL BHOSALE",
+    "email": "bhosaletr25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "VIVEK RAVINDRA AGHADATE",
+    "email": "aghadatevr25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "ABHAY SHIVAJI KUMBHAR",
+    "email": "kumbharas25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "ADINATH RAM KAWALE",
+    "email": "kawalear25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "ADITEYA SHASHIKANT PHAND",
+    "email": "phandas25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "ADITYA GAJENDRA JADHAO",
+    "email": "jadhaoag25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "ADITYA VASUDEO JUNGHARE",
+    "email": "junghareav25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "ADWAIT PRASAD ZANJURNE",
+    "email": "zanjurneap25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "AKSHARA HIRALAL PARDESHI",
+    "email": "pardeshiah25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "AKSHAY SURESH SUSAR",
+    "email": "susaras25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "ALOK MADHAV KADAM",
+    "email": "kadamam25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "ANGAD AKHILESH JOSHI",
+    "email": "joshiaa25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "ANIL BALAJI PATIL",
+    "email": "patilab25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "ANISH SURYAPRAKASH KARANDE",
+    "email": "karandeas25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "ARNAV MANISH KATEPALLEWAR",
+    "email": "katepallewaram25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "ARPIT PRAMOD GUPTA",
+    "email": "guptaap25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "ARPITA ATUL MANDRUPKAR",
+    "email": "mandrupkaraa25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "ARTI VINOD PRADHAN",
+    "email": "vinodpa25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "ARYA SANJAY KURKUTE",
+    "email": "kurkuteas25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "ARYAN ABHIJEET SONAWANE",
+    "email": "sonawaneaa25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "ARYAN DEWANAND DAHEKAR",
+    "email": "dahekarad25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "ARYAN GANESH KALE",
+    "email": "kaleag25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "ARYAN SANTOSH MANE",
+    "email": "maneas25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "ARYAN VAIBHAV NIKAM",
+    "email": "nikamav25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "ATHARV SANDEEP VYAS",
+    "email": "vyasas25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "ATHARV SANTOSH JADHAV",
+    "email": "jadhavas25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "ATHARV VIJAY JAGADALE",
+    "email": "jagadaleav25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "ATHARVA BHARAT TAK",
+    "email": "bharatta25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "ATHARVA PRAKASH KAMBLE",
+    "email": "kambleap25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "ATHARVA RANGNATH PAWAR",
+    "email": "pawarar25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "ATHARVA SHANKAR MALHARE",
+    "email": "malhareas25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "ATHARVA VIJAY SAKURE",
+    "email": "sakureav25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "AYUSH VISHWANATH THAKUR",
+    "email": "thakurav25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "BHARGAV AJINKYA VAZE",
+    "email": "vazeba25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "CHINMAY SATISH YADAV",
+    "email": "yadavcs25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "DHEER PRASHANT TOSNIWAL",
+    "email": "tosniwaldp25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "DHIRAJ SUDHIR SADANSHIV",
+    "email": "sadanshivds25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "DHYANAM KARMESH PATEL",
+    "email": "pateldk25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "DIPALI BALAJI LOKHANDE",
+    "email": "lokhandedb25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "GAURI VIJAY TALAPE",
+    "email": "talapegv25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "GAUTAMI MILIND RANGATE",
+    "email": "rangategm25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "HARDIK PRAVIN KOKATE",
+    "email": "kokatehp25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "HARSH SACHIN JAJU",
+    "email": "jajuhs25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "HARSHA RAKESH SOANS",
+    "email": "rakeshsh25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "HARSHAL RAJESH JAGTAP",
+    "email": "jagtaphr25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "HARSHIT PRAVIN JAKHOTIYA",
+    "email": "jakhotiyahp25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "HARSHVARDHAN JAYSING PATIL",
+    "email": "patilhj25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "HERAMB MAHESH BHRUSHUNDI",
+    "email": "bhrushundihm25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "ISHWARI VIJAY PATIL",
+    "email": "patiliv25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "JAYANT TATYASO PATIL",
+    "email": "patiljt25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "JAYESH DHANAJI KHADE",
+    "email": "khadejd25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "JEEVIKA NINAD TAKPERE",
+    "email": "takperejv25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "JIAYA PRASHANT MAKHE",
+    "email": "makhejp25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "KALYANI GAJANAN JAYBHAYE",
+    "email": "jaybhayekg25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "KESHAV GANESH MINIYAR",
+    "email": "miniyarkg25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "KRISHNA PADMAKAR KULKARNI",
+    "email": "kulkarnikp25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "KRISHNA VIJENDRA BANIYA",
+    "email": "baniyakv25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "KRUSHNATH SANJAY SHINDE",
+    "email": "shindeks25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "KSHITIJ RAHUL SALUNKE",
+    "email": "salunkekr25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "LAKSHYA MITHAPALLI",
+    "email": "mithapallil25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "LAV KUSH KUMAR",
+    "email": "kumarlk25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "LAXMAN DINESH KAMATH",
+    "email": "kamathld25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "MALAGI RUDRAALIS SATISH",
+    "email": "alismr25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "MALESH RAJKUMAR DHAWALE",
+    "email": "dhawalemr25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "MALLIKARJUN PRALHAD LONI",
+    "email": "lonimp25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "MANASI ARJUN FALAKE",
+    "email": "falakema25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "MANASWI RAJESH KHADSE",
+    "email": "khadsemr25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "MANSI ABHIJEET RATHI",
+    "email": "rathima25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "MANYA YADAV",
+    "email": "yadavmy25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "MAYURI DEEPAK PAWAR",
+    "email": "pawarmd25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "MIHIR ANAND SANGHAVI",
+    "email": "anandsm25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "MIHIR MANDAR KHANDKAR",
+    "email": "khandkarmm25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "MIHIR PRASHANT BHOYE",
+    "email": "bhoyemp25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "MOHAMMADNAWAZ AKRAM PATHAN",
+    "email": "pathanma25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "MOHAMMED MUFADDAL ZAKIR",
+    "email": "zakirmm25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "MOHIT RAJENDRA SAINDANE",
+    "email": "saindanemr25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "MRUNMAYEE MANOJ JOSHI",
+    "email": "joshimm25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "MUHAMMAD ALRAZA HANIFSHAIKH",
+    "email": "hanifshaikhma25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "MUKUL MANOHAR BHOSALE",
+    "email": "bhosalemm25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "NAMAN DOGRA",
+    "email": "dogrand25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "NAMAN PARAG PATNI",
+    "email": "patninp25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "NANDINI GULAB SABLE",
+    "email": "sableng25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "NANDINI KARTIKAY PATEL",
+    "email": "patelnk25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "NARAYANI TOKE",
+    "email": "narayanitn25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "NAYAN DAULAT SURYAWANSHI",
+    "email": "suryawanshind25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "NEELAM TARAP",
+    "email": "tarapnt25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "NEERAJ RAJKUMAR MANE",
+    "email": "manenr25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "NEHAL PRAVIN GANDHI",
+    "email": "nehalpg25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "NIDHISH SANJAY DHAWAS",
+    "email": "dhawasns25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "NIKHIL GUPTA",
+    "email": "guptang25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "NIMESH GULABRAO NARNAWARE",
+    "email": "narnawareng25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "NIRBHAY DILIP LAHODE",
+    "email": "lahodend25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "OM MANGALSING JARWAL",
+    "email": "jarwalom25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "OMKAR BHARAT PAWAR",
+    "email": "pawarob25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "PARAG NAVNIT PATIL",
+    "email": "patilpn25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "PARIKSHIT PRAKASH KEKAN",
+    "email": "kekanpp25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "PARISHEEL ASHISH TIRPUDE",
+    "email": "tirpudepa25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "PARTH PANDURANG GAWADE",
+    "email": "gawadepp25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "PARTH PRASHANT BARIDE",
+    "email": "baridepp25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "PATHANASAD SHABNAM KAUSAR",
+    "email": "pathanas25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "PAVAN DILIP YEDE",
+    "email": "yedepd25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "PIRJADE ARSHAD MOSUMALI",
+    "email": "mosumalipa25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "PIYUSH PATIL",
+    "email": "patilpp25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "POOJA KIRAN ROKADE",
+    "email": "rokadepk25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "PRABAL ANILKUMAR JAISWAL",
+    "email": "jaiswalpa25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "PRACHI ASHOK NIMKAR",
+    "email": "nimkarpa25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "PRACHI RAMESH PATIL",
+    "email": "patilpr25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "PRAGNYA MAKARAND KULKARNI",
+    "email": "kulkarnipm25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "PRAJWAL GANESH BHISE",
+    "email": "bhisepg25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "PRAJWAL SANJAY STHUL",
+    "email": "sthulps25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "PRANAV NILESH NEHETE",
+    "email": "nehetepn25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "PRANAV SANTOSH MARKE",
+    "email": "markeps25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "PRANAV SATISH GOGAWALE",
+    "email": "gogawaleps25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "PRANAV SITARAM PAWAR",
+    "email": "pawarps25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "PRANJAL DATTATRAY HILE",
+    "email": "hilepd25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "PRANJAL SACHIN AHIRE",
+    "email": "ahireps25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "PRASAD BHARTESH WADKAR",
+    "email": "wadkarpb25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "PRATHAMESH SANTOSH MORE",
+    "email": "moreps25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "PRATHMESH NALKUL",
+    "email": "nalkulpn25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "PREESHA MANOJ MOTWANI",
+    "email": "motwanipm25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "PRERANA AJIT ZANJURNE",
+    "email": "zanjurnepa25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "PRNAV SUDHIR SHINDE",
+    "email": "shindeps25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "PURVA AVINASH KALE",
+    "email": "kalepa25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "PURVA HANUMANT VHANKALAS",
+    "email": "vhankalasph25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "RADHA RAHUL JAWADWAR",
+    "email": "jawadwarrr25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "RAHUL ANIL KAMBALE",
+    "email": "kambalera25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "RANAPRITHVIRAJ GAJANAN PATIL",
+    "email": "ranaprithvirajp25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "RASIKA SANTOSH KUKADE",
+    "email": "kukaders25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "REVATI SHANTANU PETHE",
+    "email": "pethers25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "RISHI GIRIRAJ KOTHARI",
+    "email": "kotharirg25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "RISHIT KAKRANIA",
+    "email": "kakraniark25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "RITESH RAOSAHEB LONDHE",
+    "email": "londherr25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "RITESH TUSHAR PATKARI",
+    "email": "patkarirt25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "RIYA KANCHAN DAHIWALE",
+    "email": "dahiwalerk25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "ROHAN RAMDAS DOME",
+    "email": "domerr25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "RUDRA ANIL PAWAR",
+    "email": "pawarra25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "RUDRESHWAR RAJENDRA GADHARI",
+    "email": "gadharirr25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "RUSHIKESH GANESH JADHAO",
+    "email": "jadhaorg25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "RUSHIKESH SANTOSHMARMAT",
+    "email": "marmatrs25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "RUTKAR BAKSHI",
+    "email": "bakshirb25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "SAHIL RAMDAS TAWHARE",
+    "email": "tawharesr25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "SAI SHAILENDRA HERALGI",
+    "email": "heralgiss25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "SAIPRASAD MADHAVRAO PAINAPALLE",
+    "email": "painapallesm25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "SAIRAJ SANTOSH KAVITAKE",
+    "email": "kavitakess25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "SAKET ANAND JOSHI",
+    "email": "joshisa25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "SAKSHAM NILESH PATIL",
+    "email": "patilsn25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "SAMARTH ANIL PHARTADE",
+    "email": "phartadesa25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "SAMARTH SANJAY KULKARNI",
+    "email": "kulkarniss25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "SAMIALI SADIKALI SAYYAD",
+    "email": "sadiksa25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "SAMIKSHA RAVINDRA KALE",
+    "email": "kalesr25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "SAMPADA PRAMOD BADHE",
+    "email": "badhesp25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "SAMRUDDHI TANAJI KAMBLE",
+    "email": "kamblest25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "SAMRUDDHI VINOD WAYAL",
+    "email": "wayalsv25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "SANA SANJAY SHARMA",
+    "email": "sanjayss25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "SANCHIT BABURAO FARAKATE",
+    "email": "farakatesb25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "SANCHIT GANESH TAMHANE",
+    "email": "tamhanesg25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "SANGHARSH ANIL RAUT",
+    "email": "rautsa25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "SANGITA MADHAV SARKALE",
+    "email": "sarkalesm25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "SANIKA SANDEEP DASAR",
+    "email": "dasarss25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "SANKET BABASAHEB NABAGE",
+    "email": "nabagesb25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "SANSKAR ANIL SOBALE",
+    "email": "sobalesa25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "SANSKAR SUDHAKAR MALI",
+    "email": "sudhakarms25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "SANSKRUTI GAJANAN RAKAS",
+    "email": "rakassg25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "SANSKRUTI MILIND MANGALE",
+    "email": "mangalesm25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "SANSKRUTI UMESH KEWALE",
+    "email": "kewalesu25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "SARTHAK NEERAJ BHASKAR",
+    "email": "bhaskarsn25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "SARTHAK RAVINDRA PARADHI",
+    "email": "paradhisr25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "SARTHAK SAMBHAJI SHIMBRE",
+    "email": "shimbress25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "SARVESH MANGESH MULMULE",
+    "email": "mulmulesm25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "SARVESH RAJENDRA KALE",
+    "email": "sarveshk25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "SATYAJEET SANJAY PATIL",
+    "email": "satyajeetp25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "SATYAM MISHRA",
+    "email": "mishrasm25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "SAURABH MAHENDRA WAGAJ",
+    "email": "wagajsm25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "SEJAL SHRIKANT BARGE",
+    "email": "bargess25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "SHAIKHMOHAMMAD RAED AQUEEL",
+    "email": "raedsm25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "SHALINI CHANDRAKANT TANDEKAR",
+    "email": "tandekarsc25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "SHANTANU RAJESH MAHAJAN",
+    "email": "mahajansr25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "SHARAD SATALKAR SANSKAR",
+    "email": "satalkarss25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "SHARWIL SACHIN SHIMPI",
+    "email": "shimpiss25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "SHASHANK RAJENDRA SANGLE",
+    "email": "sanglesr25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "SHASHANK SAINATH MORE",
+    "email": "moress25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "SHITAL MALLINATH PUJARI",
+    "email": "pujarism25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "SHIVA SAI VAIBHAVK",
+    "email": "vaibhavss25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "SHIVAM BHARATSING PARDESHI",
+    "email": "pardeshisb25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "SHLOK SACHIN SALVE",
+    "email": "salvess25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "SHOURY RAI",
+    "email": "raisr25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "SHRADDHA CHANDRASHEKHAR KHADE",
+    "email": "khadesc25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "SHREEPRASAD SUBHASH NAIK",
+    "email": "naikss25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "SHREYA KADAM",
+    "email": "kadamsk25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "SHREYA PANDEY",
+    "email": "pandeysp25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "SHREYA YUVARAJ POWAR",
+    "email": "powarsy25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "SHREYASH DATTA TEMBHARE",
+    "email": "tembharesd25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "SHREYASH SANTOSH KADAM",
+    "email": "kadamss25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "SHRIRAJ RAMCHANDRA JADHAV",
+    "email": "jadhavsr25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "SHRISH NILESH PATTEWAR",
+    "email": "pattewarsn25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "SIDDHANT SUHAS WAYKOS",
+    "email": "waykoss25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "SIDDHARTH KHOLA",
+    "email": "kholask25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "SIDDHESH DIPAK RAJPUT",
+    "email": "rajputsd25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "SIDDHI SANDIP NIKAM",
+    "email": "nikamss25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "SNEHA SATYAVAN PATIL",
+    "email": "snehap25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "SNEHAL RUPRAJ RANDAYE",
+    "email": "randayesr25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "SNEHAL SHIVRAJ MULE",
+    "email": "muless25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "SOHAM SHANKAR SHINGADE",
+    "email": "shingadess25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "SOURABH VISHNU AMANE",
+    "email": "amanesv25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "SUHANI PRATAPSINH MORE",
+    "email": "moresp25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "SUKHWINDER SINGH",
+    "email": "singhss25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "SUMEDH PRAVIN WANKHADE",
+    "email": "wankhadesp25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "SUMEDH SANTOSH SHELGAONKAR",
+    "email": "shelgaonkarss25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "SUMIT SUNIL LAJURKAR",
+    "email": "lajurkarss25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "SUSHANT HANSRAJ PATIL",
+    "email": "sushantp25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "SUYASH SUDHAKAR CHAVAN",
+    "email": "chavanss25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "SWARA SANJAY KURHADE",
+    "email": "kurhadess25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "TANISHKA RAJKUMAR JADHAV",
+    "email": "jadhavtr25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "TANISHQ BHARUD",
+    "email": "bharudt25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "TANISHQ DAYANAND KASHID",
+    "email": "kashidtd25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "TANMAY BHARAT KHANDARE",
+    "email": "khandaretb25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "TANMAY NARENDRAKUMAR PATIL",
+    "email": "patiltn25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "TANVI MANOJ LOYA",
+    "email": "loyatm25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "TEJAS CHANDRAKANT SURYAVANSHI",
+    "email": "suryvanshitc25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "TEJAS NANDKISHOR PALVE",
+    "email": "palvetn25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "TEJAS SUDEEP APHALE",
+    "email": "aphalets25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "TILAK SHARAD THETE",
+    "email": "thetets25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "TUSHAR BAPU PIMPALSE",
+    "email": "pimpalsetb25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "TUSHAR SUBHASH HADAS",
+    "email": "hadasts25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "VAIBHAV CHANDRAKANT CHAUDHARI",
+    "email": "chaudharivc25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "VAISHNAVI VITTHALRAO SARJE",
+    "email": "vitthalraosv25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "VARSH GOINDANI",
+    "email": "goindanivg25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "VEDANT KAREKAR",
+    "email": "karekarvk25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "VEDANT KIRAN MOTEWAR",
+    "email": "motewarvk25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "VEDANT NANASO SARAK",
+    "email": "sarakvn25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "VEDANT VIJAY GURAV",
+    "email": "guravvv25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "VEDANT VIKAS PANGARE",
+    "email": "vikaspv25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "VEDIKA NITIN CHAUDHARI",
+    "email": "chaudharivn25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "VIGHNESH ANIL THALE",
+    "email": "thaleva25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "VIJAY SHAMSUNDAR KADAM",
+    "email": "kadamvs25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "VIKHYATH VINAYAK PATIL",
+    "email": "vikhyathvp25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "VINITA DATTATRAY KULKARNI",
+    "email": "kulkarnivd25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "VIRAJ DNYANESHWAR RANE",
+    "email": "ranevd25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "VISHAL VENKATESH BHAT",
+    "email": "bhatvv25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "VIVEK SUNIL LAGAD",
+    "email": "lagadvs25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "YASH ALOK CHOUREY",
+    "email": "choureyya25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "YASH RAHUL SOMANI",
+    "email": "somaniyr25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "YASH RAMPRASAD AMBHURE",
+    "email": "ambhureyr25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "YASH SAGAR VARMA",
+    "email": "varmays25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "YASH SANDEEP LONDHE",
+    "email": "londheys25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "YASH SANTOSH SHINGAVI",
+    "email": "shingaviys25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "YASH SUDHAKAR WANKHEDE",
+    "email": "wankhedesm25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "YASHRAJ VINAYAK KALE",
+    "email": "kaleyv25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "YASHVARDHAN VIJAY WALSE",
+    "email": "walseyv25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "YESHASHREE SHAILESH KARHALE",
+    "email": "karhaleys25.comp@coeptech.ac.in"
+  },
+  {
+    "name": "AADITYA RANJEET SHAH",
+    "email": "shahar25.aiml@coeptech.ac.in"
+  },
+  {
+    "name": "AARADHYA PANDEY",
+    "email": "pandeya25.aiml@coeptech.ac.in"
+  },
+  {
+    "name": "AARUSH RAVINDRA VARKUTE",
+    "email": "varkutear25.aiml@coeptech.ac.in"
+  },
+  {
+    "name": "AAYUSH RAJESH KERKAR",
+    "email": "rajeshka25.aiml@coeptech.ac.in"
+  },
+  {
+    "name": "AAYUSH SANJAY MEHATA",
+    "email": "sanjayma25.aiml@coeptech.ac.in"
+  },
+  {
+    "name": "ABHEDYA SRIVASTAVA",
+    "email": "srivastavaa25.aiml@coeptech.ac.in"
+  },
+  {
+    "name": "ADITYA UTTAM AHER",
+    "email": "aherau25.aiml@coeptech.ac.in"
+  },
+  {
+    "name": "AJINKYA AMBADAS GULIG",
+    "email": "ambadasga25.aiml@coeptech.ac.in"
+  },
+  {
+    "name": "AJINKYA SHARAD PATIL",
+    "email": "sharadpa25.aiml@coeptech.ac.in"
+  },
+  {
+    "name": "AJNISH RAJ",
+    "email": "raja25.aiml@coeptech.ac.in"
+  },
+  {
+    "name": "AKSHIT RAJESH",
+    "email": "rajesha25.aiml@coeptech.ac.in"
+  },
+  {
+    "name": "AMOL MAHESH BHOYE",
+    "email": "maheshba25.aiml@coeptech.ac.in"
+  },
+  {
+    "name": "ANJALI BHIVAJI SHINDE",
+    "email": "bhivajisa25.aiml@coeptech.ac.in"
+  },
+  {
+    "name": "ANUSHKA VIJAYKUMAR KAMMAR",
+    "email": "vijaykumarka25.aiml@coeptech.ac.in"
+  },
+  {
+    "name": "ARCHIT SUSHIL KOTWALA",
+    "email": "sushilka25.aiml@coeptech.ac.in"
+  },
+  {
+    "name": "ARNAV AVINASH PARBAT",
+    "email": "avinashpa25.aiml@coeptech.ac.in"
+  },
+  {
+    "name": "ARNAV KUMAR",
+    "email": "kumara25.aiml@coeptech.ac.in"
+  },
+  {
+    "name": "ARUSH ASHISH KALAWAR",
+    "email": "ashishka25.aiml@coeptech.ac.in"
+  },
+  {
+    "name": "ATHARVA HEMANT DESAI",
+    "email": "hemantda25.aiml@coeptech.ac.in"
+  },
+  {
+    "name": "AVISHKAR HANAMANT KARANDE",
+    "email": "karandeah25.aiml@coeptech.ac.in"
+  },
+  {
+    "name": "AYUSH ANIL SONAWANE",
+    "email": "anilsa25.aiml@coeptech.ac.in"
+  },
+  {
+    "name": "AYUSH HEMANT PAREEK",
+    "email": "hemantpa25.aiml@coeptech.ac.in"
+  },
+  {
+    "name": "AYUSH NANDKUMAR GAIKWAD",
+    "email": "nandkumarga25.aiml@coeptech.ac.in"
+  },
+  {
+    "name": "BINITMANI UMESHMANI TRIPATHI",
+    "email": "tripathibu25.aiml@coeptech.ac.in"
+  },
+  {
+    "name": "BURHANUDDIN YUSUF DALAL",
+    "email": "dalalby25.aiml@coeptech.ac.in"
+  },
+  {
+    "name": "DARSHEEL DHAMMANAND NAGRALE",
+    "email": "nagraledd25.aiml@coeptech.ac.in"
+  },
+  {
+    "name": "DEEP VINOD AGRAWAL",
+    "email": "vinodad25.aiml@coeptech.ac.in"
+  },
+  {
+    "name": "DHANVI PARESH BHUJBAL",
+    "email": "bhujbaldp25.aiml@coeptech.ac.in"
+  },
+  {
+    "name": "DHARINI SUSHILKUMAR PATIL",
+    "email": "sushilkumarpd25.aiml@coeptech.ac.in"
+  },
+  {
+    "name": "DHRUV ASHISH SHAH",
+    "email": "shahda25.aiml@coeptech.ac.in"
+  },
+  {
+    "name": "DURVESH ADESH SHETH",
+    "email": "shethda25.aiml@coeptech.ac.in"
+  },
+  {
+    "name": "GARGI RAVINDRA RATHOD",
+    "email": "rathodgr25.aiml@coeptech.ac.in"
+  },
+  {
+    "name": "HARISH DATTATRAYA PAWAR",
+    "email": "dattatrayaph25.aiml@coeptech.ac.in"
+  },
+  {
+    "name": "HARSHAL AMIT JAGIASI",
+    "email": "amitjh25.aiml@coeptech.ac.in"
+  },
+  {
+    "name": "HARSHIT RAMESH SHIROL",
+    "email": "shirolhr25.aiml@coeptech.ac.in"
+  },
+  {
+    "name": "HEER HAMIR JOBANPUTRA",
+    "email": "jobanputrahh25.aiml@coeptech.ac.in"
+  },
+  {
+    "name": "ISHA MUKUND MANDKE",
+    "email": "mukundmi25.aiml@coeptech.ac.in"
+  },
+  {
+    "name": "KETAN HEMANT ROPLEKAR",
+    "email": "hemantrk25.aiml@coeptech.ac.in"
+  },
+  {
+    "name": "KRISHNA NITIN KHILARE",
+    "email": "nitinkk25.aiml@coeptech.ac.in"
+  },
+  {
+    "name": "MANAS CHAVAN",
+    "email": "chavanm25.aiml@coeptech.ac.in"
+  },
+  {
+    "name": "MANAS MUKESH BADGUJAR",
+    "email": "mukeshbm25.aiml@coeptech.ac.in"
+  },
+  {
+    "name": "MANSI PRAKASHRAO SATAMWAR",
+    "email": "prakashraosm25.aiml@coeptech.ac.in"
+  },
+  {
+    "name": "MAYANK NITIN CHANDOLE",
+    "email": "nitincm25.aiml@coeptech.ac.in"
+  },
+  {
+    "name": "MIHIRA PRASAD PANDE",
+    "email": "prasadpm25.aiml@coeptech.ac.in"
+  },
+  {
+    "name": "MRUDULA VINAY NISAL",
+    "email": "vinaynm25.aiml@coeptech.ac.in"
+  },
+  {
+    "name": "NAYAN SURESH ANDHALE",
+    "email": "sureshan25.aiml@coeptech.ac.in"
+  },
+  {
+    "name": "PARTH MARTAND JORI",
+    "email": "martandjp25.aiml@coeptech.ac.in"
+  },
+  {
+    "name": "PRASAD SATISH KULKARNI",
+    "email": "kulkarnips25.aiml@coeptech.ac.in"
+  },
+  {
+    "name": "PRASANNA UMESH SAWANT",
+    "email": "umeshsp25.aiml@coeptech.ac.in"
+  },
+  {
+    "name": "PRATHMESH SHRIKANT DAROKAR",
+    "email": "shrikantdp25.aiml@coeptech.ac.in"
+  },
+  {
+    "name": "PRIYANSHU BABAN SALVE",
+    "email": "babansp25.aiml@coeptech.ac.in"
+  },
+  {
+    "name": "RAJ ARYAN",
+    "email": "aryanr25.aiml@coeptech.ac.in"
+  },
+  {
+    "name": "ROHIT DIPAK ZANWAR",
+    "email": "dipakzr25.aiml@coeptech.ac.in"
+  },
+  {
+    "name": "RUDRAKSHA CHANDRAKANT BABAR",
+    "email": "chandrakantbr25.aiml@coeptech.ac.in"
+  },
+  {
+    "name": "SAIRAJ AJIT TIVALE",
+    "email": "ajitts25.aiml@coeptech.ac.in"
+  },
+  {
+    "name": "SAMRUDDHI YASHWANT MALI",
+    "email": "malisy25.aiml@coeptech.ac.in"
+  },
+  {
+    "name": "SANCHIT PRAKASH NIKAM",
+    "email": "prakashns25.aiml@coeptech.ac.in"
+  },
+  {
+    "name": "SANSKRUTI SATYAWAN JAGTAP",
+    "email": "satyawanjs25.aiml@coeptech.ac.in"
+  },
+  {
+    "name": "SHAHIL SINGH SHEKHAWAT",
+    "email": "shekhawatss25.aiml@coeptech.ac.in"
+  },
+  {
+    "name": "SHASHANK RAHUL PASTAPURE",
+    "email": "rahulps25.aiml@coeptech.ac.in"
+  },
+  {
+    "name": "SHREEPAD JANARDAN JAGTAP",
+    "email": "janardanjs25.aiml@coeptech.ac.in"
+  },
+  {
+    "name": "SHREYA SUDHAKAR KUTAL",
+    "email": "sudhakarks25.aiml@coeptech.ac.in"
+  },
+  {
+    "name": "SHREYAS SATISHKUMAR SAVADE",
+    "email": "savadess25.aiml@coeptech.ac.in"
+  },
+  {
+    "name": "SHUBHRA JITENDRA AHIRRAO",
+    "email": "jitendraas25.aiml@coeptech.ac.in"
+  },
+  {
+    "name": "SNEHAL AMOL CHITNIS",
+    "email": "chitnissa25.aiml@coeptech.ac.in"
+  },
+  {
+    "name": "SNEHAL MAHADEV GAIKWAD",
+    "email": "mahadevgs25.aiml@coeptech.ac.in"
+  },
+  {
+    "name": "SOHAM AJAY SARATKAR",
+    "email": "saratkarsa25.aiml@coeptech.ac.in"
+  },
+  {
+    "name": "SRUSHTI SAGAR TELI",
+    "email": "sagarts25.aiml@coeptech.ac.in"
+  },
+  {
+    "name": "SUJAL GAJANAN CHOPADE",
+    "email": "gajanancs25.aiml@coeptech.ac.in"
+  },
+  {
+    "name": "SUMEDH DHARMARAJ LOKHANDE",
+    "email": "dharmarajls25.aiml@coeptech.ac.in"
+  },
+  {
+    "name": "SURAJ NANA GHONDGE",
+    "email": "nanags25.aiml@coeptech.ac.in"
+  },
+  {
+    "name": "SWARANJALI NILESH SHINDE",
+    "email": "nileshss25.aiml@coeptech.ac.in"
+  },
+  {
+    "name": "TANMAY NITIN KOLHE",
+    "email": "kolhetn25.aiml@coeptech.ac.in"
+  },
+  {
+    "name": "TANSI ABHANG PANCHBHAI",
+    "email": "panchbhaita25.aiml@coeptech.ac.in"
+  },
+  {
+    "name": "TEJASHWI GANGADHAR INGALE",
+    "email": "ingaletg25.aiml@coeptech.ac.in"
+  },
+  {
+    "name": "VED TUSHAR BHATTAD",
+    "email": "tusharbv25.aiml@coeptech.ac.in"
+  },
+  {
+    "name": "VEDANG VIRAMSHRI BIDWAI",
+    "email": "viramshribv25.aiml@coeptech.ac.in"
+  },
+  {
+    "name": "VEDANT ANAND KUMBARWAR",
+    "email": "anandkv25.aiml@coeptech.ac.in"
+  },
+  {
+    "name": "VEDANT MAKARAND RANMALE",
+    "email": "makarandrv25.aiml@coeptech.ac.in"
+  },
+  {
+    "name": "VEDANT UTTAM NANGARE",
+    "email": "uttamnv25.aiml@coeptech.ac.in"
+  },
+  {
+    "name": "VEDIKA VIVEK PATIL",
+    "email": "vivekpv25.aiml@coeptech.ac.in"
+  },
+  {
+    "name": "VEER CHIRAG SHAH",
+    "email": "shahvc25.aiml@coeptech.ac.in"
+  },
+  {
+    "name": "VIGNESH YOGESH JADHAV",
+    "email": "yogeshjv25.aiml@coeptech.ac.in"
+  },
+  {
+    "name": "VIJAY SHIVRAM PRAJAPATI",
+    "email": "prajapativs25.aiml@coeptech.ac.in"
+  },
+  {
+    "name": "VIKRANT AMOL GAIKWAD",
+    "email": "amolgv25.aiml@coeptech.ac.in"
+  },
+  {
+    "name": "VITTHAL GAJANAN MASWADKAR",
+    "email": "maswadkarvg25.aiml@coeptech.ac.in"
+  },
+  {
+    "name": "YASH DILIPRAO KHEDKAR",
+    "email": "dilipraoky25.aiml@coeptech.ac.in"
+  }
+]
