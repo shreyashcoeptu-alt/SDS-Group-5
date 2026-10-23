@@ -144,6 +144,46 @@
   animation: slideInRight 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
+/* Subtle floating animations for food illustrations */
+@keyframes foodFloatA {
+  0%, 100% {
+    transform: translateY(0px) rotate(var(--rot, 0deg));
+  }
+  50% {
+    transform: translateY(-8px) rotate(var(--rot, 0deg));
+  }
+}
+
+@keyframes foodFloatB {
+  0%, 100% {
+    transform: translateY(0px) rotate(var(--rot, 0deg));
+  }
+  50% {
+    transform: translateY(9px) rotate(var(--rot, 0deg));
+  }
+}
+
+@keyframes foodFloatC {
+  0%, 100% {
+    transform: translateY(0px) translateX(0px) rotate(var(--rot, 0deg));
+  }
+  50% {
+    transform: translateY(-6px) translateX(4px) rotate(var(--rot, 0deg));
+  }
+}
+
+.animate-food-float-a {
+  animation: foodFloatA 6s ease-in-out infinite;
+}
+
+.animate-food-float-b {
+  animation: foodFloatB 7s ease-in-out infinite;
+}
+
+.animate-food-float-c {
+  animation: foodFloatC 8s ease-in-out infinite;
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   ::before,
