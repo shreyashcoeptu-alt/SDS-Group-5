@@ -1,18 +1,28 @@
 import React from 'react';
 import { Routes, Route, Navigate, Link } from 'react-router-dom';
 import { menuRoutes } from '@/features/menu';
+import { authRoutes } from '@/features/auth';
 import { Coffee, ArrowLeft } from 'lucide-react';
 
 /**
  * App Router
- * Contains feature routes for Menu & Food Management.
- * Other student features (Auth, Cart/Checkout, Admin Orders) plug their routes in here.
+ * Contains feature routes for Auth and Menu & Food Management.
+ * Other student features (Cart/Checkout, Admin Orders) plug their routes in here.
  */
 export const AppRouter = () => {
   return (
     <Routes>
       {/* Default route redirects to customer menu */}
       <Route path="/" element={<Navigate to="/menu" replace />} />
+
+      {/* Student 1: Authentication Routes (/login, /signin) */}
+      {authRoutes.map((route) => (
+        <Route
+          key={route.path}
+          path={route.path}
+          element={route.element}
+        />
+      ))}
 
       {/* Student 2: Menu & Food Management Routes */}
       {menuRoutes.map((route) => (
