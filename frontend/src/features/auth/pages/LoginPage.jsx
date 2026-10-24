@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import {
   UtensilsCrossed,
-  ShieldCheck,
   Mail,
   Lock,
   Eye,
@@ -274,16 +273,6 @@ export const LoginPage = () => {
             </span>
           </div>
         </Link>
-
-        {/* Cafeteria Admin Portal Button */}
-        <Link
-          to="/admin/login"
-          className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold bg-stone-100 hover:bg-stone-200 text-stone-700 transition-colors shadow-sm"
-          title="Sign in as Cafeteria Staff or Manager"
-        >
-          <ShieldCheck className="w-3.5 h-3.5 text-[#E23744]" />
-          <span>Admin Portal</span>
-        </Link>
       </header>
 
       {/* 
@@ -467,17 +456,6 @@ export const LoginPage = () => {
                 <CheckCircle2 className="w-3 h-3 text-emerald-500" />
                 <span>Quick fill student demo (chittorarp23.civil@coeptech.ac.in (COEP Student))</span>
               </button>
-
-              {/* Divider & Switch to Admin Login */}
-              <div className="mt-2 pt-3 border-t border-stone-100 text-center">
-                <Link
-                  to="/admin/login"
-                  className="text-xs text-stone-500 hover:text-[#E23744] font-medium transition-colors inline-flex items-center gap-1"
-                >
-                  <span>Cafeteria Staff or Admin? Sign in to Admin Portal</span>
-                  <ArrowRight className="w-3 h-3" />
-                </Link>
-              </div>
             </form>
           </div>
         </div>
