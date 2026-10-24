@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from fastapi_app.routers import cart
+from fastapi_app.routers import cart, orders
 
 app = FastAPI(
     title="The Lunchroom - Cart & Orders API",
@@ -7,8 +7,9 @@ app = FastAPI(
     version="1.0.0",
 )
 
-# Attach the Cart router to the main application
+# Include both routers
 app.include_router(cart.router)
+app.include_router(orders.router)
 
 
 @app.get("/")
