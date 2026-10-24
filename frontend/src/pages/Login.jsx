@@ -226,8 +226,8 @@ const Login = () => {
         {/* Footer */}
         <div style={{
           textAlign: 'center',
-          marginTop: '2rem',
-          paddingTop: '1.5rem',
+          marginTop: '1.75rem',
+          paddingTop: '1.25rem',
           borderTop: '1px solid var(--border-subtle)',
           fontSize: '0.88rem',
           color: 'var(--text-muted)'
@@ -235,6 +235,40 @@ const Login = () => {
           Don't have an account?{' '}
           <Link to="/register" style={{ fontWeight: '600', color: 'var(--primary)' }}>
             Register here
+          </Link>
+        </div>
+
+        {/* Cafeteria Admin Portal Callout */}
+        <div style={{
+          marginTop: '1rem',
+          padding: '0.75rem 1rem',
+          borderRadius: 'var(--radius-sm)',
+          background: 'rgba(147, 51, 234, 0.08)',
+          border: '1px solid rgba(168, 85, 247, 0.25)',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'space-between',
+          gap: '0.75rem',
+          fontSize: '0.84rem'
+        }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: '#d8b4fe' }}>
+            <ShieldCheck size={16} color="#c084fc" />
+            <span>Cafeteria Staff or Admin?</span>
+          </div>
+          <Link
+            to="/admin-login"
+            style={{
+              color: '#c084fc',
+              fontWeight: 600,
+              textDecoration: 'none',
+              fontSize: '0.82rem',
+              padding: '0.3rem 0.65rem',
+              borderRadius: '6px',
+              background: 'rgba(147, 51, 234, 0.2)',
+              border: '1px solid rgba(168, 85, 247, 0.35)'
+            }}
+          >
+            Admin Portal →
           </Link>
         </div>
       </div>

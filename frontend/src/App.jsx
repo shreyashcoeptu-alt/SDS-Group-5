@@ -7,6 +7,7 @@ import ProtectedRoute from './components/ProtectedRoute';
 
 import Home from './pages/Home';
 import Login from './pages/Login';
+import AdminLogin from './pages/AdminLogin';
 import Register from './pages/Register';
 import CustomerDashboard from './pages/CustomerDashboard';
 import AdminDashboard from './pages/AdminDashboard';
@@ -25,6 +26,8 @@ function App() {
                 {/* Public Routes */}
                 <Route path="/" element={<Home />} />
                 <Route path="/login" element={<Login />} />
+                <Route path="/admin-login" element={<AdminLogin />} />
+                <Route path="/admin/login" element={<AdminLogin />} />
                 <Route path="/register" element={<Register />} />
 
                 {/* Customer Protected Route */}

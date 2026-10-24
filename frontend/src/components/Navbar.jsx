@@ -124,7 +124,21 @@ const Navbar = () => {
               </div>
             </>
           ) : (
-            <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '0.65rem' }}>
+              <Link 
+                to="/admin-login" 
+                className="btn btn-secondary btn-sm"
+                style={{
+                  borderColor: 'rgba(168, 85, 247, 0.4)',
+                  color: '#c084fc',
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: '0.35rem'
+                }}
+              >
+                <ShieldCheck size={14} color="#a855f7" />
+                <span>Admin Portal</span>
+              </Link>
               <Link to="/login" className="btn btn-secondary btn-sm">
                 Sign In
               </Link>
