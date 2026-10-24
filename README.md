@@ -127,3 +127,16 @@ Restart `npm run dev` in `frontend/`.
   - Drawer form with inline category creation, live image URL preview, and validation.
   - Explicit delete confirmation modal and bulk selection actions.
   - Protected by `RoleGate`.
+
+## Student 3 Services — FastAPI Cart & Orders API
+
+### Cart Endpoints (`/cart`)
+* `GET /cart/{user_id}` — View active user cart & total price
+* `POST /cart/add` — Add or increment item in cart (validated against `menuitems`)
+* `POST /cart/remove` — Decrement item quantity by 1 (removes item if quantity hits 0)
+* `DELETE /cart/item/{user_id}/{food_id}` — Remove item completely from cart
+* `DELETE /cart/clear/{user_id}` — Empty user cart
+
+### Order Endpoints (`/orders`)
+* `POST /orders/place` — Convert active cart to an order (generates `orderNumber`, clears active cart)
+* `GET /orders/{user_id}` — Retrieve order history for a user
