@@ -10,7 +10,8 @@ import {
   Sparkles,
   AlertCircle,
   CheckCircle2,
-  Compass
+  Compass,
+  ShieldCheck
 } from 'lucide-react';
 import { useToast } from '@/components/ui/Toast';
 import { ROLES, STORAGE_KEYS } from '@/utils/constants';
@@ -94,10 +95,11 @@ export const LoginPage = () => {
         console.warn('Backend connection note:', apiErr.message);
       }
 
-      // Save student session & JWT token in localStorage
-      const assignedRole = studentData?.role === 'cafeteria_admin' ? ROLES.ADMIN : ROLES.CUSTOMER;
+      // Save user session & JWT token in localStorage
+      const isStaffOrAdmin = studentData?.role === 'cafeteria_admin' || studentData?.role === 'admin';
+      const assignedRole = isStaffOrAdmin ? ROLES.ADMIN : ROLES.CUSTOMER;
       localStorage.setItem(STORAGE_KEYS.AUTH_DEMO_ROLE, assignedRole);
-      localStorage.setItem('lunchroom:student_email', email.trim());
+      localStorage.setItem(isStaffOrAdmin ? 'lunchroom:admin_email' : 'lunchroom:student_email', email.trim());
       if (token) localStorage.setItem('cafeteria_token', token);
       if (studentData) localStorage.setItem('cafeteria_user', JSON.stringify(studentData));
       localStorage.setItem('lunchroom:logged_in_at', new Date().toISOString());
@@ -108,13 +110,13 @@ export const LoginPage = () => {
       const displayName = studentData?.name || email.split('@')[0];
 
       toast.success(
-        `Welcome back, ${displayName}! Check out today's fresh campus dishes.`,
-        'Signed In'
+        `Welcome back, ${displayName}! ${isStaffOrAdmin ? 'Kitchen and menu tools are ready.' : "Check out today's fresh campus dishes."}`,
+        isStaffOrAdmin ? 'Admin Signed In' : 'Signed In'
       );
 
-      navigate(assignedRole === ROLES.ADMIN ? '/admin/menu' : '/menu', { replace: true });
+      navigate(isStaffOrAdmin ? '/admin/menu' : '/menu', { replace: true });
     } catch (err) {
-      setAuthError('Authentication failed. Please verify your credentials and try again.');
+      setAuthError(err.message || 'Authentication failed. Please verify your credentials and try again.');
     } finally {
       setIsSubmitting(false);
     }
@@ -127,6 +129,15 @@ export const LoginPage = () => {
     setErrors({});
     setAuthError(null);
     toast.info('Loaded COEP Student Batch 2027 credentials', 'Quick Fill');
+  };
+
+  // Quick fill admin demo credentials
+  const handleQuickFillAdmin = () => {
+    setEmail('admin@cafeteria.com');
+    setPassword('Admin@123');
+    setErrors({});
+    setAuthError(null);
+    toast.info('Loaded Cafeteria Admin (admin@cafeteria.com) credentials', 'Admin Quick Fill');
   };
 
   return (
@@ -272,6 +283,15 @@ export const LoginPage = () => {
               The Lunchroom
             </span>
           </div>
+        </Link>
+
+        {/* Admin Portal Header Link */}
+        <Link
+          to="/admin/login"
+          className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-stone-100 hover:bg-stone-200 text-stone-700 transition-colors shadow-sm"
+        >
+          <ShieldCheck className="w-3.5 h-3.5 text-purple-600" />
+          <span>Admin Portal</span>
         </Link>
       </header>
 
@@ -446,16 +466,27 @@ export const LoginPage = () => {
                 )}
               </button>
 
-              {/* Quick demo autofill helper for evaluators & students */}
-              <button
-                type="button"
-                onClick={handleQuickFillDemo}
-                className="text-[11px] text-stone-500 hover:text-stone-800 font-medium py-1 transition-colors flex items-center justify-center gap-1"
-                title="Populate test student credentials"
-              >
-                <CheckCircle2 className="w-3 h-3 text-emerald-500" />
-                <span>Quick fill student demo (chittorarp23.civil@coeptech.ac.in (COEP Student))</span>
-              </button>
+              {/* Quick demo autofill helpers */}
+              <div className="flex flex-col gap-1 items-center">
+                <button
+                  type="button"
+                  onClick={handleQuickFillDemo}
+                  className="text-[11px] text-stone-500 hover:text-stone-800 font-medium py-1 transition-colors flex items-center justify-center gap-1"
+                  title="Populate test student credentials"
+                >
+                  <CheckCircle2 className="w-3 h-3 text-emerald-500" />
+                  <span>Quick fill student demo (chittorarp23.civil@coeptech.ac.in)</span>
+                </button>
+                <button
+                  type="button"
+                  onClick={handleQuickFillAdmin}
+                  className="text-[11px] text-purple-600 hover:text-purple-800 font-medium py-0.5 transition-colors flex items-center justify-center gap-1"
+                  title="Populate test admin credentials"
+                >
+                  <ShieldCheck className="w-3 h-3 text-purple-500" />
+                  <span>Quick fill admin demo (admin@cafeteria.com)</span>
+                </button>
+              </div>
             </form>
           </div>
         </div>

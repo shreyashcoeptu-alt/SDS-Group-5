@@ -67,41 +67,27 @@ export const AdminLoginPage = () => {
     setIsSubmitting(true);
 
     try {
-      // Call backend authentication endpoint
-      let adminData = null;
-      let token = null;
+      const res = await fetch('/api/login', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          email: email.trim(),
+          password: password.trim(),
+          studentId: password.trim(),
+        }),
+      });
 
-      try {
-        const res = await fetch('/api/login', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            email: email.trim(),
-            password: password.trim(),
-            studentId: password.trim(),
-          }),
-        });
-        const data = await res.json();
-        if (!res.ok) {
-          throw new Error(data.message || 'Invalid admin credentials.');
-        }
-        token = data.token;
-        adminData = data.user || data.student;
-      } catch (apiErr) {
-        if (
-          apiErr.message &&
-          (apiErr.message.includes('Invalid') ||
-            apiErr.message.includes('password') ||
-            apiErr.message.includes('credentials'))
-        ) {
-          throw apiErr;
-        }
-        console.warn('Backend connection note:', apiErr.message);
+      const data = await res.json();
+      if (!res.ok) {
+        throw new Error(data.message || 'Invalid admin credentials.');
       }
+
+      const token = data.token;
+      const adminData = data.user || data.student;
 
       // Check role verification: only cafeteria_admin can access the admin dashboard
       const userRole = adminData?.role;
-      if (userRole && userRole !== 'cafeteria_admin' && userRole !== 'admin') {
+      if (userRole !== 'cafeteria_admin' && userRole !== 'admin') {
         throw new Error(
           'Access Denied: This account has student/customer permissions. Only cafeteria administrators and staff can sign in here.'
         );
