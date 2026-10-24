@@ -19,4 +19,4 @@ db = client["TheLunchroom"]
 # Collection handles matching team structure
 cart_collection = db["carts"]
 orders_collection = db["orders"]
-food_collection = db["fooditems"]
+food_collection = db["menuitems"]
