@@ -9,10 +9,8 @@ import {
   Eye,
   EyeOff,
   ArrowRight,
-  Sparkles,
   AlertCircle,
   CheckCircle2,
-  Compass,
 } from 'lucide-react';
 import { useToast } from '@/components/ui/Toast';
 import { ROLES, STORAGE_KEYS } from '@/utils/constants';
@@ -492,7 +490,7 @@ export const LoginPage = () => {
                       <path
                         className="opacity-75"
                         fill="currentColor"
-                        d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                        d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l-2.647-2.647z"
                       />
                     </svg>
                     <span>Entering The Lunchroom...</span>
