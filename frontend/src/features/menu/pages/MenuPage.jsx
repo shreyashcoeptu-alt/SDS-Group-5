@@ -1,249 +1,129 @@
-import React, { useState, useMemo } from 'react';
-import useMenu from '../hooks/useMenu';
-import useMenuFilters from '../hooks/useMenuFilters';
-import FoodCard from '../components/FoodCard';
-import FoodCardSkeleton from '../components/FoodCardSkeleton';
-import CategoryTabs from '../components/CategoryTabs';
-import MenuFilters from '../components/MenuFilters';
-import FoodDetailModal from '../components/FoodDetailModal';
-import Button from '@/components/ui/Button';
+import React, { useState } from 'react';
+import dummyMenu from '../data/dummyMenu';
+import MenuListItem from '../components/MenuListItem';
+import MenuGridCard from '../components/MenuGridCard';
 import { useToast } from '@/components/ui/Toast';
-import { Utensils, RefreshCw, AlertCircle } from 'lucide-react';
 
-/**
- * Customer Menu Page (/menu)
- * 2026 Gen-Z Modern Editorial Aesthetic.
- * Features Lovelo Black architectural title, Clash Grotesk / Satoshi body,
- * and zero-gradient clean tabs.
- */
 export const MenuPage = () => {
-  const { items, isLoading, error, refetch, summary } = useMenu();
+  const [search, setSearch] = useState('');
   const toast = useToast();
 
-  const {
-    filteredItems,
-    category,
-    setCategory,
-    search,
-    setSearch,
-    diet,
-    setDiet,
-    sortBy,
-    setSortBy,
-    showSoldOut,
-    setShowSoldOut,
-    resetFilters,
-    hasActiveFilters,
-    totalCount,
-    matchCount,
-  } = useMenuFilters(items, { syncWithUrl: true, isCustomerView: true });
-
-  const [selectedItemForModal, setSelectedItemForModal] = useState(null);
-
-  // Time-of-day greeting & meal slot determination
-  const { mealSlot, formattedDate, greetingWord } = useMemo(() => {
-    const now = new Date();
-    const hour = now.getHours();
-
-    let slot = 'Cafeteria Service';
-    let greet = 'CAMPUS BITES';
-
-    if (hour >= 5 && hour < 11) {
-      slot = 'Breakfast Menu';
-      greet = 'MORNING SERVICE';
-    } else if (hour >= 11 && hour < 15.5) {
-      slot = 'Lunch & Thali Service';
-      greet = 'LUNCH DISHES';
-    } else if (hour >= 15.5 && hour < 19) {
-      slot = 'Snacks & Evening Chai';
-      greet = 'EVENING SNACKS';
-    } else {
-      slot = 'Dinner & Light Bites';
-      greet = 'NIGHT KITCHEN';
-    }
-
-    const dateStr = now.toLocaleDateString('en-IN', {
-      weekday: 'short',
-      day: 'numeric',
-      month: 'short',
-    });
-
-    return {
-      mealSlot: slot,
-      formattedDate: dateStr,
-      greetingWord: greet,
-    };
-  }, []);
-
-  // Compute item counts per category for tab badges
-  const categoryCounts = useMemo(() => {
-    const counts = { All: items.length };
-    items.forEach((it) => {
-      const cat = (it.category || '').trim();
-      if (cat) {
-        counts[cat] = (counts[cat] || 0) + 1;
-      }
-    });
-    return counts;
-  }, [items]);
-
-  /**
-   * Handle food card Add button click
-   * 
-   * INTEGRATION STUB: Cart Feature (Student 3)
-   * Connect Student 3's useCart().addItem(item) right here.
-   */
   const handleAddToCart = (item) => {
-    toast.success(
-      `${item.name} added to order (demo)`,
-      'Cart Updated'
-    );
+    toast.success(`${item.name} added to order (demo)`, 'Cart Updated');
   };
 
+  const filteredItems = dummyMenu.filter((item) => {
+    const query = search.trim().toLowerCase();
+    if (!query) return true;
+    return (
+      item.name.toLowerCase().includes(query) ||
+      item.description.toLowerCase().includes(query)
+    );
+  });
+
   return (
-    <div className="min-h-screen bg-[#F8F9FA] pb-24 text-[#0F0F11]">
-      {/* 2026 Architectural Editorial Header */}
-      <header className="bg-white border-b border-stone-200/90 pt-8 pb-6 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row md:items-end justify-between gap-5">
-          <div className="flex flex-col gap-2 max-w-2xl">
-            {/* Top Micro-Bar */}
-            <div className="flex items-center gap-2 text-xs font-mono">
-              <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-emerald-50 text-emerald-800 border border-emerald-200 font-semibold uppercase tracking-wider text-[10px]">
-                <span className="w-1.5 h-1.5 rounded-full bg-emerald-600 animate-pulse" />
-                Live Kitchen
-              </span>
-              <span className="text-stone-300">•</span>
-              <span className="text-stone-500 uppercase tracking-wider font-semibold">
-                {mealSlot}
-              </span>
-              <span className="text-stone-300">•</span>
-              <span className="text-stone-400">
-                {formattedDate}
-              </span>
-            </div>
+    <div className="min-h-screen bg-[var(--bg)] text-[var(--ink)] px-5 sm:px-10 py-8 sm:py-12">
+      <style>{`
+        :root, [data-theme="locker"] {
+          --bg: #F4F0E8;
+          --surface: #FFFFFF;
+          --ink: #1B2430;
+          --ink-soft: #64748B;
+          --primary: #F97316;
+          --band-1: #FED7AA;
+          --band-2: #BAE6FD;
+          --band-3: #DDD6FE;
+          --band-4: #BBF7D0;
+          --band-5: #FEF08A;
+        }
+        [data-theme="blackboard"] {
+          --bg: #18181B;
+          --surface: #27272A;
+          --ink: #FAFAFA;
+          --ink-soft: #A1A1AA;
+          --primary: #FACC15;
+          --band-1: #3F3F46;
+          --band-2: #334155;
+          --band-3: #374151;
+          --band-4: #2D3748;
+          --band-5: #44403C;
+        }
+        [data-theme="pistachio"] {
+          --bg: #F2F7F4;
+          --surface: #FFFFFF;
+          --ink: #1E2D24;
+          --ink-soft: #5C7164;
+          --primary: #2D6A4F;
+          --band-1: #D8F3DC;
+          --band-2: #B7E4C7;
+          --band-3: #E9D8A6;
+          --band-4: #DDF0ED;
+          --band-5: #E2E8F0;
+        }
+        [data-theme="strawberry-milk"], [data-theme="strawberry milk"] {
+          --bg: #FFF5F7;
+          --surface: #FFFFFF;
+          --ink: #3D1C24;
+          --ink-soft: #8C626C;
+          --primary: #E11D48;
+          --band-1: #FFE4E6;
+          --band-2: #FECDD3;
+          --band-3: #FED7AA;
+          --band-4: #E0E7FF;
+          --band-5: #F5D0FE;
+        }
+      `}</style>
 
-            {/* Lovelo Black Master Title */}
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black font-title uppercase tracking-tightest text-black leading-none mt-1">
-              {greetingWord}
-            </h1>
+      <main className="max-w-[1240px] mx-auto flex flex-col gap-8">
+        <header className="flex flex-col md:flex-row md:items-center justify-between gap-4">
+          <h1 className="font-title text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-[var(--ink)]">
+            The Lunchroom
+          </h1>
 
-            <p className="text-sm sm:text-base text-stone-500 font-sans leading-relaxed">
-              Skip the queue. Freshly prepared meals, rolls & beverages ready for instant pickup.
+          <div className="w-full md:w-72">
+            <input
+              type="text"
+              value={search}
+              onChange={(e) => setSearch(e.target.value)}
+              placeholder="Search menu..."
+              aria-label="Search menu"
+              className="w-full h-11 px-4 rounded-[12px] bg-[var(--surface)] text-[var(--ink)] placeholder:text-[var(--ink-soft)] border-2 border-[var(--ink)] focus:outline-none text-sm"
+            />
+          </div>
+        </header>
+
+        <div className="md:hidden bg-[var(--surface)] rounded-[24px] p-5 divide-y divide-[var(--ink)]/15">
+          {filteredItems.map((item, index) => (
+            <MenuListItem
+              key={item.id}
+              item={item}
+              index={index}
+              onAdd={handleAddToCart}
+            />
+          ))}
+          {filteredItems.length === 0 && (
+            <p className="py-8 text-center text-sm text-[var(--ink-soft)]">
+              No items match your search.
             </p>
-          </div>
-
-          {/* Quick Counter Badge */}
-          <div className="flex items-center gap-3 py-2 px-3.5 bg-stone-100 rounded-xl border border-stone-200 text-xs font-heading font-medium self-start md:self-auto">
-            <span className="text-black font-bold font-mono text-sm tabular-nums">{summary.available}</span>
-            <span className="text-stone-500">Dishes Available Now</span>
-          </div>
+          )}
         </div>
-      </header>
 
-      {/* Sticky Minimalist Category Tabs */}
-      <CategoryTabs
-        categories={summary.categories}
-        activeCategory={category}
-        onSelectCategory={setCategory}
-        categoryCounts={categoryCounts}
-      />
-
-      {/* Main Catalog Viewport */}
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6">
-        {/* Search & Filters */}
-        <div className="mb-6">
-          <MenuFilters
-            search={search}
-            onSearchChange={setSearch}
-            diet={diet}
-            onDietChange={setDiet}
-            sortBy={sortBy}
-            onSortChange={setSortBy}
-            showSoldOut={showSoldOut}
-            onToggleSoldOut={setShowSoldOut}
-            hasActiveFilters={hasActiveFilters}
-            onResetFilters={resetFilters}
-            matchCount={matchCount}
-            totalCount={totalCount}
-          />
+        <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {filteredItems.map((item, index) => (
+            <MenuGridCard
+              key={item.id}
+              item={item}
+              index={index}
+              onAdd={handleAddToCart}
+            />
+          ))}
+          {filteredItems.length === 0 && (
+            <p className="col-span-full py-12 text-center text-sm text-[var(--ink-soft)]">
+              No items match your search.
+            </p>
+          )}
         </div>
-
-        {/* Loading Skeletons */}
-        {isLoading && (
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
-            {Array.from({ length: 8 }).map((_, i) => (
-              <FoodCardSkeleton key={i} />
-            ))}
-          </div>
-        )}
-
-        {/* Error State */}
-        {!isLoading && error && (
-          <div className="bg-white rounded-2xl border border-red-200 p-8 sm:p-12 text-center max-w-lg mx-auto shadow-sm my-8">
-            <div className="w-12 h-12 rounded-xl bg-red-100 text-red-600 flex items-center justify-center mx-auto mb-4">
-              <AlertCircle className="w-6 h-6" />
-            </div>
-            <h3 className="text-lg font-bold font-heading text-black mb-1.5">
-              Unable to load cafeteria catalog
-            </h3>
-            <p className="text-xs sm:text-sm text-stone-500 mb-6 leading-relaxed">
-              {error}. Please check your connection or switch back to mock mode.
-            </p>
-            <Button
-              variant="primary"
-              onClick={refetch}
-              leftIcon={<RefreshCw className="w-4 h-4" />}
-            >
-              Retry Loading
-            </Button>
-          </div>
-        )}
-
-        {/* Empty State */}
-        {!isLoading && !error && filteredItems.length === 0 && (
-          <div className="bg-white rounded-2xl border border-stone-200 p-10 sm:p-14 text-center max-w-md mx-auto shadow-sm my-10 animate-fade-in">
-            <div className="w-14 h-14 rounded-2xl bg-stone-100 text-stone-400 flex items-center justify-center mx-auto mb-4">
-              <Utensils className="w-7 h-7 opacity-60" />
-            </div>
-            <h3 className="text-lg font-bold font-heading text-black mb-1.5">
-              No dishes match your filter
-            </h3>
-            <p className="text-xs sm:text-sm text-stone-500 mb-6 leading-relaxed">
-              Try adjusting your dietary filter or search query to find other tasty dishes.
-            </p>
-            {hasActiveFilters && (
-              <Button
-                variant="outline"
-                onClick={resetFilters}
-              >
-                Clear all filters
-              </Button>
-            )}
-          </div>
-        )}
-
-        {/* Food Items Grid */}
-        {!isLoading && !error && filteredItems.length > 0 && (
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4.5 sm:gap-5">
-            {filteredItems.map((item) => (
-              <FoodCard
-                key={item._id}
-                item={item}
-                onCardClick={setSelectedItemForModal}
-                onAdd={handleAddToCart}
-              />
-            ))}
-          </div>
-        )}
       </main>
-
-      {/* Item Detail Modal */}
-      <FoodDetailModal
-        item={selectedItemForModal}
-        isOpen={Boolean(selectedItemForModal)}
-        onClose={() => setSelectedItemForModal(null)}
-        onAdd={handleAddToCart}
-      />
     </div>
   );
 };

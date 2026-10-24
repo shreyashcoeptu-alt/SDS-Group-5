@@ -2,40 +2,44 @@ import { useState, useEffect } from 'react';
 import { ROLES, STORAGE_KEYS } from '@/utils/constants';
 
 /**
- * INTEGRATION STUB: Auth Integration
- * 
- * IMPORTANT: Replace this hook with Student 1's AuthContext when merged.
- * 
- * Provides current user context with demo role switching for testing
- * both the customer menu (/menu) and admin management (/admin/menu).
+ * Provides current user context derived from the authenticated session.
+ * Connects to login state in localStorage without depending on the old Dev Mode switcher.
  */
 export const useCurrentUser = () => {
-  const [role, setRoleState] = useState(() => {
-    return localStorage.getItem(STORAGE_KEYS.AUTH_DEMO_ROLE) || ROLES.ADMIN;
-  });
+  const getRoleFromSession = () => {
+    const email = (localStorage.getItem('lunchroom:student_email') || '').toLowerCase().trim();
+    const savedRole = localStorage.getItem(STORAGE_KEYS.AUTH_DEMO_ROLE);
+
+    // If signed-in email contains 'admin' or saved role is admin, grant admin privileges
+    if (email.includes('admin') || savedRole === ROLES.ADMIN) {
+      return ROLES.ADMIN;
+    }
+    return ROLES.CUSTOMER;
+  };
+
+  const [role, setRoleState] = useState(getRoleFromSession);
 
   const setRole = (newRole) => {
     localStorage.setItem(STORAGE_KEYS.AUTH_DEMO_ROLE, newRole);
     setRoleState(newRole);
-    // Dispatch storage event so other components or tabs sync if needed
     window.dispatchEvent(new Event('role_changed'));
   };
 
   useEffect(() => {
     const handleRoleChanged = () => {
-      const current = localStorage.getItem(STORAGE_KEYS.AUTH_DEMO_ROLE) || ROLES.ADMIN;
-      setRoleState(current);
+      setRoleState(getRoleFromSession());
     };
     window.addEventListener('role_changed', handleRoleChanged);
     return () => window.removeEventListener('role_changed', handleRoleChanged);
   }, []);
 
   const isAdmin = role === ROLES.ADMIN;
+  const storedEmail = localStorage.getItem('lunchroom:student_email');
 
   const user = {
     _id: isAdmin ? 'usr_admin_001' : 'usr_cust_001',
-    name: isAdmin ? 'Admin Chef (Demo)' : 'Aarav Sharma (Student)',
-    email: isAdmin ? 'admin.cafeteria@college.edu' : 'aarav.cs23@college.edu',
+    name: isAdmin ? 'Cafeteria Admin' : 'Student',
+    email: storedEmail || (isAdmin ? 'admin.cafeteria@college.edu' : 'student@college.edu'),
     role: role,
   };
 
