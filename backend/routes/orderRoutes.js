@@ -1,5 +1,6 @@
 const express = require('express');
 const router = express.Router();
+const mongoose = require('mongoose');
 const Order = require('../models/Order');
 
 // Helper function to generate order numbers (e.g., ORD-618802-214)
@@ -22,19 +23,30 @@ router.post('/', async (req, res) => {
       return res.status(400).json({ message: 'Cannot place an order with an empty cart.' });
     }
 
-    // Format order items to match Mongoose schema
-    const formattedItems = items.map(item => ({
-      menuItem: item.menuItem || item.food_id || item.id,
-      name: item.name,
-      price: item.price,
-      quantity: item.quantity,
-      subtotal: item.subtotal || item.price * item.quantity,
-    }));
+    // Safely parse or assign a valid ObjectId for menuItem & customer
+    const formattedItems = items.map((item) => {
+      const rawId = item.menuItem || item.food_id || item.id;
+      const validObjectId = mongoose.Types.ObjectId.isValid(rawId)
+        ? rawId
+        : new mongoose.Types.ObjectId();
+
+      return {
+        menuItem: validObjectId,
+        name: item.name,
+        price: item.price,
+        quantity: item.quantity,
+        subtotal: item.subtotal || item.price * item.quantity,
+      };
+    });
+
+    const validCustomer = mongoose.Types.ObjectId.isValid(customer)
+      ? customer
+      : new mongoose.Types.ObjectId();
 
     // Create new Order document
     const newOrder = new Order({
       orderNumber: generateOrderNumber(),
-      customer: customer || '654321654321654321654321', // Fallback ObjectId for local demo
+      customer: validCustomer,
       items: formattedItems,
       totalAmount: totalAmount,
       status: 'pending',
