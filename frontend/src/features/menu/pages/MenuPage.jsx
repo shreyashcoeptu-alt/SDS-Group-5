@@ -9,16 +9,18 @@ import FoodDetailModal from '../components/FoodDetailModal';
 import Button from '@/components/ui/Button';
 import { useToast } from '@/components/ui/Toast';
 import { Utensils, RefreshCw, AlertCircle } from 'lucide-react';
+import { useCart } from '@/features/cart';
 
 /**
- * Customer Menu Page (/menu)
- * 2026 Gen-Z Modern Editorial Aesthetic.
- * Features Lovelo Black architectural title, Clash Grotesk / Satoshi body,
- * and zero-gradient clean tabs.
+- Customer Menu Page (/menu)
+- 2026 Gen-Z Modern Editorial Aesthetic.
+- Features Lovelo Black architectural title, Clash Grotesk / Satoshi body,
+- and zero-gradient clean tabs.
  */
 export const MenuPage = () => {
   const { items, isLoading, error, refetch, summary } = useMenu();
   const toast = useToast();
+  const { addItem, totalItemsCount, setIsCartOpen } = useCart();
 
   const {
     filteredItems,
@@ -89,13 +91,12 @@ export const MenuPage = () => {
 
   /**
    * Handle food card Add button click
-   * 
-   * INTEGRATION STUB: Cart Feature (Student 3)
-   * Connect Student 3's useCart().addItem(item) right here.
+   * Adds selected item to CartContext and triggers confirmation alert
    */
   const handleAddToCart = (item) => {
+    addItem(item);
     toast.success(
-      `${item.name} added to order (demo)`,
+      `${item.name} added to cart`,
       'Cart Updated'
     );
   };

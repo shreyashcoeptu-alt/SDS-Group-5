@@ -1,26 +1,22 @@
 import React from 'react';
 import { Routes, Route, Navigate, Link } from 'react-router-dom';
 import { menuRoutes } from '@/features/menu';
-import { Coffee, ArrowLeft } from 'lucide-react';
+import { orderRoutes } from '@/features/orders';
+import { Coffee, ArrowLeft } from 'lucide-react'; // <-- Fix: import icons from lucide-react
 
-/**
- * App Router
- * Contains feature routes for Menu & Food Management.
- * Other student features (Auth, Cart/Checkout, Admin Orders) plug their routes in here.
- */
 export const AppRouter = () => {
   return (
     <Routes>
-      {/* Default route redirects to customer menu */}
       <Route path="/" element={<Navigate to="/menu" replace />} />
 
-      {/* Student 2: Menu & Food Management Routes */}
+      {/* Menu & Food Management Routes */}
       {menuRoutes.map((route) => (
-        <Route
-          key={route.path}
-          path={route.path}
-          element={route.element}
-        />
+        <Route key={route.path} path={route.path} element={route.element} />
+      ))}
+
+      {/* Order Tracking & Admin Dashboard Routes */}
+      {orderRoutes.map((route) => (
+        <Route key={route.path} path={route.path} element={route.element} />
       ))}
 
       {/* 404 Not Found Fallback */}

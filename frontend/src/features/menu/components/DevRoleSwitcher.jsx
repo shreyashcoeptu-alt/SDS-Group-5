@@ -16,7 +16,7 @@ export const DevRoleSwitcher = () => {
   const location = useLocation();
   const navigate = useNavigate();
 
-  if (!isMock) return null;
+  if (!import.meta.env.DEV && !isMock) return null;
 
   const toggleRole = () => {
     const nextRole = isAdmin ? ROLES.CUSTOMER : ROLES.ADMIN;
