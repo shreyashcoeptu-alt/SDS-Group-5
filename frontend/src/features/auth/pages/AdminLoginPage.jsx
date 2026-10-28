@@ -82,17 +82,14 @@ export const AdminLoginPage = () => {
       const data = await res.json();
 
       if (!res.ok) {
-        throw new Error(
-          data.message || 'Invalid admin credentials.'
-        );
+        throw new Error(data.message || 'Invalid admin credentials.');
       }
 
       const token = data.token;
       const adminData = data.user || data.student;
-
-      // Never allow login without a valid user and admin role.
       const userRole = adminData?.role;
 
+      // Never allow login without a valid user, token, and admin role.
       if (
         !adminData ||
         !token ||
@@ -132,8 +129,7 @@ export const AdminLoginPage = () => {
       // Notify active listeners.
       window.dispatchEvent(new Event('role_changed'));
 
-      const displayName =
-        adminData.name || 'Cafeteria Manager';
+      const displayName = adminData.name || 'Cafeteria Manager';
 
       toast.success(
         `Welcome back, ${displayName}! Kitchen and menu management tools are ready.`,

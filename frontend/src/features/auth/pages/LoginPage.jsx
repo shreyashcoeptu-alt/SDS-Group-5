@@ -37,6 +37,7 @@ export const LoginPage = () => {
       newErrors.email = 'Please enter your college email address';
     } else {
       const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
       if (!emailRegex.test(email.trim())) {
         newErrors.email =
           'Please enter a valid email address (e.g. name@college.edu)';
@@ -64,7 +65,9 @@ export const LoginPage = () => {
     try {
       const res = await fetch('/api/login', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: {
+          'Content-Type': 'application/json',
+        },
         body: JSON.stringify({
           email: email.trim(),
           studentId: password.trim(),
@@ -84,7 +87,9 @@ export const LoginPage = () => {
       const studentData = data.student || data.user;
 
       if (!studentData) {
-        throw new Error('The server did not return valid user information.');
+        throw new Error(
+          'The server did not return valid user information.'
+        );
       }
 
       // Support both cafeteria administrator and student/customer accounts.
@@ -96,7 +101,10 @@ export const LoginPage = () => {
         ? ROLES.ADMIN
         : ROLES.CUSTOMER;
 
-      localStorage.setItem(STORAGE_KEYS.AUTH_DEMO_ROLE, assignedRole);
+      localStorage.setItem(
+        STORAGE_KEYS.AUTH_DEMO_ROLE,
+        assignedRole
+      );
 
       localStorage.setItem(
         isStaffOrAdmin
@@ -153,6 +161,7 @@ export const LoginPage = () => {
     setPassword('chittorarp23');
     setErrors({});
     setAuthError(null);
+
     toast.info(
       'Loaded COEP Student Batch 2027 credentials',
       'Quick Fill'
@@ -165,6 +174,7 @@ export const LoginPage = () => {
     setPassword('Admin@123');
     setErrors({});
     setAuthError(null);
+
     toast.info(
       'Loaded Cafeteria Admin credentials',
       'Admin Quick Fill'
@@ -173,6 +183,7 @@ export const LoginPage = () => {
 
   return (
     <div className="min-h-screen w-full max-w-full overflow-x-hidden bg-[#FDFCFB] text-stone-900 flex flex-col justify-between relative select-none font-sans">
+
       {/* Background curves */}
       <div
         className="pointer-events-none absolute inset-0 w-full h-full overflow-hidden"
