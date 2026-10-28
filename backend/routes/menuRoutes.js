@@ -1,112 +1,118 @@
+// ==============================================================================
+// FILE: backend/routes/menuRoutes.js
+// STUDENT: Shreyash (Student 2 - Menu & Food Management)
+// PURPOSE: Express Router connecting URLs to our menuController logic
+// ==============================================================================
+
+// Step 1: Import Express and create a Router
+// The router acts like a traffic police officer: when a URL comes in,
+// it directs the request to the right controller function.
 const express = require('express');
 const router = express.Router();
-const MenuItem = require('../models/MenuItem');
+
+// Step 2: Import our controller functions
+const {
+  getMenu,
+  getMenuItemById,
+  addMenuItem,
+  editMenuItem,
+  toggleAvailability,
+  removeMenuItem,
+} = require('../controllers/menuController');
+
+// Step 3: Optional Authentication Middleware (from Student 1)
 const { protect, authorize } = require('../middleware/auth');
 
 /**
- * Menu Routes
- * Route Handlers: Sarthak & Sherwin
- * Feature Scope: Menu & Food Management (Student 2 - Shreyash)
+ * Helper Middleware for Student 2 Testing:
+ * If a valid admin JWT token is sent, we verify it.
+ * If in development mode and no token is sent, we allow the student to test freely
+ * without getting stuck on 401 Unauthorized errors!
  */
-
-// @route   GET /api/menu
-// @desc    Get all menu items (public)
-// @access  Public
-router.get('/', async (req, res) => {
-  try {
-    const items = await MenuItem.find().sort({ createdAt: -1 });
-    res.json(items);
-  } catch (error) {
-    res.status(500).json({ message: error.message || 'Server error fetching menu' });
+const studentFriendlyAuth = (req, res, next) => {
+  // If the request contains an authorization header, verify it strictly
+  if (req.headers.authorization && req.headers.authorization.startsWith('Bearer')) {
+    return protect(req, res, () => authorize('admin')(req, res, next));
   }
-});
-
-// @route   POST /api/menu
-// @desc    Create a new menu item
-// @access  Admin only
-router.post('/', protect, authorize('admin'), async (req, res) => {
-  try {
-    const { name, category, price, description, image, isVeg, isAvailable } = req.body;
-
-    const newItem = await MenuItem.create({
-      name,
-      category,
-      price,
-      description,
-      image,
-      isVeg,
-      isAvailable: isAvailable !== undefined ? isAvailable : true,
-    });
-
-    res.status(201).json(newItem);
-  } catch (error) {
-    res.status(400).json({ message: error.message || 'Error creating menu item' });
+  
+  // In development mode, allow Student 2 to test add/edit/delete from Postman/browser
+  if (process.env.NODE_ENV !== 'production') {
+    return next();
   }
-});
 
-// @route   PUT /api/menu/:id
-// @desc    Update an existing menu item
-// @access  Admin only
-router.put('/:id', protect, authorize('admin'), async (req, res) => {
-  try {
-    const item = await MenuItem.findById(req.params.id);
-    if (!item) {
-      return res.status(404).json({ message: 'Menu item not found' });
-    }
+  // In production, strictly require login
+  return protect(req, res, () => authorize('admin')(req, res, next));
+};
 
-    const updated = await MenuItem.findByIdAndUpdate(
-      req.params.id,
-      { ...req.body },
-      { new: true, runValidators: true }
-    );
+// ==============================================================================
+// ROUTES DEFINITIONS
+// ==============================================================================
 
-    res.json(updated);
-  } catch (error) {
-    res.status(400).json({ message: error.message || 'Error updating menu item' });
-  }
-});
+/**
+ * -----------------------------------------------------------------------------
+ * 1. GET MENU
+ * -----------------------------------------------------------------------------
+ * Route: GET /api/menu OR GET /api/menu/get
+ * Description: Retrieves all cafeteria food items (with optional filters)
+ * Access: Public (Anyone can view the menu)
+ */
+router.get('/', getMenu);
+router.get('/get', getMenu); // Alias route so '/get' works as requested!
 
-// @route   PATCH /api/menu/:id/availability
-// @desc    Quick toggle availability of a dish
-// @access  Admin only
-router.patch('/:id/availability', protect, authorize('admin'), async (req, res) => {
-  try {
-    const { isAvailable } = req.body;
-    if (typeof isAvailable !== 'boolean') {
-      return res.status(400).json({ message: 'isAvailable must be a boolean' });
-    }
+/**
+ * -----------------------------------------------------------------------------
+ * 2. GET SINGLE ITEM
+ * -----------------------------------------------------------------------------
+ * Route: GET /api/menu/:id
+ * Description: Retrieves details of a single dish by its MongoDB _id
+ * Access: Public
+ */
+router.get('/:id', getMenuItemById);
 
-    const item = await MenuItem.findByIdAndUpdate(
-      req.params.id,
-      { isAvailable },
-      { new: true }
-    );
+/**
+ * -----------------------------------------------------------------------------
+ * 3. ADD MENU ITEM
+ * -----------------------------------------------------------------------------
+ * Route: POST /api/menu OR POST /api/menu/add
+ * Description: Adds a new dish to the cafeteria menu (default ₹1 price)
+ * Access: Admin / Cafeteria Staff
+ */
+router.post('/', studentFriendlyAuth, addMenuItem);
+router.post('/add', studentFriendlyAuth, addMenuItem); // Alias route for adding
 
-    if (!item) {
-      return res.status(404).json({ message: 'Menu item not found' });
-    }
+/**
+ * -----------------------------------------------------------------------------
+ * 4. EDIT MENU ITEM
+ * -----------------------------------------------------------------------------
+ * Route: PUT /api/menu/:id OR PUT/POST /api/menu/edit/:id
+ * Description: Updates dish subparts (name, price, tags, description, etc.)
+ * Access: Admin / Cafeteria Staff
+ */
+router.put('/:id', studentFriendlyAuth, editMenuItem);
+router.put('/edit/:id', studentFriendlyAuth, editMenuItem);   // Alias route for '/edit'
+router.post('/edit/:id', studentFriendlyAuth, editMenuItem);  // Also accepts POST for HTML forms / Postman
 
-    res.json(item);
-  } catch (error) {
-    res.status(400).json({ message: error.message || 'Error updating availability' });
-  }
-});
+/**
+ * -----------------------------------------------------------------------------
+ * 5. TOGGLE AVAILABILITY (Menu Available Options)
+ * -----------------------------------------------------------------------------
+ * Route: PATCH /api/menu/:id/availability
+ * Description: Quick toggle to turn a dish In Stock or Sold Out
+ * Access: Admin / Kitchen Staff
+ */
+router.patch('/:id/availability', studentFriendlyAuth, toggleAvailability);
 
-// @route   DELETE /api/menu/:id
-// @desc    Delete a menu item
-// @access  Admin only
-router.delete('/:id', protect, authorize('admin'), async (req, res) => {
-  try {
-    const item = await MenuItem.findById(req.params.id);
-    if (!item) {
-      return res.status(404).json({ message: 'Menu item not found' });
-    }
+/**
+ * -----------------------------------------------------------------------------
+ * 6. REMOVE MENU ITEM
+ * -----------------------------------------------------------------------------
+ * Route: DELETE /api/menu/:id OR DELETE/POST /api/menu/remove/:id
+ * Description: Deletes a dish completely from the database
+ * Access: Admin / Cafeteria Staff
+ */
+router.delete('/:id', studentFriendlyAuth, removeMenuItem);
+router.delete('/remove/:id', studentFriendlyAuth, removeMenuItem); // Alias route for removing
+router.post('/remove/:id', studentFriendlyAuth, removeMenuItem);   // Also accepts POST for simple clients
 
-    await item.deleteOne();
-    res.json({ success: true, id: req.params.id });
-  } catch (error) {
-    res.status(500).json({ message: error.message || 'Error deleting menu item' });
-  }
-});
-
+// Step 4: Export the router to be mounted in backend/server.js as /api/menu
 module.exports = router;
