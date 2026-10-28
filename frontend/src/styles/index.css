@@ -1,0 +1,196 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: 'Lovelo Black';
+    font-weight: 900;
+    font-style: normal;
+    src: local('Lovelo Black'), local('Lovelo-Black'), local('Lovelo'), local('Cabinet Grotesk Black'), local('Clash Grotesk Bold');
+  }
+
+  @font-face {
+    font-family: 'Okra';
+    font-weight: 400 900;
+    font-style: normal;
+    src: local('Okra'), local('Okra-Medium'), local('Okra-Bold'), local('Clash Grotesk');
+  }
+
+  @font-face {
+    font-family: 'Gilroy';
+    font-weight: 400 900;
+    font-style: normal;
+    src: local('Gilroy'), local('Gilroy-Medium'), local('Gilroy-Bold'), local('Plus Jakarta Sans');
+  }
+
+  @font-face {
+    font-family: 'Basis Grotesque Pro';
+    font-weight: 400 900;
+    font-style: normal;
+    src: local('Basis Grotesque Pro'), local('Basis Grotesque'), local('Satoshi');
+  }
+
+  @font-face {
+    font-family: 'Proxima Nova';
+    font-weight: 400 900;
+    font-style: normal;
+    src: local('Proxima Nova'), local('ProximaNova-Regular'), local('Inter');
+  }
+
+  :root {
+    --bg-main: #F8F9FA;
+    --text-primary: #0F0F11;
+    --accent: #FF3B00;
+  }
+
+  body {
+    background-color: #F8F9FA;
+    color: #0F0F11;
+    font-family: 'Satoshi', 'Basis Grotesque Pro', 'Plus Jakarta Sans', 'Inter', 'Proxima Nova', 'General Sans', -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, .font-title {
+    font-family: 'Lovelo Black', 'Lovelo', 'Cabinet Grotesk', 'Syne', sans-serif;
+    letter-spacing: -0.03em;
+    font-weight: 900;
+  }
+
+  h2, h3, h4, .font-heading {
+    font-family: 'Clash Grotesk', 'Gilroy', 'Okra', 'General Sans', 'Plus Jakarta Sans', sans-serif;
+  }
+
+  .font-sans {
+    font-family: 'Satoshi', 'Basis Grotesque Pro', 'Plus Jakarta Sans', 'Inter', 'Proxima Nova', 'General Sans', sans-serif;
+  }
+
+  .tabular-price {
+    font-family: 'JetBrains Mono', monospace;
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* Modern dialog scroll containment per modern-web-guidance */
+  dialog:modal {
+    overscroll-behavior: contain;
+  }
+
+  dialog::backdrop {
+    overflow: hidden;
+    overscroll-behavior: contain;
+  }
+}
+
+/* Custom minimal scrollbar */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.thin-scrollbar::-webkit-scrollbar {
+  height: 4px;
+  width: 4px;
+}
+.thin-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.thin-scrollbar::-webkit-scrollbar-thumb {
+  background: #E5E7EB;
+  border-radius: 9999px;
+}
+.thin-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #D1D5DB;
+}
+
+/* 2026 Micro-animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.18s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.22s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-drawer-in {
+  animation: slideInRight 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Subtle floating animations for food illustrations */
+@keyframes foodFloatA {
+  0%, 100% {
+    transform: translateY(0px) rotate(var(--rot, 0deg));
+  }
+  50% {
+    transform: translateY(-8px) rotate(var(--rot, 0deg));
+  }
+}
+
+@keyframes foodFloatB {
+  0%, 100% {
+    transform: translateY(0px) rotate(var(--rot, 0deg));
+  }
+  50% {
+    transform: translateY(9px) rotate(var(--rot, 0deg));
+  }
+}
+
+@keyframes foodFloatC {
+  0%, 100% {
+    transform: translateY(0px) translateX(0px) rotate(var(--rot, 0deg));
+  }
+  50% {
+    transform: translateY(-6px) translateX(4px) rotate(var(--rot, 0deg));
+  }
+}
+
+.animate-food-float-a {
+  animation: foodFloatA 6s ease-in-out infinite;
+}
+
+.animate-food-float-b {
+  animation: foodFloatB 7s ease-in-out infinite;
+}
+
+.animate-food-float-c {
+  animation: foodFloatC 8s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

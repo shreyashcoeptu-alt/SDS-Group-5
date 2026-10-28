@@ -1,7 +1,7 @@
 {
-  "name": "frontend",
+  "name": "cafeteria-client",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -10,6 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "axios": "^1.7.7",
     "lucide-react": "^1.61.0",
     "react": "^19.3.1",
     "react-dom": "^19.3.1",
@@ -19,7 +20,10 @@
     "@types/react": "^19.3.0",
     "@types/react-dom": "^19.3.0",
     "@vitejs/plugin-react": "^6.1.2",
+    "autoprefixer": "^10.4.20",
     "oxlint": "^1.88.0",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.15",
     "vite": "^8.3.4"
   }
 }

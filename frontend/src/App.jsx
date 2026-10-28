@@ -1,90 +1,47 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 import { AuthProvider } from './context/AuthContext';
-import { ToastProvider } from './context/ToastContext';
-import Navbar from './components/Navbar';
-import ProtectedRoute from './components/ProtectedRoute';
+import { CartProvider, CartDrawer } from './features/cart';
+import { ToastProvider } from './components/ui/Toast'; // Ensure this matches your ToastProvider location
+import { Navbar } from './components/Navbar';
+import AppRouter from './routes/AppRouter';
 
-import Home from './pages/Home';
-import Login from './pages/Login';
-import Register from './pages/Register';
-import CustomerDashboard from './pages/CustomerDashboard';
-import AdminDashboard from './pages/AdminDashboard';
-import Profile from './pages/Profile';
-import NotFound from './pages/NotFound';
-
-function App() {
+/**
+ * Root App component for The Lunchroom
+ * Wraps AuthProvider, CartProvider, ToastProvider, Navbar and unified Router.
+ */
+export const App = () => {
   return (
-    <Router>
-      <ToastProvider>
-        <AuthProvider>
-          <div className="app-container">
-            <Navbar />
-            <main className="main-content">
-              <Routes>
-                {/* Public Routes */}
-                <Route path="/" element={<Home />} />
-                <Route path="/login" element={<Login />} />
-                <Route path="/register" element={<Register />} />
+    <BrowserRouter>
+      <AuthProvider>
+        <CartProvider>
+          <ToastProvider>
+            <div className="min-h-screen flex flex-col bg-[#FDFCFB] text-stone-900 font-sans">
+              <Navbar />
+              
+              <main className="flex-1">
+                <AppRouter />
+              </main>
 
-                {/* Customer Protected Route */}
-                <Route
-                  path="/customer"
-                  element={
-                    <ProtectedRoute allowedRoles={['customer']}>
-                      <CustomerDashboard />
-                    </ProtectedRoute>
-                  }
-                />
+              <CartDrawer />
 
-                {/* Cafeteria Admin Protected Route */}
-                <Route
-                  path="/admin"
-                  element={
-                    <ProtectedRoute allowedRoles={['cafeteria_admin']}>
-                      <AdminDashboard />
-                    </ProtectedRoute>
-                  }
-                />
-
-                {/* General Protected Profile Route (Accessible by Customer & Admin) */}
-                <Route
-                  path="/profile"
-                  element={
-                    <ProtectedRoute>
-                      <Profile />
-                    </ProtectedRoute>
-                  }
-                />
-
-                {/* 404 Route */}
-                <Route path="*" element={<NotFound />} />
-              </Routes>
-            </main>
-
-            {/* Footer */}
-            <footer style={{
-              borderTop: '1px solid var(--border-subtle)',
-              padding: '2rem 1.5rem',
-              textAlign: 'center',
-              color: 'var(--text-dim)',
-              fontSize: '0.85rem',
-              background: '#090d16'
-            }}>
-              <div style={{ maxWidth: '1240px', margin: '0 auto', display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', alignItems: 'center', gap: '1rem' }}>
-                <div>
-                  <strong>CampusBite Cafeteria Platform</strong> — Student 1 Authentication & User Management
+              {/* Centralized Footer */}
+              <footer className="border-t border-stone-200 py-6 text-center text-stone-500 text-sm bg-[#090d16] text-white">
+                <div className="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row justify-between items-center gap-4">
+                  <div>
+                    <strong>CampusBite Cafeteria Platform</strong>
+                  </div>
+                  <div>
+                    Node.js • Express • MongoDB • JWT • React
+                  </div>
                 </div>
-                <div>
-                  Node.js • Express • MongoDB Atlas • JWT • React
-                </div>
-              </div>
-            </footer>
-          </div>
-        </AuthProvider>
-      </ToastProvider>
-    </Router>
+              </footer>
+            </div>
+          </ToastProvider>
+        </CartProvider>
+      </AuthProvider>
+    </BrowserRouter>
   );
-}
+};
 
 export default App;

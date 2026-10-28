@@ -1,17 +1,34 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
-import { authAPI, userAPI } from '../services/api';
+import { authAPI } from '../services/api'; // Removed userAPI if it was unused, add back if needed
 
 const AuthContext = createContext(null);
 
 export const AuthProvider = ({ children }) => {
+  const getStoredToken = () =>
+    localStorage.getItem('the_lunchroom_token') ||
+    localStorage.getItem('cafeteria_token') ||
+    localStorage.getItem('token');
+
+  const [token, setToken] = useState(getStoredToken);
   const [user, setUser] = useState(null);
-  const [token, setToken] = useState(() => localStorage.getItem('cafeteria_token') || null);
   const [loading, setLoading] = useState(true);
+
+  const saveToken = (tok) => {
+    localStorage.setItem('the_lunchroom_token', tok);
+    localStorage.setItem('cafeteria_token', tok);
+    localStorage.setItem('token', tok);
+  };
+
+  const clearToken = () => {
+    localStorage.removeItem('the_lunchroom_token');
+    localStorage.removeItem('cafeteria_token');
+    localStorage.removeItem('token');
+  };
 
   // Initialize and verify existing session on app load
   useEffect(() => {
     const initializeAuth = async () => {
-      const storedToken = localStorage.getItem('cafeteria_token');
+      const storedToken = getStoredToken();
       if (!storedToken) {
         setLoading(false);
         return;
@@ -19,18 +36,21 @@ export const AuthProvider = ({ children }) => {
 
       try {
         const response = await authAPI.getMe();
-        if (response.success && response.user) {
-          setUser(response.user);
+        // Handle both Fetch API (direct return) and Axios (.data wrapper)
+        const data = response?.data !== undefined ? response.data : response;
+        
+        if (data?.success && data?.user) {
+          setUser(data.user);
           setToken(storedToken);
         } else {
           // Token invalid
-          localStorage.removeItem('cafeteria_token');
+          clearToken();
           setUser(null);
           setToken(null);
         }
       } catch (error) {
         console.warn('Session verification expired or failed. Clearing token.');
-        localStorage.removeItem('cafeteria_token');
+        clearToken();
         setUser(null);
         setToken(null);
       } finally {
@@ -43,24 +63,28 @@ export const AuthProvider = ({ children }) => {
 
   const login = async (email, password) => {
     const res = await authAPI.login(email, password);
-    if (res.success && res.token) {
-      localStorage.setItem('cafeteria_token', res.token);
-      setToken(res.token);
-      setUser(res.user);
-      return res.user;
+    const data = res?.data !== undefined ? res.data : res;
+    
+    if (data?.success && data?.token) {
+      saveToken(data.token);
+      setToken(data.token);
+      setUser(data.user || data.student);
+      return data.user || data.student;
     }
-    throw new Error(res.message || 'Login failed.');
+    throw new Error(data?.message || 'Login failed.');
   };
 
   const register = async (formData) => {
     const res = await authAPI.register(formData);
-    if (res.success && res.token) {
-      localStorage.setItem('cafeteria_token', res.token);
-      setToken(res.token);
-      setUser(res.user);
-      return res.user;
+    const data = res?.data !== undefined ? res.data : res;
+    
+    if (data?.success && data?.token) {
+      saveToken(data.token);
+      setToken(data.token);
+      setUser(data.user);
+      return data.user;
     }
-    throw new Error(res.message || 'Registration failed.');
+    throw new Error(data?.message || 'Registration failed.');
   };
 
   const logout = async () => {
@@ -71,7 +95,7 @@ export const AuthProvider = ({ children }) => {
     } catch (e) {
       // Ignore network errors on logout
     } finally {
-      localStorage.removeItem('cafeteria_token');
+      clearToken();
       setToken(null);
       setUser(null);
     }
@@ -81,8 +105,8 @@ export const AuthProvider = ({ children }) => {
     setUser((prev) => (prev ? { ...prev, ...updatedFields } : null));
   };
 
-  const isAdmin = user?.role === 'cafeteria_admin';
-  const isCustomer = user?.role === 'customer';
+  const isAdmin = user?.role === 'cafeteria_admin' || user?.role === 'admin' || user?.role === 'staff';
+  const isCustomer = user?.role === 'customer' || user?.role === 'student' || (!isAdmin && !!user);
 
   return (
     <AuthContext.Provider

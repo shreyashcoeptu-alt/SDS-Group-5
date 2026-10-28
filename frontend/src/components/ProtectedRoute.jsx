@@ -1,35 +1,20 @@
 import React from 'react';
 import { Navigate, useLocation } from 'react-router-dom';
-import { useAuth } from '../context/AuthContext';
+import { useAuth } from '@/context/AuthContext';
 
 /**
- * ProtectedRoute: Guarantees authenticated access, with optional role restriction
- * @param {Array} allowedRoles e.g. ['customer'], ['cafeteria_admin'], or ['customer', 'cafeteria_admin']
+ * ProtectedRoute: Guarantees authenticated access, with role restriction
+ * @param {Array} allowedRoles e.g. ['customer'], ['admin']
  */
-const ProtectedRoute = ({ children, allowedRoles }) => {
+export const ProtectedRoute = ({ children, allowedRoles }) => {
   const { user, loading, isAuthenticated } = useAuth();
   const location = useLocation();
 
   if (loading) {
     return (
-      <div style={{
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        justifyContent: 'center',
-        minHeight: '60vh',
-        gap: '1rem'
-      }}>
-        <div style={{
-          width: '40px',
-          height: '40px',
-          border: '3px solid rgba(234, 88, 12, 0.2)',
-          borderTopColor: '#ea580c',
-          borderRadius: '50%',
-          animation: 'spin 0.8s linear infinite'
-        }} />
-        <style>{`@keyframes spin { to { transform: rotate(360deg); } }`}</style>
-        <p style={{ color: 'var(--text-muted)', fontSize: '0.9rem' }}>Verifying authentication...</p>
+      <div className="min-h-screen bg-[#FDFCFB] flex flex-col items-center justify-center p-4">
+        <div className="w-10 h-10 border-4 border-stone-200 border-t-stone-900 rounded-full animate-spin mb-3" />
+        <p className="text-xs text-stone-500 font-medium">Verifying session...</p>
       </div>
     );
   }
@@ -38,12 +23,22 @@ const ProtectedRoute = ({ children, allowedRoles }) => {
     return <Navigate to="/login" state={{ from: location }} replace />;
   }
 
-  if (allowedRoles && allowedRoles.length > 0 && !allowedRoles.includes(user.role)) {
-    // If user is admin but on a customer-only route, send to admin-dashboard, or vice versa
-    if (user.role === 'cafeteria_admin') {
-      return <Navigate to="/admin" replace />;
+  if (allowedRoles && allowedRoles.length > 0) {
+    const userRole = user?.role;
+    const isAdmin = ['admin', 'cafeteria_admin', 'staff'].includes(userRole);
+    const isCustomer = ['customer', 'student'].includes(userRole);
+
+    const hasPermission =
+      allowedRoles.includes(userRole) ||
+      (allowedRoles.includes('admin') && isAdmin) ||
+      (allowedRoles.includes('customer') && isCustomer);
+
+    if (!hasPermission) {
+      if (isAdmin) {
+        return <Navigate to="/admin/orders" replace />;
+      }
+      return <Navigate to="/menu" replace />;
     }
-    return <Navigate to="/customer" replace />;
   }
 
   return children;
