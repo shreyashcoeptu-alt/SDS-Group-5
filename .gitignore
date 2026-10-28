@@ -41,6 +41,10 @@ Thumbs.db
 .cache/
 .parcel-cache/
 .turbo/
+tmp/
+
+__pycache__/
+*.pyc
 # Local agent skills
 .agents/
 .agent/

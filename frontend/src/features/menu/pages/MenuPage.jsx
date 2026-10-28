@@ -3,16 +3,17 @@ import dummyMenu from '../data/dummyMenu';
 import MenuListItem from '../components/MenuListItem';
 import MenuGridCard from '../components/MenuGridCard';
 import { useToast } from '@/components/ui/Toast';
-import { useCart } from '@/features/cart';
+import { useCart, CartDrawer } from '@/features/cart';
 
 export const MenuPage = () => {
   const [search, setSearch] = useState('');
+  const [isCartOpen, setIsCartOpen] = useState(false);
   const toast = useToast();
-  const { addItem } = useCart();
+  const { addItem, totalItemsCount } = useCart();
 
   const handleAddToCart = (item) => {
     addItem(item);
-    toast.success(`${item.name} added to cart`, 'Cart Updated');
+    toast.success(`${item.name} added to cart!`, 'Cart Updated');
   };
 
   const filteredItems = dummyMenu.filter((item) => {
@@ -25,7 +26,7 @@ export const MenuPage = () => {
   });
 
   return (
-    <div className="min-h-screen bg-[var(--bg)] text-[var(--ink)] px-5 sm:px-10 py-8 sm:py-12">
+    <div className="min-h-screen bg-[var(--bg)] text-[var(--ink)] px-5 sm:px-10 py-8 sm:py-12 relative">
       <style>{`
         :root, [data-theme="locker"] {
           --bg: #F4F0E8;
@@ -77,21 +78,35 @@ export const MenuPage = () => {
         }
       `}</style>
 
-      <main className="max-w-[1240px] mx-auto flex flex-col gap-8">
+      <main className="max-w-[1240px] mx-auto flex flex-col gap-8 pb-20">
         <header className="flex flex-col md:flex-row md:items-center justify-between gap-4">
           <h1 className="font-title text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-[var(--ink)]">
             The Lunchroom
           </h1>
 
-          <div className="w-full md:w-72">
-            <input
-              type="text"
-              value={search}
-              onChange={(e) => setSearch(e.target.value)}
-              placeholder="Search menu..."
-              aria-label="Search menu"
-              className="w-full h-11 px-4 rounded-[12px] bg-[var(--surface)] text-[var(--ink)] placeholder:text-[var(--ink-soft)] border-2 border-[var(--ink)] focus:outline-none text-sm"
-            />
+          <div className="flex items-center gap-3 w-full md:w-auto">
+            <div className="w-full md:w-72">
+              <input
+                type="text"
+                value={search}
+                onChange={(e) => setSearch(e.target.value)}
+                placeholder="Search menu..."
+                aria-label="Search menu"
+                className="w-full h-11 px-4 rounded-[12px] bg-[var(--surface)] text-[var(--ink)] placeholder:text-[var(--ink-soft)] border-2 border-[var(--ink)] focus:outline-none text-sm"
+              />
+            </div>
+
+            <button
+              onClick={() => setIsCartOpen(true)}
+              className="relative px-4 h-11 bg-[var(--primary)] text-white font-semibold rounded-[12px] border-2 border-[var(--ink)] shadow-md flex items-center justify-center gap-2"
+            >
+              <span>🛒 Cart</span>
+              {totalItemsCount > 0 && (
+                <span className="bg-white text-[var(--ink)] rounded-full text-xs font-bold w-5 h-5 flex items-center justify-center">
+                  {totalItemsCount}
+                </span>
+              )}
+            </button>
           </div>
         </header>
 
@@ -127,6 +142,8 @@ export const MenuPage = () => {
           )}
         </div>
       </main>
+
+      <CartDrawer isOpen={isCartOpen} onClose={() => setIsCartOpen(false)} />
     </div>
   );
 };
