@@ -5,7 +5,7 @@ export const dummyMenu = [
     description: 'Crispy pastry stuffed with spiced potato and peas.',
     price: 1,
     isVeg: true,
-    image: '',
+    image: '/images/menu/samosa.jpg',
   },
   {
     id: 'item-2',
@@ -13,7 +13,7 @@ export const dummyMenu = [
     description: 'Spiced potato fritter in a soft pav with chutney.',
     price: 1,
     isVeg: true,
-    image: '',
+    image: '/images/menu/vadapav.jpg',
   },
   {
     id: 'item-3',
@@ -21,7 +21,7 @@ export const dummyMenu = [
     description: 'Seasonal vegetable curry with two rotis.',
     price: 1,
     isVeg: true,
-    image: '',
+    image: '/images/menu/sabjiroti.jpg',
   },
   {
     id: 'item-4',
@@ -29,7 +29,7 @@ export const dummyMenu = [
     description: 'Crisp rice crepe filled with spiced potato.',
     price: 1,
     isVeg: true,
-    image: '',
+    image: '/images/menu/dosa.jpg',
   },
   {
     id: 'item-5',
@@ -37,7 +37,7 @@ export const dummyMenu = [
     description: 'Veg fried rice tossed with soy sauce and vegetables.',
     price: 1,
     isVeg: true,
-    image: '',
+    image: '/images/menu/friedrice.jpg',
   },
   {
     id: 'item-6',
@@ -45,7 +45,7 @@ export const dummyMenu = [
     description: 'Fried vegetable balls in a tangy soy gravy.',
     price: 1,
     isVeg: true,
-    image: '',
+    image: '/images/menu/manchurian.jpg',
   },
   {
     id: 'item-7',
@@ -53,7 +53,7 @@ export const dummyMenu = [
     description: 'Buttery mashed vegetable curry with toasted pav.',
     price: 1,
     isVeg: true,
-    image: '',
+    image: '/images/menu/pavbhaji.jpg',
   },
   {
     id: 'item-8',
@@ -61,7 +61,7 @@ export const dummyMenu = [
     description: 'Steamed rice cakes with sambar and chutney.',
     price: 1,
     isVeg: true,
-    image: '',
+    image: '/images/menu/idli.jpg',
   },
   {
     id: 'item-9',
@@ -69,7 +69,7 @@ export const dummyMenu = [
     description: 'Flattened rice with onion, peanuts and lemon.',
     price: 1,
     isVeg: true,
-    image: '',
+    image: '/images/menu/poha.jpeg',
   },
   {
     id: 'item-10',
@@ -77,7 +77,7 @@ export const dummyMenu = [
     description: 'Spiced chickpeas with fluffy fried bread.',
     price: 1,
     isVeg: true,
-    image: '',
+    image: '/images/menu/cholebhature.jpg',
   },
   {
     id: 'item-11',
@@ -85,7 +85,7 @@ export const dummyMenu = [
     description: 'Paratha rolled around a spiced egg omelette.',
     price: 1,
     isVeg: false,
-    image: '',
+    image: '/images/menu/eggroll.jpeg',
   },
   {
     id: 'item-12',
@@ -93,7 +93,7 @@ export const dummyMenu = [
     description: 'Wok-fried rice with chicken and vegetables.',
     price: 1,
     isVeg: false,
-    image: '',
+    image: '/images/menu/chickenrice.jpg',
   },
 ];
 

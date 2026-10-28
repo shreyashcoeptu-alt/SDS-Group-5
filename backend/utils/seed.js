@@ -27,7 +27,7 @@ const DUMMY_MENU_ITEMS = [
     price: 1, // 1 Rupee only!
     tags: ['Crispy', 'Spicy', 'Popular'],
     description: 'Crispy pastry stuffed with spiced potato and peas.',
-    image: 'https://images.unsplash.com/photo-1601050690597-df0568f70950?w=800&auto=format&fit=crop&q=80',
+    image: '/images/menu/samosa.jpg',
     isVeg: true,
     isAvailable: true,
   },
@@ -37,7 +37,7 @@ const DUMMY_MENU_ITEMS = [
     price: 1, // 1 Rupee only!
     tags: ['Mumbai Special', 'Street Food'],
     description: 'Spiced potato fritter in a soft pav with chutney.',
-    image: 'https://images.unsplash.com/photo-1606491956689-2ea866880c84?w=800&auto=format&fit=crop&q=80',
+    image: '/images/menu/vadapav.jpg',
     isVeg: true,
     isAvailable: true,
   },
@@ -47,7 +47,7 @@ const DUMMY_MENU_ITEMS = [
     price: 1, // 1 Rupee only!
     tags: ['Healthy', 'Home Style', 'Wholesome'],
     description: 'Seasonal vegetable curry with two rotis.',
-    image: 'https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?w=800&auto=format&fit=crop&q=80',
+    image: '/images/menu/sabjiroti.jpg',
     isVeg: true,
     isAvailable: true,
   },
@@ -57,7 +57,7 @@ const DUMMY_MENU_ITEMS = [
     price: 1, // 1 Rupee only!
     tags: ['South Indian', 'Crispy', 'Sambar'],
     description: 'Crisp rice crepe filled with spiced potato.',
-    image: 'https://images.unsplash.com/photo-1668236543090-82eba5ee5976?w=800&auto=format&fit=crop&q=80',
+    image: '/images/menu/dosa.jpg',
     isVeg: true,
     isAvailable: true,
   },
@@ -67,7 +67,7 @@ const DUMMY_MENU_ITEMS = [
     price: 1, // 1 Rupee only!
     tags: ['Chinese', 'Wok Fried', 'Quick Bite'],
     description: 'Veg fried rice tossed with soy sauce and vegetables.',
-    image: 'https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=800&auto=format&fit=crop&q=80',
+    image: '/images/menu/friedrice.jpg',
     isVeg: true,
     isAvailable: true,
   },
@@ -77,7 +77,7 @@ const DUMMY_MENU_ITEMS = [
     price: 1, // 1 Rupee only!
     tags: ['Chinese', 'Tangy', 'Hot Gravy'],
     description: 'Fried vegetable balls in a tangy soy gravy.',
-    image: 'https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?w=800&auto=format&fit=crop&q=80',
+    image: '/images/menu/manchurian.jpg',
     isVeg: true,
     isAvailable: true,
   },
@@ -87,7 +87,7 @@ const DUMMY_MENU_ITEMS = [
     price: 1, // 1 Rupee only!
     tags: ['Butter Rich', 'Street Food', 'Spicy'],
     description: 'Buttery mashed vegetable curry with toasted pav.',
-    image: 'https://images.unsplash.com/photo-1606491956689-2ea866880c84?w=800&auto=format&fit=crop&q=80',
+    image: '/images/menu/pavbhaji.jpg',
     isVeg: true,
     isAvailable: true,
   },
@@ -97,7 +97,7 @@ const DUMMY_MENU_ITEMS = [
     price: 1, // 1 Rupee only!
     tags: ['South Indian', 'Steamed', 'Light'],
     description: 'Steamed rice cakes with sambar and chutney.',
-    image: 'https://images.unsplash.com/photo-1589301760014-d929f3979dbc?w=800&auto=format&fit=crop&q=80',
+    image: '/images/menu/idli.jpg',
     isVeg: true,
     isAvailable: true,
   },
@@ -107,7 +107,7 @@ const DUMMY_MENU_ITEMS = [
     price: 1, // 1 Rupee only!
     tags: ['Light', 'Peanuts', 'Quick Snack'],
     description: 'Flattened rice with onion, peanuts and lemon.',
-    image: 'https://images.unsplash.com/photo-1645177628172-a94c1f96e6db?w=800&auto=format&fit=crop&q=80',
+    image: '/images/menu/poha.jpeg',
     isVeg: true,
     isAvailable: true,
   },
@@ -117,7 +117,7 @@ const DUMMY_MENU_ITEMS = [
     price: 1, // 1 Rupee only!
     tags: ['North Indian', 'Fluffy', 'Rich Gravy'],
     description: 'Spiced chickpeas with fluffy fried bread.',
-    image: 'https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?w=800&auto=format&fit=crop&q=80',
+    image: '/images/menu/cholebhature.jpg',
     isVeg: true,
     isAvailable: true,
   },
@@ -127,7 +127,7 @@ const DUMMY_MENU_ITEMS = [
     price: 1, // 1 Rupee only!
     tags: ['Non-Veg', 'High Protein', 'Kathi Roll'],
     description: 'Paratha rolled around a spiced egg omelette.',
-    image: 'https://images.unsplash.com/photo-1525351484163-7529414344d8?w=800&auto=format&fit=crop&q=80',
+    image: '/images/menu/eggroll.jpeg',
     isVeg: false,
     isAvailable: true,
   },
@@ -137,7 +137,7 @@ const DUMMY_MENU_ITEMS = [
     price: 1, // 1 Rupee only!
     tags: ['Non-Veg', 'Chicken', 'Chinese'],
     description: 'Wok-fried rice with chicken and vegetables.',
-    image: 'https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?w=800&auto=format&fit=crop&q=80',
+    image: '/images/menu/chickenrice.jpg',
     isVeg: false,
     isAvailable: false, // Testing sold-out / unavailable handling
   },
