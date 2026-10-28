@@ -1,7 +1,7 @@
 # The Lunchroom — College Cafeteria Ordering System
 ### Software Development Section (SDS) — Group 5 Project
 
-A full-stack modern web application built to digitize and elevate college cafeteria dining. Customers can discover dishes with real-time dietary tags and live meal-slot recommendations, place orders, and track order progress; cafeteria administrators and kitchen staff manage menus, pricing, availability toggles, and incoming order fulfillment.
+**The Lunchroom** is a full-stack modern web platform built to digitize and elevate college cafeteria dining. Students and campus patrons can browse dishes with live vegetarian tags, dietary filters, and images; place orders into a persistent cart; complete orders via Razorpay test payment; and track order progress in real time through an interactive live status stepper. Cafeteria administrators and kitchen staff manage menus, pricing, stock availability toggles, and incoming order fulfillment.
 
 ---
 
@@ -13,130 +13,104 @@ A full-stack modern web application built to digitize and elevate college cafete
 
 - **Frontend (`frontend/`):**
   - **Framework:** React 18 + Vite (SPA)
-  - **Styling:** Tailwind CSS with custom warm cafeteria tokens (`brand-600`, `cafe-bg`, `cafe-text`)
-  - **Typography:** Bricolage Grotesque (headings), Plus Jakarta Sans (body UI), JetBrains Mono (prices)
+  - **Styling:** Tailwind CSS with flat editorial tokens (`#FDFCFB`, `#E23744`, `#0F0F11`)
+  - **Typography:** Bricolage Grotesque / Clash Grotesk, Plus Jakarta Sans, JetBrains Mono
   - **Icons:** Lucide React
-  - **Routing:** React Router v6
-  - **HTTP:** Axios with JWT interceptors
+  - **Routing:** React Router v6 with Role-Based Protected Routes
+  - **State & Context:** React Context API (`AuthContext`, `CartContext`, `ToastContext`)
+  - **HTTP:** Axios with automatic JWT Authorization bearer interceptors
 - **Backend (`backend/`):**
   - **Runtime:** Node.js + Express
-  - **Database:** MongoDB + Mongoose ODM
+  - **Database:** MongoDB + Mongoose ODM (Zero-config local embedded MongoDB fallback with auto-seeding + MongoDB Atlas support)
+  - **Payments:** Razorpay Node SDK with HMAC-SHA256 signature verification
   - **Security:** JSON Web Tokens (JWT), Bcrypt.js, CORS
-- **Mock Store (Standalone Mode):**
-  - LocalStorage + In-memory store with realistic 400–700ms simulated latency for offline frontend development.
+- **Shared (`shared/`):**
+  - Centralized single-source-of-truth constants for Roles, Order Statuses, and Menu Limits.
+
+---
+
+## 👥 Demo Accounts (Pre-Seeded)
+
+| Role | Email | Password | Access |
+| :--- | :--- | :--- | :--- |
+| **Student / Customer** | `aarav.cs23@college.edu` | `lunchroom2026` | `/menu`, Cart, Checkout, `/orders` (Live Tracking) |
+| **Cafeteria Admin** | `admin@cafeteria.com` | `Admin@123` | `/admin/orders` (Kitchen Queue), `/admin/menu` (Manager) |
+
+*(Admins can also register at `/register` by selecting "Cafeteria Admin" and entering security key `CAFE_ADMIN_2026`).*
 
 ---
 
 ## 📁 Repository Structure
 
 ```
-cafeteria-ordering-system/
+The Lunchroom/
 ├── .gitignore
 ├── README.md                       # Project overview & quick start
 ├── ARCHITECTURE.md                 # Full system architecture, API contracts & schemas
-├── package.json                    # Monorepo root scripts (npm run dev, dev:frontend, dev:backend)
+├── INTEGRATION_NOTES.md            # Integration report across all 4 student features
+├── package.json                    # Monorepo root scripts
+├── shared/
+│   └── constants.js                # Roles, order statuses, and menu constraints
 ├── frontend/                       # React 18 + Tailwind Frontend
 │   ├── .env.example
 │   ├── index.html
 │   ├── package.json
-│   ├── tailwind.config.js
 │   ├── vite.config.js
+│   ├── public/images/menu/         # Local high-res cafeteria dish photos
 │   └── src/
-│       ├── App.jsx                 # App shell mounting ToastProvider, DevRoleSwitcher, Router
-│       ├── api/axiosClient.js      # Shared Axios client
-│       ├── components/ui/          # Shared atomic primitives (Button, Modal, Drawer, Switch, etc.)
-│       ├── routes/AppRouter.jsx    # Feature routes registry
-│       ├── styles/index.css        # Global CSS & Tailwind imports
-│       ├── utils/                  # formatCurrency (₹), constants
+│       ├── App.jsx                 # App shell mounting AuthProvider, CartProvider, Navbar, Router
+│       ├── components/
+│       │   ├── Navbar.jsx          # Role-aware responsive navigation header
+│       │   ├── ProtectedRoute.jsx  # Role & auth route protection
+│       │   └── ui/                 # UI primitives (Button, Modal, Drawer, Toast, Badge)
+│       ├── context/                # AuthContext (session, login, register, token)
+│       ├── routes/AppRouter.jsx    # Unified router with public, customer, and admin groups
 │       └── features/
-│           ├── auth/               # Authentication & User Profile
-│           ├── menu/               # Menu & Food Management
-│           ├── cart/               # Cart & Checkout
-│           └── orders/             # Tracking & Admin Dashboard
+│           ├── auth/               # LoginPage, RegisterPage, AdminLoginPage
+│           ├── menu/               # Customer MenuPage, Admin MenuManagerPage, Cards, Forms
+│           ├── cart/               # CartContext, CartDrawer, Razorpay checkout
+│           └── orders/             # CustomerOrdersPage, OrderTrackingPage, AdminOrdersDashboardPage
 └── backend/                        # Node.js + Express Backend
     ├── .env.example
     ├── package.json
-    ├── server.js                   # Express server entry point
-    ├── config/db.js                # MongoDB connection
-    ├── middleware/auth.js          # JWT & role authorization middleware
+    ├── server.js                   # Express server entry point (port 5001)
+    ├── config/db.js                # MongoDB connection + Embedded local DB auto-fallback
+    ├── controllers/                # authController, menuController
+    ├── middleware/auth.js          # JWT verification & role authorization
     ├── models/                     # User, MenuItem, Order schemas
     ├── routes/                     # authRoutes, menuRoutes, orderRoutes, paymentRoutes
-    └── utils/seed.js               # Database seeder (20 Indian cafeteria dishes)
+    └── utils/seed.js               # Database seeder (Dishes & demo accounts)
 ```
 
 ---
 
 ## 🚀 Quick Start Guide
 
-### Monorepo Quickstart (From Root)
+### 1. Install Dependencies
 ```bash
-npm run install:all     # Install dependencies for both backend and frontend
-npm run dev             # Start the frontend dev server
-npm run dev:backend     # Start the Express API server
+npm run install:all
 ```
 
-### 1. Running the Frontend (`frontend/`)
-
+### 2. Configure Environment Files
+Copy the example environment files (configured for local operation out-of-the-box):
 ```bash
-cd frontend
-npm install
+cp backend/.env.example backend/.env
+cp frontend/.env.example frontend/.env
+```
+
+### 3. Seed Database & Start
+To seed dishes and demo accounts manually into MongoDB:
+```bash
+npm run seed --prefix backend
+```
+
+To run both backend and frontend concurrently:
+```bash
+# Terminal 1 - Backend API (starts on http://localhost:5001)
+npm run dev:server
+
+# Terminal 2 - Frontend Client (starts on http://localhost:5173)
 npm run dev
 ```
 
-The frontend will start on **`http://localhost:5173/`**.
-
-> **Note on Mock Mode**: By default, `VITE_USE_MOCKS=true` in `frontend/.env`. The frontend runs completely standalone with 20 pre-seeded authentic Indian dishes, persistent localStorage edits, and a floating **DEV ROLE SWITCHER** pill to toggle between Customer (`/menu`) and Admin (`/admin/menu`).
-
-### 2. Running the Backend (`backend/`)
-
-```bash
-cd backend
-npm install
-# Copy environment configuration
-cp .env.example .env
-# Seed initial dishes into MongoDB
-npm run seed
-# Start the API server
-npm run dev
-```
-
-The backend API will run on **`http://localhost:5000/api`**.
-
-### 3. Connecting Frontend to Real Backend
-
-In `frontend/.env`:
-```bash
-VITE_API_URL=http://localhost:5000/api
-VITE_USE_MOCKS=false
-```
-Restart `npm run dev` in `frontend/`.
-
----
-
-## 🍱 Menu & Food Management Showcase
-
-- **Customer Menu (`/menu`)**:
-  - Time-of-day greeting (Breakfast, Lunch, Snacks, Dinner) with Indian date format.
-  - Sticky category tabs (`All`, `Breakfast`, `Meals`, `Snacks`, `Beverages`, `Desserts`).
-  - Search (debounced 250ms), FSSAI veg/non-veg filter toggle, multi-criteria sort, and sold-out toggle.
-  - Interactive dish cards, Indian Rupee (`₹`) formatting, and full dish detail modal.
-- **Admin Menu Manager (`/admin/menu`)**:
-  - Metric summary chips (Total, Available, Sold Out, Categories).
-  - Table view (desktop sortable columns) & Card Grid view (mobile).
-  - Optimistic availability switch with live loading indicator and automatic error rollback.
-  - Drawer form with inline category creation, live image URL preview, and validation.
-  - Explicit delete confirmation modal and bulk selection actions.
-  - Protected by `RoleGate`.
-
-## Student 3 Services — FastAPI Cart & Orders API
-
-### Cart Endpoints (`/cart`)
-* `GET /cart/{user_id}` — View active user cart & total price
-* `POST /cart/add` — Add or increment item in cart (validated against `menuitems`)
-* `POST /cart/remove` — Decrement item quantity by 1 (removes item if quantity hits 0)
-* `DELETE /cart/item/{user_id}/{food_id}` — Remove item completely from cart
-* `DELETE /cart/clear/{user_id}` — Empty user cart
-
-### Order Endpoints (`/orders`)
-* `POST /orders/place` — Convert active cart to an order (generates `orderNumber`, clears active cart)
-* `GET /orders/{user_id}` — Retrieve order history for a user
+Open **`http://localhost:5173`** in your browser.

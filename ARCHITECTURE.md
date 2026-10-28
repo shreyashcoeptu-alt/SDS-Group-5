@@ -306,7 +306,7 @@ Real `.env` files are in `.gitignore` and are never committed.
 ### Monorepo Root (Recommended)
 ```bash
 npm run install:all     # Install dependencies in both backend and frontend
-npm run dev:server      # Starts Express backend on http://localhost:5000
+npm run dev:server      # Starts Express backend on http://localhost:5001
 npm run dev:client      # Starts Vite React frontend on http://localhost:5173
 ```
 
