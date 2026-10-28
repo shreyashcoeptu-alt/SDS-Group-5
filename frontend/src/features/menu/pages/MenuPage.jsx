@@ -1,27 +1,30 @@
 import React, { useState } from 'react';
 import dummyMenu from '../data/dummyMenu';
+import { useMenu } from '../hooks/useMenu';
 import MenuListItem from '../components/MenuListItem';
 import MenuGridCard from '../components/MenuGridCard';
 import { useToast } from '@/components/ui/Toast';
-import { useCart, CartDrawer } from '@/features/cart';
+import { useCart } from '@/features/cart';
 
 export const MenuPage = () => {
   const [search, setSearch] = useState('');
-  const [isCartOpen, setIsCartOpen] = useState(false);
   const toast = useToast();
-  const { addItem, totalItemsCount } = useCart();
+  const { addItem, totalItemsCount, setIsCartOpen } = useCart();
+  const { items: liveItems, isLoading } = useMenu();
 
   const handleAddToCart = (item) => {
     addItem(item);
     toast.success(`${item.name} added to cart!`, 'Cart Updated');
   };
 
-  const filteredItems = dummyMenu.filter((item) => {
+  const allItems = liveItems && liveItems.length > 0 ? liveItems : dummyMenu;
+
+  const filteredItems = allItems.filter((item) => {
     const query = search.trim().toLowerCase();
     if (!query) return true;
     return (
-      item.name.toLowerCase().includes(query) ||
-      item.description.toLowerCase().includes(query)
+      item.name?.toLowerCase().includes(query) ||
+      item.description?.toLowerCase().includes(query)
     );
   });
 
@@ -113,7 +116,7 @@ export const MenuPage = () => {
         <div className="md:hidden bg-[var(--surface)] rounded-[24px] p-5 divide-y divide-[var(--ink)]/15">
           {filteredItems.map((item, index) => (
             <MenuListItem
-              key={item.id}
+              key={item._id || item.id}
               item={item}
               index={index}
               onAdd={handleAddToCart}
@@ -129,7 +132,7 @@ export const MenuPage = () => {
         <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {filteredItems.map((item, index) => (
             <MenuGridCard
-              key={item.id}
+              key={item._id || item.id}
               item={item}
               index={index}
               onAdd={handleAddToCart}

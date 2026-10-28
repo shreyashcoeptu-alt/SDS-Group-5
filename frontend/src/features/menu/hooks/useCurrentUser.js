@@ -1,45 +1,22 @@
-import { useState, useEffect } from 'react';
-import { ROLES, STORAGE_KEYS } from '@/utils/constants';
+import { useAuth } from '@/context/AuthContext';
+import { ROLES } from '@/utils/constants';
 
 /**
- * Provides current user context derived from the authenticated session.
- * Connects to login state in localStorage without depending on the old Dev Mode switcher.
+ * Provides current user context directly from the real authenticated session.
  */
 export const useCurrentUser = () => {
-  const getRoleFromSession = () => {
-    const email = (localStorage.getItem('lunchroom:student_email') || '').toLowerCase().trim();
-    const savedRole = localStorage.getItem(STORAGE_KEYS.AUTH_DEMO_ROLE);
+  const { user: authUser, isAdmin: authIsAdmin } = useAuth();
 
-    // If signed-in email contains 'admin' or saved role is admin, grant admin privileges
-    if (email.includes('admin') || savedRole === ROLES.ADMIN) {
-      return ROLES.ADMIN;
-    }
-    return ROLES.CUSTOMER;
-  };
+  const isAdmin =
+    authIsAdmin ||
+    ['admin', 'cafeteria_admin', 'staff'].includes(authUser?.role);
 
-  const [role, setRoleState] = useState(getRoleFromSession);
+  const role = isAdmin ? ROLES.ADMIN : ROLES.CUSTOMER;
 
-  const setRole = (newRole) => {
-    localStorage.setItem(STORAGE_KEYS.AUTH_DEMO_ROLE, newRole);
-    setRoleState(newRole);
-    window.dispatchEvent(new Event('role_changed'));
-  };
-
-  useEffect(() => {
-    const handleRoleChanged = () => {
-      setRoleState(getRoleFromSession());
-    };
-    window.addEventListener('role_changed', handleRoleChanged);
-    return () => window.removeEventListener('role_changed', handleRoleChanged);
-  }, []);
-
-  const isAdmin = role === ROLES.ADMIN;
-  const storedEmail = localStorage.getItem('lunchroom:student_email');
-
-  const user = {
+  const user = authUser || {
     _id: isAdmin ? 'usr_admin_001' : 'usr_cust_001',
     name: isAdmin ? 'Cafeteria Admin' : 'Student',
-    email: storedEmail || (isAdmin ? 'admin.cafeteria@college.edu' : 'student@college.edu'),
+    email: isAdmin ? 'admin@cafeteria.com' : 'student@college.edu',
     role: role,
   };
 
@@ -47,7 +24,6 @@ export const useCurrentUser = () => {
     user,
     role,
     isAdmin,
-    setRole,
   };
 };
 

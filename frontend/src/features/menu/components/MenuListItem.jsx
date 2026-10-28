@@ -41,11 +41,16 @@ export const MenuListItem = ({ item, index = 0, onAdd }) => {
         </div>
         <button
           type="button"
-          onClick={() => onAdd(item)}
-          aria-label={`Add ${item.name}`}
-          className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[75%] min-h-[48px] h-12 rounded-[12px] border-2 border-[var(--ink)] bg-[var(--surface)] text-[var(--primary)] font-bold text-base flex items-center justify-center focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--ink)] focus-visible:ring-offset-2 active:scale-[0.98] transition-transform select-none"
+          onClick={() => item.isAvailable !== false && onAdd(item)}
+          disabled={item.isAvailable === false}
+          aria-label={item.isAvailable === false ? `${item.name} is sold out` : `Add ${item.name}`}
+          className={`absolute bottom-0 left-1/2 -translate-x-1/2 w-[75%] min-h-[48px] h-12 rounded-[12px] border-2 border-[var(--ink)] font-bold text-base flex items-center justify-center transition-transform select-none ${
+            item.isAvailable === false
+              ? 'bg-stone-200 text-stone-500 border-stone-400 cursor-not-allowed opacity-75'
+              : 'bg-[var(--surface)] text-[var(--primary)] focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--ink)] focus-visible:ring-offset-2 active:scale-[0.98]'
+          }`}
         >
-          Add
+          {item.isAvailable === false ? 'Sold Out' : 'Add'}
         </button>
       </div>
     </div>
