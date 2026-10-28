@@ -46,13 +46,28 @@ router.post('/', async (req, res) => {
     });
 
     let customerId = customer;
+    let userRole = null;
+
     if (req.headers.authorization && req.headers.authorization.startsWith('Bearer')) {
       try {
         const token = req.headers.authorization.split(' ')[1];
         const decoded = jwt.verify(token, process.env.JWT_SECRET || 'lunchroom_super_secret_jwt_key_2026');
         if (decoded?.id) customerId = decoded.id;
+        if (decoded?.role) userRole = decoded.role;
       } catch (e) {
         // Fall back to customer passed in body
+      }
+    }
+
+    // Guard: Admins cannot place orders
+    if (userRole && ['admin', 'cafeteria_admin', 'staff'].includes(userRole)) {
+      return res.status(403).json({ message: "Admins can’t place orders." });
+    }
+
+    if (customerId && mongoose.Types.ObjectId.isValid(customerId)) {
+      const userDoc = await User.findById(customerId).select('role');
+      if (userDoc && ['admin', 'cafeteria_admin', 'staff'].includes(userDoc.role)) {
+        return res.status(403).json({ message: "Admins can’t place orders." });
       }
     }
 

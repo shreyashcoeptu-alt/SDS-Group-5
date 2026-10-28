@@ -30,24 +30,9 @@ export const Navbar = () => {
   };
 
   const isActive = (path) => location.pathname === path;
-  const isStudentViewForAdmin = isAdmin && (location.pathname === '/menu' || location.pathname.startsWith('/orders/'));
 
   return (
     <header className="sticky top-0 z-40 bg-white border-b-2 border-stone-900 select-none">
-      {/* Top Banner if Admin is viewing student menu */}
-      {isStudentViewForAdmin && (
-        <div className="bg-amber-400 text-stone-900 px-4 py-1.5 text-xs font-bold flex items-center justify-between border-b border-stone-900">
-          <span>You are viewing the Student Menu as an Administrator</span>
-          <Link
-            to="/admin/orders"
-            className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-lg bg-stone-900 text-white font-semibold text-xs hover:bg-stone-800 transition-colors"
-          >
-            <ArrowLeft className="w-3 h-3" />
-            <span>Back to admin</span>
-          </Link>
-        </div>
-      )}
-
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Brand Wordmark */}
@@ -133,13 +118,6 @@ export const Navbar = () => {
                   }`}
                 >
                   Incoming orders
-                </Link>
-
-                <Link
-                  to="/menu"
-                  className="px-3 py-2 rounded-xl text-sm font-bold text-amber-700 bg-amber-50 hover:bg-amber-100 border border-amber-300 transition-colors"
-                >
-                  View as student
                 </Link>
               </>
             )}
@@ -274,14 +252,6 @@ export const Navbar = () => {
                   }`}
                 >
                   Incoming orders
-                </Link>
-
-                <Link
-                  to="/menu"
-                  onClick={() => setMobileMenuOpen(false)}
-                  className="px-4 py-2.5 rounded-xl text-sm font-bold text-amber-700 bg-amber-50 border border-amber-200"
-                >
-                  View as student
                 </Link>
               </>
             )}

@@ -81,7 +81,7 @@ export const OrderTrackingPage = () => {
                 </span>
                 <OrderStatusBadge status={order.status} />
               </div>
-              <h1 className="text-2xl sm:text-3xl font-black font-title uppercase tracking-tight text-black mt-1">
+              <h1 className="text-2xl sm:text-3xl font-bold font-order font-order-id text-black mt-1 [font-variant-numeric:tabular-nums] tracking-normal normal-case">
                 {order.orderNumber}
               </h1>
             </div>

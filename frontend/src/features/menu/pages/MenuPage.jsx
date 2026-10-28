@@ -5,8 +5,11 @@ import MenuListItem from '../components/MenuListItem';
 import MenuGridCard from '../components/MenuGridCard';
 import { useToast } from '@/components/ui/Toast';
 import { useCart, CartDrawer } from '@/features/cart';
+import { useAuth } from '@/context/AuthContext';
 
 export const MenuPage = () => {
+  const { user } = useAuth();
+  const isAdmin = ['admin', 'cafeteria_admin', 'staff'].includes(user?.role);
   const [search, setSearch] = useState('');
   const toast = useToast();
   const { addItem, totalItemsCount, isCartOpen, setIsCartOpen } = useCart();
@@ -99,17 +102,19 @@ export const MenuPage = () => {
               />
             </div>
 
-            <button
-              onClick={() => setIsCartOpen(true)}
-              className="relative px-4 h-11 bg-[var(--primary)] text-white font-semibold rounded-[12px] border-2 border-[var(--ink)] shadow-md flex items-center justify-center gap-2"
-            >
-              <span>🛒 Cart</span>
-              {totalItemsCount > 0 && (
-                <span className="bg-white text-[var(--ink)] rounded-full text-xs font-bold w-5 h-5 flex items-center justify-center">
-                  {totalItemsCount}
-                </span>
-              )}
-            </button>
+            {!isAdmin && (
+              <button
+                onClick={() => setIsCartOpen(true)}
+                className="relative px-4 h-11 bg-[var(--primary)] text-white font-semibold rounded-[12px] border-2 border-[var(--ink)] shadow-md flex items-center justify-center gap-2"
+              >
+                <span>🛒 Cart</span>
+                {totalItemsCount > 0 && (
+                  <span className="bg-white text-[var(--ink)] rounded-full text-xs font-bold w-5 h-5 flex items-center justify-center">
+                    {totalItemsCount}
+                  </span>
+                )}
+              </button>
+            )}
           </div>
         </header>
 

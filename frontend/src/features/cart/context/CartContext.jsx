@@ -1,8 +1,12 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
+import { useAuth } from '@/context/AuthContext';
 
 const CartContext = createContext();
 
 export const CartProvider = ({ children }) => {
+    const { user } = useAuth();
+    const isAdmin = ['admin', 'cafeteria_admin', 'staff'].includes(user?.role);
+
     const [items, setItems] = useState(() => {
         const saved = localStorage.getItem('lunchroom:cart');
         return saved ? JSON.parse(saved) : [];
@@ -13,6 +17,7 @@ export const CartProvider = ({ children }) => {
     }, [items]);
 
     const addItem = (dish) => {
+        if (isAdmin) return;
         setItems((prevItems) => {
             const existing = prevItems.find((i) => (i._id || i.id) === (dish._id || dish.id));
             if (existing) {

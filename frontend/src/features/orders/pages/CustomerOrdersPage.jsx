@@ -158,7 +158,7 @@ export const CustomerOrdersPage = () => {
                 >
                   <div className="flex flex-col gap-2">
                     <div className="flex items-center gap-2.5 flex-wrap">
-                      <span className="font-mono font-bold text-base text-black">
+                      <span className="text-base font-bold font-order font-order-id text-black [font-variant-numeric:tabular-nums] tracking-normal normal-case">
                         {order.orderNumber}
                       </span>
                       <OrderStatusBadge status={order.status} />

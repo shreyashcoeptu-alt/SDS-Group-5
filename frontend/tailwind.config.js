@@ -48,8 +48,9 @@ export default {
       fontFamily: {
         title: ['"Lovelo Black"', '"Lovelo"', '"Cabinet Grotesk"', '"Syne"', 'sans-serif'],
         heading: ['"Clash Grotesk"', '"Gilroy"', '"Okra"', '"General Sans"', '"Plus Jakarta Sans"', 'sans-serif'],
-        sans: ['"Satoshi"', '"Basis Grotesque Pro"', '"Plus Jakarta Sans"', '"Inter"', '"Proxima Nova"', '"General Sans"', 'sans-serif'],
+        sans: ['"Instrument Sans"', '"Satoshi"', '"Basis Grotesque Pro"', '"Plus Jakarta Sans"', '"Inter"', '"Proxima Nova"', '"General Sans"', 'sans-serif'],
         mono: ['"JetBrains Mono"', 'monospace'],
+        order: ['"Instrument Sans"', 'sans-serif'],
       },
       letterSpacing: {
         tightest: '-0.04em',

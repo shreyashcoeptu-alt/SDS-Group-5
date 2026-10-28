@@ -1,9 +1,12 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useCart } from './CartContext.jsx';
+import { useAuth } from '@/context/AuthContext';
 import axiosClient from '../../api/axiosClient';
 
 export const CartDrawer = ({ isOpen, onClose } = {}) => {
+  const { user } = useAuth();
+  const isAdmin = ['admin', 'cafeteria_admin', 'staff'].includes(user?.role);
   const {
     items,
     updateQuantity,
@@ -22,6 +25,7 @@ export const CartDrawer = ({ isOpen, onClose } = {}) => {
   const [errorMsg, setErrorMsg] = useState('');
   const navigate = useNavigate();
 
+  if (isAdmin) return null;
   const open = isOpen !== undefined ? isOpen : isCartOpen;
   if (!open) return null;
 

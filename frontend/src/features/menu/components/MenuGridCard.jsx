@@ -1,8 +1,11 @@
 import React from 'react';
 import VegIndicator from './VegIndicator';
 import { formatCurrency } from '@/utils/formatCurrency';
+import { useAuth } from '@/context/AuthContext';
 
 export const MenuGridCard = ({ item, index = 0, onAdd }) => {
+  const { user } = useAuth();
+  const isAdmin = ['admin', 'cafeteria_admin', 'staff'].includes(user?.role);
   const tintColor = `var(--band-${(index % 5) + 1})`;
 
   return (
@@ -36,19 +39,21 @@ export const MenuGridCard = ({ item, index = 0, onAdd }) => {
         <p className="text-[14px] text-[var(--ink-soft)] line-clamp-2 leading-relaxed flex-1">
           {item.description}
         </p>
-        <button
-          type="button"
-          onClick={() => item.isAvailable !== false && onAdd(item)}
-          disabled={item.isAvailable === false}
-          aria-label={item.isAvailable === false ? `${item.name} is sold out` : `Add ${item.name}`}
-          className={`mt-2 w-full min-h-[48px] h-12 rounded-[12px] border-2 border-[var(--ink)] font-bold text-base flex items-center justify-center transition-transform ${
-            item.isAvailable === false
-              ? 'bg-stone-200 text-stone-500 border-stone-400 cursor-not-allowed opacity-75'
-              : 'bg-[var(--surface)] text-[var(--primary)] focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--ink)] focus-visible:ring-offset-2 active:scale-[0.98]'
-          }`}
-        >
-          {item.isAvailable === false ? 'Sold Out' : 'Add'}
-        </button>
+        {!isAdmin && (
+          <button
+            type="button"
+            onClick={() => item.isAvailable !== false && onAdd(item)}
+            disabled={item.isAvailable === false}
+            aria-label={item.isAvailable === false ? `${item.name} is sold out` : `Add ${item.name}`}
+            className={`mt-2 w-full min-h-[48px] h-12 rounded-[12px] border-2 border-[var(--ink)] font-bold text-base flex items-center justify-center transition-transform ${
+              item.isAvailable === false
+                ? 'bg-stone-200 text-stone-500 border-stone-400 cursor-not-allowed opacity-75'
+                : 'bg-[var(--surface)] text-[var(--primary)] focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--ink)] focus-visible:ring-offset-2 active:scale-[0.98]'
+            }`}
+          >
+            {item.isAvailable === false ? 'Sold Out' : 'Add'}
+          </button>
+        )}
       </div>
     </div>
   );

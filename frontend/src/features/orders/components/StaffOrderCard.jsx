@@ -53,7 +53,7 @@ export const StaffOrderCard = ({ order, onUpdateStatus }) => {
         <div className="flex items-start justify-between gap-2 border-b border-stone-100 pb-3">
           <div>
             <div className="flex items-center gap-2">
-              <span className="font-mono font-extrabold text-sm sm:text-base text-black">
+              <span className="text-sm sm:text-base font-bold font-order font-order-id text-black [font-variant-numeric:tabular-nums] tracking-normal normal-case">
                 {order.orderNumber}
               </span>
               <span className="text-xs font-mono text-stone-400 flex items-center gap-1">

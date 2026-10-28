@@ -71,6 +71,14 @@
     font-variant-numeric: tabular-nums;
   }
 
+  .font-order-id {
+    font-family: 'Instrument Sans', sans-serif;
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
+    letter-spacing: normal;
+    text-transform: none;
+  }
+
   /* Modern dialog scroll containment per modern-web-guidance */
   dialog:modal {
     overscroll-behavior: contain;

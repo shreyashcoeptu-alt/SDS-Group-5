@@ -57,15 +57,31 @@ export const AppRouter = () => {
       <Route
         path="/menu"
         element={
-          <ProtectedRoute allowedRoles={['customer', 'student', 'admin', 'cafeteria_admin', 'staff']}>
+          <ProtectedRoute allowedRoles={['customer', 'student']}>
             <MenuPage />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/cart"
+        element={
+          <ProtectedRoute allowedRoles={['customer', 'student']}>
+            <Navigate to="/menu" replace />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/checkout"
+        element={
+          <ProtectedRoute allowedRoles={['customer', 'student']}>
+            <Navigate to="/menu" replace />
           </ProtectedRoute>
         }
       />
       <Route
         path="/orders"
         element={
-          <ProtectedRoute allowedRoles={['customer', 'student', 'admin', 'cafeteria_admin', 'staff']}>
+          <ProtectedRoute allowedRoles={['customer', 'student']}>
             <CustomerOrdersPage />
           </ProtectedRoute>
         }
