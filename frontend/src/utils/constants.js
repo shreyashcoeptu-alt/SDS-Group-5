@@ -1,8 +1,20 @@
+import {
+  ROLES as SHARED_ROLES,
+  ORDER_STATUS_LIST,
+  MENU_LIMITS as SHARED_MENU_LIMITS,
+} from '../../../shared/constants';
+
 export const ROLES = {
+  ...SHARED_ROLES,
   CUSTOMER: 'customer',
   ADMIN: 'admin',
   STAFF: 'staff',
+  CAFETERIA_ADMIN: 'cafeteria_admin',
 };
+
+export const ORDER_STATUSES = ORDER_STATUS_LIST;
+
+export const MENU_LIMITS = SHARED_MENU_LIMITS;
 
 export const API_ENDPOINTS = {
   MENU: '/menu',
@@ -16,18 +28,11 @@ export const API_ENDPOINTS = {
 };
 
 export const STORAGE_KEYS = {
-  MENU_ITEMS: 'cafeteria_menu_items_v1',
-  ORDERS: 'cafeteria_orders_v1',
-  AUTH_DEMO_ROLE: 'cafeteria_demo_role',
+  MENU_ITEMS: 'lunchroom_menu_items_v1',
+  ORDERS: 'lunchroom_orders_v1',
+  AUTH_DEMO_ROLE: 'lunchroom_role',
+  CART: 'lunchroom_cart_v1',
 };
-
-export const ORDER_STATUSES = [
-  'pending',
-  'preparing',
-  'ready',
-  'completed',
-  'cancelled',
-];
 
 export const DEFAULT_CATEGORIES = [
   'All',
