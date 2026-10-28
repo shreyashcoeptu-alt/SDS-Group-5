@@ -1,8 +1,11 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const router = express.Router();
-const mongoose = require('mongoose');
 const Order = require('../models/Order');
+const User = require('../models/User');
+const { protect, authorize } = require('../middleware/auth');
+
+const VALID_STATUSES = ['pending', 'preparing', 'ready', 'completed', 'cancelled'];
 
 // Helper function to generate order numbers (e.g., ORD-618802-214)
 const generateOrderNumber = () => {
@@ -13,18 +16,18 @@ const generateOrderNumber = () => {
 
 /**
  * 1. POST /api/orders
- * Feature: Place Order (Student 3)
+ * Feature: Place Order (Shared / Protected)
  */
 router.post('/', async (req, res) => {
   try {
-    const { customer, items, totalAmount, specialInstructions } = req.body;
+    const { customer, items, totalAmount, specialInstructions, paymentStatus, paymentId } = req.body;
 
     // Guard: Validate items array
-    if (!items || items.length === 0) {
+    if (!items || !Array.isArray(items) || items.length === 0) {
       return res.status(400).json({ message: 'Cannot place an order with an empty cart.' });
     }
 
-    // Safely parse or assign a valid ObjectId for menuItem & customer
+    // Safely parse or assign a valid ObjectId for menuItem
     const formattedItems = items.map((item) => {
       const rawId = item.menuItem || item.food_id || item.id;
       const validObjectId = mongoose.Types.ObjectId.isValid(rawId)
@@ -49,10 +52,10 @@ router.post('/', async (req, res) => {
       orderNumber: generateOrderNumber(),
       customer: validCustomer,
       items: formattedItems,
-      totalAmount: totalAmount,
+      totalAmount,
       status: 'pending',
-      paymentStatus: 'pending',
-      paymentId: '',
+      paymentStatus: paymentStatus || 'pending',
+      paymentId: paymentId || '',
       specialInstructions: specialInstructions || '',
     });
 
@@ -81,53 +84,11 @@ router.get('/user/:userId', async (req, res) => {
     return res.status(200).json({
       status: 'success',
       total_orders: orders.length,
-      orders: orders,
+      orders,
     });
   } catch (error) {
     console.error('Error fetching user orders:', error);
     return res.status(500).json({ message: 'Failed to fetch orders', error: error.message });
-const Order = require('../models/Order');
-const User = require('../models/User');
-const { protect, authorize } = require('../middleware/auth');
-
-const VALID_STATUSES = ['pending', 'preparing', 'ready', 'completed', 'cancelled'];
-
-// @route   POST /api/orders
-// @desc    Place a new order (Shared with Student 3)
-// @access  Private (Customer/Admin)
-router.post('/', protect, async (req, res) => {
-  try {
-    const { items, totalAmount, specialInstructions, paymentStatus, paymentId } = req.body;
-
-    if (!items || !Array.isArray(items) || items.length === 0) {
-      return res.status(400).json({ message: 'Order must contain at least one item' });
-    }
-
-    const orderNumber = `ORD-${Date.now().toString().slice(-6)}-${Math.floor(100 + Math.random() * 900)}`;
-
-    // Fallback to a valid ObjectId if frontend sends mock string IDs like "menu_003"
-    const sanitizedItems = items.map((item) => ({
-      ...item,
-      menuItem: mongoose.Types.ObjectId.isValid(item.menuItem)
-        ? item.menuItem
-        : new mongoose.Types.ObjectId(),
-    }));
-
-    const order = await Order.create({
-      orderNumber,
-      customer: req.user.id || req.user._id,
-      items: sanitizedItems,
-      totalAmount,
-      specialInstructions: specialInstructions || '',
-      paymentStatus: paymentStatus || 'pending',
-      paymentId: paymentId || '',
-      status: 'pending',
-    });
-
-    const populated = await Order.findById(order._id).populate('customer', 'name email phone');
-    res.status(201).json(populated || order);
-  } catch (error) {
-    res.status(400).json({ message: error.message || 'Error placing order' });
   }
 });
 
