@@ -37,7 +37,16 @@ const protect = async (req, res, next) => {
 // Grant access to specific roles (e.g. 'admin')
 const authorize = (...roles) => {
   return (req, res, next) => {
-    if (!req.user || !roles.includes(req.user.role)) {
+    const userRole = req.user?.role;
+    const isAdminRole = ['admin', 'cafeteria_admin', 'staff'].includes(userRole);
+    const isCustomerRole = ['customer', 'student'].includes(userRole);
+    const authorized =
+      roles.includes(userRole) ||
+      (roles.includes('admin') && isAdminRole) ||
+      (roles.includes('staff') && isAdminRole) ||
+      (roles.includes('customer') && isCustomerRole);
+
+    if (!req.user || !authorized) {
       return res.status(403).json({
         success: false,
         message: `Role '${req.user?.role || 'anonymous'}' is not authorized to access this resource.`,

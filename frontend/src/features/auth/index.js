@@ -1,12 +1,11 @@
 import React from 'react';
 import LoginPage from './pages/LoginPage';
-
-/**
- * Authentication & User Management Feature Module (Student 1)
- * Clean exports for page components and route definitions.
- */
+import RegisterPage from './pages/RegisterPage';
+import AdminLoginPage from './pages/AdminLoginPage';
 
 export { LoginPage } from './pages/LoginPage';
+export { RegisterPage } from './pages/RegisterPage';
+export { AdminLoginPage } from './pages/AdminLoginPage';
 
 export const authRoutes = [
   {
@@ -17,9 +16,23 @@ export const authRoutes = [
     path: '/signin',
     element: React.createElement(LoginPage),
   },
+  {
+    path: '/register',
+    element: React.createElement(RegisterPage),
+  },
+  {
+    path: '/signup',
+    element: React.createElement(RegisterPage),
+  },
+  {
+    path: '/admin/login',
+    element: React.createElement(AdminLoginPage),
+  },
 ];
 
 export default {
   LoginPage,
+  RegisterPage,
+  AdminLoginPage,
   authRoutes,
 };

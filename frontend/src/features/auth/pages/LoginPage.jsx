@@ -13,6 +13,7 @@ import {
   Compass
 } from 'lucide-react';
 import { useToast } from '@/components/ui/Toast';
+import { useAuth } from '@/context/AuthContext';
 import { ROLES, STORAGE_KEYS } from '@/utils/constants';
 
 /**
@@ -23,6 +24,7 @@ import { ROLES, STORAGE_KEYS } from '@/utils/constants';
 export const LoginPage = () => {
   const navigate = useNavigate();
   const toast = useToast();
+  const { login } = useAuth();
 
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -67,30 +69,21 @@ export const LoginPage = () => {
     setIsSubmitting(true);
 
     try {
-      // Simulate authentic student verification with natural response time
-      await new Promise((resolve) => setTimeout(resolve, 400));
-
-      // Save student session in localStorage
-      localStorage.setItem(STORAGE_KEYS.AUTH_DEMO_ROLE, ROLES.CUSTOMER);
-      localStorage.setItem('lunchroom:student_email', email.trim());
-      localStorage.setItem('lunchroom:logged_in_at', new Date().toISOString());
-
-      // Notify any active listeners of role update
-      window.dispatchEvent(new Event('role_changed'));
-
-      // Extract student name or username from email for personalized greeting
-      const studentName = email.split('@')[0].replace(/[._0-9]+/g, ' ').trim() || 'Student';
-      const capitalizedName = studentName.charAt(0).toUpperCase() + studentName.slice(1);
+      const loggedUser = await login(email.trim(), password);
 
       toast.success(
-        `Welcome back, ${capitalizedName}! Check out today's fresh campus dishes.`,
+        `Welcome back, ${loggedUser?.name || 'Student'}! Check out today's fresh campus dishes.`,
         'Signed In'
       );
 
-      // Navigate to the campus menu
-      navigate('/menu', { replace: true });
+      const isAdmin = ['admin', 'cafeteria_admin', 'staff'].includes(loggedUser?.role);
+      if (isAdmin) {
+        navigate('/admin/orders', { replace: true });
+      } else {
+        navigate('/menu', { replace: true });
+      }
     } catch (err) {
-      setAuthError('Authentication failed. Please verify your credentials and try again.');
+      setAuthError(err.message || 'Authentication failed. Please verify your credentials and try again.');
     } finally {
       setIsSubmitting(false);
     }
@@ -431,6 +424,15 @@ export const LoginPage = () => {
                 <CheckCircle2 className="w-3 h-3 text-emerald-500" />
                 <span>Quick fill student demo (aarav.cs23@college.edu)</span>
               </button>
+
+              <div className="flex items-center justify-between text-xs text-stone-500 pt-2 border-t border-stone-100">
+                <Link to="/register" className="font-semibold text-[#E23744] hover:underline">
+                  New student? Register
+                </Link>
+                <Link to="/admin/login" className="hover:text-stone-800 hover:underline">
+                  Staff / Admin &rarr;
+                </Link>
+              </div>
             </form>
           </div>
         </div>
