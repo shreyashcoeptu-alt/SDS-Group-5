@@ -4,12 +4,12 @@ import { useMenu } from '../hooks/useMenu';
 import MenuListItem from '../components/MenuListItem';
 import MenuGridCard from '../components/MenuGridCard';
 import { useToast } from '@/components/ui/Toast';
-import { useCart } from '@/features/cart';
+import { useCart, CartDrawer } from '@/features/cart';
 
 export const MenuPage = () => {
   const [search, setSearch] = useState('');
   const toast = useToast();
-  const { addItem, totalItemsCount, setIsCartOpen } = useCart();
+  const { addItem, totalItemsCount, isCartOpen, setIsCartOpen } = useCart();
   const { items: liveItems, isLoading } = useMenu();
 
   const handleAddToCart = (item) => {

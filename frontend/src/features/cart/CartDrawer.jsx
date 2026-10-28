@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { useCart } from './CartContext.jsx';
 import axiosClient from '../../api/axiosClient';
 
-export const CartDrawer = () => {
+export const CartDrawer = ({ isOpen, onClose } = {}) => {
   const {
     items,
     updateQuantity,
@@ -22,7 +22,13 @@ export const CartDrawer = () => {
   const [errorMsg, setErrorMsg] = useState('');
   const navigate = useNavigate();
 
-  if (!isCartOpen) return null;
+  const open = isOpen !== undefined ? isOpen : isCartOpen;
+  if (!open) return null;
+
+  const handleClose = () => {
+    if (onClose) onClose();
+    setIsCartOpen(false);
+  };
   
   const handleRazorpayPayment = async () => {
     if (items.length === 0) return;
@@ -116,13 +122,19 @@ export const CartDrawer = () => {
   };
 
   return (
-    <div className="fixed inset-0 z-50 overflow-hidden bg-black/50 backdrop-blur-sm flex justify-end">
-      <div className="w-full max-w-md bg-white h-full shadow-2xl flex flex-col">
+    <div
+      className="fixed inset-0 z-50 overflow-hidden bg-black/50 backdrop-blur-sm flex justify-end"
+      onClick={handleClose}
+    >
+      <div
+        className="w-full max-w-md bg-white h-full shadow-2xl flex flex-col"
+        onClick={(e) => e.stopPropagation()}
+      >
         {/* Header */}
         <div className="p-4 border-b flex items-center justify-between">
           <h2 className="text-lg font-bold text-gray-900">Your Cart ({totalItemsCount})</h2>
           <button
-            onClick={() => setIsCartOpen(false)}
+            onClick={handleClose}
             className="text-gray-500 hover:text-gray-800 text-xl font-semibold px-2"
           >
             ✕
