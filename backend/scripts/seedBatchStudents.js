@@ -51,6 +51,7 @@ async function seedBatchStudents() {
     const salt = await bcrypt.genSalt(10);
     const defaultHashedPassword = await bcrypt.hash('coep@123', salt);
 
+
     const candidates = [
       path.join(__dirname, '../data'),
       'C:\\Users\\Sarthak\\Downloads',
@@ -58,7 +59,7 @@ async function seedBatchStudents() {
     ];
 
     const studentMap = new Map();
-    let totalLoaded = 0;
+    let totalLoaded = 0; //no of records loaded from all files
 
     for (const { file, batchYear } of BATCH_FILES) {
       let resolvedPath = null;
