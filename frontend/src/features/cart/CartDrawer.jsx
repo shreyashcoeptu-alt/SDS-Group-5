@@ -46,10 +46,10 @@ export const CartDrawer = () => {
 
       // 2. Configure Razorpay modal
       const options = {
-        key: import.meta.env.VITE_RAZORPAY_KEY_ID,
+        key: import.meta.env.VITE_RAZORPAY_KEY_ID || 'rzp_test_TrSdcBrqn3Oi1E',
         amount: rzpOrder.amount,
         currency: rzpOrder.currency || 'INR',
-        name: 'COEP Cafeteria',
+        name: 'The Lunchroom',
         description: `Order Payment (${totalItemsCount} items)`,
         order_id: rzpOrder.id,
         theme: { color: '#0F172A' },

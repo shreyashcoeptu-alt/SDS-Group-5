@@ -16,7 +16,11 @@ const axiosClient = axios.create({
 // Request interceptor to attach JWT token when Student 1's auth is active
 axiosClient.interceptors.request.use(
   (config) => {
-    const token = localStorage.getItem('token') || localStorage.getItem('auth_token');
+    const token =
+      localStorage.getItem('the_lunchroom_token') ||
+      localStorage.getItem('cafeteria_token') ||
+      localStorage.getItem('token') ||
+      localStorage.getItem('auth_token');
     if (token) {
       config.headers.Authorization = `Bearer ${token}`;
     }

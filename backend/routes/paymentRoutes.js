@@ -5,8 +5,8 @@ const Razorpay = require('razorpay');
 
 // Initialize Razorpay instance
 const razorpay = new Razorpay({
-  key_id: process.env.RAZORPAY_KEY_ID,
-  key_secret: process.env.RAZORPAY_KEY_SECRET,
+  key_id: process.env.RAZORPAY_KEY_ID || 'rzp_test_TrSdcBrqn3Oi1E',
+  key_secret: process.env.RAZORPAY_KEY_SECRET || '9cNTGG6KepF0Mq5PlTtDvSJk',
 });
 
 /**
@@ -51,7 +51,7 @@ router.post('/create-order', async (req, res) => {
  * @desc    Verify Razorpay payment signature
  * @access  Public / Authenticated
  */
-router.post('/verify', async (req, res) => {
+const handlePaymentVerification = async (req, res) => {
   try {
     const { razorpay_order_id, razorpay_payment_id, razorpay_signature } = req.body;
 
@@ -65,7 +65,7 @@ router.post('/verify', async (req, res) => {
     // Generate expected HMAC-SHA256 signature
     const sign = `${razorpay_order_id}|${razorpay_payment_id}`;
     const expectedSign = crypto
-      .createHmac('sha256', process.env.RAZORPAY_KEY_SECRET)
+      .createHmac('sha256', process.env.RAZORPAY_KEY_SECRET || '9cNTGG6KepF0Mq5PlTtDvSJk')
       .update(sign)
       .digest('hex');
 
@@ -91,6 +91,9 @@ router.post('/verify', async (req, res) => {
       message: error.message || 'Server error during payment verification',
     });
   }
-});
+};
+
+router.post('/verify', handlePaymentVerification);
+router.post('/verify-payment', handlePaymentVerification);
 
 module.exports = router;

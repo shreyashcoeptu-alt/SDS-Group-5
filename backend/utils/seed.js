@@ -12,8 +12,32 @@ require('dotenv').config({ path: path.resolve(__dirname, '../.env') });
 // Mongoose connects us to MongoDB
 const mongoose = require('mongoose');
 
-// Import our MenuItem model to insert data into the database
+// Import our MenuItem and User models to insert data into the database
 const MenuItem = require('../models/MenuItem');
+const User = require('../models/User');
+
+const SEED_USERS = [
+  {
+    name: 'Aarav Sharma',
+    email: 'aarav.cs23@college.edu',
+    studentId: 'CS23-0104',
+    batch: '2023-27',
+    department: 'Computer Science',
+    password: 'lunchroom2026',
+    role: 'customer',
+    phone: '9876543210',
+    status: 'active',
+  },
+  {
+    name: 'Cafeteria Admin',
+    email: 'admin@cafeteria.com',
+    studentId: 'ADMIN-001',
+    password: 'Admin@123',
+    role: 'cafeteria_admin',
+    phone: '9890001122',
+    status: 'active',
+  },
+];
 /**
  * DUMMY MENU DATA
  * Sourced directly from frontend dummyMenu.js!
@@ -150,34 +174,48 @@ const DUMMY_MENU_ITEMS = [
  * 3. Inserts all 12 dummy menu items
  * 4. Disconnects cleanly
  */
+const autoSeed = async () => {
+  try {
+    await User.deleteMany({ email: { $in: ['aarav.cs23@college.edu', 'admin@cafeteria.com'] } });
+    for (const u of SEED_USERS) {
+      await User.create(u);
+    }
+    await MenuItem.deleteMany({});
+    await MenuItem.insertMany(DUMMY_MENU_ITEMS);
+    console.log('✓ Auto-seeded initial dishes and users into MongoDB!');
+  } catch (err) {
+    console.error('Auto-seed warning:', err.message);
+  }
+};
+
 const seedDatabase = async () => {
   try {
-    const mongoUri = process.env.MONGO_URI || 'mongodb://localhost:27017/cafeteria_db';
+    const mongoUri = process.env.MONGO_URI || 'mongodb://localhost:27017/TheLunchroom';
     console.log(`📡 Connecting to MongoDB at: ${mongoUri}...`);
     
     // Connect to MongoDB
     await mongoose.connect(mongoUri);
     console.log('✓ MongoDB Connected!');
 
-    // Step 2: Delete existing menu items to start fresh
-    console.log('🧹 Clearing previous menu items from collection...');
-    await MenuItem.deleteMany({});
-
-    // Step 3: Insert the new 12 dishes
-    console.log(`🌱 Seeding ${DUMMY_MENU_ITEMS.length} dummy menu items with price = ₹1...`);
-    const insertedItems = await MenuItem.insertMany(DUMMY_MENU_ITEMS);
-
-    console.log(`✓ Successfully seeded ${insertedItems.length} dishes into MongoDB!`);
-    console.log('Example dish seeded:', insertedItems[0].name, '— Price:', `₹${insertedItems[0].price}`);
+    await autoSeed();
+    console.log(`✓ Database successfully seeded!`);
 
     // Exit process with 0 (indicates clean success)
     process.exit(0);
   } catch (error) {
     console.error(`✗ Seeding failed with error: ${error.message}`);
-    // Exit process with 1 (indicates error)
     process.exit(1);
   }
 };
 
-// Execute the seeder function
-seedDatabase();
+module.exports = {
+  autoSeed,
+  seedDatabase,
+  DUMMY_MENU_ITEMS,
+  SEED_USERS,
+};
+
+// Execute if run directly from command line
+if (require.main === module) {
+  seedDatabase();
+}

@@ -3,9 +3,11 @@ const mongoose = require('mongoose');
 const router = express.Router();
 const Order = require('../models/Order');
 const User = require('../models/User');
+const jwt = require('jsonwebtoken');
 const { protect, authorize } = require('../middleware/auth');
+const { ORDER_STATUS_LIST } = require('../../shared/constants');
 
-const VALID_STATUSES = ['pending', 'preparing', 'ready', 'completed', 'cancelled'];
+const VALID_STATUSES = ORDER_STATUS_LIST || ['pending', 'preparing', 'ready', 'completed', 'cancelled'];
 
 // Helper function to generate order numbers (e.g., ORD-618802-214)
 const generateOrderNumber = () => {
@@ -43,8 +45,19 @@ router.post('/', async (req, res) => {
       };
     });
 
-    const validCustomer = mongoose.Types.ObjectId.isValid(customer)
-      ? customer
+    let customerId = customer;
+    if (req.headers.authorization && req.headers.authorization.startsWith('Bearer')) {
+      try {
+        const token = req.headers.authorization.split(' ')[1];
+        const decoded = jwt.verify(token, process.env.JWT_SECRET || 'lunchroom_super_secret_jwt_key_2026');
+        if (decoded?.id) customerId = decoded.id;
+      } catch (e) {
+        // Fall back to customer passed in body
+      }
+    }
+
+    const validCustomer = mongoose.Types.ObjectId.isValid(customerId)
+      ? customerId
       : new mongoose.Types.ObjectId();
 
     // Create new Order document
