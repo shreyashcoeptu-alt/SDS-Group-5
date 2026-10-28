@@ -1,22 +1,25 @@
 import React from 'react';
 import { Routes, Route, Navigate, Link } from 'react-router-dom';
 import { menuRoutes } from '@/features/menu';
+import { orderRoutes } from '@/features/orders';
 import { authRoutes } from '@/features/auth';
 import { Coffee, ArrowLeft } from 'lucide-react';
 
 /**
  * App Router
- * Contains feature routes for Auth and Menu & Food Management.
- * Other student features (Cart/Checkout, Admin Orders) plug their routes in here.
+ * Combines feature routes for:
+ * - Student 1: Auth (/login, /signin)
+ * - Student 2: Menu & Food Management (/menu)
+ * - Student 3 & 4: Orders, Cart, & Admin Dashboard (/orders, /admin/orders)
  */
 export const AppRouter = () => {
   return (
     <Routes>
-      {/* Default route redirects to customer menu */}
+      {/* Root redirect */}
       <Route path="/" element={<Navigate to="/menu" replace />} />
 
       {/* Student 1: Authentication Routes (/login, /signin) */}
-      {authRoutes.map((route) => (
+      {authRoutes?.map((route) => (
         <Route
           key={route.path}
           path={route.path}
@@ -25,12 +28,13 @@ export const AppRouter = () => {
       ))}
 
       {/* Student 2: Menu & Food Management Routes */}
-      {menuRoutes.map((route) => (
-        <Route
-          key={route.path}
-          path={route.path}
-          element={route.element}
-        />
+      {menuRoutes?.map((route) => (
+        <Route key={route.path} path={route.path} element={route.element} />
+      ))}
+
+      {/* Student 3 & 4: Order Tracking & Admin Dashboard Routes */}
+      {orderRoutes?.map((route) => (
+        <Route key={route.path} path={route.path} element={route.element} />
       ))}
 
       {/* 404 Not Found Fallback */}

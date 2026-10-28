@@ -121,7 +121,7 @@ export const MenuPage = () => {
           ))}
           {filteredItems.length === 0 && (
             <p className="py-8 text-center text-sm text-[var(--ink-soft)]">
-              No items match your search.
+              No items found.
             </p>
           )}
         </div>
@@ -137,7 +137,7 @@ export const MenuPage = () => {
           ))}
           {filteredItems.length === 0 && (
             <p className="col-span-full py-12 text-center text-sm text-[var(--ink-soft)]">
-              No items match your search.
+              No items found.
             </p>
           )}
         </div>

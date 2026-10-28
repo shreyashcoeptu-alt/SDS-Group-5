@@ -1,2 +1,3 @@
-export { CartProvider, useCart } from './context/CartContext';
-export { default as CartDrawer } from './components/CartDrawer';
+export { CartProvider, useCart } from './CartContext.jsx';
+export { CartDrawer } from './CartDrawer.jsx';
+export { CartButton } from './CartButton';
