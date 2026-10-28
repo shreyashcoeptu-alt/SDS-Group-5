@@ -2,20 +2,38 @@ import React from 'react';
 import { Routes, Route, Navigate, Link } from 'react-router-dom';
 import { menuRoutes } from '@/features/menu';
 import { orderRoutes } from '@/features/orders';
-import { Coffee, ArrowLeft } from 'lucide-react'; // <-- Fix: import icons from lucide-react
+import { authRoutes } from '@/features/auth';
+import { Coffee, ArrowLeft } from 'lucide-react';
 
+/**
+ * App Router
+ * Combines feature routes for:
+ * - Student 1: Auth (/login, /signin)
+ * - Student 2: Menu & Food Management (/menu)
+ * - Student 3 & 4: Orders, Cart, & Admin Dashboard (/orders, /admin/orders)
+ */
 export const AppRouter = () => {
   return (
     <Routes>
+      {/* Root redirect */}
       <Route path="/" element={<Navigate to="/menu" replace />} />
 
-      {/* Menu & Food Management Routes */}
-      {menuRoutes.map((route) => (
+      {/* Student 1: Authentication Routes (/login, /signin) */}
+      {authRoutes?.map((route) => (
+        <Route
+          key={route.path}
+          path={route.path}
+          element={route.element}
+        />
+      ))}
+
+      {/* Student 2: Menu & Food Management Routes */}
+      {menuRoutes?.map((route) => (
         <Route key={route.path} path={route.path} element={route.element} />
       ))}
 
-      {/* Order Tracking & Admin Dashboard Routes */}
-      {orderRoutes.map((route) => (
+      {/* Student 3 & 4: Order Tracking & Admin Dashboard Routes */}
+      {orderRoutes?.map((route) => (
         <Route key={route.path} path={route.path} element={route.element} />
       ))}
 
