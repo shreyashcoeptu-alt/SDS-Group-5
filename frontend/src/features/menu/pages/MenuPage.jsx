@@ -3,13 +3,16 @@ import dummyMenu from '../data/dummyMenu';
 import MenuListItem from '../components/MenuListItem';
 import MenuGridCard from '../components/MenuGridCard';
 import { useToast } from '@/components/ui/Toast';
+import { useCart } from '@/features/cart';
 
 export const MenuPage = () => {
   const [search, setSearch] = useState('');
   const toast = useToast();
+  const { addItem } = useCart();
 
   const handleAddToCart = (item) => {
-    toast.success(`${item.name} added to order (demo)`, 'Cart Updated');
+    addItem(item);
+    toast.success(`${item.name} added to cart`, 'Cart Updated');
   };
 
   const filteredItems = dummyMenu.filter((item) => {
@@ -103,7 +106,7 @@ export const MenuPage = () => {
           ))}
           {filteredItems.length === 0 && (
             <p className="py-8 text-center text-sm text-[var(--ink-soft)]">
-              No items match your search.
+              No items found.
             </p>
           )}
         </div>
@@ -119,7 +122,7 @@ export const MenuPage = () => {
           ))}
           {filteredItems.length === 0 && (
             <p className="col-span-full py-12 text-center text-sm text-[var(--ink-soft)]">
-              No items match your search.
+              No items found.
             </p>
           )}
         </div>
