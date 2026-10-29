@@ -44,7 +44,7 @@ export const Navbar = () => {
               <img
                 src="/images/TheLunchroomLogo.png"
                 alt="The Lunchroom Logo"
-                className="h-8 sm:h-9 w-auto object-contain rounded-md"
+                className="h-8 sm:h-9 w-auto object-contain"
               />
               <span>The Lunchroom</span>
               {isAdmin && (
