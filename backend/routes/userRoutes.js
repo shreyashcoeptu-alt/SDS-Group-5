@@ -10,7 +10,7 @@ const {
   updateUserRoleOrStatus,
   deleteUser,
 } = require('../controllers/userController');
-const { protect, authorize } = require('../middleware/authMiddleware');
+const { protect, authorize } = require('../middleware/auth');
 
 // Customer & Admin self profile routes
 router.get('/profile', protect, getProfile);

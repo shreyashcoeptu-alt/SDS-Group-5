@@ -1,12 +1,12 @@
 {
-  "name": "cafeteria-backend",
+  "name": "cafeteria-server",
   "version": "1.0.0",
-  "description": "The Lunchroom - Authentication & User Management Backend API",
+  "description": "The Lunchroom - College Cafeteria Ordering System Backend API",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "dev": "node server.js",
-    "seed": "node scripts/seedBatchStudents.js",
+    "dev": "nodemon server.js",
+    "seed": "node utils/seed.js",
     "seed:batches": "node scripts/seedBatchStudents.js",
     "seed:users": "node scripts/seedUsers.js",
     "test": "node verify-all.js"
@@ -23,9 +23,14 @@
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "cors": "^2.8.5",
-    "dotenv": "^16.4.7",
-    "express": "^4.21.2",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
     "jsonwebtoken": "^9.0.2",
-    "mongoose": "^8.9.5"
+    "mongoose": "^8.4.1",
+    "razorpay": "^2.9.8"
+  },
+  "devDependencies": {
+    "mongodb-memory-server": "^11.3.0",
+    "nodemon": "^3.1.2"
   }
 }

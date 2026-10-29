@@ -9,16 +9,18 @@ const protect = async (req, res, next) => {
 
   if (
     req.headers.authorization &&
-    req.headers.authorization.startsWith('Bearer ')
+    req.headers.authorization.startsWith('Bearer')
   ) {
     try {
       token = req.headers.authorization.split(' ')[1];
+      
       const decoded = jwt.verify(
         token,
-        process.env.JWT_SECRET || 'fallback_secret_for_dev_cafeteria'
+        process.env.JWT_SECRET || 'supersecretjwtkey_replace_in_production'
       );
 
-      const user = await User.findById(decoded.id).select('-password');
+      // SECURITY: Always fetch fresh user data to check if they were suspended/deleted
+      const user = await User.findById(decoded.id || decoded._id).select('-password');
 
       if (!user) {
         return res.status(401).json({
@@ -30,7 +32,7 @@ const protect = async (req, res, next) => {
       if (user.status === 'suspended') {
         return res.status(403).json({
           success: false,
-          message: 'Your account is suspended. Please contact the cafeteria manager.',
+          message: 'Your account is suspended. Please contact the administrator.',
         });
       }
 
@@ -55,18 +57,34 @@ const protect = async (req, res, next) => {
 
 /**
  * Role-based authorization middleware
- * @param  {...string} roles Allowed roles ('customer', 'cafeteria_admin')
+ * Supports synonymous roles (e.g., student = customer, staff = cafeteria_admin)
  */
 const authorize = (...roles) => {
   return (req, res, next) => {
-    if (!req.user || !roles.includes(req.user.role)) {
+    const userRole = req.user?.role;
+    
+    // Group aliases together
+    const isAdminRole = ['admin', 'cafeteria_admin', 'staff'].includes(userRole);
+    const isCustomerRole = ['customer', 'student'].includes(userRole);
+    
+    const authorized =
+      roles.includes(userRole) ||
+      (roles.includes('admin') && isAdminRole) ||
+      (roles.includes('staff') && isAdminRole) ||
+      (roles.includes('customer') && isCustomerRole);
+
+    if (!req.user || !authorized) {
       return res.status(403).json({
         success: false,
-        message: `Forbidden: User role '${req.user ? req.user.role : 'anonymous'}' is not authorized to access this resource. Required: ${roles.join(', ')}`,
+        message: `Forbidden: Role '${userRole || 'anonymous'}' is not authorized to access this resource.`,
       });
     }
+    
     next();
   };
 };
 
-module.exports = { protect, authorize };
+module.exports = { 
+  protect, 
+  authorize 
+};

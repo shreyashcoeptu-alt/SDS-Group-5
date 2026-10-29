@@ -1,124 +1,68 @@
-// Base API URL: Uses relative path so Vite proxy (or production reverse proxy) handles it
-const API_BASE = '/api';
+import axiosClient from '../api/axiosClient';
 
 /**
- * Helper to get authorization headers with JWT
+ * Authentication API Service
  */
-const getAuthHeaders = () => {
-  const token = localStorage.getItem('cafeteria_token');
-  const headers = {
-    'Content-Type': 'application/json',
-  };
-  if (token) {
-    headers['Authorization'] = `Bearer ${token}`;
-  }
-  return headers;
-};
-
-/**
- * Generic request wrapper with comprehensive error handling
- */
-const request = async (endpoint, options = {}) => {
-  const config = {
-    ...options,
-    headers: {
-      ...getAuthHeaders(),
-      ...(options.headers || {}),
-    },
-  };
-
-  try {
-    const response = await fetch(`${API_BASE}${endpoint}`, config);
-    const data = await response.json().catch(() => ({
-      success: false,
-      message: 'Failed to parse JSON response from server.',
-    }));
-
-    if (!response.ok) {
-      throw new Error(data.message || `Request failed with status ${response.status}`);
-    }
-
-    return data;
-  } catch (error) {
-    console.error(`[API Error] ${endpoint}:`, error.message);
-    throw error;
-  }
-};
-
 export const authAPI = {
-  login: (email, credential) =>
-    request('/login', {
-      method: 'POST',
-      body: JSON.stringify({
-        email,
-        studentId: credential,
-        password: credential,
-      }),
-    }),
-
-  register: (userData) =>
-    request('/auth/register', {
-      method: 'POST',
-      body: JSON.stringify(userData),
-    }),
-
-  getMe: () =>
-    request('/auth/me', {
-      method: 'GET',
-    }),
-
-  logout: () =>
-    request('/auth/logout', {
-      method: 'POST',
-    }),
-};
-
-export const userAPI = {
-  getProfile: () =>
-    request('/users/profile', {
-      method: 'GET',
-    }),
-
-  updateProfile: (data) =>
-    request('/users/profile', {
-      method: 'PUT',
-      body: JSON.stringify(data),
-    }),
-
-  changePassword: (data) =>
-    request('/users/change-password', {
-      method: 'PUT',
-      body: JSON.stringify(data),
-    }),
-
-  // Admin user management
-  getUserStats: () =>
-    request('/users/stats', {
-      method: 'GET',
-    }),
-
-  getAllUsers: (params = {}) => {
-    const query = new URLSearchParams();
-    if (params.search) query.append('search', params.search);
-    if (params.role) query.append('role', params.role);
-    if (params.status) query.append('status', params.status);
-
-    const queryString = query.toString() ? `?${query.toString()}` : '';
-    return request(`/users${queryString}`, {
-      method: 'GET',
+  login: async (email, credential) => {
+    // Support sending the credential as both studentId and password 
+    // to align with the backend's unified login logic.
+    return await axiosClient.post('/auth/login', { 
+      email, 
+      studentId: credential,
+      password: credential 
     });
   },
 
-  updateUserRoleOrStatus: (userId, data) =>
-    request(`/users/${userId}/role-status`, {
-      method: 'PUT',
-      body: JSON.stringify(data),
-    }),
+  register: async (userData) => {
+    return await axiosClient.post('/auth/register', userData);
+  },
 
-  deleteUser: (userId) =>
-    request(`/users/${userId}`, {
-      method: 'DELETE',
-    }),
+  getMe: async () => {
+    return await axiosClient.get('/auth/me');
+  },
+
+  logout: async () => {
+    return await axiosClient.post('/auth/logout');
+  },
+};
+
+/**
+ * User & Admin Management API Service
+ */
+export const userAPI = {
+  getProfile: async () => {
+    return await axiosClient.get('/users/profile');
+  },
+
+  updateProfile: async (data) => {
+    return await axiosClient.put('/users/profile', data);
+  },
+
+  changePassword: async (data) => {
+    return await axiosClient.put('/users/change-password', data);
+  },
+
+  // ==========================================
+  // Admin User Management Endpoints
+  // ==========================================
+  
+  getUserStats: async () => {
+    return await axiosClient.get('/users/stats');
+  },
+
+  getAllUsers: async (params = {}) => {
+    // Axios automatically serializes the params object into query strings
+    return await axiosClient.get('/users', { params });
+  },
+
+  updateUserRoleOrStatus: async (userId, data) => {
+    return await axiosClient.put(`/users/${userId}/role-status`, data);
+  },
+
+  deleteUser: async (userId) => {
+    return await axiosClient.delete(`/users/${userId}`);
+  },
 };
 
 export default { auth: authAPI, user: userAPI };

@@ -14,6 +14,10 @@ import {
   ArrowLeft,
 } from 'lucide-react';
 import { useToast } from '@/components/ui/Toast';
+<<<<<<< HEAD
+=======
+import { useAuth } from '@/context/AuthContext';
+>>>>>>> main
 import { ROLES, STORAGE_KEYS } from '@/utils/constants';
 
 /**
@@ -23,6 +27,10 @@ import { ROLES, STORAGE_KEYS } from '@/utils/constants';
 export const AdminLoginPage = () => {
   const navigate = useNavigate();
   const toast = useToast();
+<<<<<<< HEAD
+=======
+  const { login } = useAuth();
+>>>>>>> main
 
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -67,6 +75,7 @@ export const AdminLoginPage = () => {
     setIsSubmitting(true);
 
     try {
+<<<<<<< HEAD
       const res = await fetch('/api/login', {
         method: 'POST',
         headers: {
@@ -141,6 +150,24 @@ export const AdminLoginPage = () => {
       setAuthError(
         err.message ||
           'Authentication failed. Please verify your admin credentials.'
+=======
+      const loggedUser = await login(email.trim(), password.trim());
+      const isAdmin = ['admin', 'cafeteria_admin', 'staff'].includes(loggedUser?.role);
+
+      if (!isAdmin) {
+        throw new Error('Access Denied: Only cafeteria administrators and staff can sign in here.');
+      }
+
+      toast.success(
+        `Welcome back, ${loggedUser.name || 'Admin'}! Kitchen and orders dashboard is ready.`,
+        'Admin Signed In'
+      );
+
+      navigate('/admin/orders', { replace: true });
+    } catch (err) {
+      setAuthError(
+        err.message || 'Authentication failed. Please verify your admin credentials.'
+>>>>>>> main
       );
     } finally {
       setIsSubmitting(false);
