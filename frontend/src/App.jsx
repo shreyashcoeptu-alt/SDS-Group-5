@@ -31,7 +31,7 @@ export const App = () => {
               <footer className="border-t border-stone-200 py-6 text-center text-sm bg-[#090d16] text-white">
                 <div className="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row justify-between items-center gap-4">
                   <div>
-                    <strong>CampusBite Cafeteria Platform</strong>
+                    <strong>The Lunchroom</strong> — College Cafeteria Ordering
                   </div>
                   <div>
                     Node.js • Express • MongoDB • JWT • React

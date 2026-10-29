@@ -23,11 +23,10 @@ const foodItemSchema = new mongoose.Schema(
       maxlength: [60, 'Name cannot exceed 60 characters'],
     },
 
-    // Subpart 2: Price (Set default to 1 rupee for testing as required)
+    // Subpart 2: Price in INR
     price: {
       type: Number,                               // Must be a number
       required: [true, 'Price is required'],
-      default: 1,                                 // Default is 1 Rupee!
       min: [0, 'Price cannot be negative'],       // Cannot be less than 0
     },
 
