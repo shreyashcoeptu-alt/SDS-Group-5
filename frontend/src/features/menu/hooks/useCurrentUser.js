@@ -1,22 +1,41 @@
-import { useAuth } from '@/context/AuthContext';
-import { ROLES } from '@/utils/constants';
+import { useState, useEffect } from 'react';
+import { ROLES, STORAGE_KEYS } from '@/utils/constants';
 
 /**
- * Provides current user context directly from the real authenticated session.
+ * INTEGRATION STUB: Auth Integration
+ * 
+ * IMPORTANT: Replace this hook with Student 1's AuthContext when merged.
+ * 
+ * Provides current user context with demo role switching for testing
+ * both the customer menu (/menu) and admin management (/admin/menu).
  */
 export const useCurrentUser = () => {
-  const { user: authUser, isAdmin: authIsAdmin } = useAuth();
+  const [role, setRoleState] = useState(() => {
+    return localStorage.getItem(STORAGE_KEYS.AUTH_DEMO_ROLE) || ROLES.ADMIN;
+  });
 
-  const isAdmin =
-    authIsAdmin ||
-    ['admin', 'cafeteria_admin', 'staff'].includes(authUser?.role);
+  const setRole = (newRole) => {
+    localStorage.setItem(STORAGE_KEYS.AUTH_DEMO_ROLE, newRole);
+    setRoleState(newRole);
+    // Dispatch storage event so other components or tabs sync if needed
+    window.dispatchEvent(new Event('role_changed'));
+  };
 
-  const role = isAdmin ? ROLES.ADMIN : ROLES.CUSTOMER;
+  useEffect(() => {
+    const handleRoleChanged = () => {
+      const current = localStorage.getItem(STORAGE_KEYS.AUTH_DEMO_ROLE) || ROLES.ADMIN;
+      setRoleState(current);
+    };
+    window.addEventListener('role_changed', handleRoleChanged);
+    return () => window.removeEventListener('role_changed', handleRoleChanged);
+  }, []);
 
-  const user = authUser || {
+  const isAdmin = role === ROLES.ADMIN;
+
+  const user = {
     _id: isAdmin ? 'usr_admin_001' : 'usr_cust_001',
-    name: isAdmin ? 'Cafeteria Admin' : 'Student',
-    email: isAdmin ? 'admin@cafeteria.com' : 'student@college.edu',
+    name: isAdmin ? 'Admin Chef (Demo)' : 'Aarav Sharma (Student)',
+    email: isAdmin ? 'admin.cafeteria@college.edu' : 'aarav.cs23@college.edu',
     role: role,
   };
 
@@ -24,6 +43,7 @@ export const useCurrentUser = () => {
     user,
     role,
     isAdmin,
+    setRole,
   };
 };
 

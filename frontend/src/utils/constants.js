@@ -1,3 +1,7 @@
+/**
+ * Application Constants
+ * Single source of truth for API endpoints, roles, and default configurations.
+ */
 import {
   ROLES as SHARED_ROLES,
   ORDER_STATUS_LIST,

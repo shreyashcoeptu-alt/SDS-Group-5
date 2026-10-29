@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import orderApi from '../api/orderApi';
-import OrderStatusBadge from '../components/OrderStatusBadge';
+import axiosClient from "../../../api/axiosClient";import OrderStatusBadge from '../components/OrderStatusBadge';
 import OrderTrackerStepper from '../components/OrderTrackerStepper';
 import Button from '@/components/ui/Button';
 import formatCurrency from '@/utils/formatCurrency';
@@ -15,11 +14,15 @@ export const OrderTrackingPage = () => {
 
   const fetchOrder = useCallback(async () => {
     try {
-      const data = await orderApi.getOrderById(id);
+      // Securely fetch the order using axiosClient (which includes your auth token)
+      const res = await axiosClient.get(`/orders/${id}`);
+      const data = res?.data !== undefined ? res.data : res;
+      
       setOrder(data);
       setError(null);
     } catch (err) {
-      setError(err.message || 'Could not load order');
+      // Accurately capture the real backend error (e.g., 401, 403, 404)
+      setError(err.response?.data?.message || err.message || 'Could not load order');
     } finally {
       setIsLoading(false);
     }

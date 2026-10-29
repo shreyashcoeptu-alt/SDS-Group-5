@@ -74,9 +74,11 @@ export const CartProvider = ({ children }) => {
     localStorage.removeItem('cafeteria_cart');
   };
 
-  const subtotal = items.reduce((sum, item) => sum + item.subtotal, 0);
-  const tax = Math.round(subtotal * 0.05); // 5% GST
-  const totalAmount = subtotal + tax;
+  // Standard 2-Decimal Precision Calculations
+  const rawSubtotal = items.reduce((sum, item) => sum + item.subtotal, 0);
+  const subtotal = Number(rawSubtotal.toFixed(2));
+  const tax = Number((subtotal * 0.05).toFixed(2)); // 5% GST with 2 decimals
+  const totalAmount = Number((subtotal + tax).toFixed(2));
   const totalItemsCount = isAdmin ? 0 : items.reduce((sum, item) => sum + item.quantity, 0);
 
   const safeSetIsCartOpen = (open) => {

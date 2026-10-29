@@ -16,7 +16,7 @@ const RootRedirect = () => {
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-[#FDFCFB] flex items-center justify-center">
+      <div className="min-h-screen bg-cafe-bg flex items-center justify-center">
         <div className="w-8 h-8 border-4 border-stone-200 border-t-stone-900 rounded-full animate-spin" />
       </div>
     );
@@ -129,21 +129,21 @@ export const AppRouter = () => {
       <Route
         path="*"
         element={
-          <div className="min-h-screen bg-[#FDFCFB] flex items-center justify-center p-4">
-            <div className="bg-white rounded-3xl border border-stone-200 p-8 max-w-md w-full text-center shadow-sm">
-              <div className="w-12 h-12 rounded-2xl bg-rose-50 text-[#E23744] flex items-center justify-center mx-auto mb-4">
+          <div className="min-h-screen bg-cafe-bg flex items-center justify-center p-4">
+            <div className="bg-white rounded-3xl border border-cafe-border p-8 max-w-md w-full text-center shadow-card">
+              <div className="w-12 h-12 rounded-2xl bg-brand-50 text-brand-600 flex items-center justify-center mx-auto mb-4">
                 <Coffee className="w-6 h-6" />
               </div>
-              <h2 className="text-xl font-bold text-stone-900 mb-1">
+              <h2 className="text-xl font-bold font-display text-cafe-text mb-1">
                 Page Not Found
               </h2>
-              <p className="text-sm text-stone-500 mb-6">
+              <p className="text-sm text-cafe-subtext mb-6">
                 The requested URL does not exist or has moved.
               </p>
               <Link to="/menu">
                 <button
                   type="button"
-                  className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl text-sm font-semibold bg-stone-900 text-white hover:bg-stone-800 transition-colors shadow-sm"
+                  className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl text-sm font-semibold bg-brand-600 text-white hover:bg-brand-700 transition-colors shadow-sm"
                 >
                   <ArrowLeft className="w-4 h-4" />
                   <span>Return to Menu</span>

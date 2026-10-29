@@ -2,16 +2,16 @@ const mongoose = require('mongoose');
 
 /**
  * MongoDB Database Connection for The Lunchroom
- * Connects to process.env.MONGO_URI (e.g. mongodb://localhost:27017/TheLunchroom).
- * If no local daemon is running, automatically starts an embedded MongoMemoryServer
- * so that evaluation and development work out-of-the-box with zero setup!
+ * Connects to process.env.MONGO_URI (or MONGODB_URI) and defaults to localhost.
+ * If no local daemon is running, automatically starts an embedded MongoMemoryServer.
  */
 const connectDB = async () => {
-  const targetUri = process.env.MONGO_URI || 'mongodb://localhost:27017/TheLunchroom';
+  // Checks for both standard environment variables, defaults to local
+  const targetUri = process.env.MONGO_URI || process.env.MONGODB_URI || 'mongodb://localhost:27017/TheLunchroom';
 
   try {
     const conn = await mongoose.connect(targetUri, {
-      serverSelectionTimeoutMS: 2500,
+      serverSelectionTimeoutMS: 2500, // Short timeout so it falls back quickly if unreachable
     });
     console.log(`✓ MongoDB Connected: ${conn.connection.host}/${conn.connection.name}`);
 
@@ -20,8 +20,9 @@ const connectDB = async () => {
     if (ensureDemoSeed) {
       await ensureDemoSeed();
     }
+    return conn;
   } catch (error) {
-    console.log(`ℹ️ Notice: External MongoDB not reachable (${error.message}).`);
+    console.log(`ℹ️ Notice: External/Local MongoDB not reachable (${error.message}).`);
     console.log(`🚀 Starting local embedded MongoDB instance for The Lunchroom...`);
 
     try {
@@ -38,6 +39,8 @@ const connectDB = async () => {
       if (autoSeed) {
         await autoSeed();
       }
+      
+      return conn;
     } catch (memError) {
       console.error(`✗ Failed to initialize MongoDB: ${memError.message}`);
       process.exit(1);

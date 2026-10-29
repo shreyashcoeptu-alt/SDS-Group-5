@@ -33,7 +33,7 @@ const register = async (req, res) => {
       if (!adminSecretKey || adminSecretKey.trim() !== expectedSecret) {
         return res.status(403).json({
           success: false,
-          message: 'Invalid Admin Security Key. Required to register as Cafeteria Staff/Admin (Default: CAFE_ADMIN_2026).',
+          message: 'Invalid Admin Security Key. Required to register as Cafeteria Staff/Admin.',
         });
       }
     }
@@ -55,6 +55,10 @@ const register = async (req, res) => {
       role: targetRole,
       phone: phone ? phone.trim() : '',
       status: 'active',
+      // Include any other student-specific fields here if they are passed in req.body
+      studentId: req.body.studentId || undefined,
+      batch: req.body.batch || undefined,
+      department: req.body.department || undefined,
     });
 
     const token = generateToken(user._id, user.role);
@@ -89,23 +93,27 @@ const register = async (req, res) => {
  */
 const login = async (req, res) => {
   try {
+    // Support generic email or specific collegeEmail field from frontend
     const email = req.body.email || req.body.collegeEmail;
+    // Support either studentId or traditional password
     const credential = req.body.studentId || req.body.password;
 
     if (!email || !credential) {
       return res.status(400).json({
         success: false,
-        message: 'Please provide your college email and student ID (or password).',
+        message: 'Please provide your email and student ID (or password).',
       });
     }
 
-    // Find user by email and explicitly select password
+    // Find user by email and explicitly select password for verification
     const user = await User.findOne({ email: email.toLowerCase().trim() }).select('+password');
 
+    // SECURITY: Use identical error messages for 'user not found' and 'wrong password'
+    // to prevent malicious actors from guessing which emails are registered.
     if (!user) {
       return res.status(401).json({
         success: false,
-        message: 'Invalid credentials. No student or user found with this email.',
+        message: 'Invalid credentials.',
       });
     }
 
@@ -114,7 +122,7 @@ const login = async (req, res) => {
     if (!isMatch) {
       return res.status(401).json({
         success: false,
-        message: 'Invalid credentials. Student ID or password did not match.',
+        message: 'Invalid credentials.',
       });
     }
 
@@ -146,7 +154,7 @@ const login = async (req, res) => {
         id: user._id,
         name: user.name,
         email: user.email,
-        studentId: user.studentId,
+        studentId: user.studentId, 
         batch: user.batch,
         department: user.department,
         role: user.role,
@@ -171,6 +179,8 @@ const login = async (req, res) => {
  */
 const getMe = async (req, res) => {
   try {
+    // SECURITY: Fetch fresh user data from DB rather than trusting the JWT payload.
+    // This ensures suspended/deleted users are blocked immediately.
     const userId = req.user.id || req.user._id;
     const user = await User.findById(userId);
 
@@ -187,6 +197,9 @@ const getMe = async (req, res) => {
         id: user._id,
         name: user.name,
         email: user.email,
+        studentId: user.studentId,
+        batch: user.batch,
+        department: user.department,
         role: user.role,
         phone: user.phone,
         status: user.status,
@@ -194,6 +207,7 @@ const getMe = async (req, res) => {
       },
     });
   } catch (error) {
+    console.error('[Auth GetMe Error]:', error);
     return res.status(500).json({
       success: false,
       message: 'Server error retrieving user data.',
@@ -207,6 +221,7 @@ const getMe = async (req, res) => {
  * @access  Private
  */
 const logout = async (req, res) => {
+  // If you later implement HTTP-Only cookies for tokens, clear the cookie here.
   return res.status(200).json({
     success: true,
     message: 'User logged out successfully.',

@@ -20,7 +20,8 @@ export const ProtectedRoute = ({ children, allowedRoles }) => {
   }
 
   if (!isAuthenticated) {
-    return <Navigate to="/login" state={{ from: location }} replace />;
+    const isTargetingAdmin = allowedRoles && allowedRoles.includes('cafeteria_admin');
+    return <Navigate to={isTargetingAdmin ? '/admin-login' : '/login'} state={{ from: location }} replace />;
   }
 
   if (allowedRoles && allowedRoles.length > 0) {

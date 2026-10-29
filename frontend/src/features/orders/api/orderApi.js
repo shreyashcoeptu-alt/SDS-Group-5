@@ -1,55 +1,34 @@
 import axiosClient from '@/api/axiosClient';
 import { API_ENDPOINTS } from '@/utils/constants';
-import { orderMock } from './mock/orderMock';
-
-const USE_MOCKS = import.meta.env.VITE_USE_MOCKS !== 'false';
 
 export const orderApi = {
   async getAllOrders(status = 'all') {
-    if (USE_MOCKS) {
-      return orderMock.getAllOrders(status);
-    }
     const params = status && status !== 'all' ? { status } : {};
     const res = await axiosClient.get(API_ENDPOINTS.ORDERS, { params });
-    return Array.isArray(res) ? res : res.data || [];
+    const data = res?.data !== undefined ? res.data : res;
+    // Extract orders array safely whether wrapped in a success object or direct array
+    return Array.isArray(data) ? data : data?.orders || [];
   },
 
-  async getMyOrders(customerId) {
-    if (USE_MOCKS) {
-      return orderMock.getMyOrders(customerId);
-    }
+  async getMyOrders() {
     const res = await axiosClient.get(API_ENDPOINTS.MY_ORDERS);
-    return Array.isArray(res) ? res : res.data || [];
+    const data = res?.data !== undefined ? res.data : res;
+    return Array.isArray(data) ? data : data?.orders || [];
   },
 
   async getOrderById(id) {
-    if (USE_MOCKS) {
-      return orderMock.getOrderById(id);
-    }
     const res = await axiosClient.get(API_ENDPOINTS.ORDER_BY_ID(id));
-    return res.data || res;
+    return res?.data !== undefined ? res.data : res;
   },
 
   async updateOrderStatus(id, status) {
-    if (USE_MOCKS) {
-      return orderMock.updateOrderStatus(id, status);
-    }
     const res = await axiosClient.patch(API_ENDPOINTS.ORDER_STATUS(id), { status });
-    return res.data || res;
+    return res?.data !== undefined ? res.data : res;
   },
 
   async getSummary() {
-    if (USE_MOCKS) {
-      return orderMock.getSummary();
-    }
     const res = await axiosClient.get(API_ENDPOINTS.ORDER_SUMMARY);
-    return res.data || res;
-  },
-
-  resetMockOrders() {
-    if (USE_MOCKS) {
-      return orderMock.resetToSeed();
-    }
+    return res?.data !== undefined ? res.data : res;
   },
 };
 

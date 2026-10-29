@@ -2,15 +2,19 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import useCurrentUser from '../hooks/useCurrentUser';
 import Button from '@/components/ui/Button';
-import { ShieldAlert, ArrowLeft, LogIn } from 'lucide-react';
+import { ROLES } from '@/utils/constants';
+import { ShieldAlert, ArrowLeft } from 'lucide-react';
 
 /**
  * RoleGate component.
  * Ensures the wrapped view is only accessible to users with the Admin role.
  * Non-admins see a polite unauthorized barrier with clear recovery options.
+ *
+ * NOTE: When Student 1's authentication is integrated, replace useCurrentUser
+ * with the central AuthContext / ProtectedRoute.
  */
 export const RoleGate = ({ children }) => {
-  const { user, isAdmin } = useCurrentUser();
+  const { user, isAdmin, setRole } = useCurrentUser();
 
   if (!isAdmin) {
     return (
@@ -25,19 +29,17 @@ export const RoleGate = ({ children }) => {
           </h2>
 
           <p className="text-sm text-cafe-subtext mb-6 leading-relaxed">
-            You are currently signed in as <strong className="text-cafe-text font-bold">{user.name}</strong> ({user.email}). Menu editing and stock availability controls are restricted to cafeteria managers.
+            You are currently signed in as <strong className="text-cafe-text font-bold">{user.name}</strong>. Menu editing and stock availability controls are restricted to cafeteria managers.
           </p>
 
           <div className="flex flex-col gap-3">
-            <Link to="/login" className="w-full">
-              <Button
-                variant="primary"
-                className="w-full"
-                leftIcon={<LogIn className="w-4 h-4" />}
-              >
-                Sign In with Admin Account
-              </Button>
-            </Link>
+            <Button
+              variant="primary"
+              onClick={() => setRole(ROLES.ADMIN)}
+              className="w-full"
+            >
+              Switch to Admin Role (Dev Demo)
+            </Button>
 
             <Link to="/menu" className="w-full">
               <Button variant="outline" className="w-full" leftIcon={<ArrowLeft className="w-4 h-4" />}>

@@ -37,6 +37,10 @@ Thumbs.db
 *.sln
 *.sw?
 
+# Temporary test scripts
+test-db.js
+test-api.js
+
 # Temporary / Cache Files
 .cache/
 .parcel-cache/
@@ -45,7 +49,7 @@ tmp/
 
 __pycache__/
 *.pyc
+
 # Local agent skills
 .agents/
 .agent/
-tmp/

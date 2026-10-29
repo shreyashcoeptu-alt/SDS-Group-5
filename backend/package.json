@@ -1,13 +1,25 @@
 {
   "name": "cafeteria-server",
   "version": "1.0.0",
-  "description": "Backend API for College Cafeteria Ordering System",
+  "description": "The Lunchroom - College Cafeteria Ordering System Backend API",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
     "dev": "nodemon server.js",
-    "seed": "node utils/seed.js"
+    "seed": "node utils/seed.js",
+    "seed:batches": "node scripts/seedBatchStudents.js",
+    "seed:users": "node scripts/seedUsers.js",
+    "test": "node verify-all.js"
   },
+  "keywords": [
+    "the-lunchroom",
+    "cafeteria",
+    "authentication",
+    "jwt",
+    "user-management"
+  ],
+  "author": "The Lunchroom",
+  "license": "ISC",
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "cors": "^2.8.5",

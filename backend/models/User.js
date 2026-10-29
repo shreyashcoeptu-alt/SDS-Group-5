@@ -34,8 +34,25 @@ const userSchema = new mongoose.Schema(
     },
     password: {
       type: String,
-      minlength: [4, 'Password must be at least 4 characters long'],
-      select: false, // Prevents password from being returned in normal queries
+      required: [true, 'Please provide a password'],
+      minlength: [6, 'Password must be at least 6 characters long'],
+      select: false, // Security best practice: exclude password from queries by default
+    },
+    studentId: {
+      type: String,
+      trim: true,
+      index: true,
+      default: '',
+    },
+    batch: {
+      type: String,
+      trim: true,
+      default: '',
+    },
+    department: {
+      type: String,
+      trim: true,
+      default: '',
     },
     role: {
       type: String,
@@ -43,7 +60,7 @@ const userSchema = new mongoose.Schema(
         values: ['customer', 'student', 'admin', 'cafeteria_admin', 'staff'],
         message: '{VALUE} is not a valid role',
       },
-      default: 'customer',
+      default: 'student',
     },
     phone: {
       type: String,

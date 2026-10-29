@@ -1,17 +1,29 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
-import { authAPI, userAPI } from '../services/api';
+import { authAPI } from '../services/api'; // Removed userAPI if it was unused, add back if needed
 
 const AuthContext = createContext(null);
 
 export const AuthProvider = ({ children }) => {
-  const [user, setUser] = useState(null);
   const getStoredToken = () =>
     localStorage.getItem('the_lunchroom_token') ||
     localStorage.getItem('cafeteria_token') ||
     localStorage.getItem('token');
 
   const [token, setToken] = useState(getStoredToken);
+  const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
+
+  const saveToken = (tok) => {
+    localStorage.setItem('the_lunchroom_token', tok);
+    localStorage.setItem('cafeteria_token', tok);
+    localStorage.setItem('token', tok);
+  };
+
+  const clearToken = () => {
+    localStorage.removeItem('the_lunchroom_token');
+    localStorage.removeItem('cafeteria_token');
+    localStorage.removeItem('token');
+  };
 
   // Initialize and verify existing session on app load
   useEffect(() => {
@@ -24,7 +36,9 @@ export const AuthProvider = ({ children }) => {
 
       try {
         const response = await authAPI.getMe();
+        // Handle both Fetch API (direct return) and Axios (.data wrapper)
         const data = response?.data !== undefined ? response.data : response;
+        
         if (data?.success && data?.user) {
           setUser(data.user);
           setToken(storedToken);
@@ -47,21 +61,10 @@ export const AuthProvider = ({ children }) => {
     initializeAuth();
   }, []);
 
-  const saveToken = (tok) => {
-    localStorage.setItem('the_lunchroom_token', tok);
-    localStorage.setItem('cafeteria_token', tok);
-    localStorage.setItem('token', tok);
-  };
-
-  const clearToken = () => {
-    localStorage.removeItem('the_lunchroom_token');
-    localStorage.removeItem('cafeteria_token');
-    localStorage.removeItem('token');
-  };
-
   const login = async (email, password) => {
     const res = await authAPI.login(email, password);
     const data = res?.data !== undefined ? res.data : res;
+    
     if (data?.success && data?.token) {
       saveToken(data.token);
       setToken(data.token);
@@ -74,6 +77,7 @@ export const AuthProvider = ({ children }) => {
   const register = async (formData) => {
     const res = await authAPI.register(formData);
     const data = res?.data !== undefined ? res.data : res;
+    
     if (data?.success && data?.token) {
       saveToken(data.token);
       setToken(data.token);
