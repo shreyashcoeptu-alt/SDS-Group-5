@@ -155,7 +155,7 @@ export const AdminLoginPage = () => {
           style={{ '--rot': '-12deg' }}
         >
           <img
-            src="/images/food/tomato.png"
+            src="/images/food/ww.png"
             alt=""
             className="w-20 xl:w-24 h-auto drop-shadow-[0_12px_24px_rgba(0,0,0,0.08)] opacity-95"
             loading="eager"

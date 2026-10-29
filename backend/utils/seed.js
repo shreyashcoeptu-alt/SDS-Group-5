@@ -174,6 +174,25 @@ const DUMMY_MENU_ITEMS = [
  * 3. Inserts all 12 dummy menu items
  * 4. Disconnects cleanly
  */
+const ensureDemoSeed = async () => {
+  try {
+    for (const u of SEED_USERS) {
+      const existing = await User.findOne({ email: u.email });
+      if (!existing) {
+        await User.create(u);
+        console.log(`✓ Created demo user: ${u.email} (${u.role})`);
+      }
+    }
+    const menuCount = await MenuItem.countDocuments();
+    if (menuCount === 0) {
+      await MenuItem.insertMany(DUMMY_MENU_ITEMS);
+      console.log('✓ Seeded initial 12 menu items into MongoDB!');
+    }
+  } catch (err) {
+    console.error('Demo seed check error:', err.message);
+  }
+};
+
 const autoSeed = async () => {
   try {
     await User.deleteMany({ email: { $in: ['aarav.cs23@college.edu', 'admin@cafeteria.com'] } });
@@ -209,6 +228,7 @@ const seedDatabase = async () => {
 };
 
 module.exports = {
+  ensureDemoSeed,
   autoSeed,
   seedDatabase,
   DUMMY_MENU_ITEMS,

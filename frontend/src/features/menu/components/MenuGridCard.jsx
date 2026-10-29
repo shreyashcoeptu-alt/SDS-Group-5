@@ -20,6 +20,9 @@ export const MenuGridCard = ({ item, index = 0, onAdd }) => {
             src={item.image}
             alt={item.name}
             className="w-full h-full object-cover"
+            onError={(e) => {
+              e.currentTarget.style.display = 'none';
+            }}
           />
         )}
       </div>

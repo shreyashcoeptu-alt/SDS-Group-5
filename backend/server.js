@@ -23,6 +23,9 @@ app.use(cors({
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+// Serve dish photos statically so backend and direct requests can always access images
+app.use('/images', express.static(path.resolve(__dirname, '../frontend/public/images')));
+
 // Health check endpoint
 app.get('/api/health', (req, res) => {
   res.json({

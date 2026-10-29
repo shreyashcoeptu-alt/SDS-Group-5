@@ -39,9 +39,13 @@ export const Navbar = () => {
           <div className="flex items-center gap-3">
             <Link
               to={isAdmin ? '/admin/orders' : '/menu'}
-              className="font-black text-xl sm:text-2xl tracking-tight text-stone-900 hover:opacity-90 flex items-center gap-2"
+              className="font-black text-xl sm:text-2xl tracking-tight text-stone-900 hover:opacity-90 flex items-center gap-2.5"
             >
-              <span className="w-3 h-3 rounded-full bg-[#E23744]" />
+              <img
+                src="/images/TheLunchroomLogo.png"
+                alt="The Lunchroom Logo"
+                className="h-8 sm:h-9 w-auto object-contain rounded-md"
+              />
               <span>The Lunchroom</span>
               {isAdmin && (
                 <span className="text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 rounded-full bg-stone-900 text-white ml-1">

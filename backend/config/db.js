@@ -15,14 +15,10 @@ const connectDB = async () => {
     });
     console.log(`✓ MongoDB Connected: ${conn.connection.host}/${conn.connection.name}`);
 
-    // Ensure default starting dishes and accounts exist if database is empty
-    const User = require('../models/User');
-    const userCount = await User.countDocuments();
-    if (userCount === 0) {
-      const { autoSeed } = require('../utils/seed');
-      if (autoSeed) {
-        await autoSeed();
-      }
+    // Ensure default demo accounts and menu items exist
+    const { ensureDemoSeed } = require('../utils/seed');
+    if (ensureDemoSeed) {
+      await ensureDemoSeed();
     }
   } catch (error) {
     console.log(`ℹ️ Notice: External MongoDB not reachable (${error.message}).`);
