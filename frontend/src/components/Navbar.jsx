@@ -1,24 +1,9 @@
-<<<<<<< HEAD
-import React from 'react';
-import { Link, useNavigate, useLocation } from 'react-router-dom';
-import { useAuth } from '../context/AuthContext';
-import { useToast } from '../context/ToastContext';
-import { 
-  Zap, 
-  LogOut, 
-  User, 
-  ShieldCheck, 
-  LayoutDashboard, 
-  Sparkles
-} from 'lucide-react';
-=======
 import React, { useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useAuth } from '@/context/AuthContext';
 import { useCart } from '@/features/cart';
 import { useToast } from '@/components/ui/Toast';
 import { ShoppingBag, Menu, X, ArrowLeft } from 'lucide-react';
->>>>>>> main
 
 export const Navbar = () => {
   const { user, isAuthenticated, isAdmin, logout } = useAuth();
@@ -48,54 +33,6 @@ export const Navbar = () => {
   const isStudentViewForAdmin = isAdmin && (location.pathname === '/menu' || location.pathname.startsWith('/orders/'));
 
   return (
-<<<<<<< HEAD
-    <header className="navbar">
-      <div className="nav-container">
-        {/* Brand & Project Info */}
-        <Link to="/" className="nav-brand">
-          <div style={{
-            width: '36px',
-            height: '36px',
-            borderRadius: '9px',
-            background: '#0F0F11',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            color: '#FFFFFF'
-          }}>
-            <Zap size={18} fill="#FFFFFF" />
-          </div>
-          <div>
-            <span>The <span className="logo-highlight">Lunchroom</span></span>
-            <div style={{
-              fontSize: '0.65rem',
-              fontWeight: '600',
-              fontFamily: 'var(--font-mono)',
-              color: 'var(--text-dim)',
-              letterSpacing: '0.04em',
-              textTransform: 'uppercase',
-              lineHeight: 1,
-              marginTop: '2px'
-            }}>
-              Campus Dining Platform
-            </div>
-          </div>
-        </Link>
-
-        {/* Navigation Links */}
-        <nav className="nav-links">
-          {isAuthenticated ? (
-            <>
-              {isCustomer && (
-                <Link
-                  to="/customer"
-                  className={`nav-link ${location.pathname === '/customer' ? 'active' : ''}`}
-                >
-                  <LayoutDashboard size={16} style={{ verticalAlign: 'middle', marginRight: '6px' }} />
-                  Customer Portal
-                </Link>
-              )}
-=======
     <header className="sticky top-0 z-40 bg-white border-b-2 border-stone-900 select-none">
       {/* Top Banner if Admin is viewing student menu */}
       {isStudentViewForAdmin && (
@@ -110,7 +47,6 @@ export const Navbar = () => {
           </Link>
         </div>
       )}
->>>>>>> main
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
@@ -123,47 +59,13 @@ export const Navbar = () => {
               <span className="w-3 h-3 rounded-full bg-[#E23744]" />
               <span>The Lunchroom</span>
               {isAdmin && (
-<<<<<<< HEAD
-                <Link
-                  to="/admin"
-                  className={`nav-link ${location.pathname === '/admin' ? 'active' : ''}`}
-                >
-                  <ShieldCheck size={16} style={{ verticalAlign: 'middle', marginRight: '6px' }} />
-                  Admin Control
-                </Link>
-=======
                 <span className="text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 rounded-full bg-stone-900 text-white ml-1">
                   Admin
                 </span>
->>>>>>> main
               )}
             </Link>
           </div>
 
-<<<<<<< HEAD
-              <Link
-                to="/profile"
-                className={`nav-link ${location.pathname === '/profile' ? 'active' : ''}`}
-              >
-                <User size={16} style={{ verticalAlign: 'middle', marginRight: '6px' }} />
-                Profile
-              </Link>
-
-              {/* User Dropdown / Badge */}
-              <div className="nav-user">
-                <Link to="/profile" className="user-profile-badge" title="View Profile">
-                  <div className={`avatar-circle ${isAdmin ? 'admin' : ''}`}>
-                    {getInitials(user?.name)}
-                  </div>
-                  <div style={{ textAlign: 'left', lineHeight: 1.2 }}>
-                    <div style={{ fontSize: '0.82rem', fontWeight: '600', color: 'var(--text-main)' }}>
-                      {user?.name?.split(' ')[0]}
-                    </div>
-                    <span className={`badge ${isAdmin ? 'badge-admin' : 'badge-customer'}`} style={{ padding: '0 0.4rem', fontSize: '0.65rem' }}>
-                      {isAdmin ? 'Admin' : 'Customer'}
-                    </span>
-                  </div>
-=======
           {/* Desktop Navigation Links */}
           <nav className="hidden md:flex items-center gap-1 sm:gap-2">
             {!isAdmin ? (
@@ -178,7 +80,6 @@ export const Navbar = () => {
                   }`}
                 >
                   Menu
->>>>>>> main
                 </Link>
 
                 <button
@@ -187,36 +88,6 @@ export const Navbar = () => {
                   className="px-3 py-2 rounded-xl text-sm font-bold text-stone-700 hover:bg-stone-100 transition-colors flex items-center gap-1.5"
                   aria-label="Open Cart"
                 >
-<<<<<<< HEAD
-                  <LogOut size={14} />
-                  <span>Logout</span>
-                </button>
-              </div>
-            </>
-          ) : (
-            <div style={{ display: 'flex', alignItems: 'center', gap: '0.65rem' }}>
-              <Link 
-                to="/admin-login" 
-                className="btn btn-secondary btn-sm"
-                style={{
-                  borderColor: 'rgba(168, 85, 247, 0.4)',
-                  color: '#c084fc',
-                  display: 'inline-flex',
-                  alignItems: 'center',
-                  gap: '0.35rem'
-                }}
-              >
-                <ShieldCheck size={14} color="#a855f7" />
-                <span>Admin Portal</span>
-              </Link>
-              <Link to="/login" className="btn btn-secondary btn-sm">
-                Sign In
-              </Link>
-              <Link to="/register" className="btn btn-primary btn-sm">
-                <Sparkles size={14} />
-                Get Started
-              </Link>
-=======
                   <ShoppingBag className="w-4 h-4 text-[#E23744]" />
                   <span>Cart</span>
                   {totalItemsCount > 0 && (
@@ -310,7 +181,6 @@ export const Navbar = () => {
                   </Link>
                 </div>
               )}
->>>>>>> main
             </div>
           </nav>
 

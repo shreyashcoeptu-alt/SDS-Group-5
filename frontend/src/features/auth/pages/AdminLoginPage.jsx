@@ -14,10 +14,7 @@ import {
   ArrowLeft,
 } from 'lucide-react';
 import { useToast } from '@/components/ui/Toast';
-<<<<<<< HEAD
-=======
 import { useAuth } from '@/context/AuthContext';
->>>>>>> main
 import { ROLES, STORAGE_KEYS } from '@/utils/constants';
 
 /**
@@ -27,10 +24,7 @@ import { ROLES, STORAGE_KEYS } from '@/utils/constants';
 export const AdminLoginPage = () => {
   const navigate = useNavigate();
   const toast = useToast();
-<<<<<<< HEAD
-=======
   const { login } = useAuth();
->>>>>>> main
 
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -75,82 +69,6 @@ export const AdminLoginPage = () => {
     setIsSubmitting(true);
 
     try {
-<<<<<<< HEAD
-      const res = await fetch('/api/login', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          email: email.trim(),
-          password: password.trim(),
-          studentId: password.trim(),
-        }),
-      });
-
-      const data = await res.json();
-
-      if (!res.ok) {
-        throw new Error(data.message || 'Invalid admin credentials.');
-      }
-
-      const token = data.token;
-      const adminData = data.user || data.student;
-      const userRole = adminData?.role;
-
-      // Never allow login without a valid user, token, and admin role.
-      if (
-        !adminData ||
-        !token ||
-        (userRole !== 'cafeteria_admin' && userRole !== 'admin')
-      ) {
-        throw new Error(
-          'Access Denied: Only cafeteria administrators and staff can sign in here.'
-        );
-      }
-
-      // Save admin session and JWT token.
-      localStorage.setItem(
-        STORAGE_KEYS.AUTH_DEMO_ROLE,
-        ROLES.ADMIN
-      );
-
-      localStorage.setItem(
-        'lunchroom:admin_email',
-        email.trim()
-      );
-
-      localStorage.setItem(
-        'cafeteria_token',
-        token
-      );
-
-      localStorage.setItem(
-        'cafeteria_user',
-        JSON.stringify(adminData)
-      );
-
-      localStorage.setItem(
-        'lunchroom:logged_in_at',
-        new Date().toISOString()
-      );
-
-      // Notify active listeners.
-      window.dispatchEvent(new Event('role_changed'));
-
-      const displayName = adminData.name || 'Cafeteria Manager';
-
-      toast.success(
-        `Welcome back, ${displayName}! Kitchen and menu management tools are ready.`,
-        'Admin Signed In'
-      );
-
-      navigate('/admin/menu', { replace: true });
-    } catch (err) {
-      setAuthError(
-        err.message ||
-          'Authentication failed. Please verify your admin credentials.'
-=======
       const loggedUser = await login(email.trim(), password.trim());
       const isAdmin = ['admin', 'cafeteria_admin', 'staff'].includes(loggedUser?.role);
 
@@ -167,7 +85,6 @@ export const AdminLoginPage = () => {
     } catch (err) {
       setAuthError(
         err.message || 'Authentication failed. Please verify your admin credentials.'
->>>>>>> main
       );
     } finally {
       setIsSubmitting(false);
