@@ -36,17 +36,17 @@ app.use((req, res, next) => {
 });
 
 // Database connectivity check for API routes
-const mongoose = require('mongoose');
-app.use('/api', (req, res, next) => {
-  if (req.path === '/health') return next();
-  if (mongoose.connection.readyState !== 1) {
-    return res.status(503).json({
-      success: false,
-      message: 'Database connection is not ready. Please ensure your current IP address is whitelisted in MongoDB Atlas (Network Access -> Add 0.0.0.0/0 or Current IP).',
-    });
-  }
-  next();
-});
+// const mongoose = require('mongoose');
+// app.use('/api', (req, res, next) => {
+//   if (req.path === '/health') return next();
+//   if (mongoose.connection.readyState !== 1) {
+//     return res.status(503).json({
+//       success: false,
+//       message: 'Database connection is not ready. Please ensure your current IP address is whitelisted in MongoDB Atlas (Network Access -> Add 0.0.0.0/0 or Current IP).',
+//     });
+//   }
+//   next();
+// });
 
 // Root Health Check & System API Overview
 app.get('/api/health', (req, res) => {
