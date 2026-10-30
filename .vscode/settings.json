@@ -1,9 +1,0 @@
-{
-    "git.ignoreLimitWarning": true,
-    "chat.tools.terminal.autoApprove": {
-        "/^git status --short && printf '\\\\nREADME name references:\\\\n' && rg -n -i \"project\\|SDS\\|group\\|lunch\" README\\* 2>/dev/null \\|\\| true$/": {
-            "approve": true,
-            "matchCommandLine": true
-        }
-    }
-}
