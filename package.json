@@ -1,8 +1,8 @@
 {
-  "name": "cafeteria-ordering-system",
+  "name": "the-lunchroom",
   "version": "1.0.0",
   "private": true,
-  "description": "College Cafeteria Ordering System - Monorepo root",
+  "description": "The Lunchroom — College Cafeteria Online Ordering System",
   "scripts": {
     "dev": "npm run dev --prefix frontend",
     "dev:frontend": "npm run dev --prefix frontend",

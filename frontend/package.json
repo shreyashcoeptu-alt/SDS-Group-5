@@ -1,7 +1,8 @@
 {
-  "name": "cafeteria-client",
+  "name": "the-lunchroom-frontend",
   "private": true,
   "version": "1.0.0",
+  "description": "The Lunchroom - College Cafeteria Ordering System Frontend SPA",
   "type": "module",
   "scripts": {
     "dev": "vite",

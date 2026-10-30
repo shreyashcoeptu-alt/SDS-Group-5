@@ -1,5 +1,5 @@
 {
-  "name": "cafeteria-server",
+  "name": "the-lunchroom-backend",
   "version": "1.0.0",
   "description": "The Lunchroom - College Cafeteria Ordering System Backend API",
   "main": "server.js",
