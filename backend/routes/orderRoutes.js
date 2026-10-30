@@ -5,9 +5,9 @@ const Order = require('../models/Order');
 const User = require('../models/User');
 const jwt = require('jsonwebtoken');
 const { protect, authorize } = require('../middleware/auth');
-const { ORDER_STATUS_LIST } = require('../../shared/constants');
 
-const VALID_STATUSES = ORDER_STATUS_LIST || ['pending', 'preparing', 'ready', 'completed', 'cancelled'];
+
+const VALID_STATUSES = ['pending', 'preparing', 'ready', 'completed', 'cancelled'];
 
 // Helper function to generate order numbers (e.g., ORD-618802-214)
 const generateOrderNumber = () => {
