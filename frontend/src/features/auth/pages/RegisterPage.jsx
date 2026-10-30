@@ -45,7 +45,7 @@ export const RegisterPage = () => {
     setFormData((prev) => ({
       ...prev,
       role,
-      adminSecretKey: role === 'cafeteria_admin' ? (prev.adminSecretKey || 'CAFE_ADMIN_2026') : '',
+      adminSecretKey: role === 'cafeteria_admin' ? '' : '',
     }));
   };
 
@@ -169,7 +169,7 @@ export const RegisterPage = () => {
             {formData.role === 'cafeteria_admin' && (
               <div className="p-3 bg-amber-50 rounded-2xl border border-amber-200">
                 <label className="block text-xs font-semibold text-amber-900 mb-1">
-                  Admin Passcode (Default: CAFE_ADMIN_2026)
+                  Admin Passcode
                 </label>
                 <input
                   type="password"

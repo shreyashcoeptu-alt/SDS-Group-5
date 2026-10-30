@@ -415,15 +415,6 @@ export const LoginPage = () => {
               </button>
 
               {/* Quick demo autofill helper for evaluators & students */}
-              <button
-                type="button"
-                onClick={handleQuickFillDemo}
-                className="text-[11px] text-stone-500 hover:text-stone-800 font-medium py-1 transition-colors flex items-center justify-center gap-1"
-                title="Populate test student credentials"
-              >
-                <CheckCircle2 className="w-3 h-3 text-emerald-500" />
-                <span>Quick fill student demo (aarav.cs23@college.edu)</span>
-              </button>
 
               <div className="flex items-center justify-between text-xs text-stone-500 pt-2 border-t border-stone-100">
                 <Link to="/register" className="font-semibold text-[#E23744] hover:underline">

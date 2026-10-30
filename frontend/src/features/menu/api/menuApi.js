@@ -6,7 +6,7 @@ import { menuMock } from './mock/menuMock';
  * Flag determining if we are running against local mock store or live Express backend.
  * Default is true unless explicitly set to 'false' in .env.
  */
-const USE_MOCKS = import.meta.env.VITE_USE_MOCKS !== 'false';
+const USE_MOCKS = import.meta.env.VITE_USE_MOCKS !== 'true';
 
 /**
  * Menu API Service

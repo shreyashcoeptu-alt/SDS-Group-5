@@ -425,17 +425,11 @@ export const AdminLoginPage = () => {
               </button>
 
               {/* Admin demo autofill */}
-              <button
-                type="button"
-                onClick={handleQuickFillAdmin}
-                className="text-[11px] text-purple-600 hover:text-purple-800 font-medium py-1 transition-colors flex items-center justify-center gap-1 mt-1"
-                title="Populate test admin credentials"
-              >
                 <CheckCircle2 className="w-3 h-3 text-purple-500" />
                 <span>
-                  Quick fill Admin demo (admin@cafeteria.com / Admin@123)
+                  
                 </span>
-              </button>
+              </form>
 
               {/* Student portal link */}
               <div className="mt-3 pt-3.5 border-t border-stone-100 text-center">
@@ -447,9 +441,9 @@ export const AdminLoginPage = () => {
                   <ArrowRight className="w-3 h-3" />
                 </Link>
               </div>
-            </form>
+            </div>
           </div>
-        </div>
+        
       </main>
 
       {/* Footer */}
